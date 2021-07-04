@@ -1,0 +1,12 @@
+
+!!! fabquestion "**8.** Une application doit écrire sur le disque dur de l'ordinateur, laquelle des affirmations suivantes est vraie ?"
+    === "Réponses"
+        - [ ] a) Elle peut le faire quand bon lui semble
+        - [ ] b) Elle doit en faire la demande au système d'exploitation
+        - [ ] c) Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur
+        - [ ] d) Elle doit en faire la demande à l'utilisateur de l'ordinateur
+    === "Correction"
+        - [ ] a) ~~Elle peut le faire quand bon lui semble~~ 
+        - [x] b) ==Elle doit en faire la demande au système d'exploitation== 
+        - [ ] c) ~~Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur~~ 
+        - [ ] d) ~~Elle doit en faire la demande à l'utilisateur de l'ordinateur~~ 
