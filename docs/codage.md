@@ -18,10 +18,13 @@
 
 {{ telecharger("Fiche d'activité","C2/C2-act1.pdf")}}
 
-{{ titre_activite(num_act,"Numération hexadécimale",["papier"]) }}
+{{ titre_activite(num_act,"Numération hexadécimale",[]) }}
 {% set num_act=num_act+1 %}
 
-{{ telecharger("Fiche d'activité","C2/C2-act2.pdf")}}
+1. Lancer l'application **Ghex** soit en tapant `ghex` dans un terminal soit depuis le menu des applications.
+    1. Dans le menu *Windows*, sélectionner *Base converter* vous obtenez la fenêtre suivante :
+    ![Base converter](images/baseconverter.png "Capture d'écran de Base converter")
+    2. Sur la ligne *Decimal*, entrer le chiffre 9 puis valider
 
 
 {{ titre_activite(num_act,"Encodage des caractères",["video"]) }}
@@ -70,7 +73,7 @@ Recopier et compléter le tableau de conversion suivant :
 |               |$(10010101)_2$ |                   |
 |               |$(10010010)_2$ |                   |
 
-{{ exo(num_exo,"Un peu de reflexion ...",[]) }}
+{{ exo(num_exo,"Un peu de reflexion",[]) }}
 {% set num_exo=num_exo+1 %}
 
 1. Quel est le plus grand entier positif écrit en utilisant 10 chiffres en base 2 ?
@@ -80,7 +83,7 @@ Recopier et compléter le tableau de conversion suivant :
     3. De façon générale, soit $b$ un entier supérieur ou égal à 2, que peut-on dire de l'écriture en base $b$ d'un nombre divisible par $b$ .
 4. En base 10, un million s'écrit avec 7 chiffres, combien en faut-il pour l'écrire en base 2 ?
 
-{{ exo(num_exo,"Enigme",[]) }}
+{{ exo(num_exo,"Énigme",[]) }}
 {% set num_exo=num_exo+1 %}
 Il manque des chiffres (remplacés par des ?) dans le nombre binaire suivant : $?001??111?$
 
@@ -92,7 +95,7 @@ Il manque des chiffres (remplacés par des ?) dans le nombre binaire suivant : $
 2. Donner l'écriture décimale de nombre.
 3. Donner son écriture hexadécimale
 
-{{ exo(num_exo,"Enigme",["python"]) }}
+{{ exo(num_exo,"Un peu de Python",["python"]) }}
 
 1. Lancer Python en ligne de commande, comme vu dans le chapitre précédent.
 2. Tester la fonction `bin` de Python, en affichant par exemple `bin(201)` et `bin(57)`. Rapprocher les résultats obtenus avec les réponses de l'exercice 1. Émettre une hypothèse sur cette fonction.
