@@ -7,7 +7,7 @@ site_author: Fabrice NATIVEL
 nav:
   - "C1-Systèmes d'exploitation" : os.md
   - "C2-Représentation des entiers et des caractères" : codage.md
-
+  - "C3-Données en table" : donneestable.md
 
 #Le thème du site
 theme:
@@ -35,6 +35,12 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.snippets
   - pymdownx.superfences:          # Imbrication de blocs.
+    # Exception pour code highlight (de façon à faire fonctionner mermaid)
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+
   - pymdownx.tabbed               # Volets glissants.  === "Mon volet"
   - pymdownx.arithmatex:
       generic: true
@@ -60,6 +66,7 @@ markdown_extensions:
 plugins:
   - macros
   - search
+  - mermaid2
 
 extra_css:
   - stylesheets/fenarius.css
@@ -68,9 +75,8 @@ extra_javascript:
   - javascripts/config.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js
   
-
-
 extra:
   icones: 
     bombe: ":fontawesome-solid-bomb:{title='Exercice difficile'}"

@@ -32,10 +32,21 @@
 Cette initiation se fait à travers la réalisation de **missions** dans un mini jeu d'aventures. Pour démarrer cette activité
 
 1. lancer un terminal 
-2. dans ce terminal taper `./gameshell` et laisser vous guider par les instructions à l'écran
+2. dans ce terminal taper `./gameshell.sh` et laisser vous guider par les instructions à l'écran
 3. Parallèlement à l'exécution des missions :
     * Noter les commandes que vous utilisez et leur signification
     * Tenir à jour un plan du monde dans lequel se déroule le jeu
+    
+    !!! aide "Aide"
+        Pour la première mission, vous devez donc noter le sens des commandes `cd`, `ls` et `pwd` et commencer le schéma suivant qui sera à poursuivre tout au long des missions :
+        ```mermaid
+            graph TD
+            A[Monde] --> B[Chateau]
+            A --> C[Echoppe]
+            A --> D[Forêt]
+            A --> E[Jardin]
+            A --> F[Montagne]
+        ```
 
 !!! maison "Poursuivre ce travail à la maison"
     Le but est d'atteindre la mission 15, vous pouvez  poursuivre ce travail à la maison en installant **Gameshell**, suivre les instructions que vous trouverez sur [cette page](https://linuxfr.org/news/gameshell-le-retour){target=_blank}.

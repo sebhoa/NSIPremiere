@@ -45,7 +45,8 @@ def define_env(env):
         "oral": ":fontawesome-regular-comment:{title='Activité oral'}",
         "papier": ":fontawesome-solid-edit:{title='Activité à réaliser sur feuille'}",
         "vscode": ":material-microsoft-visual-studio-code:{title='Activité utilisant VS Code'}",
-        "video": ":fontawesome-solid-film:{title='Activité utilisant un support vidéo'}"
+        "video": ":fontawesome-solid-film:{title='Activité utilisant un support vidéo'}",
+        "notebook": ":material-notebook:{title='Activité utilisant un jupyter notebook'}"
     }
     env.variables['devant_exo']=':black_small_square:'
     env.variables['devant_act']=':black_small_square:'
