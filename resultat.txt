@@ -1,4 +1,1910 @@
 
+!!! fabquestion "**1.** Quelle est l'écriture en base 2 du nombre $(154)_{10}$ ?"
+    === "Réponses"
+        - [ ] a) 10011100
+        - [ ] b) 10011001
+        - [ ] c) 00011010
+        - [ ] d) 10011010
+    === "Correction"
+        - [ ] a) ~~10011100~~ 
+        - [ ] b) ~~10011001~~ 
+        - [ ] c) ~~00011010~~ 
+        - [x] d) ==10011010== 
+
+!!! fabquestion "**2.** Que peut-on dire de l'écriture en base 2 d'un nombre divisible par 2 ?"
+    === "Réponses"
+        - [ ] a) Elle ne contient pas de 0
+        - [ ] b) Elle se termine par 0
+        - [ ] c) Elle ne contient qu'un seul 1
+        - [ ] d) Elle contient deux 1
+    === "Correction"
+        - [ ] a) ~~Elle ne contient pas de 0~~ 
+        - [x] b) ==Elle se termine par 0== 
+        - [ ] c) ~~Elle ne contient qu'un seul 1~~ 
+        - [ ] d) ~~Elle contient deux 1~~ 
+
+!!! fabquestion "**3.** Quelle est l'écriture en base 10 du nombre $(01101100)_{2}$ ?"
+    === "Réponses"
+        - [ ] a) 216
+        - [ ] b) 108
+        - [ ] c) 54
+        - [ ] d) 4
+    === "Correction"
+        - [ ] a) ~~216~~ 
+        - [x] b) ==108== 
+        - [ ] c) ~~54~~ 
+        - [ ] d) ~~4~~ 
+
+!!! fabquestion "**4.** Quelle est l'écriture en base 16 du nombre $(165)_{10}$ ?"
+    === "Réponses"
+        - [ ] a) 95
+        - [ ] b) A5
+        - [ ] c) B5
+        - [ ] d) C5
+    === "Correction"
+        - [ ] a) ~~95~~ 
+        - [x] b) ==A5== 
+        - [ ] c) ~~B5~~ 
+        - [ ] d) ~~C5~~ 
+
+!!! fabquestion "**5.** En base 12, combien il y a-t-il de chiffres ?"
+    === "Réponses"
+        - [ ] a) 10
+        - [ ] b) 11
+        - [ ] c) 12
+        - [ ] d) 13
+    === "Correction"
+        - [ ] a) ~~10~~ 
+        - [ ] b) ~~11~~ 
+        - [x] c) ==12== 
+        - [ ] d) ~~13~~ 
+
+!!! fabquestion "**6.** Si l'écriture en base 2 d'un nombre ne comporte qu'un seul 1, alors ce nombre :"
+    === "Réponses"
+        - [ ] a) n'est pas une puissance 2
+        - [ ] b) est une puissance de 2
+        - [ ] c) est divisible par 2
+        - [ ] d) n'est pas divisible par 2
+    === "Correction"
+        - [ ] a) ~~n'est pas une puissance 2~~ 
+        - [x] b) ==est une puissance de 2== 
+        - [ ] c) ~~est divisible par 2~~ 
+        - [ ] d) ~~n'est pas divisible par 2~~ 
+
+!!! fabquestion "**7.** Quelle est l'écriture en base 10 du nombre $(B2)_{16}$ ?"
+    === "Réponses"
+        - [ ] a) 112
+        - [ ] b) 162
+        - [ ] c) 178
+        - [ ] d) 194
+    === "Correction"
+        - [ ] a) ~~112~~ 
+        - [ ] b) ~~162~~ 
+        - [x] c) ==178== 
+        - [ ] d) ~~194~~ 
+
+!!! fabquestion "**8.** Pour écrire les nombres entre 1 et 100 en base 2, on a besoin au maximum de :"
+    === "Réponses"
+        - [ ] a) 5 chiffres
+        - [ ] b) 6 chiffres
+        - [ ] c) 7 chiffres
+        - [ ] d) 8 chiffres
+    === "Correction"
+        - [ ] a) ~~5 chiffres~~ 
+        - [ ] b) ~~6 chiffres~~ 
+        - [x] c) ==7 chiffres== 
+        - [ ] d) ~~8 chiffres~~ 
+
+!!! fabquestion "**9.** Quelle est l'affirmation exacte ?"
+    === "Réponses"
+        - [ ] a) Le codage UTF-8 est sur 7 bits.
+        - [ ] b) Le codage UTF-8 est sur 1 octet.
+        - [ ] c) Le codage UTF-8 est sur 1 à 4 octets.
+        - [ ] d) Le codage UTF-8 est sur 4 octets.
+    === "Correction"
+        - [ ] a) ~~Le codage UTF-8 est sur 7 bits.~~ 
+        - [ ] b) ~~Le codage UTF-8 est sur 1 octet.~~ 
+        - [x] c) ==Le codage UTF-8 est sur 1 à 4 octets.== 
+        - [ ] d) ~~Le codage UTF-8 est sur 4 octets.~~ 
+
+!!! fabquestion "**18.** On considère la fonction suivante où `x` et `y` sont des entiers naturels :"
+    ```python
+    def f(x,y):
+        s=x
+        t=y
+        while t>0:
+            s=s+1
+            t=t-1
+        return s
+    ```
+    Quelle affirmation est fausse "
+    === "Réponses"
+        - [ ] a) La propriété `s+t=x+y` est un invariant de boucle
+        - [ ] b) La valeur finale de `t` est 1
+        - [ ] c) La propriété "`t` est supérieur ou égale à 0" est un invariant de boucle
+        - [ ] d) Le résultat renvoyé est égal à la somme `a+b`
+    === "Correction"
+        - [ ] a) ~~La propriété `s+t=x+y` est un invariant de boucle~~ 
+        - [x] b) ==La valeur finale de `t` est 1== 
+        - [ ] c) ~~La propriété "`t` est supérieur ou égale à 0" est un invariant de boucle~~ 
+        - [ ] d) ~~Le résultat renvoyé est égal à la somme `a+b`~~ 
+
+!!! fabquestion "**1.** Une et une seule de es affirmations est fausse. Laquelle ?"
+    === "Réponses"
+        - [ ] a) Un système d'exploitation libre est la plupart du temps gratuit
+        - [ ] b) Je peux contribuer à un système d'exploitation libre
+        - [ ] c) Il est interdit d'étudier un système d'exploitation propriétaire
+        - [ ] d) Un système d'exploitation propriétaire est plus sécurisé
+    === "Correction"
+        - [ ] a) ~~Un système d'exploitation libre est la plupart du temps gratuit~~ 
+        - [ ] b) ~~Je peux contribuer à un système d'exploitation libre~~ 
+        - [ ] c) ~~Il est interdit d'étudier un système d'exploitation propriétaire~~ 
+        - [x] d) ==Un système d'exploitation propriétaire est plus sécurisé== 
+
+!!! fabquestion "**2.** Quelle est l'effet de la commande `cd ..` ?"
+    === "Réponses"
+        - [ ] a) Changer le répertoire courant vers le répertoire supérieur
+        - [ ] b) Ejecter le CD
+        - [ ] c) Copier le contenu du répertoire courant dans un répertoire caché
+        - [ ] d) Supprimer le répertoire courant
+    === "Correction"
+        - [x] a) ==Changer le répertoire courant vers le répertoire supérieur== 
+        - [ ] b) ~~Ejecter le CD~~ 
+        - [ ] c) ~~Copier le contenu du répertoire courant dans un répertoire caché~~ 
+        - [ ] d) ~~Supprimer le répertoire courant~~ 
+
+!!! fabquestion "**3.** Quel est le rôle de la commande `ls` ?"
+    === "Réponses"
+        - [ ] a) Basculer en mode administrateur
+        - [ ] b) Lister le contenu du répertoire courant
+        - [ ] c) Effacer le contenu du répertoire courant
+        - [ ] d) Donner un accès complet à un fichier
+    === "Correction"
+        - [ ] a) ~~Basculer en mode administrateur~~ 
+        - [x] b) ==Lister le contenu du répertoire courant== 
+        - [ ] c) ~~Effacer le contenu du répertoire courant~~ 
+        - [ ] d) ~~Donner un accès complet à un fichier~~ 
+
+!!! fabquestion "**4.** Dans un terminal sous Linux, quelle commande faut-il écrire pour donner à tout le monde le droit d'écriture sur le fichier `information.py` ?"
+    === "Réponses"
+        - [ ] a) `chmod o+w information.py`
+        - [ ] b) `chmod a+w information.py`
+        - [ ] c) `chmod o+x information.py`
+        - [ ] d) `chmod a+x information.py`
+    === "Correction"
+        - [ ] a) ~~`chmod o+w information.py`~~ 
+        - [x] b) ==`chmod a+w information.py`== 
+        - [ ] c) ~~`chmod o+x information.py`~~ 
+        - [ ] d) ~~`chmod a+x information.py`~~ 
+
+!!! fabquestion "**5.** Quel est l'effet de la commande `chmod u+w fichier.txt` ?"
+    === "Réponses"
+        - [ ] a) de permettre au propriétaire du fichier de modifier le contenu de ce fichier
+        - [ ] b) d'interdire au propriétaire de modifier le contenu de ce fichier
+        - [ ] c) d'interdire à tous les autres utilisateurs de lire le fichier
+        - [ ] d) d'effacer le fichier
+    === "Correction"
+        - [x] a) ==de permettre au propriétaire du fichier de modifier le contenu de ce fichier== 
+        - [ ] b) ~~d'interdire au propriétaire de modifier le contenu de ce fichier~~ 
+        - [ ] c) ~~d'interdire à tous les autres utilisateurs de lire le fichier~~ 
+        - [ ] d) ~~d'effacer le fichier~~ 
+
+!!! fabquestion "**6.** Dans la console Linux, quelle commande faut-il exécuter pour obtenir la documentation sur commande `pwd` ?"
+    === "Réponses"
+        - [ ] a) `man pwd`
+        - [ ] b) `cd pwd`
+        - [ ] c) `mkdir pwd`
+        - [ ] d) `ls pwd`
+    === "Correction"
+        - [x] a) ==`man pwd`== 
+        - [ ] b) ~~`cd pwd`~~ 
+        - [ ] c) ~~`mkdir pwd`~~ 
+        - [ ] d) ~~`ls pwd`~~ 
+
+!!! fabquestion "**7.** Lequel de ces systèmes d'exploitation est sous licence propriétaire ?"
+    === "Réponses"
+        - [ ] a) Android
+        - [ ] b) Linux
+        - [ ] c) Windows
+        - [ ] d) Ubuntu
+    === "Correction"
+        - [ ] a) ~~Android~~ 
+        - [ ] b) ~~Linux~~ 
+        - [x] c) ==Windows== 
+        - [ ] d) ~~Ubuntu~~ 
+
+!!! fabquestion "**8.** Une application doit écrire sur le disque dur de l'ordinateur, laquelle des affirmations suivantes est vraie ?"
+    === "Réponses"
+        - [ ] a) Elle peut le faire quand bon lui semble
+        - [ ] b) Elle doit en faire la demande au système d'exploitation
+        - [ ] c) Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur
+        - [ ] d) Elle doit en faire la demande à l'utilisateur de l'ordinateur
+    === "Correction"
+        - [ ] a) ~~Elle peut le faire quand bon lui semble~~ 
+        - [x] b) ==Elle doit en faire la demande au système d'exploitation== 
+        - [ ] c) ~~Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur~~ 
+        - [ ] d) ~~Elle doit en faire la demande à l'utilisateur de l'ordinateur~~ 
+
+!!! fabquestion "**1.** Quelle est l'écriture en base 2 du nombre $(154)_{10}$ ?"
+    === "Réponses"
+        - [ ] a) 10011100
+        - [ ] b) 10011001
+        - [ ] c) 00011010
+        - [ ] d) 10011010
+    === "Correction"
+        - [ ] a) ~~10011100~~ 
+        - [ ] b) ~~10011001~~ 
+        - [ ] c) ~~00011010~~ 
+        - [x] d) ==10011010== 
+
+!!! fabquestion "**2.** Que peut-on dire de l'écriture en base 2 d'un nombre divisible par 2 ?"
+    === "Réponses"
+        - [ ] a) Elle ne contient pas de 0
+        - [ ] b) Elle se termine par 0
+        - [ ] c) Elle ne contient qu'un seul 1
+        - [ ] d) Elle contient deux 1
+    === "Correction"
+        - [ ] a) ~~Elle ne contient pas de 0~~ 
+        - [x] b) ==Elle se termine par 0== 
+        - [ ] c) ~~Elle ne contient qu'un seul 1~~ 
+        - [ ] d) ~~Elle contient deux 1~~ 
+
+!!! fabquestion "**3.** Quelle est l'écriture en base 10 du nombre $(01101100)_{2}$ ?"
+    === "Réponses"
+        - [ ] a) 216
+        - [ ] b) 108
+        - [ ] c) 54
+        - [ ] d) 4
+    === "Correction"
+        - [ ] a) ~~216~~ 
+        - [x] b) ==108== 
+        - [ ] c) ~~54~~ 
+        - [ ] d) ~~4~~ 
+
+!!! fabquestion "**4.** Quelle est l'écriture en base 16 du nombre $(165)_{10}$ ?"
+    === "Réponses"
+        - [ ] a) 95
+        - [ ] b) A5
+        - [ ] c) B5
+        - [ ] d) C5
+    === "Correction"
+        - [ ] a) ~~95~~ 
+        - [x] b) ==A5== 
+        - [ ] c) ~~B5~~ 
+        - [ ] d) ~~C5~~ 
+
+!!! fabquestion "**5.** En base 12, combien il y a-t-il de chiffres ?"
+    === "Réponses"
+        - [ ] a) 10
+        - [ ] b) 11
+        - [ ] c) 12
+        - [ ] d) 13
+    === "Correction"
+        - [ ] a) ~~10~~ 
+        - [ ] b) ~~11~~ 
+        - [x] c) ==12== 
+        - [ ] d) ~~13~~ 
+
+!!! fabquestion "**6.** Si l'écriture en base 2 d'un nombre ne comporte qu'un seul 1, alors ce nombre :"
+    === "Réponses"
+        - [ ] a) n'est pas une puissance 2
+        - [ ] b) est une puissance de 2
+        - [ ] c) est divisible par 2
+        - [ ] d) n'est pas divisible par 2
+    === "Correction"
+        - [ ] a) ~~n'est pas une puissance 2~~ 
+        - [x] b) ==est une puissance de 2== 
+        - [ ] c) ~~est divisible par 2~~ 
+        - [ ] d) ~~n'est pas divisible par 2~~ 
+
+!!! fabquestion "**7.** Quelle est l'écriture en base 10 du nombre $(B2)_{16}$ ?"
+    === "Réponses"
+        - [ ] a) 112
+        - [ ] b) 162
+        - [ ] c) 178
+        - [ ] d) 194
+    === "Correction"
+        - [ ] a) ~~112~~ 
+        - [ ] b) ~~162~~ 
+        - [x] c) ==178== 
+        - [ ] d) ~~194~~ 
+
+!!! fabquestion "**8.** Pour écrire les nombres entre 1 et 100 en base 2, on a besoin au maximum de :"
+    === "Réponses"
+        - [ ] a) 5 chiffres
+        - [ ] b) 6 chiffres
+        - [ ] c) 7 chiffres
+        - [ ] d) 8 chiffres
+    === "Correction"
+        - [ ] a) ~~5 chiffres~~ 
+        - [ ] b) ~~6 chiffres~~ 
+        - [x] c) ==7 chiffres== 
+        - [ ] d) ~~8 chiffres~~ 
+
+!!! fabquestion "**9.** Quelle est l'affirmation exacte ?"
+    === "Réponses"
+        - [ ] a) Le codage UTF-8 est sur 7 bits.
+        - [ ] b) Le codage UTF-8 est sur 1 octet.
+        - [ ] c) Le codage UTF-8 est sur 1 à 4 octets.
+        - [ ] d) Le codage UTF-8 est sur 4 octets.
+    === "Correction"
+        - [ ] a) ~~Le codage UTF-8 est sur 7 bits.~~ 
+        - [ ] b) ~~Le codage UTF-8 est sur 1 octet.~~ 
+        - [x] c) ==Le codage UTF-8 est sur 1 à 4 octets.== 
+        - [ ] d) ~~Le codage UTF-8 est sur 4 octets.~~ 
+
+!!! fabquestion "**18.** On considère la fonction suivante où `x` et `y` sont des entiers naturels :"
+    ```python
+    def f(x,y):
+        s=x
+        t=y
+        while t>0:
+            s=s+1
+            t=t-1
+        return s
+    ```
+    Quelle affirmation est fausse ?"
+    === "Réponses"
+        - [ ] a) La propriété `s+t=x+y` est un invariant de boucle
+        - [ ] b) La valeur finale de `t` est 1
+        - [ ] c) La propriété "`t` est supérieur ou égale à 0" est un invariant de boucle
+        - [ ] d) Le résultat renvoyé est égal à la somme `a+b`
+    === "Correction"
+        - [ ] a) ~~La propriété `s+t=x+y` est un invariant de boucle~~ 
+        - [x] b) ==La valeur finale de `t` est 1== 
+        - [ ] c) ~~La propriété "`t` est supérieur ou égale à 0" est un invariant de boucle~~ 
+        - [ ] d) ~~Le résultat renvoyé est égal à la somme `a+b`~~ 
+
+!!! fabquestion "**1.** Une et une seule de es affirmations est fausse. Laquelle ?"
+    === "Réponses"
+        - [ ] a) Un système d'exploitation libre est la plupart du temps gratuit
+        - [ ] b) Je peux contribuer à un système d'exploitation libre
+        - [ ] c) Il est interdit d'étudier un système d'exploitation propriétaire
+        - [ ] d) Un système d'exploitation propriétaire est plus sécurisé
+    === "Correction"
+        - [ ] a) ~~Un système d'exploitation libre est la plupart du temps gratuit~~ 
+        - [ ] b) ~~Je peux contribuer à un système d'exploitation libre~~ 
+        - [ ] c) ~~Il est interdit d'étudier un système d'exploitation propriétaire~~ 
+        - [x] d) ==Un système d'exploitation propriétaire est plus sécurisé== 
+
+!!! fabquestion "**2.** Quelle est l'effet de la commande `cd ..` ?"
+    === "Réponses"
+        - [ ] a) Changer le répertoire courant vers le répertoire supérieur
+        - [ ] b) Ejecter le CD
+        - [ ] c) Copier le contenu du répertoire courant dans un répertoire caché
+        - [ ] d) Supprimer le répertoire courant
+    === "Correction"
+        - [x] a) ==Changer le répertoire courant vers le répertoire supérieur== 
+        - [ ] b) ~~Ejecter le CD~~ 
+        - [ ] c) ~~Copier le contenu du répertoire courant dans un répertoire caché~~ 
+        - [ ] d) ~~Supprimer le répertoire courant~~ 
+
+!!! fabquestion "**3.** Quel est le rôle de la commande `ls` ?"
+    === "Réponses"
+        - [ ] a) Basculer en mode administrateur
+        - [ ] b) Lister le contenu du répertoire courant
+        - [ ] c) Effacer le contenu du répertoire courant
+        - [ ] d) Donner un accès complet à un fichier
+    === "Correction"
+        - [ ] a) ~~Basculer en mode administrateur~~ 
+        - [x] b) ==Lister le contenu du répertoire courant== 
+        - [ ] c) ~~Effacer le contenu du répertoire courant~~ 
+        - [ ] d) ~~Donner un accès complet à un fichier~~ 
+
+!!! fabquestion "**4.** Dans un terminal sous Linux, quelle commande faut-il écrire pour donner à tout le monde le droit d'écriture sur le fichier `information.py` ?"
+    === "Réponses"
+        - [ ] a) `chmod o+w information.py`
+        - [ ] b) `chmod a+w information.py`
+        - [ ] c) `chmod o+x information.py`
+        - [ ] d) `chmod a+x information.py`
+    === "Correction"
+        - [ ] a) ~~`chmod o+w information.py`~~ 
+        - [x] b) ==`chmod a+w information.py`== 
+        - [ ] c) ~~`chmod o+x information.py`~~ 
+        - [ ] d) ~~`chmod a+x information.py`~~ 
+
+!!! fabquestion "**5.** Quel est l'effet de la commande `chmod u+w fichier.txt` ?"
+    === "Réponses"
+        - [ ] a) de permettre au propriétaire du fichier de modifier le contenu de ce fichier
+        - [ ] b) d'interdire au propriétaire de modifier le contenu de ce fichier
+        - [ ] c) d'interdire à tous les autres utilisateurs de lire le fichier
+        - [ ] d) d'effacer le fichier
+    === "Correction"
+        - [x] a) ==de permettre au propriétaire du fichier de modifier le contenu de ce fichier== 
+        - [ ] b) ~~d'interdire au propriétaire de modifier le contenu de ce fichier~~ 
+        - [ ] c) ~~d'interdire à tous les autres utilisateurs de lire le fichier~~ 
+        - [ ] d) ~~d'effacer le fichier~~ 
+
+!!! fabquestion "**6.** Dans la console Linux, quelle commande faut-il exécuter pour obtenir la documentation sur commande `pwd` ?"
+    === "Réponses"
+        - [ ] a) `man pwd`
+        - [ ] b) `cd pwd`
+        - [ ] c) `mkdir pwd`
+        - [ ] d) `ls pwd`
+    === "Correction"
+        - [x] a) ==`man pwd`== 
+        - [ ] b) ~~`cd pwd`~~ 
+        - [ ] c) ~~`mkdir pwd`~~ 
+        - [ ] d) ~~`ls pwd`~~ 
+
+!!! fabquestion "**7.** Lequel de ces systèmes d'exploitation est sous licence propriétaire ?"
+    === "Réponses"
+        - [ ] a) Android
+        - [ ] b) Linux
+        - [ ] c) Windows
+        - [ ] d) Ubuntu
+    === "Correction"
+        - [ ] a) ~~Android~~ 
+        - [ ] b) ~~Linux~~ 
+        - [x] c) ==Windows== 
+        - [ ] d) ~~Ubuntu~~ 
+
+!!! fabquestion "**8.** Une application doit écrire sur le disque dur de l'ordinateur, laquelle des affirmations suivantes est vraie ?"
+    === "Réponses"
+        - [ ] a) Elle peut le faire quand bon lui semble
+        - [ ] b) Elle doit en faire la demande au système d'exploitation
+        - [ ] c) Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur
+        - [ ] d) Elle doit en faire la demande à l'utilisateur de l'ordinateur
+    === "Correction"
+        - [ ] a) ~~Elle peut le faire quand bon lui semble~~ 
+        - [x] b) ==Elle doit en faire la demande au système d'exploitation== 
+        - [ ] c) ~~Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur~~ 
+        - [ ] d) ~~Elle doit en faire la demande à l'utilisateur de l'ordinateur~~ 
+
+!!! fabquestion "**1.** Quelle est l'écriture en base 2 du nombre $(154)_{10}$ ?"
+    === "Réponses"
+        - [ ] a) 10011100
+        - [ ] b) 10011001
+        - [ ] c) 00011010
+        - [ ] d) 10011010
+    === "Correction"
+        - [ ] a) ~~10011100~~ 
+        - [ ] b) ~~10011001~~ 
+        - [ ] c) ~~00011010~~ 
+        - [x] d) ==10011010== 
+
+!!! fabquestion "**2.** Que peut-on dire de l'écriture en base 2 d'un nombre divisible par 2 ?"
+    === "Réponses"
+        - [ ] a) Elle ne contient pas de 0
+        - [ ] b) Elle se termine par 0
+        - [ ] c) Elle ne contient qu'un seul 1
+        - [ ] d) Elle contient deux 1
+    === "Correction"
+        - [ ] a) ~~Elle ne contient pas de 0~~ 
+        - [x] b) ==Elle se termine par 0== 
+        - [ ] c) ~~Elle ne contient qu'un seul 1~~ 
+        - [ ] d) ~~Elle contient deux 1~~ 
+
+!!! fabquestion "**3.** Quelle est l'écriture en base 10 du nombre $(01101100)_{2}$ ?"
+    === "Réponses"
+        - [ ] a) 216
+        - [ ] b) 108
+        - [ ] c) 54
+        - [ ] d) 4
+    === "Correction"
+        - [ ] a) ~~216~~ 
+        - [x] b) ==108== 
+        - [ ] c) ~~54~~ 
+        - [ ] d) ~~4~~ 
+
+!!! fabquestion "**4.** Quelle est l'écriture en base 16 du nombre $(165)_{10}$ ?"
+    === "Réponses"
+        - [ ] a) 95
+        - [ ] b) A5
+        - [ ] c) B5
+        - [ ] d) C5
+    === "Correction"
+        - [ ] a) ~~95~~ 
+        - [x] b) ==A5== 
+        - [ ] c) ~~B5~~ 
+        - [ ] d) ~~C5~~ 
+
+!!! fabquestion "**5.** En base 12, combien il y a-t-il de chiffres ?"
+    === "Réponses"
+        - [ ] a) 10
+        - [ ] b) 11
+        - [ ] c) 12
+        - [ ] d) 13
+    === "Correction"
+        - [ ] a) ~~10~~ 
+        - [ ] b) ~~11~~ 
+        - [x] c) ==12== 
+        - [ ] d) ~~13~~ 
+
+!!! fabquestion "**6.** Si l'écriture en base 2 d'un nombre ne comporte qu'un seul 1, alors ce nombre :"
+    === "Réponses"
+        - [ ] a) n'est pas une puissance 2
+        - [ ] b) est une puissance de 2
+        - [ ] c) est divisible par 2
+        - [ ] d) n'est pas divisible par 2
+    === "Correction"
+        - [ ] a) ~~n'est pas une puissance 2~~ 
+        - [x] b) ==est une puissance de 2== 
+        - [ ] c) ~~est divisible par 2~~ 
+        - [ ] d) ~~n'est pas divisible par 2~~ 
+
+!!! fabquestion "**7.** Quelle est l'écriture en base 10 du nombre $(B2)_{16}$ ?"
+    === "Réponses"
+        - [ ] a) 112
+        - [ ] b) 162
+        - [ ] c) 178
+        - [ ] d) 194
+    === "Correction"
+        - [ ] a) ~~112~~ 
+        - [ ] b) ~~162~~ 
+        - [x] c) ==178== 
+        - [ ] d) ~~194~~ 
+
+!!! fabquestion "**8.** Pour écrire les nombres entre 1 et 100 en base 2, on a besoin au maximum de :"
+    === "Réponses"
+        - [ ] a) 5 chiffres
+        - [ ] b) 6 chiffres
+        - [ ] c) 7 chiffres
+        - [ ] d) 8 chiffres
+    === "Correction"
+        - [ ] a) ~~5 chiffres~~ 
+        - [ ] b) ~~6 chiffres~~ 
+        - [x] c) ==7 chiffres== 
+        - [ ] d) ~~8 chiffres~~ 
+
+!!! fabquestion "**9.** Quelle est l'affirmation exacte ?"
+    === "Réponses"
+        - [ ] a) Le codage UTF-8 est sur 7 bits.
+        - [ ] b) Le codage UTF-8 est sur 1 octet.
+        - [ ] c) Le codage UTF-8 est sur 1 à 4 octets.
+        - [ ] d) Le codage UTF-8 est sur 4 octets.
+    === "Correction"
+        - [ ] a) ~~Le codage UTF-8 est sur 7 bits.~~ 
+        - [ ] b) ~~Le codage UTF-8 est sur 1 octet.~~ 
+        - [x] c) ==Le codage UTF-8 est sur 1 à 4 octets.== 
+        - [ ] d) ~~Le codage UTF-8 est sur 4 octets.~~ 
+
+!!! fabquestion "**1.** On a écrit une fonction qui prend en paramètre une liste non vide et qui renvoie son plus grand élément. Combien de tests faudrait-il écrire pour garantir que la fonction donne un résultat correct pour toute liste ?"
+    === "Réponses"
+        - [ ] a) Il faudrait écrire une infinité de tests, on ne peut pas prouver que cette fonction est correct simplement en la testant
+        - [ ] b) Deux tests : pour une liste à un élément et pour une liste à deux éléments ou plus.
+        - [ ] c) Trois tests : pour une liste vide, pour une liste à un élément et pour une liste à deux éléments ou plus.
+        - [ ] d) Deux tests : pour le cas où le plus grand élément est en début de liste et pour le cas où le plus grand élément n'est pas en début de liste
+    === "Correction"
+        - [x] a) ==Il faudrait écrire une infinité de tests, on ne peut pas prouver que cette fonction est correct simplement en la testant== 
+        - [ ] b) ~~Deux tests : pour une liste à un élément et pour une liste à deux éléments ou plus.~~ 
+        - [ ] c) ~~Trois tests : pour une liste vide, pour une liste à un élément et pour une liste à deux éléments ou plus.~~ 
+        - [ ] d) ~~Deux tests : pour le cas où le plus grand élément est en début de liste et pour le cas où le plus grand élément n'est pas en début de liste~~ 
+
+!!! fabquestion "**2.** On considère la fonction suivante où `x` et `y` sont des entiers naturels :"
+    ```python
+    def f(x,y):
+        s=x
+        t=y
+        while t>0:
+            s=s+1
+            t=t-1
+        return s
+    ```
+    Quelle affirmation est fausse ?"
+    === "Réponses"
+        - [ ] a) La propriété `s+t=x+y` est un invariant de boucle
+        - [ ] b) La valeur finale de `t` est 1
+        - [ ] c) La propriété "`t` est supérieur ou égale à 0" est un invariant de boucle
+        - [ ] d) Le résultat renvoyé est égal à la somme `a+b`
+    === "Correction"
+        - [ ] a) ~~La propriété `s+t=x+y` est un invariant de boucle~~ 
+        - [x] b) ==La valeur finale de `t` est 1== 
+        - [ ] c) ~~La propriété "`t` est supérieur ou égale à 0" est un invariant de boucle~~ 
+        - [ ] d) ~~Le résultat renvoyé est égal à la somme `a+b`~~ 
+
+!!! fabquestion "**1.** Une et une seule de es affirmations est fausse. Laquelle ?"
+    === "Réponses"
+        - [ ] a) Un système d'exploitation libre est la plupart du temps gratuit
+        - [ ] b) Je peux contribuer à un système d'exploitation libre
+        - [ ] c) Il est interdit d'étudier un système d'exploitation propriétaire
+        - [ ] d) Un système d'exploitation propriétaire est plus sécurisé
+    === "Correction"
+        - [ ] a) ~~Un système d'exploitation libre est la plupart du temps gratuit~~ 
+        - [ ] b) ~~Je peux contribuer à un système d'exploitation libre~~ 
+        - [ ] c) ~~Il est interdit d'étudier un système d'exploitation propriétaire~~ 
+        - [x] d) ==Un système d'exploitation propriétaire est plus sécurisé== 
+
+!!! fabquestion "**2.** Quelle est l'effet de la commande `cd ..` ?"
+    === "Réponses"
+        - [ ] a) Changer le répertoire courant vers le répertoire supérieur
+        - [ ] b) Ejecter le CD
+        - [ ] c) Copier le contenu du répertoire courant dans un répertoire caché
+        - [ ] d) Supprimer le répertoire courant
+    === "Correction"
+        - [x] a) ==Changer le répertoire courant vers le répertoire supérieur== 
+        - [ ] b) ~~Ejecter le CD~~ 
+        - [ ] c) ~~Copier le contenu du répertoire courant dans un répertoire caché~~ 
+        - [ ] d) ~~Supprimer le répertoire courant~~ 
+
+!!! fabquestion "**3.** Quel est le rôle de la commande `ls` ?"
+    === "Réponses"
+        - [ ] a) Basculer en mode administrateur
+        - [ ] b) Lister le contenu du répertoire courant
+        - [ ] c) Effacer le contenu du répertoire courant
+        - [ ] d) Donner un accès complet à un fichier
+    === "Correction"
+        - [ ] a) ~~Basculer en mode administrateur~~ 
+        - [x] b) ==Lister le contenu du répertoire courant== 
+        - [ ] c) ~~Effacer le contenu du répertoire courant~~ 
+        - [ ] d) ~~Donner un accès complet à un fichier~~ 
+
+!!! fabquestion "**4.** Dans un terminal sous Linux, quelle commande faut-il écrire pour donner à tout le monde le droit d'écriture sur le fichier `information.py` ?"
+    === "Réponses"
+        - [ ] a) `chmod o+w information.py`
+        - [ ] b) `chmod a+w information.py`
+        - [ ] c) `chmod o+x information.py`
+        - [ ] d) `chmod a+x information.py`
+    === "Correction"
+        - [ ] a) ~~`chmod o+w information.py`~~ 
+        - [x] b) ==`chmod a+w information.py`== 
+        - [ ] c) ~~`chmod o+x information.py`~~ 
+        - [ ] d) ~~`chmod a+x information.py`~~ 
+
+!!! fabquestion "**5.** Quel est l'effet de la commande `chmod u+w fichier.txt` ?"
+    === "Réponses"
+        - [ ] a) de permettre au propriétaire du fichier de modifier le contenu de ce fichier
+        - [ ] b) d'interdire au propriétaire de modifier le contenu de ce fichier
+        - [ ] c) d'interdire à tous les autres utilisateurs de lire le fichier
+        - [ ] d) d'effacer le fichier
+    === "Correction"
+        - [x] a) ==de permettre au propriétaire du fichier de modifier le contenu de ce fichier== 
+        - [ ] b) ~~d'interdire au propriétaire de modifier le contenu de ce fichier~~ 
+        - [ ] c) ~~d'interdire à tous les autres utilisateurs de lire le fichier~~ 
+        - [ ] d) ~~d'effacer le fichier~~ 
+
+!!! fabquestion "**6.** Dans la console Linux, quelle commande faut-il exécuter pour obtenir la documentation sur commande `pwd` ?"
+    === "Réponses"
+        - [ ] a) `man pwd`
+        - [ ] b) `cd pwd`
+        - [ ] c) `mkdir pwd`
+        - [ ] d) `ls pwd`
+    === "Correction"
+        - [x] a) ==`man pwd`== 
+        - [ ] b) ~~`cd pwd`~~ 
+        - [ ] c) ~~`mkdir pwd`~~ 
+        - [ ] d) ~~`ls pwd`~~ 
+
+!!! fabquestion "**7.** Lequel de ces systèmes d'exploitation est sous licence propriétaire ?"
+    === "Réponses"
+        - [ ] a) Android
+        - [ ] b) Linux
+        - [ ] c) Windows
+        - [ ] d) Ubuntu
+    === "Correction"
+        - [ ] a) ~~Android~~ 
+        - [ ] b) ~~Linux~~ 
+        - [x] c) ==Windows== 
+        - [ ] d) ~~Ubuntu~~ 
+
+!!! fabquestion "**8.** Une application doit écrire sur le disque dur de l'ordinateur, laquelle des affirmations suivantes est vraie ?"
+    === "Réponses"
+        - [ ] a) Elle peut le faire quand bon lui semble
+        - [ ] b) Elle doit en faire la demande au système d'exploitation
+        - [ ] c) Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur
+        - [ ] d) Elle doit en faire la demande à l'utilisateur de l'ordinateur
+    === "Correction"
+        - [ ] a) ~~Elle peut le faire quand bon lui semble~~ 
+        - [x] b) ==Elle doit en faire la demande au système d'exploitation== 
+        - [ ] c) ~~Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur~~ 
+        - [ ] d) ~~Elle doit en faire la demande à l'utilisateur de l'ordinateur~~ 
+
+!!! fabquestion "**1.** Quelle est l'écriture en base 2 du nombre $(154)_{10}$ ?"
+    === "Réponses"
+        - [ ] a) 10011100
+        - [ ] b) 10011001
+        - [ ] c) 00011010
+        - [ ] d) 10011010
+    === "Correction"
+        - [ ] a) ~~10011100~~ 
+        - [ ] b) ~~10011001~~ 
+        - [ ] c) ~~00011010~~ 
+        - [x] d) ==10011010== 
+
+!!! fabquestion "**2.** Que peut-on dire de l'écriture en base 2 d'un nombre divisible par 2 ?"
+    === "Réponses"
+        - [ ] a) Elle ne contient pas de 0
+        - [ ] b) Elle se termine par 0
+        - [ ] c) Elle ne contient qu'un seul 1
+        - [ ] d) Elle contient deux 1
+    === "Correction"
+        - [ ] a) ~~Elle ne contient pas de 0~~ 
+        - [x] b) ==Elle se termine par 0== 
+        - [ ] c) ~~Elle ne contient qu'un seul 1~~ 
+        - [ ] d) ~~Elle contient deux 1~~ 
+
+!!! fabquestion "**3.** Quelle est l'écriture en base 10 du nombre $(01101100)_{2}$ ?"
+    === "Réponses"
+        - [ ] a) 216
+        - [ ] b) 108
+        - [ ] c) 54
+        - [ ] d) 4
+    === "Correction"
+        - [ ] a) ~~216~~ 
+        - [x] b) ==108== 
+        - [ ] c) ~~54~~ 
+        - [ ] d) ~~4~~ 
+
+!!! fabquestion "**4.** Quelle est l'écriture en base 16 du nombre $(165)_{10}$ ?"
+    === "Réponses"
+        - [ ] a) 95
+        - [ ] b) A5
+        - [ ] c) B5
+        - [ ] d) C5
+    === "Correction"
+        - [ ] a) ~~95~~ 
+        - [x] b) ==A5== 
+        - [ ] c) ~~B5~~ 
+        - [ ] d) ~~C5~~ 
+
+!!! fabquestion "**5.** En base 12, combien il y a-t-il de chiffres ?"
+    === "Réponses"
+        - [ ] a) 10
+        - [ ] b) 11
+        - [ ] c) 12
+        - [ ] d) 13
+    === "Correction"
+        - [ ] a) ~~10~~ 
+        - [ ] b) ~~11~~ 
+        - [x] c) ==12== 
+        - [ ] d) ~~13~~ 
+
+!!! fabquestion "**6.** Si l'écriture en base 2 d'un nombre ne comporte qu'un seul 1, alors ce nombre :"
+    === "Réponses"
+        - [ ] a) n'est pas une puissance 2
+        - [ ] b) est une puissance de 2
+        - [ ] c) est divisible par 2
+        - [ ] d) n'est pas divisible par 2
+    === "Correction"
+        - [ ] a) ~~n'est pas une puissance 2~~ 
+        - [x] b) ==est une puissance de 2== 
+        - [ ] c) ~~est divisible par 2~~ 
+        - [ ] d) ~~n'est pas divisible par 2~~ 
+
+!!! fabquestion "**7.** Quelle est l'écriture en base 10 du nombre $(B2)_{16}$ ?"
+    === "Réponses"
+        - [ ] a) 112
+        - [ ] b) 162
+        - [ ] c) 178
+        - [ ] d) 194
+    === "Correction"
+        - [ ] a) ~~112~~ 
+        - [ ] b) ~~162~~ 
+        - [x] c) ==178== 
+        - [ ] d) ~~194~~ 
+
+!!! fabquestion "**8.** Pour écrire les nombres entre 1 et 100 en base 2, on a besoin au maximum de :"
+    === "Réponses"
+        - [ ] a) 5 chiffres
+        - [ ] b) 6 chiffres
+        - [ ] c) 7 chiffres
+        - [ ] d) 8 chiffres
+    === "Correction"
+        - [ ] a) ~~5 chiffres~~ 
+        - [ ] b) ~~6 chiffres~~ 
+        - [x] c) ==7 chiffres== 
+        - [ ] d) ~~8 chiffres~~ 
+
+!!! fabquestion "**9.** Quelle est l'affirmation exacte ?"
+    === "Réponses"
+        - [ ] a) Le codage UTF-8 est sur 7 bits.
+        - [ ] b) Le codage UTF-8 est sur 1 octet.
+        - [ ] c) Le codage UTF-8 est sur 1 à 4 octets.
+        - [ ] d) Le codage UTF-8 est sur 4 octets.
+    === "Correction"
+        - [ ] a) ~~Le codage UTF-8 est sur 7 bits.~~ 
+        - [ ] b) ~~Le codage UTF-8 est sur 1 octet.~~ 
+        - [x] c) ==Le codage UTF-8 est sur 1 à 4 octets.== 
+        - [ ] d) ~~Le codage UTF-8 est sur 4 octets.~~ 
+
+!!! fabquestion "**1.** On a écrit une fonction qui prend en paramètre une liste non vide et qui renvoie son plus grand élément. Combien de tests faudrait-il écrire pour garantir que la fonction donne un résultat correct pour toute liste ?"
+    === "Réponses"
+        - [ ] a) Il faudrait écrire une infinité de tests, on ne peut pas prouver que cette fonction est correct simplement en la testant
+        - [ ] b) Deux tests : pour une liste à un élément et pour une liste à deux éléments ou plus.
+        - [ ] c) Trois tests : pour une liste vide, pour une liste à un élément et pour une liste à deux éléments ou plus.
+        - [ ] d) Deux tests : pour le cas où le plus grand élément est en début de liste et pour le cas où le plus grand élément n'est pas en début de liste
+    === "Correction"
+        - [x] a) ==Il faudrait écrire une infinité de tests, on ne peut pas prouver que cette fonction est correct simplement en la testant== 
+        - [ ] b) ~~Deux tests : pour une liste à un élément et pour une liste à deux éléments ou plus.~~ 
+        - [ ] c) ~~Trois tests : pour une liste vide, pour une liste à un élément et pour une liste à deux éléments ou plus.~~ 
+        - [ ] d) ~~Deux tests : pour le cas où le plus grand élément est en début de liste et pour le cas où le plus grand élément n'est pas en début de liste~~ 
+
+!!! fabquestion "**2.** On considère la fonction suivante où `x` et `y` sont des entiers naturels :"
+    ```python
+    def f(x,y):
+        s=x
+        t=y
+        while t>0:
+            s=s+1
+            t=t-1
+        return s
+    ```
+    Quelle affirmation est fausse "
+    === "Réponses"
+        - [ ] a) La propriété `s+t=x+y` est un invariant de boucle
+        - [ ] b) La valeur finale de `t` est 1
+        - [ ] c) La propriété "`t` est supérieur ou égale à 0" est un invariant de boucle
+        - [ ] d) Le résultat renvoyé est égal à la somme `a+b`
+    === "Correction"
+        - [ ] a) ~~La propriété `s+t=x+y` est un invariant de boucle~~ 
+        - [x] b) ==La valeur finale de `t` est 1== 
+        - [ ] c) ~~La propriété "`t` est supérieur ou égale à 0" est un invariant de boucle~~ 
+        - [ ] d) ~~Le résultat renvoyé est égal à la somme `a+b`~~ 
+
+!!! fabquestion "**1.** Une et une seule de es affirmations est fausse. Laquelle ?"
+    === "Réponses"
+        - [ ] a) Un système d'exploitation libre est la plupart du temps gratuit
+        - [ ] b) Je peux contribuer à un système d'exploitation libre
+        - [ ] c) Il est interdit d'étudier un système d'exploitation propriétaire
+        - [ ] d) Un système d'exploitation propriétaire est plus sécurisé
+    === "Correction"
+        - [ ] a) ~~Un système d'exploitation libre est la plupart du temps gratuit~~ 
+        - [ ] b) ~~Je peux contribuer à un système d'exploitation libre~~ 
+        - [ ] c) ~~Il est interdit d'étudier un système d'exploitation propriétaire~~ 
+        - [x] d) ==Un système d'exploitation propriétaire est plus sécurisé== 
+
+!!! fabquestion "**2.** Quelle est l'effet de la commande `cd ..` ?"
+    === "Réponses"
+        - [ ] a) Changer le répertoire courant vers le répertoire supérieur
+        - [ ] b) Ejecter le CD
+        - [ ] c) Copier le contenu du répertoire courant dans un répertoire caché
+        - [ ] d) Supprimer le répertoire courant
+    === "Correction"
+        - [x] a) ==Changer le répertoire courant vers le répertoire supérieur== 
+        - [ ] b) ~~Ejecter le CD~~ 
+        - [ ] c) ~~Copier le contenu du répertoire courant dans un répertoire caché~~ 
+        - [ ] d) ~~Supprimer le répertoire courant~~ 
+
+!!! fabquestion "**3.** Quel est le rôle de la commande `ls` ?"
+    === "Réponses"
+        - [ ] a) Basculer en mode administrateur
+        - [ ] b) Lister le contenu du répertoire courant
+        - [ ] c) Effacer le contenu du répertoire courant
+        - [ ] d) Donner un accès complet à un fichier
+    === "Correction"
+        - [ ] a) ~~Basculer en mode administrateur~~ 
+        - [x] b) ==Lister le contenu du répertoire courant== 
+        - [ ] c) ~~Effacer le contenu du répertoire courant~~ 
+        - [ ] d) ~~Donner un accès complet à un fichier~~ 
+
+!!! fabquestion "**4.** Dans un terminal sous Linux, quelle commande faut-il écrire pour donner à tout le monde le droit d'écriture sur le fichier `information.py` ?"
+    === "Réponses"
+        - [ ] a) `chmod o+w information.py`
+        - [ ] b) `chmod a+w information.py`
+        - [ ] c) `chmod o+x information.py`
+        - [ ] d) `chmod a+x information.py`
+    === "Correction"
+        - [ ] a) ~~`chmod o+w information.py`~~ 
+        - [x] b) ==`chmod a+w information.py`== 
+        - [ ] c) ~~`chmod o+x information.py`~~ 
+        - [ ] d) ~~`chmod a+x information.py`~~ 
+
+!!! fabquestion "**5.** Quel est l'effet de la commande `chmod u+w fichier.txt` ?"
+    === "Réponses"
+        - [ ] a) de permettre au propriétaire du fichier de modifier le contenu de ce fichier
+        - [ ] b) d'interdire au propriétaire de modifier le contenu de ce fichier
+        - [ ] c) d'interdire à tous les autres utilisateurs de lire le fichier
+        - [ ] d) d'effacer le fichier
+    === "Correction"
+        - [x] a) ==de permettre au propriétaire du fichier de modifier le contenu de ce fichier== 
+        - [ ] b) ~~d'interdire au propriétaire de modifier le contenu de ce fichier~~ 
+        - [ ] c) ~~d'interdire à tous les autres utilisateurs de lire le fichier~~ 
+        - [ ] d) ~~d'effacer le fichier~~ 
+
+!!! fabquestion "**6.** Dans la console Linux, quelle commande faut-il exécuter pour obtenir la documentation sur commande `pwd` ?"
+    === "Réponses"
+        - [ ] a) `man pwd`
+        - [ ] b) `cd pwd`
+        - [ ] c) `mkdir pwd`
+        - [ ] d) `ls pwd`
+    === "Correction"
+        - [x] a) ==`man pwd`== 
+        - [ ] b) ~~`cd pwd`~~ 
+        - [ ] c) ~~`mkdir pwd`~~ 
+        - [ ] d) ~~`ls pwd`~~ 
+
+!!! fabquestion "**7.** Lequel de ces systèmes d'exploitation est sous licence propriétaire ?"
+    === "Réponses"
+        - [ ] a) Android
+        - [ ] b) Linux
+        - [ ] c) Windows
+        - [ ] d) Ubuntu
+    === "Correction"
+        - [ ] a) ~~Android~~ 
+        - [ ] b) ~~Linux~~ 
+        - [x] c) ==Windows== 
+        - [ ] d) ~~Ubuntu~~ 
+
+!!! fabquestion "**8.** Une application doit écrire sur le disque dur de l'ordinateur, laquelle des affirmations suivantes est vraie ?"
+    === "Réponses"
+        - [ ] a) Elle peut le faire quand bon lui semble
+        - [ ] b) Elle doit en faire la demande au système d'exploitation
+        - [ ] c) Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur
+        - [ ] d) Elle doit en faire la demande à l'utilisateur de l'ordinateur
+    === "Correction"
+        - [ ] a) ~~Elle peut le faire quand bon lui semble~~ 
+        - [x] b) ==Elle doit en faire la demande au système d'exploitation== 
+        - [ ] c) ~~Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur~~ 
+        - [ ] d) ~~Elle doit en faire la demande à l'utilisateur de l'ordinateur~~ 
+
+!!! fabquestion "**1.** Quelle est l'écriture en base 2 du nombre $(154)_{10}$ ?
+    === "Réponses"
+        - [ ] a) 10011100
+        - [ ] b) 10011001
+        - [ ] c) 00011010
+        - [ ] d) 10011010
+    === "Correction"
+        - [ ] a) ~~10011100~~ 
+        - [ ] b) ~~10011001~~ 
+        - [ ] c) ~~00011010~~ 
+        - [x] d) ==10011010== 
+
+!!! fabquestion "**2.** Que peut-on dire de l'écriture en base 2 d'un nombre divisible par 2 ?
+    === "Réponses"
+        - [ ] a) Elle ne contient pas de 0
+        - [ ] b) Elle se termine par 0
+        - [ ] c) Elle ne contient qu'un seul 1
+        - [ ] d) Elle contient deux 1
+    === "Correction"
+        - [ ] a) ~~Elle ne contient pas de 0~~ 
+        - [x] b) ==Elle se termine par 0== 
+        - [ ] c) ~~Elle ne contient qu'un seul 1~~ 
+        - [ ] d) ~~Elle contient deux 1~~ 
+
+!!! fabquestion "**3.** Quelle est l'écriture en base 10 du nombre $(01101100)_{2}$ ?
+    === "Réponses"
+        - [ ] a) 216
+        - [ ] b) 108
+        - [ ] c) 54
+        - [ ] d) 4
+    === "Correction"
+        - [ ] a) ~~216~~ 
+        - [x] b) ==108== 
+        - [ ] c) ~~54~~ 
+        - [ ] d) ~~4~~ 
+
+!!! fabquestion "**4.** Quelle est l'écriture en base 16 du nombre $(165)_{10}$ ?
+    === "Réponses"
+        - [ ] a) 95
+        - [ ] b) A5
+        - [ ] c) B5
+        - [ ] d) C5
+    === "Correction"
+        - [ ] a) ~~95~~ 
+        - [x] b) ==A5== 
+        - [ ] c) ~~B5~~ 
+        - [ ] d) ~~C5~~ 
+
+!!! fabquestion "**5.** En base 12, combien il y a-t-il de chiffres ?
+    === "Réponses"
+        - [ ] a) 10
+        - [ ] b) 11
+        - [ ] c) 12
+        - [ ] d) 13
+    === "Correction"
+        - [ ] a) ~~10~~ 
+        - [ ] b) ~~11~~ 
+        - [x] c) ==12== 
+        - [ ] d) ~~13~~ 
+
+!!! fabquestion "**6.** Si l'écriture en base 2 d'un nombre ne comporte qu'un seul 1, alors ce nombre :
+    === "Réponses"
+        - [ ] a) n'est pas une puissance 2
+        - [ ] b) est une puissance de 2
+        - [ ] c) est divisible par 2
+        - [ ] d) n'est pas divisible par 2
+    === "Correction"
+        - [ ] a) ~~n'est pas une puissance 2~~ 
+        - [x] b) ==est une puissance de 2== 
+        - [ ] c) ~~est divisible par 2~~ 
+        - [ ] d) ~~n'est pas divisible par 2~~ 
+
+!!! fabquestion "**7.** Quelle est l'écriture en base 10 du nombre $(B2)_{16}$ ?
+    === "Réponses"
+        - [ ] a) 112
+        - [ ] b) 162
+        - [ ] c) 178
+        - [ ] d) 194
+    === "Correction"
+        - [ ] a) ~~112~~ 
+        - [ ] b) ~~162~~ 
+        - [x] c) ==178== 
+        - [ ] d) ~~194~~ 
+
+!!! fabquestion "**8.** Pour écrire les nombres entre 1 et 100 en base 2, on a besoin au maximum de :
+    === "Réponses"
+        - [ ] a) 5 chiffres
+        - [ ] b) 6 chiffres
+        - [ ] c) 7 chiffres
+        - [ ] d) 8 chiffres
+    === "Correction"
+        - [ ] a) ~~5 chiffres~~ 
+        - [ ] b) ~~6 chiffres~~ 
+        - [x] c) ==7 chiffres== 
+        - [ ] d) ~~8 chiffres~~ 
+
+!!! fabquestion "**9.** Quelle est l'affirmation exacte ?
+    === "Réponses"
+        - [ ] a) Le codage UTF-8 est sur 7 bits.
+        - [ ] b) Le codage UTF-8 est sur 1 octet.
+        - [ ] c) Le codage UTF-8 est sur 1 à 4 octets.
+        - [ ] d) Le codage UTF-8 est sur 4 octets.
+    === "Correction"
+        - [ ] a) ~~Le codage UTF-8 est sur 7 bits.~~ 
+        - [ ] b) ~~Le codage UTF-8 est sur 1 octet.~~ 
+        - [x] c) ==Le codage UTF-8 est sur 1 à 4 octets.== 
+        - [ ] d) ~~Le codage UTF-8 est sur 4 octets.~~ 
+
+!!! fabquestion "**1.** On a écrit une fonction qui prend en paramètre une liste non vide et qui renvoie son plus grand élément. Combien de tests faudrait-il écrire pour garantir que la fonction donne un résultat correct pour toute liste ?
+    === "Réponses"
+        - [ ] a) Il faudrait écrire une infinité de tests, on ne peut pas prouver que cette fonction est correct simplement en la testant
+        - [ ] b) Deux tests : pour une liste à un élément et pour une liste à deux éléments ou plus.
+        - [ ] c) Trois tests : pour une liste vide, pour une liste à un élément et pour une liste à deux éléments ou plus.
+        - [ ] d) Deux tests : pour le cas où le plus grand élément est en début de liste et pour le cas où le plus grand élément n'est pas en début de liste
+    === "Correction"
+        - [x] a) ==Il faudrait écrire une infinité de tests, on ne peut pas prouver que cette fonction est correct simplement en la testant== 
+        - [ ] b) ~~Deux tests : pour une liste à un élément et pour une liste à deux éléments ou plus.~~ 
+        - [ ] c) ~~Trois tests : pour une liste vide, pour une liste à un élément et pour une liste à deux éléments ou plus.~~ 
+        - [ ] d) ~~Deux tests : pour le cas où le plus grand élément est en début de liste et pour le cas où le plus grand élément n'est pas en début de liste~~ 
+
+!!! fabquestion "**2.** On considère la fonction suivante où `x` et `y` sont des entiers naturels :"
+    ```python
+    def f(x,y):
+        s=x
+        t=y
+        while t>0:
+            s=s+1
+            t=t-1
+        return s
+    ```
+    Quelle affirmation est fausse ?
+    === "Réponses"
+        - [ ] a) La propriété `s+t=x+y` est un invariant de boucle
+        - [ ] b) La valeur finale de `t` est 1
+        - [ ] c) La propriété "`t` est supérieur ou égale à 0" est un invariant de boucle
+        - [ ] d) Le résultat renvoyé est égal à la somme `a+b`
+    === "Correction"
+        - [ ] a) ~~La propriété `s+t=x+y` est un invariant de boucle~~ 
+        - [x] b) ==La valeur finale de `t` est 1== 
+        - [ ] c) ~~La propriété "`t` est supérieur ou égale à 0" est un invariant de boucle~~ 
+        - [ ] d) ~~Le résultat renvoyé est égal à la somme `a+b`~~ 
+
+!!! fabquestion "**1.** Une et une seule de es affirmations est fausse. Laquelle ?
+    === "Réponses"
+        - [ ] a) Un système d'exploitation libre est la plupart du temps gratuit
+        - [ ] b) Je peux contribuer à un système d'exploitation libre
+        - [ ] c) Il est interdit d'étudier un système d'exploitation propriétaire
+        - [ ] d) Un système d'exploitation propriétaire est plus sécurisé
+    === "Correction"
+        - [ ] a) ~~Un système d'exploitation libre est la plupart du temps gratuit~~ 
+        - [ ] b) ~~Je peux contribuer à un système d'exploitation libre~~ 
+        - [ ] c) ~~Il est interdit d'étudier un système d'exploitation propriétaire~~ 
+        - [x] d) ==Un système d'exploitation propriétaire est plus sécurisé== 
+
+!!! fabquestion "**2.** Quelle est l'effet de la commande `cd ..` ?
+    === "Réponses"
+        - [ ] a) Changer le répertoire courant vers le répertoire supérieur
+        - [ ] b) Ejecter le CD
+        - [ ] c) Copier le contenu du répertoire courant dans un répertoire caché
+        - [ ] d) Supprimer le répertoire courant
+    === "Correction"
+        - [x] a) ==Changer le répertoire courant vers le répertoire supérieur== 
+        - [ ] b) ~~Ejecter le CD~~ 
+        - [ ] c) ~~Copier le contenu du répertoire courant dans un répertoire caché~~ 
+        - [ ] d) ~~Supprimer le répertoire courant~~ 
+
+!!! fabquestion "**3.** Quel est le rôle de la commande `ls` ?
+    === "Réponses"
+        - [ ] a) Basculer en mode administrateur
+        - [ ] b) Lister le contenu du répertoire courant
+        - [ ] c) Effacer le contenu du répertoire courant
+        - [ ] d) Donner un accès complet à un fichier
+    === "Correction"
+        - [ ] a) ~~Basculer en mode administrateur~~ 
+        - [x] b) ==Lister le contenu du répertoire courant== 
+        - [ ] c) ~~Effacer le contenu du répertoire courant~~ 
+        - [ ] d) ~~Donner un accès complet à un fichier~~ 
+
+!!! fabquestion "**4.** Dans un terminal sous Linux, quelle commande faut-il écrire pour donner à tout le monde le droit d'écriture sur le fichier `information.py` ?
+    === "Réponses"
+        - [ ] a) `chmod o+w information.py`
+        - [ ] b) `chmod a+w information.py`
+        - [ ] c) `chmod o+x information.py`
+        - [ ] d) `chmod a+x information.py`
+    === "Correction"
+        - [ ] a) ~~`chmod o+w information.py`~~ 
+        - [x] b) ==`chmod a+w information.py`== 
+        - [ ] c) ~~`chmod o+x information.py`~~ 
+        - [ ] d) ~~`chmod a+x information.py`~~ 
+
+!!! fabquestion "**5.** Quel est l'effet de la commande `chmod u+w fichier.txt` ?
+    === "Réponses"
+        - [ ] a) de permettre au propriétaire du fichier de modifier le contenu de ce fichier
+        - [ ] b) d'interdire au propriétaire de modifier le contenu de ce fichier
+        - [ ] c) d'interdire à tous les autres utilisateurs de lire le fichier
+        - [ ] d) d'effacer le fichier
+    === "Correction"
+        - [x] a) ==de permettre au propriétaire du fichier de modifier le contenu de ce fichier== 
+        - [ ] b) ~~d'interdire au propriétaire de modifier le contenu de ce fichier~~ 
+        - [ ] c) ~~d'interdire à tous les autres utilisateurs de lire le fichier~~ 
+        - [ ] d) ~~d'effacer le fichier~~ 
+
+!!! fabquestion "**6.** Dans la console Linux, quelle commande faut-il exécuter pour obtenir la documentation sur commande `pwd` ?
+    === "Réponses"
+        - [ ] a) `man pwd`
+        - [ ] b) `cd pwd`
+        - [ ] c) `mkdir pwd`
+        - [ ] d) `ls pwd`
+    === "Correction"
+        - [x] a) ==`man pwd`== 
+        - [ ] b) ~~`cd pwd`~~ 
+        - [ ] c) ~~`mkdir pwd`~~ 
+        - [ ] d) ~~`ls pwd`~~ 
+
+!!! fabquestion "**7.** Lequel de ces systèmes d'exploitation est sous licence propriétaire ?
+    === "Réponses"
+        - [ ] a) Android
+        - [ ] b) Linux
+        - [ ] c) Windows
+        - [ ] d) Ubuntu
+    === "Correction"
+        - [ ] a) ~~Android~~ 
+        - [ ] b) ~~Linux~~ 
+        - [x] c) ==Windows== 
+        - [ ] d) ~~Ubuntu~~ 
+
+!!! fabquestion "**8.** Une application doit écrire sur le disque dur de l'ordinateur, laquelle des affirmations suivantes est vraie ?
+    === "Réponses"
+        - [ ] a) Elle peut le faire quand bon lui semble
+        - [ ] b) Elle doit en faire la demande au système d'exploitation
+        - [ ] c) Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur
+        - [ ] d) Elle doit en faire la demande à l'utilisateur de l'ordinateur
+    === "Correction"
+        - [ ] a) ~~Elle peut le faire quand bon lui semble~~ 
+        - [x] b) ==Elle doit en faire la demande au système d'exploitation== 
+        - [ ] c) ~~Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur~~ 
+        - [ ] d) ~~Elle doit en faire la demande à l'utilisateur de l'ordinateur~~ 
+
+!!! fabquestion "**1.** Quelle est l'écriture en base 2 du nombre $(154)_{10}$ ?"
+    === "Réponses"
+        - [ ] a) 10011100
+        - [ ] b) 10011001
+        - [ ] c) 00011010
+        - [ ] d) 10011010
+    === "Correction"
+        - [ ] a) ~~10011100~~ 
+        - [ ] b) ~~10011001~~ 
+        - [ ] c) ~~00011010~~ 
+        - [x] d) ==10011010== 
+
+!!! fabquestion "**2.** Que peut-on dire de l'écriture en base 2 d'un nombre divisible par 2 ?"
+    === "Réponses"
+        - [ ] a) Elle ne contient pas de 0
+        - [ ] b) Elle se termine par 0
+        - [ ] c) Elle ne contient qu'un seul 1
+        - [ ] d) Elle contient deux 1
+    === "Correction"
+        - [ ] a) ~~Elle ne contient pas de 0~~ 
+        - [x] b) ==Elle se termine par 0== 
+        - [ ] c) ~~Elle ne contient qu'un seul 1~~ 
+        - [ ] d) ~~Elle contient deux 1~~ 
+
+!!! fabquestion "**3.** Quelle est l'écriture en base 10 du nombre $(01101100)_{2}$ ?"
+    === "Réponses"
+        - [ ] a) 216
+        - [ ] b) 108
+        - [ ] c) 54
+        - [ ] d) 4
+    === "Correction"
+        - [ ] a) ~~216~~ 
+        - [x] b) ==108== 
+        - [ ] c) ~~54~~ 
+        - [ ] d) ~~4~~ 
+
+!!! fabquestion "**4.** Quelle est l'écriture en base 16 du nombre $(165)_{10}$ ?"
+    === "Réponses"
+        - [ ] a) 95
+        - [ ] b) A5
+        - [ ] c) B5
+        - [ ] d) C5
+    === "Correction"
+        - [ ] a) ~~95~~ 
+        - [x] b) ==A5== 
+        - [ ] c) ~~B5~~ 
+        - [ ] d) ~~C5~~ 
+
+!!! fabquestion "**5.** En base 12, combien il y a-t-il de chiffres ?"
+    === "Réponses"
+        - [ ] a) 10
+        - [ ] b) 11
+        - [ ] c) 12
+        - [ ] d) 13
+    === "Correction"
+        - [ ] a) ~~10~~ 
+        - [ ] b) ~~11~~ 
+        - [x] c) ==12== 
+        - [ ] d) ~~13~~ 
+
+!!! fabquestion "**6.** Si l'écriture en base 2 d'un nombre ne comporte qu'un seul 1, alors ce nombre :"
+    === "Réponses"
+        - [ ] a) n'est pas une puissance 2
+        - [ ] b) est une puissance de 2
+        - [ ] c) est divisible par 2
+        - [ ] d) n'est pas divisible par 2
+    === "Correction"
+        - [ ] a) ~~n'est pas une puissance 2~~ 
+        - [x] b) ==est une puissance de 2== 
+        - [ ] c) ~~est divisible par 2~~ 
+        - [ ] d) ~~n'est pas divisible par 2~~ 
+
+!!! fabquestion "**7.** Quelle est l'écriture en base 10 du nombre $(B2)_{16}$ ?"
+    === "Réponses"
+        - [ ] a) 112
+        - [ ] b) 162
+        - [ ] c) 178
+        - [ ] d) 194
+    === "Correction"
+        - [ ] a) ~~112~~ 
+        - [ ] b) ~~162~~ 
+        - [x] c) ==178== 
+        - [ ] d) ~~194~~ 
+
+!!! fabquestion "**8.** Pour écrire les nombres entre 1 et 100 en base 2, on a besoin au maximum de :"
+    === "Réponses"
+        - [ ] a) 5 chiffres
+        - [ ] b) 6 chiffres
+        - [ ] c) 7 chiffres
+        - [ ] d) 8 chiffres
+    === "Correction"
+        - [ ] a) ~~5 chiffres~~ 
+        - [ ] b) ~~6 chiffres~~ 
+        - [x] c) ==7 chiffres== 
+        - [ ] d) ~~8 chiffres~~ 
+
+!!! fabquestion "**9.** Quelle est l'affirmation exacte ?"
+    === "Réponses"
+        - [ ] a) Le codage UTF-8 est sur 7 bits.
+        - [ ] b) Le codage UTF-8 est sur 1 octet.
+        - [ ] c) Le codage UTF-8 est sur 1 à 4 octets.
+        - [ ] d) Le codage UTF-8 est sur 4 octets.
+    === "Correction"
+        - [ ] a) ~~Le codage UTF-8 est sur 7 bits.~~ 
+        - [ ] b) ~~Le codage UTF-8 est sur 1 octet.~~ 
+        - [x] c) ==Le codage UTF-8 est sur 1 à 4 octets.== 
+        - [ ] d) ~~Le codage UTF-8 est sur 4 octets.~~ 
+
+!!! fabquestion "**1.** On a écrit une fonction qui prend en paramètre une liste non vide et qui renvoie son plus grand élément. Combien de tests faudrait-il écrire pour garantir que la fonction donne un résultat correct pour toute liste ?"
+    === "Réponses"
+        - [ ] a) Il faudrait écrire une infinité de tests, on ne peut pas prouver que cette fonction est correct simplement en la testant
+        - [ ] b) Deux tests : pour une liste à un élément et pour une liste à deux éléments ou plus.
+        - [ ] c) Trois tests : pour une liste vide, pour une liste à un élément et pour une liste à deux éléments ou plus.
+        - [ ] d) Deux tests : pour le cas où le plus grand élément est en début de liste et pour le cas où le plus grand élément n'est pas en début de liste
+    === "Correction"
+        - [x] a) ==Il faudrait écrire une infinité de tests, on ne peut pas prouver que cette fonction est correct simplement en la testant== 
+        - [ ] b) ~~Deux tests : pour une liste à un élément et pour une liste à deux éléments ou plus.~~ 
+        - [ ] c) ~~Trois tests : pour une liste vide, pour une liste à un élément et pour une liste à deux éléments ou plus.~~ 
+        - [ ] d) ~~Deux tests : pour le cas où le plus grand élément est en début de liste et pour le cas où le plus grand élément n'est pas en début de liste~~ 
+
+!!! fabquestion "**2.** On considère la fonction suivante où `x` et `y` sont des entiers naturels :"
+    ```python
+    def f(x,y):
+        s=x
+        t=y
+        while t>0:
+            s=s+1
+            t=t-1
+        return s
+    ```
+    Quelle affirmation est fausse ?
+    === "Réponses"
+        - [ ] a) La propriété `s+t=x+y` est un invariant de boucle
+        - [ ] b) La valeur finale de `t` est 1
+        - [ ] c) La propriété "`t` est supérieur ou égale à 0" est un invariant de boucle
+        - [ ] d) Le résultat renvoyé est égal à la somme `a+b`
+    === "Correction"
+        - [ ] a) ~~La propriété `s+t=x+y` est un invariant de boucle~~ 
+        - [x] b) ==La valeur finale de `t` est 1== 
+        - [ ] c) ~~La propriété "`t` est supérieur ou égale à 0" est un invariant de boucle~~ 
+        - [ ] d) ~~Le résultat renvoyé est égal à la somme `a+b`~~ 
+
+!!! fabquestion "**1.** Une et une seule de es affirmations est fausse. Laquelle ?"
+    === "Réponses"
+        - [ ] a) Un système d'exploitation libre est la plupart du temps gratuit
+        - [ ] b) Je peux contribuer à un système d'exploitation libre
+        - [ ] c) Il est interdit d'étudier un système d'exploitation propriétaire
+        - [ ] d) Un système d'exploitation propriétaire est plus sécurisé
+    === "Correction"
+        - [ ] a) ~~Un système d'exploitation libre est la plupart du temps gratuit~~ 
+        - [ ] b) ~~Je peux contribuer à un système d'exploitation libre~~ 
+        - [ ] c) ~~Il est interdit d'étudier un système d'exploitation propriétaire~~ 
+        - [x] d) ==Un système d'exploitation propriétaire est plus sécurisé== 
+
+!!! fabquestion "**2.** Quelle est l'effet de la commande `cd ..` ?"
+    === "Réponses"
+        - [ ] a) Changer le répertoire courant vers le répertoire supérieur
+        - [ ] b) Ejecter le CD
+        - [ ] c) Copier le contenu du répertoire courant dans un répertoire caché
+        - [ ] d) Supprimer le répertoire courant
+    === "Correction"
+        - [x] a) ==Changer le répertoire courant vers le répertoire supérieur== 
+        - [ ] b) ~~Ejecter le CD~~ 
+        - [ ] c) ~~Copier le contenu du répertoire courant dans un répertoire caché~~ 
+        - [ ] d) ~~Supprimer le répertoire courant~~ 
+
+!!! fabquestion "**3.** Quel est le rôle de la commande `ls` ?"
+    === "Réponses"
+        - [ ] a) Basculer en mode administrateur
+        - [ ] b) Lister le contenu du répertoire courant
+        - [ ] c) Effacer le contenu du répertoire courant
+        - [ ] d) Donner un accès complet à un fichier
+    === "Correction"
+        - [ ] a) ~~Basculer en mode administrateur~~ 
+        - [x] b) ==Lister le contenu du répertoire courant== 
+        - [ ] c) ~~Effacer le contenu du répertoire courant~~ 
+        - [ ] d) ~~Donner un accès complet à un fichier~~ 
+
+!!! fabquestion "**4.** Dans un terminal sous Linux, quelle commande faut-il écrire pour donner à tout le monde le droit d'écriture sur le fichier `information.py` ?"
+    === "Réponses"
+        - [ ] a) `chmod o+w information.py`
+        - [ ] b) `chmod a+w information.py`
+        - [ ] c) `chmod o+x information.py`
+        - [ ] d) `chmod a+x information.py`
+    === "Correction"
+        - [ ] a) ~~`chmod o+w information.py`~~ 
+        - [x] b) ==`chmod a+w information.py`== 
+        - [ ] c) ~~`chmod o+x information.py`~~ 
+        - [ ] d) ~~`chmod a+x information.py`~~ 
+
+!!! fabquestion "**5.** Quel est l'effet de la commande `chmod u+w fichier.txt` ?"
+    === "Réponses"
+        - [ ] a) de permettre au propriétaire du fichier de modifier le contenu de ce fichier
+        - [ ] b) d'interdire au propriétaire de modifier le contenu de ce fichier
+        - [ ] c) d'interdire à tous les autres utilisateurs de lire le fichier
+        - [ ] d) d'effacer le fichier
+    === "Correction"
+        - [x] a) ==de permettre au propriétaire du fichier de modifier le contenu de ce fichier== 
+        - [ ] b) ~~d'interdire au propriétaire de modifier le contenu de ce fichier~~ 
+        - [ ] c) ~~d'interdire à tous les autres utilisateurs de lire le fichier~~ 
+        - [ ] d) ~~d'effacer le fichier~~ 
+
+!!! fabquestion "**6.** Dans la console Linux, quelle commande faut-il exécuter pour obtenir la documentation sur commande `pwd` ?"
+    === "Réponses"
+        - [ ] a) `man pwd`
+        - [ ] b) `cd pwd`
+        - [ ] c) `mkdir pwd`
+        - [ ] d) `ls pwd`
+    === "Correction"
+        - [x] a) ==`man pwd`== 
+        - [ ] b) ~~`cd pwd`~~ 
+        - [ ] c) ~~`mkdir pwd`~~ 
+        - [ ] d) ~~`ls pwd`~~ 
+
+!!! fabquestion "**7.** Lequel de ces systèmes d'exploitation est sous licence propriétaire ?"
+    === "Réponses"
+        - [ ] a) Android
+        - [ ] b) Linux
+        - [ ] c) Windows
+        - [ ] d) Ubuntu
+    === "Correction"
+        - [ ] a) ~~Android~~ 
+        - [ ] b) ~~Linux~~ 
+        - [x] c) ==Windows== 
+        - [ ] d) ~~Ubuntu~~ 
+
+!!! fabquestion "**8.** Une application doit écrire sur le disque dur de l'ordinateur, laquelle des affirmations suivantes est vraie ?"
+    === "Réponses"
+        - [ ] a) Elle peut le faire quand bon lui semble
+        - [ ] b) Elle doit en faire la demande au système d'exploitation
+        - [ ] c) Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur
+        - [ ] d) Elle doit en faire la demande à l'utilisateur de l'ordinateur
+    === "Correction"
+        - [ ] a) ~~Elle peut le faire quand bon lui semble~~ 
+        - [x] b) ==Elle doit en faire la demande au système d'exploitation== 
+        - [ ] c) ~~Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur~~ 
+        - [ ] d) ~~Elle doit en faire la demande à l'utilisateur de l'ordinateur~~ 
+
+!!! fabquestion "**1.** Quelle est l'écriture en base 2 du nombre $(154)_{10}$ ?"
+    === "Réponses"
+        - [ ] a) 10011100
+        - [ ] b) 10011001
+        - [ ] c) 00011010
+        - [ ] d) 10011010
+    === "Correction"
+        - [ ] a) ~~10011100~~ 
+        - [ ] b) ~~10011001~~ 
+        - [ ] c) ~~00011010~~ 
+        - [x] d) ==10011010== 
+
+!!! fabquestion "**2.** Que peut-on dire de l'écriture en base 2 d'un nombre divisible par 2 ?"
+    === "Réponses"
+        - [ ] a) Elle ne contient pas de 0
+        - [ ] b) Elle se termine par 0
+        - [ ] c) Elle ne contient qu'un seul 1
+        - [ ] d) Elle contient deux 1
+    === "Correction"
+        - [ ] a) ~~Elle ne contient pas de 0~~ 
+        - [x] b) ==Elle se termine par 0== 
+        - [ ] c) ~~Elle ne contient qu'un seul 1~~ 
+        - [ ] d) ~~Elle contient deux 1~~ 
+
+!!! fabquestion "**3.** Quelle est l'écriture en base 10 du nombre $(01101100)_{2}$ ?"
+    === "Réponses"
+        - [ ] a) 216
+        - [ ] b) 108
+        - [ ] c) 54
+        - [ ] d) 4
+    === "Correction"
+        - [ ] a) ~~216~~ 
+        - [x] b) ==108== 
+        - [ ] c) ~~54~~ 
+        - [ ] d) ~~4~~ 
+
+!!! fabquestion "**4.** Quelle est l'écriture en base 16 du nombre $(165)_{10}$ ?"
+    === "Réponses"
+        - [ ] a) 95
+        - [ ] b) A5
+        - [ ] c) B5
+        - [ ] d) C5
+    === "Correction"
+        - [ ] a) ~~95~~ 
+        - [x] b) ==A5== 
+        - [ ] c) ~~B5~~ 
+        - [ ] d) ~~C5~~ 
+
+!!! fabquestion "**5.** En base 12, combien il y a-t-il de chiffres ?"
+    === "Réponses"
+        - [ ] a) 10
+        - [ ] b) 11
+        - [ ] c) 12
+        - [ ] d) 13
+    === "Correction"
+        - [ ] a) ~~10~~ 
+        - [ ] b) ~~11~~ 
+        - [x] c) ==12== 
+        - [ ] d) ~~13~~ 
+
+!!! fabquestion "**6.** Si l'écriture en base 2 d'un nombre ne comporte qu'un seul 1, alors ce nombre :"
+    === "Réponses"
+        - [ ] a) n'est pas une puissance 2
+        - [ ] b) est une puissance de 2
+        - [ ] c) est divisible par 2
+        - [ ] d) n'est pas divisible par 2
+    === "Correction"
+        - [ ] a) ~~n'est pas une puissance 2~~ 
+        - [x] b) ==est une puissance de 2== 
+        - [ ] c) ~~est divisible par 2~~ 
+        - [ ] d) ~~n'est pas divisible par 2~~ 
+
+!!! fabquestion "**7.** Quelle est l'écriture en base 10 du nombre $(B2)_{16}$ ?"
+    === "Réponses"
+        - [ ] a) 112
+        - [ ] b) 162
+        - [ ] c) 178
+        - [ ] d) 194
+    === "Correction"
+        - [ ] a) ~~112~~ 
+        - [ ] b) ~~162~~ 
+        - [x] c) ==178== 
+        - [ ] d) ~~194~~ 
+
+!!! fabquestion "**8.** Pour écrire les nombres entre 1 et 100 en base 2, on a besoin au maximum de :"
+    === "Réponses"
+        - [ ] a) 5 chiffres
+        - [ ] b) 6 chiffres
+        - [ ] c) 7 chiffres
+        - [ ] d) 8 chiffres
+    === "Correction"
+        - [ ] a) ~~5 chiffres~~ 
+        - [ ] b) ~~6 chiffres~~ 
+        - [x] c) ==7 chiffres== 
+        - [ ] d) ~~8 chiffres~~ 
+
+!!! fabquestion "**9.** Quelle est l'affirmation exacte ?"
+    === "Réponses"
+        - [ ] a) Le codage UTF-8 est sur 7 bits.
+        - [ ] b) Le codage UTF-8 est sur 1 octet.
+        - [ ] c) Le codage UTF-8 est sur 1 à 4 octets.
+        - [ ] d) Le codage UTF-8 est sur 4 octets.
+    === "Correction"
+        - [ ] a) ~~Le codage UTF-8 est sur 7 bits.~~ 
+        - [ ] b) ~~Le codage UTF-8 est sur 1 octet.~~ 
+        - [x] c) ==Le codage UTF-8 est sur 1 à 4 octets.== 
+        - [ ] d) ~~Le codage UTF-8 est sur 4 octets.~~ 
+
+!!! fabquestion "**1.** On a écrit une fonction qui prend en paramètre une liste non vide et qui renvoie son plus grand élément. Combien de tests faudrait-il écrire pour garantir que la fonction donne un résultat correct pour toute liste ?"
+    === "Réponses"
+        - [ ] a) Il faudrait écrire une infinité de tests, on ne peut pas prouver que cette fonction est correct simplement en la testant
+        - [ ] b) Deux tests : pour une liste à un élément et pour une liste à deux éléments ou plus.
+        - [ ] c) Trois tests : pour une liste vide, pour une liste à un élément et pour une liste à deux éléments ou plus.
+        - [ ] d) Deux tests : pour le cas où le plus grand élément est en début de liste et pour le cas où le plus grand élément n'est pas en début de liste
+    === "Correction"
+        - [x] a) ==Il faudrait écrire une infinité de tests, on ne peut pas prouver que cette fonction est correct simplement en la testant== 
+        - [ ] b) ~~Deux tests : pour une liste à un élément et pour une liste à deux éléments ou plus.~~ 
+        - [ ] c) ~~Trois tests : pour une liste vide, pour une liste à un élément et pour une liste à deux éléments ou plus.~~ 
+        - [ ] d) ~~Deux tests : pour le cas où le plus grand élément est en début de liste et pour le cas où le plus grand élément n'est pas en début de liste~~ 
+
+!!! fabquestion "**2.** On considère la fonction suivante où `x` et `y` sont des entiers naturels :"
+    ```python
+    def f(x,y):
+        s=x
+        t=y
+        while t>0:
+            s=s+1
+            t=t-1
+        return s
+    ```
+    Quelle affirmation est fausse ?
+    === "Réponses"
+        - [ ] a) La propriété `s+t=x+y` est un invariant de boucle
+        - [ ] b) La valeur finale de `t` est 1
+        - [ ] c) La propriété "`t` est supérieur ou égale à 0" est un invariant de boucle
+        - [ ] d) Le résultat renvoyé est égal à la somme `a+b`
+    === "Correction"
+        - [ ] a) ~~La propriété `s+t=x+y` est un invariant de boucle~~ 
+        - [x] b) ==La valeur finale de `t` est 1== 
+        - [ ] c) ~~La propriété "`t` est supérieur ou égale à 0" est un invariant de boucle~~ 
+        - [ ] d) ~~Le résultat renvoyé est égal à la somme `a+b`~~ 
+
+!!! fabquestion "**3.** L'algorithme suivant permet de calculer la somme des `N` premiers entiers, où `N ` est un nombre entier donné :"
+    ```python
+    i=0
+    while i<N:
+        i=i+1
+        somme=somme+i
+    ```
+    Un invariant de boucle de cet algorithme est :
+    === "Réponses"
+        - [ ] a) somme = 0+1+2+...+i et i<N
+        - [ ] b) somme = 0+1+1+...+N et i<N
+        - [ ] c) somme = 0+1+1+...+i et i<N+1
+        - [ ] d) somme = 0+1+1+...+N et i<N+1
+    === "Correction"
+        - [ ] a) ~~somme = 0+1+2+...+i et i<N~~ 
+        - [x] b) ==somme = 0+1+1+...+N et i<N== 
+        - [ ] c) ~~somme = 0+1+1+...+i et i<N+1~~ 
+        - [ ] d) ~~somme = 0+1+1+...+N et i<N+1~~ 
+
+!!! fabquestion "**1.** Une et une seule de es affirmations est fausse. Laquelle ?"
+    === "Réponses"
+        - [ ] a) Un système d'exploitation libre est la plupart du temps gratuit
+        - [ ] b) Je peux contribuer à un système d'exploitation libre
+        - [ ] c) Il est interdit d'étudier un système d'exploitation propriétaire
+        - [ ] d) Un système d'exploitation propriétaire est plus sécurisé
+    === "Correction"
+        - [ ] a) ~~Un système d'exploitation libre est la plupart du temps gratuit~~ 
+        - [ ] b) ~~Je peux contribuer à un système d'exploitation libre~~ 
+        - [ ] c) ~~Il est interdit d'étudier un système d'exploitation propriétaire~~ 
+        - [x] d) ==Un système d'exploitation propriétaire est plus sécurisé== 
+
+!!! fabquestion "**2.** Quelle est l'effet de la commande `cd ..` ?"
+    === "Réponses"
+        - [ ] a) Changer le répertoire courant vers le répertoire supérieur
+        - [ ] b) Ejecter le CD
+        - [ ] c) Copier le contenu du répertoire courant dans un répertoire caché
+        - [ ] d) Supprimer le répertoire courant
+    === "Correction"
+        - [x] a) ==Changer le répertoire courant vers le répertoire supérieur== 
+        - [ ] b) ~~Ejecter le CD~~ 
+        - [ ] c) ~~Copier le contenu du répertoire courant dans un répertoire caché~~ 
+        - [ ] d) ~~Supprimer le répertoire courant~~ 
+
+!!! fabquestion "**3.** Quel est le rôle de la commande `ls` ?"
+    === "Réponses"
+        - [ ] a) Basculer en mode administrateur
+        - [ ] b) Lister le contenu du répertoire courant
+        - [ ] c) Effacer le contenu du répertoire courant
+        - [ ] d) Donner un accès complet à un fichier
+    === "Correction"
+        - [ ] a) ~~Basculer en mode administrateur~~ 
+        - [x] b) ==Lister le contenu du répertoire courant== 
+        - [ ] c) ~~Effacer le contenu du répertoire courant~~ 
+        - [ ] d) ~~Donner un accès complet à un fichier~~ 
+
+!!! fabquestion "**4.** Dans un terminal sous Linux, quelle commande faut-il écrire pour donner à tout le monde le droit d'écriture sur le fichier `information.py` ?"
+    === "Réponses"
+        - [ ] a) `chmod o+w information.py`
+        - [ ] b) `chmod a+w information.py`
+        - [ ] c) `chmod o+x information.py`
+        - [ ] d) `chmod a+x information.py`
+    === "Correction"
+        - [ ] a) ~~`chmod o+w information.py`~~ 
+        - [x] b) ==`chmod a+w information.py`== 
+        - [ ] c) ~~`chmod o+x information.py`~~ 
+        - [ ] d) ~~`chmod a+x information.py`~~ 
+
+!!! fabquestion "**5.** Quel est l'effet de la commande `chmod u+w fichier.txt` ?"
+    === "Réponses"
+        - [ ] a) de permettre au propriétaire du fichier de modifier le contenu de ce fichier
+        - [ ] b) d'interdire au propriétaire de modifier le contenu de ce fichier
+        - [ ] c) d'interdire à tous les autres utilisateurs de lire le fichier
+        - [ ] d) d'effacer le fichier
+    === "Correction"
+        - [x] a) ==de permettre au propriétaire du fichier de modifier le contenu de ce fichier== 
+        - [ ] b) ~~d'interdire au propriétaire de modifier le contenu de ce fichier~~ 
+        - [ ] c) ~~d'interdire à tous les autres utilisateurs de lire le fichier~~ 
+        - [ ] d) ~~d'effacer le fichier~~ 
+
+!!! fabquestion "**6.** Dans la console Linux, quelle commande faut-il exécuter pour obtenir la documentation sur commande `pwd` ?"
+    === "Réponses"
+        - [ ] a) `man pwd`
+        - [ ] b) `cd pwd`
+        - [ ] c) `mkdir pwd`
+        - [ ] d) `ls pwd`
+    === "Correction"
+        - [x] a) ==`man pwd`== 
+        - [ ] b) ~~`cd pwd`~~ 
+        - [ ] c) ~~`mkdir pwd`~~ 
+        - [ ] d) ~~`ls pwd`~~ 
+
+!!! fabquestion "**7.** Lequel de ces systèmes d'exploitation est sous licence propriétaire ?"
+    === "Réponses"
+        - [ ] a) Android
+        - [ ] b) Linux
+        - [ ] c) Windows
+        - [ ] d) Ubuntu
+    === "Correction"
+        - [ ] a) ~~Android~~ 
+        - [ ] b) ~~Linux~~ 
+        - [x] c) ==Windows== 
+        - [ ] d) ~~Ubuntu~~ 
+
+!!! fabquestion "**8.** Une application doit écrire sur le disque dur de l'ordinateur, laquelle des affirmations suivantes est vraie ?"
+    === "Réponses"
+        - [ ] a) Elle peut le faire quand bon lui semble
+        - [ ] b) Elle doit en faire la demande au système d'exploitation
+        - [ ] c) Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur
+        - [ ] d) Elle doit en faire la demande à l'utilisateur de l'ordinateur
+    === "Correction"
+        - [ ] a) ~~Elle peut le faire quand bon lui semble~~ 
+        - [x] b) ==Elle doit en faire la demande au système d'exploitation== 
+        - [ ] c) ~~Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur~~ 
+        - [ ] d) ~~Elle doit en faire la demande à l'utilisateur de l'ordinateur~~ 
+
+!!! fabquestion "**1.** Quelle est l'écriture en base 2 du nombre $(154)_{10}$ ?"
+    === "Réponses"
+        - [ ] a) 10011100
+        - [ ] b) 10011001
+        - [ ] c) 00011010
+        - [ ] d) 10011010
+    === "Correction"
+        - [ ] a) ~~10011100~~ 
+        - [ ] b) ~~10011001~~ 
+        - [ ] c) ~~00011010~~ 
+        - [x] d) ==10011010== 
+
+!!! fabquestion "**2.** Que peut-on dire de l'écriture en base 2 d'un nombre divisible par 2 ?"
+    === "Réponses"
+        - [ ] a) Elle ne contient pas de 0
+        - [ ] b) Elle se termine par 0
+        - [ ] c) Elle ne contient qu'un seul 1
+        - [ ] d) Elle contient deux 1
+    === "Correction"
+        - [ ] a) ~~Elle ne contient pas de 0~~ 
+        - [x] b) ==Elle se termine par 0== 
+        - [ ] c) ~~Elle ne contient qu'un seul 1~~ 
+        - [ ] d) ~~Elle contient deux 1~~ 
+
+!!! fabquestion "**3.** Quelle est l'écriture en base 10 du nombre $(01101100)_{2}$ ?"
+    === "Réponses"
+        - [ ] a) 216
+        - [ ] b) 108
+        - [ ] c) 54
+        - [ ] d) 4
+    === "Correction"
+        - [ ] a) ~~216~~ 
+        - [x] b) ==108== 
+        - [ ] c) ~~54~~ 
+        - [ ] d) ~~4~~ 
+
+!!! fabquestion "**4.** Quelle est l'écriture en base 16 du nombre $(165)_{10}$ ?"
+    === "Réponses"
+        - [ ] a) 95
+        - [ ] b) A5
+        - [ ] c) B5
+        - [ ] d) C5
+    === "Correction"
+        - [ ] a) ~~95~~ 
+        - [x] b) ==A5== 
+        - [ ] c) ~~B5~~ 
+        - [ ] d) ~~C5~~ 
+
+!!! fabquestion "**5.** En base 12, combien il y a-t-il de chiffres ?"
+    === "Réponses"
+        - [ ] a) 10
+        - [ ] b) 11
+        - [ ] c) 12
+        - [ ] d) 13
+    === "Correction"
+        - [ ] a) ~~10~~ 
+        - [ ] b) ~~11~~ 
+        - [x] c) ==12== 
+        - [ ] d) ~~13~~ 
+
+!!! fabquestion "**6.** Si l'écriture en base 2 d'un nombre ne comporte qu'un seul 1, alors ce nombre :"
+    === "Réponses"
+        - [ ] a) n'est pas une puissance 2
+        - [ ] b) est une puissance de 2
+        - [ ] c) est divisible par 2
+        - [ ] d) n'est pas divisible par 2
+    === "Correction"
+        - [ ] a) ~~n'est pas une puissance 2~~ 
+        - [x] b) ==est une puissance de 2== 
+        - [ ] c) ~~est divisible par 2~~ 
+        - [ ] d) ~~n'est pas divisible par 2~~ 
+
+!!! fabquestion "**7.** Quelle est l'écriture en base 10 du nombre $(B2)_{16}$ ?"
+    === "Réponses"
+        - [ ] a) 112
+        - [ ] b) 162
+        - [ ] c) 178
+        - [ ] d) 194
+    === "Correction"
+        - [ ] a) ~~112~~ 
+        - [ ] b) ~~162~~ 
+        - [x] c) ==178== 
+        - [ ] d) ~~194~~ 
+
+!!! fabquestion "**8.** Pour écrire les nombres entre 1 et 100 en base 2, on a besoin au maximum de :"
+    === "Réponses"
+        - [ ] a) 5 chiffres
+        - [ ] b) 6 chiffres
+        - [ ] c) 7 chiffres
+        - [ ] d) 8 chiffres
+    === "Correction"
+        - [ ] a) ~~5 chiffres~~ 
+        - [ ] b) ~~6 chiffres~~ 
+        - [x] c) ==7 chiffres== 
+        - [ ] d) ~~8 chiffres~~ 
+
+!!! fabquestion "**9.** Quelle est l'affirmation exacte ?"
+    === "Réponses"
+        - [ ] a) Le codage UTF-8 est sur 7 bits.
+        - [ ] b) Le codage UTF-8 est sur 1 octet.
+        - [ ] c) Le codage UTF-8 est sur 1 à 4 octets.
+        - [ ] d) Le codage UTF-8 est sur 4 octets.
+    === "Correction"
+        - [ ] a) ~~Le codage UTF-8 est sur 7 bits.~~ 
+        - [ ] b) ~~Le codage UTF-8 est sur 1 octet.~~ 
+        - [x] c) ==Le codage UTF-8 est sur 1 à 4 octets.== 
+        - [ ] d) ~~Le codage UTF-8 est sur 4 octets.~~ 
+
+!!! fabquestion "**1.** On a écrit une fonction qui prend en paramètre une liste non vide et qui renvoie son plus grand élément. Combien de tests faudrait-il écrire pour garantir que la fonction donne un résultat correct pour toute liste ?"
+    === "Réponses"
+        - [ ] a) Il faudrait écrire une infinité de tests, on ne peut pas prouver que cette fonction est correct simplement en la testant
+        - [ ] b) Deux tests : pour une liste à un élément et pour une liste à deux éléments ou plus.
+        - [ ] c) Trois tests : pour une liste vide, pour une liste à un élément et pour une liste à deux éléments ou plus.
+        - [ ] d) Deux tests : pour le cas où le plus grand élément est en début de liste et pour le cas où le plus grand élément n'est pas en début de liste
+    === "Correction"
+        - [x] a) ==Il faudrait écrire une infinité de tests, on ne peut pas prouver que cette fonction est correct simplement en la testant== 
+        - [ ] b) ~~Deux tests : pour une liste à un élément et pour une liste à deux éléments ou plus.~~ 
+        - [ ] c) ~~Trois tests : pour une liste vide, pour une liste à un élément et pour une liste à deux éléments ou plus.~~ 
+        - [ ] d) ~~Deux tests : pour le cas où le plus grand élément est en début de liste et pour le cas où le plus grand élément n'est pas en début de liste~~ 
+
+!!! fabquestion "**2.** On considère la fonction suivante où `x` et `y` sont des entiers naturels :"
+    ```python
+    def f(x,y):
+        s=x
+        t=y
+        while t>0:
+            s=s+1
+            t=t-1
+        return s
+    ```
+    Quelle affirmation est fausse ?
+    === "Réponses"
+        - [ ] a) La propriété `s+t=x+y` est un invariant de boucle
+        - [ ] b) La valeur finale de `t` est 1
+        - [ ] c) La propriété "`t` est supérieur ou égale à 0" est un invariant de boucle
+        - [ ] d) Le résultat renvoyé est égal à la somme `a+b`
+    === "Correction"
+        - [ ] a) ~~La propriété `s+t=x+y` est un invariant de boucle~~ 
+        - [x] b) ==La valeur finale de `t` est 1== 
+        - [ ] c) ~~La propriété "`t` est supérieur ou égale à 0" est un invariant de boucle~~ 
+        - [ ] d) ~~Le résultat renvoyé est égal à la somme `a+b`~~ 
+
+!!! fabquestion "**3.** L'algorithme suivant permet de calculer la somme des `N` premiers entiers, où `N ` est un nombre entier donné :"
+    ```python
+    i=0
+    while i<N:
+        i=i+1
+        somme=somme+i
+    ```
+    Un invariant de boucle de cet algorithme est :
+    === "Réponses"
+        - [ ] a) somme = 0+1+2+...+i et i<N
+        - [ ] b) somme = 0+1+1+...+N et i<N
+        - [ ] c) somme = 0+1+1+...+i et i<N+1
+        - [ ] d) somme = 0+1+1+...+N et i<N+1
+    === "Correction"
+        - [ ] a) ~~somme = 0+1+2+...+i et i<N~~ 
+        - [x] b) ==somme = 0+1+1+...+N et i<N== 
+        - [ ] c) ~~somme = 0+1+1+...+i et i<N+1~~ 
+        - [ ] d) ~~somme = 0+1+1+...+N et i<N+1~~ 
+
+!!! fabquestion "**1.** Une et une seule de es affirmations est fausse. Laquelle ?"
+    === "Réponses"
+        - [ ] a) Un système d'exploitation libre est la plupart du temps gratuit
+        - [ ] b) Je peux contribuer à un système d'exploitation libre
+        - [ ] c) Il est interdit d'étudier un système d'exploitation propriétaire
+        - [ ] d) Un système d'exploitation propriétaire est plus sécurisé
+    === "Correction"
+        - [ ] a) ~~Un système d'exploitation libre est la plupart du temps gratuit~~ 
+        - [ ] b) ~~Je peux contribuer à un système d'exploitation libre~~ 
+        - [ ] c) ~~Il est interdit d'étudier un système d'exploitation propriétaire~~ 
+        - [x] d) ==Un système d'exploitation propriétaire est plus sécurisé== 
+
+!!! fabquestion "**2.** Quelle est l'effet de la commande `cd ..` ?"
+    === "Réponses"
+        - [ ] a) Changer le répertoire courant vers le répertoire supérieur
+        - [ ] b) Ejecter le CD
+        - [ ] c) Copier le contenu du répertoire courant dans un répertoire caché
+        - [ ] d) Supprimer le répertoire courant
+    === "Correction"
+        - [x] a) ==Changer le répertoire courant vers le répertoire supérieur== 
+        - [ ] b) ~~Ejecter le CD~~ 
+        - [ ] c) ~~Copier le contenu du répertoire courant dans un répertoire caché~~ 
+        - [ ] d) ~~Supprimer le répertoire courant~~ 
+
+!!! fabquestion "**3.** Quel est le rôle de la commande `ls` ?"
+    === "Réponses"
+        - [ ] a) Basculer en mode administrateur
+        - [ ] b) Lister le contenu du répertoire courant
+        - [ ] c) Effacer le contenu du répertoire courant
+        - [ ] d) Donner un accès complet à un fichier
+    === "Correction"
+        - [ ] a) ~~Basculer en mode administrateur~~ 
+        - [x] b) ==Lister le contenu du répertoire courant== 
+        - [ ] c) ~~Effacer le contenu du répertoire courant~~ 
+        - [ ] d) ~~Donner un accès complet à un fichier~~ 
+
+!!! fabquestion "**4.** Dans un terminal sous Linux, quelle commande faut-il écrire pour donner à tout le monde le droit d'écriture sur le fichier `information.py` ?"
+    === "Réponses"
+        - [ ] a) `chmod o+w information.py`
+        - [ ] b) `chmod a+w information.py`
+        - [ ] c) `chmod o+x information.py`
+        - [ ] d) `chmod a+x information.py`
+    === "Correction"
+        - [ ] a) ~~`chmod o+w information.py`~~ 
+        - [x] b) ==`chmod a+w information.py`== 
+        - [ ] c) ~~`chmod o+x information.py`~~ 
+        - [ ] d) ~~`chmod a+x information.py`~~ 
+
+!!! fabquestion "**5.** Quel est l'effet de la commande `chmod u+w fichier.txt` ?"
+    === "Réponses"
+        - [ ] a) de permettre au propriétaire du fichier de modifier le contenu de ce fichier
+        - [ ] b) d'interdire au propriétaire de modifier le contenu de ce fichier
+        - [ ] c) d'interdire à tous les autres utilisateurs de lire le fichier
+        - [ ] d) d'effacer le fichier
+    === "Correction"
+        - [x] a) ==de permettre au propriétaire du fichier de modifier le contenu de ce fichier== 
+        - [ ] b) ~~d'interdire au propriétaire de modifier le contenu de ce fichier~~ 
+        - [ ] c) ~~d'interdire à tous les autres utilisateurs de lire le fichier~~ 
+        - [ ] d) ~~d'effacer le fichier~~ 
+
+!!! fabquestion "**6.** Dans la console Linux, quelle commande faut-il exécuter pour obtenir la documentation sur commande `pwd` ?"
+    === "Réponses"
+        - [ ] a) `man pwd`
+        - [ ] b) `cd pwd`
+        - [ ] c) `mkdir pwd`
+        - [ ] d) `ls pwd`
+    === "Correction"
+        - [x] a) ==`man pwd`== 
+        - [ ] b) ~~`cd pwd`~~ 
+        - [ ] c) ~~`mkdir pwd`~~ 
+        - [ ] d) ~~`ls pwd`~~ 
+
+!!! fabquestion "**7.** Lequel de ces systèmes d'exploitation est sous licence propriétaire ?"
+    === "Réponses"
+        - [ ] a) Android
+        - [ ] b) Linux
+        - [ ] c) Windows
+        - [ ] d) Ubuntu
+    === "Correction"
+        - [ ] a) ~~Android~~ 
+        - [ ] b) ~~Linux~~ 
+        - [x] c) ==Windows== 
+        - [ ] d) ~~Ubuntu~~ 
+
 !!! fabquestion "**8.** Une application doit écrire sur le disque dur de l'ordinateur, laquelle des affirmations suivantes est vraie ?"
     === "Réponses"
         - [ ] a) Elle peut le faire quand bon lui semble

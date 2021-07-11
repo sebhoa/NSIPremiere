@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex 2021.5.4)  4 JUL 2021 12:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex 2021.5.4)  7 JUL 2021 18:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/home/fenarius/Travail/Cours/MkDocs/docs/pdf/C2/C2-act1.tex
-(/home/fenarius/Travail/Cours/MkDocs/docs/pdf/C2/C2-act1.tex
+**/home/fenarius/Travail/Cours/MkDocs/docs/pdf/C2/C2-act2.tex
+(/home/fenarius/Travail/Cours/MkDocs/docs/pdf/C2/C2-act2.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -972,8 +972,8 @@ Package: exercise 2014/10/20 v1.6 Exercise package (P.Pichaureau)
 \tempskipa=\skip102
 \tempskipb=\skip103
 \@savedmathindent=\skip104
-)) (./C2-act1.aux)
-\openout1 = `C2-act1.aux'.
+)) (./C2-act2.aux)
+\openout1 = `C2-act2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
@@ -1015,9 +1015,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 5.
 LaTeX Info: Redefining \pageref on input line 5.
 LaTeX Info: Redefining \nameref on input line 5.
- (./C2-act1.out) (./C2-act1.out)
+ (./C2-act2.out) (./C2-act2.out)
 \@outlinefile=\write9
-\openout9 = `C2-act1.out'.
+\openout9 = `C2-act2.out'.
 
  (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
@@ -1081,48 +1081,30 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 5.
 \c@numprojet=\count428
 \c@numquestion=\count429
 )
-LaTeX Font Info:    Trying to load font information for T1+cmss on input line 11.
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 12.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-Package hyperref Info: bookmark level for unknown exercise defaults to 0 on input line 11.
-LaTeX Font Info:    Trying to load font information for U+bbold on input line 13.
- (/usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd) <images/pascal.eps> <images/leibniz.eps> <images/babbage.eps> <images/lovelace.eps> <images/boole.eps> <images/turing.eps> <images/vonneumann.eps> <images/hooper.eps> <images/pascal.eps> <images/leibniz.eps> <images/babbage.eps> <images/lovelace.eps> <images/boole.eps> <images/turing.eps> <images/vonneumann.eps> <images/hooper.eps>
-File: images/pascal.eps Graphic file (type eps)
- <images/pascal.eps>
-File: images/leibniz.eps Graphic file (type eps)
- <images/leibniz.eps>
-File: images/babbage.eps Graphic file (type eps)
- <images/babbage.eps>
-File: images/lovelace.eps Graphic file (type eps)
- <images/lovelace.eps>
-File: images/boole.eps Graphic file (type eps)
- <images/boole.eps>
-File: images/turing.eps Graphic file (type eps)
- <images/turing.eps>
-File: images/vonneumann.eps Graphic file (type eps)
- <images/vonneumann.eps>
-File: images/hooper.eps Graphic file (type eps)
- <images/hooper.eps>
-LaTeX Font Info:    Trying to load font information for U+fontawesomefree0 on input line 62.
+Package hyperref Info: bookmark level for unknown exercise defaults to 0 on input line 12.
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree0 on input line 54.
  (/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/ufontawesomefree0.fd) [1
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 62.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 62.
- (./C2-act1.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 62.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 62.
-Package rerunfilecheck Info: File `C2-act1.out' has not changed.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 54.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 54.
+ (./C2-act2.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 54.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 54.
+Package rerunfilecheck Info: File `C2-act2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 33570 strings out of 481240
- 631381 string characters out of 5920404
- 1126972 words of memory out of 5000000
- 48173 multiletter control sequences out of 15000+600000
- 545831 words of font info for 65 fonts, out of 8000000 for 9000
+ 33526 strings out of 481240
+ 630504 string characters out of 5920404
+ 1112972 words of memory out of 5000000
+ 48143 multiletter control sequences out of 15000+600000
+ 545642 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,15n,79p,889b,779s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on C2-act1.dvi (1 page, 20188 bytes).
+Output written on C2-act2.dvi (1 page, 19092 bytes).

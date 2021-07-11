@@ -7,7 +7,9 @@ site_author: Fabrice NATIVEL
 nav:
   - "C1-Systèmes d'exploitation" : os.md
   - "C2-Représentation des entiers et des caractères" : codage.md
-  - "C3-Données en table" : donneestable.md
+  - "C3-Initiation à Python avec Turtle" : ippt.md
+  - "C4-Notions d'algorithmique" : notionsalgo.md
+  - "C5-Données en table" : donneestable.md
 
 #Le thème du site
 theme:

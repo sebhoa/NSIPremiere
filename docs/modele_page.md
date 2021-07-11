@@ -32,7 +32,7 @@ CONTENU ACTIVITE 2
 
 ## QCM
 
-{{affiche_qcm(num)}}
+{{qcm_chapitre(num)}}
 
 
 ## Exercices

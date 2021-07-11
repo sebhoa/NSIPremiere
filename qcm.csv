@@ -16,3 +16,23 @@ num,enonce,reponseA,reponseB,reponseC,reponseD,bonne_reponse,domaine,chapitre,im
 15,Quelle est l'écriture en base 10 du nombre $(B2)_{16}$ ?,112,162,178,194,C,Types et valeurs de base,2,
 16,"Pour écrire les nombres entre 1 et 100 en base 2, on a besoin au maximum de :",5 chiffres,6 chiffres,7 chiffres,8 chiffres,C,Types et valeurs de base,2,
 17,Quelle est l'affirmation exacte ?,Le codage UTF-8 est sur 7 bits.,Le codage UTF-8 est sur 1 octet.,Le codage UTF-8 est sur 1 à 4 octets.,Le codage UTF-8 est sur 4 octets.,C,Types et valeurs de base,2,
+18,On a écrit une fonction qui prend en paramètre une liste non vide et qui renvoie son plus grand élément. Combien de tests faudrait-il écrire pour garantir que la fonction donne un résultat correct pour toute liste ?,"Il faudrait écrire une infinité de tests, on ne peut pas prouver que cette fonction est correct simplement en la testant",Deux tests : pour une liste à un élément et pour une liste à deux éléments ou plus.,"Trois tests : pour une liste vide, pour une liste à un élément et pour une liste à deux éléments ou plus.",Deux tests : pour le cas où le plus grand élément est en début de liste et pour le cas où le plus grand élément n'est pas en début de liste,A,Algorithmique,4,
+19,"On considère la fonction suivante où `x` et `y` sont des entiers naturels :
+```python
+def f(x,y):
+    s=x
+    t=y
+    while t>0:
+        s=s+1
+        t=t-1
+    return s
+```
+Quelle affirmation est fausse ?",La propriété `s+t=x+y` est un invariant de boucle,La valeur finale de `t` est 1,"La propriété ""`t` est supérieur ou égale à 0"" est un invariant de boucle",Le résultat renvoyé est égal à la somme `a+b`,B,Algorithmique,4,
+20,"L'algorithme suivant permet de calculer la somme des `N` premiers entiers, où `N ` est un nombre entier donné :
+```python
+i=0
+while i<N:
+    i=i+1
+    somme=somme+i
+```
+Un invariant de boucle de cet algorithme est :",somme = 0+1+2+...+i et i<N,somme = 0+1+1+...+N et i<N,somme = 0+1+1+...+i et i<N+1,somme = 0+1+1+...+N et i<N+1,B,Algorithmique,4,

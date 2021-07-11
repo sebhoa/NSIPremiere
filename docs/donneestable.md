@@ -1,5 +1,5 @@
 
-{% set num = 3 %}
+{% set num = 5 %}
 {% set titre = "Données en table"%}
 {% set theme = "donneestable"%}
 {% set num_qcm = [] %}

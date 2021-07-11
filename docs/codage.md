@@ -16,15 +16,13 @@
 {{ titre_activite(num_act,"Numération binaire",["papier"]) }}
 {% set num_act=num_act+1 %}
 
-{{ telecharger("Fiche d'activité","C2/C2-act1.pdf")}}
+{{ telecharger("Fiche d'activité","/pdf/C2/C2-act1.pdf")}}
 
 {{ titre_activite(num_act,"Numération hexadécimale",[]) }}
 {% set num_act=num_act+1 %}
 
-1. Lancer l'application **Ghex** soit en tapant `ghex` dans un terminal soit depuis le menu des applications.
-    1. Dans le menu *Windows*, sélectionner *Base converter* vous obtenez la fenêtre suivante :
-    ![Base converter](images/baseconverter.png "Capture d'écran de Base converter")
-    2. Sur la ligne *Decimal*, entrer le chiffre 9 puis valider
+{{ telecharger("Fiche d'activité","/pdf/C2/C2-act2.pdf")}}
+
 
 
 {{ titre_activite(num_act,"Encodage des caractères",["video"]) }}
@@ -64,14 +62,14 @@ Recopier et compléter le tableau de conversion suivant :
 | Ecriture décimale | Ecriture binaire | Ecriture hexadécimale |
 |-------------------|------------------|-----------------------|
 |$(201)_{10}$   | ...           | ...               |   
-|               |               |    $(EA)_{16}$    |
-|$(57)_{10}$    |               |                   |
+|        ...    |    ...        |    $(EA)_{16}$    |
+|$(57)_{10}$    |     ...       |                ...|
 |               |$(00100001)_2$ |                   |
 |$(128)_{10}$   | ...           | ...               |   
 |$(163)_{10}$   | ...           | ...               |
-|               |               |    $(5B)_{16}$    |   
-|               |$(10010101)_2$ |                   |
-|               |$(10010010)_2$ |                   |
+|  ...          |  ...          |    $(5B)_{16}$    |   
+|  ...          |$(10010101)_2$ |    ...            |
+|  ...          |$(10010010)_2$ |       ...         |
 
 {{ exo(num_exo,"Un peu de reflexion",[]) }}
 {% set num_exo=num_exo+1 %}
@@ -96,8 +94,36 @@ Il manque des chiffres (remplacés par des ?) dans le nombre binaire suivant : $
 3. Donner son écriture hexadécimale
 
 {{ exo(num_exo,"Un peu de Python",["python"]) }}
+{% set num_exo=num_exo+1 %}
 
 1. Lancer Python en ligne de commande, comme vu dans le chapitre précédent.
 2. Tester la fonction `bin` de Python, en affichant par exemple `bin(201)` et `bin(57)`. Rapprocher les résultats obtenus avec les réponses de l'exercice 1. Émettre une hypothèse sur cette fonction.
 3. Valider votre hypothèse en faisant afficher l'aide de la fonction `bin`.
 4. Reprendre les questions précédentes pour la fonction `hex`
+
+{{ exo(num_exo,"Code ASCII",[]) }}
+{% set num_exo=num_exo+1 %}
+
+1. Le code {{ sc("ascii") }} de A est 65 et celui de a est 97. Ecrire ces deux codes en binaire. 
+2. Sachant que l'ordre des codes suit l'ordre alphabétique (donc le code de B est 66), écrire les codes binaires de B et de b.
+3. Même question pour C et c. Que remarquez-vous ?
+4. Le code {{ sc("ascii") }} binaire de P est $10100000$, quel est celui de $p$?
+5. Le code {{ sc("ascii") }} du zéro est 48, l'écrire en binaire. Ce code a-t-il été choisi au hasard ?
+
+{{ exo(num_exo,"Le parachute de perseverance",[]) }}
+{% set num_exo=num_exo+1 %}
+
+En février 2021, le robot *Perseverance* a atterrit sur Mars, en déployant un parachute :
+![Parachute de perseverance](./images/C2/perseverance.png){: .imgcentre}
+Le motif du parachute cache un message codé en binaire, le décoder en utilisant les informations suivantes :
+
+* Un mot est codé sur chacun des trois anneaux intérieurs 
+* les caractères sont représentés sur 10 bits 
+* La lettre A est codée 1, la lettre B est codée 2 et ainsi de suite
+* l'anneau extérieur code des coordonnées {{ sc("gps") }} de la forme trois groupes de chiffres suivi d'une lettre (N ou S) puis de nouveau 3 groupes de chiffres suivi d'une lettre (E ou W)
+
+![Parachute de perseverance](./images/C2/parachute.png){: .imgcentre}
+
+!!! lien "Pour aller plus loin"
+    * Visiter le site [Msg2Mars](https://sjwarner.github.io/perseverance-parachute-generator/){target=_blank} pour coder votre propre message en suivant le même principe
+    * Le service [Nominatim d'openstreetmap](https://nominatim.openstreetmap.org/ui/search.html){target=_blank} vous permettra de retrouver un lieu à partir de ces coordonnées {{ sc("gps" )}}

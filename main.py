@@ -119,7 +119,7 @@ def define_env(env):
 
     @env.macro
     def telecharger(description,fichier):
-        liens =f"[{description} :fontawesome-solid-download:](./pdf/{fichier})"
+        liens =f"[{description} :fontawesome-solid-download:](./{fichier})"
         liens+="{.md-button}"
         return liens
 
@@ -135,8 +135,16 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
 
     @env.macro
     def affiche_question(num,index):
+        lenonce = env.variables.qcm[num]["enonce"]
+        # Traitement si enoncé sur plusieurs lignes
+        nl = lenonce.find('\n')
+        if nl>0:
+            lenonce=lenonce.replace("\n",'"\n',1)
+            lenonce=lenonce.replace("\n",'\n    ')
+        else:
+            lenonce+='"'
         modele = f'''
-!!! fabquestion "**{index}.** {env.variables.qcm[num]["enonce"]}"
+!!! fabquestion "**{index}.** {lenonce}
     === "Réponses"
         - [ ] a) {env.variables.qcm[num]["reponseA"]}
         - [ ] b) {env.variables.qcm[num]["reponseB"]}
@@ -149,7 +157,7 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
                 modele+=f"        - [x] {rep.lower()}) =={env.variables.qcm[num][clerep]}== \n"
             else:
                 modele+=f"        - [ ] {rep.lower()}) ~~{env.variables.qcm[num][clerep]}~~ \n"
-        f= open("resultat.txt","w")
+        f= open("resultat.txt","a")
         f.write(modele)
         f.close()
         return modele
