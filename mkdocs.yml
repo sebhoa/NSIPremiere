@@ -10,6 +10,9 @@ nav:
   - "C3-Initiation à Python avec Turtle" : ippt.md
   - "C4-Notions d'algorithmique" : notionsalgo.md
   - "C5-Données en table" : donneestable.md
+  - "C6-Le Web" : leweb.md
+  - "C7-Architecture matérielle" : architecture.md
+  - "C8-Algorithmes gloutons" : gloutons.md
 
 #Le thème du site
 theme:
@@ -17,8 +20,8 @@ theme:
   language: fr
   # Changement de l'icone du site (dans la barre de titre) les icones sont à chercher dans ~/.local/lib/python3.8/site-packages/material/.icons
   icon:
-    logo: fontawesome/solid/archway
-  favicon : images/archway.svg
+    logo: fontawesome/solid/dragon
+  favicon : images/dragon.svg
   # Les couleurs, on utilise la palette par défaut avec qques tweaks via css (voir https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/_colors.scss)
   palette: 
     scheme: default

@@ -10,7 +10,6 @@
 {{chapitre("donneestable","Lecture de données en table",2)}}
 {{chapitre("web","Le web",2)}}
 {{chapitre("os","Architecture matérielle",1)}}
-{{chapitre("typesbase","Booléens",2)}}
 {{chapitre("algorithmique","Algorithmes gloutons",2)}}
 {{chapitre("web","Interaction dans une page *Web*",2)}}
 {{chapitre("os","Réseau",1)}}

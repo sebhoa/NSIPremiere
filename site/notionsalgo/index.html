@@ -8,9 +8,9 @@
 <meta content="Cours de NSI en classe de première du lycée Hintermann-Afféjee" name="description"/>
 <meta content="Fabrice NATIVEL" name="author"/>
 <link href="../images/archway.svg" rel="icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-7.1.6" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-7.1.7" name="generator"/>
 <title>C4-Notions d'algorithmique - Numériques et Sciences Informatiques Première</title>
-<link href="../assets/stylesheets/main.875de78c.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.ca7ac06f.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
@@ -168,8 +168,38 @@
 <nav aria-label="Exercices" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#exercice-1">
-    Exercice 1
+<a class="md-nav__link" href="#exercice-1-analyser-un-programme">
+    Exercice 1 : Analyser un programme
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-2-predire-des-temps-dexecution">
+    Exercice 2 : Predire des temps d'exécution
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-3-puissance">
+    Exercice 3 : Puissance  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-4-factoriel">
+    Exercice 4 : Factoriel  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-5-nombre-de-chiffres-dun-nombre">
+    Exercice 5 : Nombre de chiffres d'un nombre
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-6-suite-de-syracuse-et-terminaison">
+    Exercice 6 : Suite de Syracuse et terminaison  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-7-exponentiation-rapide">
+    Exercice 7 : Exponentiation rapide    
   </a>
 </li>
 </ul>
@@ -181,6 +211,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../donneestable/">
         C5-Données en table
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../leweb/">
+        C6-Le Web
       </a>
 </li>
 </ul>
@@ -238,8 +273,38 @@
 <nav aria-label="Exercices" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#exercice-1">
-    Exercice 1
+<a class="md-nav__link" href="#exercice-1-analyser-un-programme">
+    Exercice 1 : Analyser un programme
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-2-predire-des-temps-dexecution">
+    Exercice 2 : Predire des temps d'exécution
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-3-puissance">
+    Exercice 3 : Puissance  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-4-factoriel">
+    Exercice 4 : Factoriel  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-5-nombre-de-chiffres-dun-nombre">
+    Exercice 5 : Nombre de chiffres d'un nombre
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-6-suite-de-syracuse-et-terminaison">
+    Exercice 6 : Suite de Syracuse et terminaison  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-7-exponentiation-rapide">
+    Exercice 7 : Exponentiation rapide    
   </a>
 </li>
 </ul>
@@ -289,8 +354,8 @@
 </input></div>
 </div>
 <div class="admonition fabquestion">
-<p class="admonition-title"><strong>2.</strong> On considère la fonction suivante où <code>x</code> et <code>y</code> sont des entiers naturels :</p>
-<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+<p class="admonition-title"><strong>2.</strong> Quelle affirmation concernant la fonction ci-dessous (où <code>x</code> et <code>y</code> sont des entiers naturels) est fausse ? </p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
     <span class="n">s</span><span class="o">=</span><span class="n">x</span>
     <span class="n">t</span><span class="o">=</span><span class="n">y</span>
     <span class="k">while</span> <span class="n">t</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
@@ -298,7 +363,6 @@
         <span class="n">t</span><span class="o">=</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span>
     <span class="k">return</span> <span class="n">s</span>
 </code></pre></div>
-Quelle affirmation est fausse ?</p>
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"/><label for="__tabbed_2_1">Réponses</label><div class="tabbed-content">
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) La propriété <code>s+t=x+y</code> est un invariant de boucle</li>
@@ -318,40 +382,268 @@ Quelle affirmation est fausse ?</p>
 </div>
 </div>
 <div class="admonition fabquestion">
-<p class="admonition-title"><strong>3.</strong> L'algorithme suivant permet de calculer la somme des <code>N</code> premiers entiers, où <code>N</code> est un nombre entier donné :</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<p class="admonition-title"><strong>3.</strong> Donner un invariant de boucle de l'algorithme suivant qui permet de calculer la somme des <code>N</code> premiers entiers (où <code>N</code> est un nombre entier) :</p>
+<div class="highlight"><pre><span></span><code><span class="n">i</span><span class="o">=</span><span class="mi">0</span>
 <span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">:</span>
     <span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span>
     <span class="n">somme</span><span class="o">=</span><span class="n">somme</span><span class="o">+</span><span class="n">i</span>
 </code></pre></div>
-Un invariant de boucle de cet algorithme est :</p>
 <div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><label for="__tabbed_3_1">Réponses</label><div class="tabbed-content">
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) somme = 0+1+2+...+i et i&lt;N</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) somme = 0+1+1+...+N et i&lt;N</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) somme = 0+1+1+...+i et i&lt;N+1</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) somme = 0+1+1+...+N et i&lt;N+1</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <code>somme = 0+1+2+...+i</code> et <code>i&lt;N</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <code>somme = 0+1+2+...+N</code> et <code>i&lt;N</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <code>somme = 0+1+1+...+i</code> et <code>i&lt;N+1</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <code>somme = 0+1+2+...+N</code> et <code>i&lt;N+1</code></li>
 </ul>
 </div>
 <input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><label for="__tabbed_3_2">Correction</label><div class="tabbed-content">
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>somme = 0+1+2+...+i et i&lt;N</del> </li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> b) <mark>somme = 0+1+1+...+N et i&lt;N</mark> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>somme = 0+1+1+...+i et i&lt;N+1</del> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>somme = 0+1+1+...+N et i&lt;N+1</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del><code>somme = 0+1+2+...+i</code> et <code>i&lt;N</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> b) <mark><code>somme = 0+1+2+...+N</code> et <code>i&lt;N</code></mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del><code>somme = 0+1+1+...+i</code> et <code>i&lt;N+1</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del><code>somme = 0+1+2+...+N</code> et <code>i&lt;N+1</code></del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>4.</strong> Quel test va permettre de détecter l'erreur dans la fonction Python suivante qui ne calcule pas toujours correctement le résultat de <span class="arithmatex">\(x^y\)</span> (avec <span class="arithmatex">\(x\)</span> et <span class="arithmatex">\(y\)</span> entiers) ?</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+    <span class="n">p</span><span class="o">=</span><span class="n">x</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="o">*</span><span class="n">x</span>
+    <span class="k">return</span> <span class="n">p</span>
+</code></pre></div>
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><label for="__tabbed_4_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <code>puissance(2,0)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <code>puissance(2,1)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <code>puissance(2,2)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <code>puissance(2,10)</code></li>
+</ul>
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><label for="__tabbed_4_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> a) <mark><code>puissance(2,0)</code></mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del><code>puissance(2,1)</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del><code>puissance(2,2)</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del><code>puissance(2,10)</code></del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>5.</strong> Pour pouvoir utiliser un algorithme de recherche par dichotomie dans une liste, quelle précondition doit être vraie ?</p>
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><label for="__tabbed_5_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) La liste doit être triée.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) La liste ne doit pas comporter de doublons.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) La liste doit comporter uniquement des entiers positifs.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) La liste doit être de longueur inférieure à 1024.</li>
+</ul>
+</div>
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><label for="__tabbed_5_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> a) <mark>La liste doit être triée.</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del>La liste ne doit pas comporter de doublons.</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>La liste doit comporter uniquement des entiers positifs.</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>La liste doit être de longueur inférieure à 1024.</del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>6.</strong> La fonction suivante doit calculer la moyenne d'un tableau de nombres. Avec quelles expressions faut-il compléter l'écriture pour que la fonction soit correcte ?</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tableau</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">for</span> <span class="n">valeur</span> <span class="ow">in</span> <span class="n">tableau</span><span class="p">:</span>
+        <span class="n">total</span><span class="o">=</span><span class="n">total</span><span class="o">+</span><span class="n">valeur</span>
+    <span class="k">return</span> <span class="n">total</span><span class="o">/...</span>
+</code></pre></div>
+<div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><label for="__tabbed_6_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <code>0</code> et <code>len(tableau)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <code>0</code> et <code>len(tableau)+1</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <code>1</code> et <code>len(tableau)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <code>1</code> et <code>len(tableau)+1</code></li>
+</ul>
+</div>
+<input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><label for="__tabbed_6_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> a) <mark><code>0</code> et <code>len(tableau)</code></mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del><code>0</code> et <code>len(tableau)+1</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del><code>1</code> et <code>len(tableau)</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del><code>1</code> et <code>len(tableau)+1</code></del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>7.</strong> Dans une recherche par dichotomie, combien de comparaisons faut-il faire au maximum pour savoir si une valeur se trouve ou non dans un tableau trié de 1000 nombres ?</p>
+<div class="tabbed-set" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><label for="__tabbed_7_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) 3</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) 10</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) 1000</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) 2000</li>
+</ul>
+</div>
+<input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><label for="__tabbed_7_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>3</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> b) <mark>10</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>1000</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>2000</del> </li>
 </ul>
 </div>
 </div>
 </div>
 <h2 id="exercices">Exercices</h2>
-<h3 id="exercice-1"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:"/>   Exercice 1</h3>
+<h3 id="exercice-1-analyser-un-programme"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:"/>   Exercice 1 : <em>Analyser un programme</em></h3>
+<p>On considère la fonction Python suivante :
+<div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">cherche_position</span><span class="p">(</span><span class="n">element</span><span class="p">,</span><span class="n">liste</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">pos</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">liste</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="o">==</span><span class="n">element</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">pos</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+</code></pre></div></p>
+<ol>
+<li>Prédire la valeur renvoyée par <code>cherche_position("Y",["P","Y","T","H","O","N"])</code> puis vérifier en testant la fonction.</li>
+<li>Même question pour <code>cherche_position("A",["P","Y","T","H","O","N"])</code></li>
+<li>Même question pour <code>cherche_position("M",["P","R","O","G","R","A","M","M","E"])</code></li>
+<li>Que fait cette fonction ? Ecrire sa chaîne de documentation.</li>
+</ol>
+<h3 id="exercice-2-predire-des-temps-dexecution"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:"/>   Exercice 2 : <em>Predire des temps d'exécution</em></h3>
+<ol>
+<li>Si un algorithme de recherche linéaire s'exécute environ en 0.002 s sur une liste de <span class="arithmatex">\(10\,000\)</span> éléments, en combien de temps environ devrait-il s'exécuter pour une liste de un million d'éléments ?</li>
+<li>Si on double la taille d'une liste, le temps d'exécution d'un algorithme de recherche dichotomique va-t-il aussi doubler ? Justifier.</li>
+</ol>
+<h3 id="exercice-3-puissance"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:"/>   Exercice 3 : <em>Puissance</em><span style="float:right;"><span style="float:right;">  <span class="twemoji" title="Exercice en lien avec les mathématiques"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M471.1 96C405 96 353.3 137.3 320 174.6 286.7 137.3 235 96 168.9 96 75.8 96 0 167.8 0 256s75.8 160 168.9 160c66.1 0 117.8-41.3 151.1-78.6 33.3 37.3 85 78.6 151.1 78.6 93.1 0 168.9-71.8 168.9-160S564.2 96 471.1 96zM168.9 320c-40.2 0-72.9-28.7-72.9-64s32.7-64 72.9-64c38.2 0 73.4 36.1 94 64-20.4 27.6-55.9 64-94 64zm302.2 0c-38.2 0-73.4-36.1-94-64 20.4-27.6 55.9-64 94-64 40.2 0 72.9 28.7 72.9 64s-32.7 64-72.9 64z"></path></svg></span></span></span></h3>
+<p>On considère la fonction Python suivante :
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="n">x</span>
+    <span class="k">return</span> <span class="n">p</span>
+</code></pre></div>
+1. Que fait cette fonction ? Ecrire sa chaîne de documentation.
+2. Proposer des préconditions sur les arguments.
+3. Montrer que l'algorithme utilisé dans cette fonction a une complexité linéaire.</p>
+<h3 id="exercice-4-factoriel"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:"/>   Exercice 4 : <em>Factoriel</em><span style="float:right;"><span style="float:right;">  <span class="twemoji" title="Exercice en lien avec les mathématiques"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M471.1 96C405 96 353.3 137.3 320 174.6 286.7 137.3 235 96 168.9 96 75.8 96 0 167.8 0 256s75.8 160 168.9 160c66.1 0 117.8-41.3 151.1-78.6 33.3 37.3 85 78.6 151.1 78.6 93.1 0 168.9-71.8 168.9-160S564.2 96 471.1 96zM168.9 320c-40.2 0-72.9-28.7-72.9-64s32.7-64 72.9-64c38.2 0 73.4 36.1 94 64-20.4 27.6-55.9 64-94 64zm302.2 0c-38.2 0-73.4-36.1-94-64 20.4-27.6 55.9-64 94-64 40.2 0 72.9 28.7 72.9 64s-32.7 64-72.9 64z"></path></svg></span></span></span></h3>
+<p>En mathématiques, on appel <em>factoriel</em> d'un entier et <span class="arithmatex">\(n\)</span> et on note <span class="arithmatex">\(n!\)</span> le produit de cet entier par tous ceux qui le précèdent à l'exception de zéro, et on convient d'autre part que <span class="arithmatex">\(O!=1\)</span>. Par exemple : <br/>
+<span class="arithmatex">\(5!= 5 \times 4 \times 3 \times 2 \times 1 = 120.\)</span><br/>
+On considère la fonction Python suivante :</p>
+<div class="highlight"><pre><span></span><code>   <span class="k">def</span> <span class="nf">factoriel</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+       <span class="sd">'''Renvoie factoriel de n, avec n un entier positif ou nul'''</span>
+       <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+           <span class="k">return</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">fact</span><span class="o">=</span><span class="mi">1</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                <span class="n">fact</span><span class="o">=</span><span class="n">fact</span><span class="o">*</span><span class="n">i</span>
+            <span class="k">return</span> <span class="n">fact</span>
+</code></pre></div>
+<ol>
+<li>Ecrire une instruction <code>assert</code> permettant de vérifier que cette fonction renvoie bien 120 pour factoriel de 5.</li>
+<li>On suppose qu'on appelle <code>fact(5)</code>, donner les valeurs prises par la variable <code>fact</code> lors des passages successifs dans la boucle <code>for</code>.</li>
+<li>Vérifier que la propriété <em>"la variable <code>fact</code> contient <span class="arithmatex">\(k!\)</span> après <span class="arithmatex">\(k\)</span> tours de boucle"</em> est un invariant de boucle.</li>
+<li>Que peut-on en déduire ?</li>
+</ol>
+<h3 id="exercice-5-nombre-de-chiffres-dun-nombre"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:"/>   Exercice 5 : <em>Nombre de chiffres d'un nombre</em></h3>
+<p>On considère la fonction suivante :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">nombre_chiffres</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">'''Renvoie le nombre de chiffres de l'entier naturel n en base 10'''</span>
+    <span class="n">k</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">while</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="o">/</span><span class="mi">10</span>
+        <span class="n">k</span><span class="o">=</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">k</span>
+</code></pre></div>
+<ol>
+<li>Ecrire un jeu de test pour cette fonction</li>
+<li>Le résultat de <code>nombre_chiffres(0)</code> est-il correct ? Sinon corriger cette fonction.</li>
+<li>Ajouter des préconditions sous forme d'instruction <code>assert</code> sur la variable <code>n</code>.</li>
+<li>Justifier que ce programme termine en utilisant la méthode du variant de boucle.</li>
+<li>Proposer une fonction similaire qui renvoie le nombre de bits nécessaire pour écrire un entier donné en base 2.</li>
+</ol>
+<h3 id="exercice-6-suite-de-syracuse-et-terminaison"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:"/>   Exercice 6 : <em>Suite de Syracuse et terminaison</em><span style="float:right;"><span style="float:right;">  <span class="twemoji" title="Exercice en lien avec les mathématiques"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M471.1 96C405 96 353.3 137.3 320 174.6 286.7 137.3 235 96 168.9 96 75.8 96 0 167.8 0 256s75.8 160 168.9 160c66.1 0 117.8-41.3 151.1-78.6 33.3 37.3 85 78.6 151.1 78.6 93.1 0 168.9-71.8 168.9-160S564.2 96 471.1 96zM168.9 320c-40.2 0-72.9-28.7-72.9-64s32.7-64 72.9-64c38.2 0 73.4 36.1 94 64-20.4 27.6-55.9 64-94 64zm302.2 0c-38.2 0-73.4-36.1-94-64 20.4-27.6 55.9-64 94-64 40.2 0 72.9 28.7 72.9 64s-32.7 64-72.9 64z"></path></svg></span></span></span></h3>
+<p>On peut lire sur <a href="https://fr.wikipedia.org/wiki/Conjecture_de_Syracuse" target="_blank">wikipedia</a> que :</p>
+<blockquote>
+<p><em>"En mathématiques, on appelle suite de Syracuse une suite d'entiers naturels définie de la manière suivante : on part d'un nombre entier strictement positif ; s’il est pair, on le divise par 2 ; s’il est impair, on le multiplie par 3 et on ajoute 1. En répétant l’opération, on obtient une suite d'entiers strictement positifs dont chacun ne dépend que de son prédécesseur.<br/>
+Par exemple, à partir de 14, on construit la suite des nombres : 14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1, 4, 2… C'est ce qu'on appelle la suite de Syracuse du nombre 14."</em> </p>
+</blockquote>
+<ol>
+<li>Donner la suite de Syracuse du nombre 12.</li>
+<li>Même question pour le nombre 29.</li>
+<li>Ecrire une fonction <code>syracuse</code> qui renvoie la liste des valeurs de la suite de syracuse d'un entier naturel postif <code>n</code> donné en paramètre.</li>
+<li>Ecrire un jeu de test pour votre fonction.</li>
+<li>Recherche sur le <em>Web</em> ce qu'on appelle <em>conjecture de Syracuse</em> (ou <em>conjecture de Collatz</em>). Consulter par exemple la page <a href="https://fr.wikipedia.org/wiki/Conjecture_de_Syracuse" target="_blank">wikipedia</a> citée ci-dessus.</li>
+<li>Que pouvez-vous en conclure sur la preuve de la terminaison de la fonction <code>syracuse</code> ?</li>
+</ol>
+<h3 id="exercice-7-exponentiation-rapide"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:"/>   Exercice 7 : <em>Exponentiation rapide</em><span style="float:right;"><span style="float:right;">  <span class="twemoji" title="Exercice difficile"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m440.5 88.5-52 52L415 167c9.4 9.4 9.4 24.6 0 33.9l-17.4 17.4c11.8 26.1 18.4 55.1 18.4 85.6 0 114.9-93.1 208-208 208S0 418.9 0 304 93.1 96 208 96c30.5 0 59.5 6.6 85.6 18.4L311 97c9.4-9.4 24.6-9.4 33.9 0l26.5 26.5 52-52 17.1 17zM500 60h-24c-6.6 0-12 5.4-12 12s5.4 12 12 12h24c6.6 0 12-5.4 12-12s-5.4-12-12-12zM440 0c-6.6 0-12 5.4-12 12v24c0 6.6 5.4 12 12 12s12-5.4 12-12V12c0-6.6-5.4-12-12-12zm33.9 55 17-17c4.7-4.7 4.7-12.3 0-17-4.7-4.7-12.3-4.7-17 0l-17 17c-4.7 4.7-4.7 12.3 0 17 4.8 4.7 12.4 4.7 17 0zm-67.8 0c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17zm67.8 34c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17zM112 272c0-35.3 28.7-64 64-64 8.8 0 16-7.2 16-16s-7.2-16-16-16c-52.9 0-96 43.1-96 96 0 8.8 7.2 16 16 16s16-7.2 16-16z"></path></svg></span></span><span style="float:right;">  <span class="twemoji" title="Exercice en lien avec les mathématiques"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M471.1 96C405 96 353.3 137.3 320 174.6 286.7 137.3 235 96 168.9 96 75.8 96 0 167.8 0 256s75.8 160 168.9 160c66.1 0 117.8-41.3 151.1-78.6 33.3 37.3 85 78.6 151.1 78.6 93.1 0 168.9-71.8 168.9-160S564.2 96 471.1 96zM168.9 320c-40.2 0-72.9-28.7-72.9-64s32.7-64 72.9-64c38.2 0 73.4 36.1 94 64-20.4 27.6-55.9 64-94 64zm302.2 0c-38.2 0-73.4-36.1-94-64 20.4-27.6 55.9-64 94-64 40.2 0 72.9 28.7 72.9 64s-32.7 64-72.9 64z"></path></svg></span></span></span></h3>
+<p>On considère la fonction Python suivante où <code>x</code> est un nombre quelconque et <code>n</code> un entier positif :
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">puissance_rapide</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">p</span><span class="o">=</span><span class="mi">1</span>
+    <span class="k">while</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span><span class="n">x</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">p</span>
+</code></pre></div></p>
+<ol>
+<li>Tester cette fonction avec <code>x=2</code> et les valeurs suivantes de <code>n</code> : 4, 5, 8 et 10.</li>
+<li>Que fait cette fonction ?</li>
+<li>
+<p>Donner les valeurs successives prises par les variables <code>p</code>, <code>x</code> et <code>n</code> lors de l'appel de cette fonction avec <code>x=2</code> et <code>n=9</code> en recopiant et en complétant le tableau suivant :</p>
+<table>
+<thead>
+<tr>
+<th>Variables</th>
+<th><code>p</code></th>
+<th><code>x</code></th>
+<th><code>n</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initialisation</td>
+<td>1</td>
+<td>2</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Tour 1</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>Tour 2</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>Tour 3</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Déterminer la complexité de cet algorithme (on pourra déterminer le nombre de tours de boucle nécessaire en fonction de <code>n</code>)</p>
+</li>
+</ol>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a class="md-footer__link md-footer__link--prev" href="../ippt/" rel="prev">
+<a aria-label="Précédent: C3-Initiation à Python avec Turtle" class="md-footer__link md-footer__link--prev" href="../ippt/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -364,7 +656,7 @@ Un invariant de boucle de cet algorithme est :</p>
             </div>
 </div>
 </a>
-<a class="md-footer__link md-footer__link--next" href="../donneestable/" rel="next">
+<a aria-label="Suivant: C5-Données en table" class="md-footer__link md-footer__link--next" href="../donneestable/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
@@ -394,8 +686,8 @@ Un invariant de boucle de cet algorithme est :</p>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
-<script src="../assets/javascripts/bundle.34eae1b6.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+<script src="../assets/javascripts/bundle.76f349be.min.js"></script>
 <script src="../javascripts/config.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

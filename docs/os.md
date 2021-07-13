@@ -1,21 +1,13 @@
-
 {% set num = 1 %}
 {% set titre = "Systèmes d'exploitation"%}
 {% set theme = "os"%}
-{% set num_qcm = [0,1,2,3,4,5,6,7] %}
-
-{% set num_exo=1 %}
-{% set num_act=1 %}
-
-
 
 {{ titre_chapitre(num,titre,theme)}}
  
 ## Activités 
 
-{{ titre_activite(num_act,"Découverte des OS, logiciels libres",[]) }}
-{% set num_act=num_act+1 %}
-
+{{ titre_activite("Découverte des OS, logiciels libres",[],0) }}
+ 
 
 1. Rendez-vous sur la  [page de téléchargement du logiciel vlc](https://www.videolan.org/vlc/index.fr.html){target=_blank}. :
     * Pourquoi faut-il télécharger une version différente de VLC suivant qu'on utilise Windows, MacOS, Linux ou Android ?
@@ -25,9 +17,7 @@
     * Quel est le rôle de ces logiciels sur un ordinateur ?
     * Que signifie le mot **libre** dans la phrase : "*VLC est un lecteur multimédia gratuit et libre* "?
 
-{{ titre_activite(num_act,"Initiation à la ligne de commande",[])}}
-{% set num_act=num_act+1 %}
-
+{{ titre_activite("Initiation à la ligne de commande",[])}}
 
 Cette initiation se fait à travers la réalisation de **missions** dans un mini jeu d'aventures. Pour démarrer cette activité
 
@@ -56,24 +46,20 @@ Cette initiation se fait à travers la réalisation de **missions** dans un mini
 {{ cours("C1/C1-cours.pdf") }}
 
 
-
-
 ## QCM
 
 {{qcm_chapitre(num)}}
 
-
 ## Exercices
 
-{{ exo(num_exo,"Calendrier",["capacite"]) }}
-{% set num_exo=num_exo+1 %}
+{{ exo("Calendrier",["capacite"],0) }}
+
 1. Ouvrir un terminal et y tester la commande ``cal``
 2. Lire la documentation de cette commande
 3. Quel était le jour de la semaine le 26 juin 1815 ?
 4. Quel commande faut-il écrire pour afficher le calendrier du mois de mai 1970 ?
 
-{{ exo(num_exo,"Python en ligne de commande",["python"]) }}
-{% set num_exo=num_exo+1 %}
+{{ exo("Python en ligne de commande",["python"]) }}
 
 Le langage Python peut être invoqué à partir de la ligne de commande, taper simplement `python` dans un terminal. L'invite de commande se transforme en `>>>`, on dit que Python est en mode console. vous pouvez quitter Python en tapant `exit()`.
 
@@ -92,8 +78,8 @@ Le langage Python peut être invoqué à partir de la ligne de commande, taper s
     1. Tester les commandes `chr(33)`,  `chr(72)`, `chr(125)`
     2. Pour connaître l'utilité de cette commande taper `help(chr)`
 
-{{ exo(num_exo,"Ecrire dans un fichier",[]) }}
-{% set num_exo=num_exo+1 %}
+{{ exo("Ecrire dans un fichier",[]) }}
+
 !!! rappel "Rappel"
     * La commande `touch` permet de créer un fichier vide, par exemple `touch bidule.txt` crée un fichier vide nommé `bidule.txt` dans le répertoire courant.
     * La commande `cat` permet d'afficher le contenu d'un fichier dans le terminal
@@ -109,8 +95,7 @@ Le langage Python peut être invoqué à partir de la ligne de commande, taper s
         !!! aide "Aide"
             Les commandes principales s'affichent en bas de page, le caractère `^` désigne la touche ++ctrl++ 
 
-{{ exo(num_exo,"Ranger un dossier",[]) }}
-{% set num_exo=num_exo+1 %}
+{{ exo("Ranger un dossier",[]) }}
 
 1. Faire une copie du répertoire `a_ranger` que vous trouverez dans le dossier partagé.
 2. Lister le contenu de ce dossier, quel type de fichier contient-t-il ?
@@ -120,8 +105,8 @@ Le langage Python peut être invoqué à partir de la ligne de commande, taper s
     !!! aide "Aide"
             Déplacer les fichiers un à un serait long à fastidieux. Penser à utiliser le caractère `*` qui remplace n'importe quel suite de caractère dans les noms de fichiers.
 
-{{ exo(num_exo,"Enigme",["dur"]) }}
-{% set num_exo=num_exo+1 %}
+{{ exo("Enigme",["dur"]) }}
+
 1. Trouver six lettres en utilisant uniquement la ligne de commande et les indices suivants :
     * Lettre n° 1 : "*cachée dans le dossier `EnigmeNSI` que vous trouverez dans le dossier partagé*"
     * Lettre n° 2 : "*son code {{sc("ascii")}} est 71*"

@@ -37,19 +37,23 @@ def define_env(env):
         "recherche": ":fontawesome-solid-search:{title='Exercice de recherche'}",
         "capacite": ":fontawesome-solid-puzzle-piece:{title='Exercice testant une capacité du chapitre'}",
         "python": ":fontawesome-brands-python:{title='Exercice en lien avec la programmation en Python'}",
-        "bac": ":fontawesome-solid-graduation-cap:{title='Exercice extrait du Bac'}"
+        "bac": ":fontawesome-solid-graduation-cap:{title='Exercice extrait du Bac'}",
+        "maths": ":fontawesome-solid-infinity:{title='Exercice en lien avec les mathématiques'}"
     }
     env.variables['icones_act']={
         "rappel": ":fontawesome-solid-history:{title='Retour sur des notions antérieures'}",
         "recherche": ":fontawesome-solid-search:{title='Activité de recherche'}",
-        "oral": ":fontawesome-regular-comment:{title='Activité oral'}",
+        "oral": ":fontawesome-solid-comments:{title='Activité oral'}",
         "papier": ":fontawesome-solid-edit:{title='Activité à réaliser sur feuille'}",
         "vscode": ":material-microsoft-visual-studio-code:{title='Activité utilisant VS Code'}",
         "video": ":fontawesome-solid-film:{title='Activité utilisant un support vidéo'}",
-        "notebook": ":material-notebook:{title='Activité utilisant un jupyter notebook'}"
+        "notebook": ":fontawesome-solid-book:{title='Activité utilisant un jupyter notebook'}",
+        "python": ":fontawesome-brands-python:{title='Activité en lien avec la programmation en Python'}"
     }
     env.variables['devant_exo']=':black_small_square:'
     env.variables['devant_act']=':black_small_square:'
+    env.variables['num_exo']=1
+    env.variables['num_act']=1
 
     with open(QCMFILE,"r",encoding="utf-8") as f:
         questions = list(csv.DictReader(f,delimiter=","))
@@ -88,8 +92,10 @@ def define_env(env):
         return ligne
     
     @env.macro
-    def titre_activite(numero,titre,licones):
-        ligne=f"### {env.variables['devant_act']}   Activité {numero} "
+    def titre_activite(titre,licones,numero=1):
+        if numero==0:
+            env.variables['num_act']=1
+        ligne=f"### {env.variables['devant_act']}   Activité {env.variables['num_act']} "
         if titre!="":
             ligne+=f": *{titre}*"
         if licones!=[]:
@@ -97,12 +103,15 @@ def define_env(env):
             for icone in licones:
                 ligne+=f"<span style='float:right;'>&thinsp; {env.variables['icones_act'][icone]}</span>"
             ligne+="</span>"
+        env.variables['num_act']=env.variables['num_act']+1
         return ligne
     
 
     @env.macro
-    def exo(numero,titre,licones):
-        ligne=f"### {env.variables['devant_exo']}   Exercice {numero} "
+    def exo(titre,licones,numero=1):
+        if numero==0:
+            env.variables['num_exo']=1
+        ligne=f"### {env.variables['devant_exo']}   Exercice {env.variables['num_exo']} "
         if titre!="":
             ligne+=f": *{titre}*"
         if licones!=[]:
@@ -110,6 +119,7 @@ def define_env(env):
             for icone in licones:
                 ligne+=f"<span style='float:right;'>&thinsp; {env.variables['icones_exo'][icone]}</span>"
             ligne+="</span>"
+        env.variables['num_exo']=env.variables['num_exo']+1
         return ligne
     
     @env.macro

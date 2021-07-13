@@ -17,7 +17,7 @@ num,enonce,reponseA,reponseB,reponseC,reponseD,bonne_reponse,domaine,chapitre,im
 16,"Pour écrire les nombres entre 1 et 100 en base 2, on a besoin au maximum de :",5 chiffres,6 chiffres,7 chiffres,8 chiffres,C,Types et valeurs de base,2,
 17,Quelle est l'affirmation exacte ?,Le codage UTF-8 est sur 7 bits.,Le codage UTF-8 est sur 1 octet.,Le codage UTF-8 est sur 1 à 4 octets.,Le codage UTF-8 est sur 4 octets.,C,Types et valeurs de base,2,
 18,On a écrit une fonction qui prend en paramètre une liste non vide et qui renvoie son plus grand élément. Combien de tests faudrait-il écrire pour garantir que la fonction donne un résultat correct pour toute liste ?,"Il faudrait écrire une infinité de tests, on ne peut pas prouver que cette fonction est correct simplement en la testant",Deux tests : pour une liste à un élément et pour une liste à deux éléments ou plus.,"Trois tests : pour une liste vide, pour une liste à un élément et pour une liste à deux éléments ou plus.",Deux tests : pour le cas où le plus grand élément est en début de liste et pour le cas où le plus grand élément n'est pas en début de liste,A,Algorithmique,4,
-19,"On considère la fonction suivante où `x` et `y` sont des entiers naturels :
+19,"Quelle affirmation concernant la fonction ci-dessous (où `x` et `y` sont des entiers naturels) est fausse ? 
 ```python
 def f(x,y):
     s=x
@@ -27,12 +27,40 @@ def f(x,y):
         t=t-1
     return s
 ```
-Quelle affirmation est fausse ?",La propriété `s+t=x+y` est un invariant de boucle,La valeur finale de `t` est 1,"La propriété ""`t` est supérieur ou égale à 0"" est un invariant de boucle",Le résultat renvoyé est égal à la somme `a+b`,B,Algorithmique,4,
-20,"L'algorithme suivant permet de calculer la somme des `N` premiers entiers, où `N ` est un nombre entier donné :
+",La propriété `s+t=x+y` est un invariant de boucle,La valeur finale de `t` est 1,"La propriété ""`t` est supérieur ou égale à 0"" est un invariant de boucle",Le résultat renvoyé est égal à la somme `a+b`,B,Algorithmique,4,
+20,"Donner un invariant de boucle de l'algorithme suivant qui permet de calculer la somme des `N` premiers entiers (où `N` est un nombre entier) :
 ```python
 i=0
 while i<N:
     i=i+1
     somme=somme+i
 ```
-Un invariant de boucle de cet algorithme est :",somme = 0+1+2+...+i et i<N,somme = 0+1+1+...+N et i<N,somme = 0+1+1+...+i et i<N+1,somme = 0+1+1+...+N et i<N+1,B,Algorithmique,4,
+",`somme = 0+1+2+...+i` et `i<N`,`somme = 0+1+2+...+N` et `i<N`,`somme = 0+1+1+...+i` et `i<N+1`,`somme = 0+1+2+...+N` et `i<N+1`,B,Algorithmique,4,
+21,"Quel test va permettre de détecter l'erreur dans la fonction Python suivante qui ne calcule pas toujours correctement le résultat de $x^y$ (avec $x$ et $y$ entiers) ?
+```python
+def puissance(x,y);
+    p=x
+    for i in range(y-1):
+        p=p*x
+    return p
+```","`puissance(2,0)`","`puissance(2,1)`","`puissance(2,2)`","`puissance(2,10)`",A,Algorithmique,4,
+22,"Pour pouvoir utiliser un algorithme de recherche par dichotomie dans une liste, quelle précondition doit être vraie ?",La liste doit être triée.,La liste ne doit pas comporter de doublons.,La liste doit comporter uniquement des entiers positifs.,La liste doit être de longueur inférieure à 1024.,A,Algorithmique,4,
+23,"La fonction suivante doit calculer la moyenne d'un tableau de nombres. Avec quelles expressions faut-il compléter l'écriture pour que la fonction soit correcte ?
+```python
+def moyenne(tableau):
+    total = ...
+    for valeur in tableau:
+        total=total+valeur
+    return total/...
+```",`0` et `len(tableau)`,`0` et `len(tableau)+1`,`1` et `len(tableau)`,`1` et `len(tableau)+1`,A,Algorithmique,4,
+24,"Dans une recherche par dichotomie, combien de comparaisons faut-il faire au maximum pour savoir si une valeur se trouve ou non dans un tableau trié de 1000 nombres ?",3,10,1000,2000,B,Algorithmique,4,
+25,Qu'est-ce qu'un fichier `csv` ?,Un utilitaire de traiment d'image.,Un format de données.,Un format d'image.,Une bibliothèque Python permettant l'affichage des images.,B,Traitement de données en table,5,
+26,"Dans la plupart des fichiers `csv`, que contient la première ligne ?",L'origine des données,Des informations sur l'auteur du fichier,La date de création du fichier,Les descripteurs des champs de la table de données,D,Traitement de données en table,5,
+27,"Dans un fichier `csv`,",Une ligne s'appelle un enregistrement et une colonne s'apelle un champ,Une ligne s'appelle un champ et une colonne s'apelle un enregistrement,Une ligne s'appelle un descripteur et une colonne s'apelle un champ,Une ligne s'appelle un enregistrement et une colonne s'apelle un descripteur,A,Traitement de données en table,5,
+28,"Quels sont les descripteurs du tableau suivant :
+   |Nom   |Prenom| Naissance |
+   |------|------|-----------|
+   |Dupont|Pierre|17/05/1987|
+   |Dupond|Catherine|18/07/1981|
+   |Haddock|Archibald|23/04/1998|
+","Dupont, Pierre et 17/05/1987","Dupont, Dupond et Haddock",Nom Prenom et Naissance,Il n'y en a pas,C,Traitement de données en table,5,

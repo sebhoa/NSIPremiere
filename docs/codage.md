@@ -1,33 +1,18 @@
-
 {% set num = 2 %}
 {% set titre = "Codage des entiers et des caractères"%}
 {% set theme = "typesbase"%}
-{% set num_qcm = [8] %}
-
-{% set num_exo=1 %}
-{% set num_act=1 %}
-
-
 
 {{ titre_chapitre(num,titre,theme)}}
  
 ## Activités 
 
-{{ titre_activite(num_act,"Numération binaire",["papier"]) }}
-{% set num_act=num_act+1 %}
-
+{{ titre_activite("Numération binaire",["papier"],0) }}
 {{ telecharger("Fiche d'activité","/pdf/C2/C2-act1.pdf")}}
 
-{{ titre_activite(num_act,"Numération hexadécimale",[]) }}
-{% set num_act=num_act+1 %}
-
+{{ titre_activite("Numération hexadécimale",[]) }}
 {{ telecharger("Fiche d'activité","/pdf/C2/C2-act2.pdf")}}
 
-
-
-{{ titre_activite(num_act,"Encodage des caractères",["video"]) }}
-{% set num_act=num_act+1 %}
-
+{{ titre_activite("Encodage des caractères",["video"]) }}
 <div class="centre"><iframe width="560" height="315" src="https://www.youtube.com/embed/MijmeoH9LT4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe></div>
 En utilisant la video ci-dessus et en faisant éventuellement vos propres recherches sur le *Web*, répondre brièvement aux questions suivantes :
 
@@ -43,7 +28,6 @@ En utilisant la video ci-dessus et en faisant éventuellement vos propres recher
     2. Cet encodage est-il compatible avec l'ancienne norme {{ sc("ascii")}} ?
 
 
-
 ## Cours
 
 {{ cours("C2/C2-cours.pdf") }}
@@ -54,8 +38,8 @@ En utilisant la video ci-dessus et en faisant éventuellement vos propres recher
   
 ## Exercices
 
-{{ exo(num_exo,"Passer d'une base à l'autre",[]) }}
-{% set num_exo=num_exo+1 %}
+{{ exo("Passer d'une base à l'autre",[],0) }}
+
 
 Recopier et compléter le tableau de conversion suivant :
 
@@ -71,8 +55,8 @@ Recopier et compléter le tableau de conversion suivant :
 |  ...          |$(10010101)_2$ |    ...            |
 |  ...          |$(10010010)_2$ |       ...         |
 
-{{ exo(num_exo,"Un peu de reflexion",[]) }}
-{% set num_exo=num_exo+1 %}
+{{ exo("Un peu de reflexion",[]) }}
+
 
 1. Quel est le plus grand entier positif écrit en utilisant 10 chiffres en base 2 ?
 2. Que peut-on dire d'un nombre dont l"écriture en base 2 ne contient qu'un seul chiffre 1 ?
@@ -81,8 +65,8 @@ Recopier et compléter le tableau de conversion suivant :
     3. De façon générale, soit $b$ un entier supérieur ou égal à 2, que peut-on dire de l'écriture en base $b$ d'un nombre divisible par $b$ .
 4. En base 10, un million s'écrit avec 7 chiffres, combien en faut-il pour l'écrire en base 2 ?
 
-{{ exo(num_exo,"Énigme",[]) }}
-{% set num_exo=num_exo+1 %}
+{{ exo("Énigme",[]) }}
+
 Il manque des chiffres (remplacés par des ?) dans le nombre binaire suivant : $?001??111?$
 
 1. Retrouver les chiffres manquants en utilisant les indices suivants:
@@ -93,16 +77,16 @@ Il manque des chiffres (remplacés par des ?) dans le nombre binaire suivant : $
 2. Donner l'écriture décimale de nombre.
 3. Donner son écriture hexadécimale
 
-{{ exo(num_exo,"Un peu de Python",["python"]) }}
-{% set num_exo=num_exo+1 %}
+{{ exo("Un peu de Python",["python"]) }}
+
 
 1. Lancer Python en ligne de commande, comme vu dans le chapitre précédent.
 2. Tester la fonction `bin` de Python, en affichant par exemple `bin(201)` et `bin(57)`. Rapprocher les résultats obtenus avec les réponses de l'exercice 1. Émettre une hypothèse sur cette fonction.
 3. Valider votre hypothèse en faisant afficher l'aide de la fonction `bin`.
 4. Reprendre les questions précédentes pour la fonction `hex`
 
-{{ exo(num_exo,"Code ASCII",[]) }}
-{% set num_exo=num_exo+1 %}
+{{ exo("Code ASCII",[]) }}
+
 
 1. Le code {{ sc("ascii") }} de A est 65 et celui de a est 97. Ecrire ces deux codes en binaire. 
 2. Sachant que l'ordre des codes suit l'ordre alphabétique (donc le code de B est 66), écrire les codes binaires de B et de b.
@@ -110,8 +94,8 @@ Il manque des chiffres (remplacés par des ?) dans le nombre binaire suivant : $
 4. Le code {{ sc("ascii") }} binaire de P est $10100000$, quel est celui de $p$?
 5. Le code {{ sc("ascii") }} du zéro est 48, l'écrire en binaire. Ce code a-t-il été choisi au hasard ?
 
-{{ exo(num_exo,"Le parachute de perseverance",[]) }}
-{% set num_exo=num_exo+1 %}
+{{ exo("Le parachute de perseverance",[]) }}
+
 
 En février 2021, le robot *Perseverance* a atterrit sur Mars, en déployant un parachute :
 ![Parachute de perseverance](./images/C2/perseverance.png){: .imgcentre}
