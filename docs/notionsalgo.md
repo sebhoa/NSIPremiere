@@ -64,6 +64,7 @@ def puissance(x,n):
         p = p * x
     return p
 ```
+
 1. Que fait cette fonction ? Ecrire sa chaîne de documentation.
 2. Proposer des préconditions sur les arguments.
 3. Montrer que l'algorithme utilisé dans cette fonction a une complexité linéaire.

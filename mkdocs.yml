@@ -4,15 +4,24 @@ site_description: Cours de NSI en classe de première du lycée Hintermann-Affé
 site_author: Fabrice NATIVEL
 
 # Les éléments de la barre de navigation
-nav:
+nav:  
   - "C1-Systèmes d'exploitation" : os.md
-  - "C2-Représentation des entiers et des caractères" : codage.md
-  - "C3-Initiation à Python avec Turtle" : ippt.md
+  - "C2-Initiation à Python avec Turtle" : ippt.md
+  - "C3-Représentation des entiers et des caractères" : codage.md
   - "C4-Notions d'algorithmique" : notionsalgo.md
-  - "C5-Données en table" : donneestable.md
-  - "C6-Le Web" : leweb.md
+  - "C5-Lecture et traitement de données en table" : donneestable.md
+  - "C6-Le web" : leweb.md
   - "C7-Architecture matérielle" : architecture.md
-  - "C8-Algorithmes gloutons" : gloutons.md
+  - "C8-Algorithmes de tri" : algostri.md
+  - "C9-Représentation des entiers négatifs" : negatifs.md
+  - "C10-Réseau" : reseau.md
+  - "C11-Interaction dans une page web" : interactionweb.md
+  - "C12-Algorithmes gloutons" : gloutons.md
+  - "C13-Tri et fusion de tables" : fusiontable.md
+  - "C14-Interface homme-machine" : interface.md
+  - "C15-Notion de nombre flottant" : flottant.md
+  - "C16-Algorithme des k plus proches voisins" : knn.md
+
 
 #Le thème du site
 theme:

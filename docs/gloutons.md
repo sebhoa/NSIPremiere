@@ -38,3 +38,15 @@
 
 {{ exo("Un problème du sac à dos",[],0) }}
 
+
+<!-- --> |
+:-------:|
+:material-bag-personal:{  .sacdos } |
+Max  : 15 kg|
+
+
+
+Objet|Poids|Valeur|
+-----|-----|------|
+:material-key-variant:{ .objet }  |20|100|
+

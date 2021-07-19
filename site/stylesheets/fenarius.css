@@ -1,3 +1,18 @@
+.sacdos {
+  color: darkorange;
+  font-size : 72pt;
+}
+
+
+.textcenter {
+  text-align: center ;
+}
+
+.objet {
+  color: blue;
+  font-size : larger;
+}
+
 :root {
     --md-primary-fg-color:       #1A237E;
     --md-accent-fg-color: #FF5722;

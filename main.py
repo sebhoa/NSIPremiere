@@ -55,6 +55,25 @@ def define_env(env):
     env.variables['num_exo']=1
     env.variables['num_act']=1
 
+    env.variables['progression']={
+        1 : ["os","Systèmes d'exploitation",1,"os.md"],
+        2 : ["python","Initiation à Python avec Turtle",3,"ippt.md"],
+        3 : ["typesbase","Représentation des entiers et des caractères",2,"codage.md"],
+        4 : ["algorithmique","Notions d'algorithmique",2,"notionsalgo.md"],
+        5 : ["donneestable","Lecture et traitement de données en table",2,"donneestable.md"],
+        6 : ["web","Le web",2,"leweb.md"],
+        7 : ["os","Architecture matérielle",1,"architecture.md"],
+        8 : ["algorithmique","Algorithmes de tri",2,"algostri.md"],
+        9 : ["typesbase","Représentation des entiers négatifs",1,"negatifs.md"],
+        10: ["os","Réseau",1,"reseau.md"],
+        11: ["web","Interaction dans une page web",1,"interactionweb.md"],
+        12: ["algorithmique","Algorithmes gloutons",2,"gloutons.md"],
+        13: ["donneestable","Tri et fusion de tables",1,"fusiontable.md"],
+        14: ["os","Interface homme-machine",2,"interface.md"],
+        15: ["typesbase","Notion de nombre flottant",1,"flottant.md"],
+        16: ["algorithmique","Algorithme des k plus proches voisins",2,"knn.md"]
+    }
+
     with open(QCMFILE,"r",encoding="utf-8") as f:
         questions = list(csv.DictReader(f,delimiter=","))
     env.variables['qcm']=questions
@@ -68,17 +87,7 @@ def define_env(env):
     @env.macro
     def sec_titre(theme,titre):
             icone = env.variables.icones[theme]
-            if theme in env.variables["transversal"]:
-                return f"<span class='{theme}'> {icone} &nbsp; {titre} </span>"
-            else:
-                return f"{icone} &nbsp; {titre}"
-    
-    @env.macro
-    def chapitre(theme,titre,duree):
-        env.variables['nchap']+=1
-        icone = env.variables["icones"][theme]
-        num = env.variables['nchap']
-        return f"|{icone}|[C{num}- {titre}](#C{num}) | {duree}"
+            return f"### {icone} &nbsp; {titre}"
     
     @env.macro
     def icone(theme):
@@ -194,6 +203,30 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
     def sc(chaine):
         return f'<span style="font-variant:small-caps;">{chaine}</span>'
 
+    @env.macro
+    def chapitre(num,theme,titre,duree,lien):
+        icone = env.variables["icones"][theme]
+        return f"|{icone}|[C{num}- {titre}]({lien}) | {duree}\n"
+
+    @env.macro
+    def affiche_progression():
+        ret='''
+| |Titre        | Durée |
+|-|-------------|-------|
+        '''
+        for k in env.variables.progression:
+           ret+=chapitre(k,env.variables['progression'][k][0],env.variables['progression'][k][1],env.variables['progression'][k][2],env.variables['progression'][k][3])
+        return ret
+    
+    @env.macro
+    def genere_nav():
+        ret='''```\n'''
+        for k in env.variables.progression:
+            da = env.variables['progression'][k]
+            ret+=f'  - "C{k}-{da[1]}" : {da[3]}\n'
+        return ret+'```\n'
+
+    
 
     
 
