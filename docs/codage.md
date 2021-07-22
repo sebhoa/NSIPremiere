@@ -21,7 +21,7 @@ En utilisant la video ci-dessus et en faisant éventuellement vos propres recher
     2. Expliquer rapidement pourquoi ce système était limité et à du être étendu
 2. L'encodage Latin-1
     1. Sur combien de bits était encodé chaque caractère ?
-    2. Combien de caractères au maximum étaient représentées ?
+    2. Combien de caractères au maximum étaient représentés ?
     3. Ce système était-il universel ?
 3. L'encodage {{ sc("utf-8")}}
     1. Un caractère est-il toujours encodé sur le même nombre de bits ?
@@ -59,7 +59,7 @@ Recopier et compléter le tableau de conversion suivant :
 
 
 1. Quel est le plus grand entier positif écrit en utilisant 10 chiffres en base 2 ?
-2. Que peut-on dire d'un nombre dont l"écriture en base 2 ne contient qu'un seul chiffre 1 ?
+2. Que peut-on dire d'un nombre dont l'écriture en base 2 ne contient qu'un seul chiffre 1 ?
 3.  1. En base 10, comment reconnaît-on un nombre divisible par 10 ? 
     2. L'écriture en base 2 d'un nombre divisible par 2 se termine forcément par quel chiffre ? Justifier.
     3. De façon générale, soit $b$ un entier supérieur ou égal à 2, que peut-on dire de l'écriture en base $b$ d'un nombre divisible par $b$ .
@@ -91,7 +91,7 @@ Il manque des chiffres (remplacés par des ?) dans le nombre binaire suivant : $
 1. Le code {{ sc("ascii") }} de A est 65 et celui de a est 97. Ecrire ces deux codes en binaire. 
 2. Sachant que l'ordre des codes suit l'ordre alphabétique (donc le code de B est 66), écrire les codes binaires de B et de b.
 3. Même question pour C et c. Que remarquez-vous ?
-4. Le code {{ sc("ascii") }} binaire de P est $10100000$, quel est celui de $p$?
+4. Le code {{ sc("ascii") }} binaire de P est $10100000$, quel est celui de p ?
 5. Le code {{ sc("ascii") }} du zéro est 48, l'écrire en binaire. Ce code a-t-il été choisi au hasard ?
 
 {{ exo("Le parachute de perseverance",[]) }}
