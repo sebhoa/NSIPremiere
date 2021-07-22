@@ -70,15 +70,15 @@ def puissance(x,n):
 3. Montrer que l'algorithme utilisé dans cette fonction a une complexité linéaire.
 
 
-{{ exo("Factoriel",["maths"]) }}
+{{ exo("Factorielle",["maths"]) }}
 
-En mathématiques, on appel *factoriel* d'un entier et $n$ et on note $n!$ le produit de cet entier par tous ceux qui le précèdent à l'exception de zéro, et on convient d'autre part que $O!=1$. Par exemple : <br>
+En mathématiques, on appel *factorielle* d'un entier et $n$ et on note $n!$ le produit de cet entier par tous ceux qui le précèdent à l'exception de zéro, et on convient d'autre part que $O!=1$. Par exemple : <br>
 $5!= 5 \times 4 \times 3 \times 2 \times 1 = 120.$<br>
 On considère la fonction Python suivante :
 
 ```python
-   def factoriel(n):
-       '''Renvoie factoriel de n, avec n un entier positif ou nul'''
+   def factorielle(n):
+       '''Renvoie factorielle de n, avec n un entier positif ou nul'''
        if n==0:
            return 1
         else:
@@ -88,8 +88,8 @@ On considère la fonction Python suivante :
             return fact
 ```
 
-1. Ecrire une instruction `assert` permettant de vérifier que cette fonction renvoie bien 120 pour factoriel de 5.
-2. On suppose qu'on appelle `fact(5)`, donner les valeurs prises par la variable `fact` lors des passages successifs dans la boucle `for`.
+1. Ecrire une instruction `assert` permettant de vérifier que cette fonction renvoie bien 120 pour factorielle de 5.
+2. On suppose qu'on appelle `factorielle(5)`, donner les valeurs prises par la variable `fact` lors des passages successifs dans la boucle `for`.
 3. Vérifier que la propriété *"la variable `fact` contient $k!$ après $k$ tours de boucle"* est un invariant de boucle.
 4. Que peut-on en déduire ?
 
@@ -121,7 +121,7 @@ Par exemple, à partir de 14, on construit la suite des nombres : 14, 7, 22, 11,
 
 1. Donner la suite de Syracuse du nombre 12.
 2. Même question pour le nombre 29.
-3. Ecrire une fonction `syracuse` qui renvoie la liste des valeurs de la suite de syracuse d'un entier naturel postif `n` donné en paramètre.
+3. Ecrire une fonction `syracuse` qui renvoie la liste des valeurs de la suite de syracuse d'un entier naturel postif `n` donné en paramètre. On arrêtera notre liste dès que la valeur 1 y est ajoutée.
 4. Ecrire un jeu de test pour votre fonction.
 5. Recherche sur le *Web* ce qu'on appelle *conjecture de Syracuse* (ou *conjecture de Collatz*). Consulter par exemple la page [wikipedia](https://fr.wikipedia.org/wiki/Conjecture_de_Syracuse){target=_blank} citée ci-dessus.
 6. Que pouvez-vous en conclure sur la preuve de la terminaison de la fonction `syracuse` ?
