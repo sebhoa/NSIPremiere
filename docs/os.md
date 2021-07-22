@@ -11,11 +11,11 @@
 
 1. Rendez-vous sur la  [page de téléchargement du logiciel vlc](https://www.videolan.org/vlc/index.fr.html){target=_blank}. :
     * Pourquoi faut-il télécharger une version différente de VLC suivant qu'on utilise Windows, MacOS, Linux ou Android ?
-    * Pouvez vous associer chaque icône au logiciel qu'il représente ?
+    * Pouvez-vous associer chaque icône au logiciel qu'il représente ?
 2. En faisant  des recherches sur le *Web*, rédiger une réponse brève aux questions suivantes :
     * Que sont Windows, MacOS, Linux et Android ?
     * Quel est le rôle de ces logiciels sur un ordinateur ?
-    * Que signifie le mot **libre** dans la phrase : "*VLC est un lecteur multimédia gratuit et libre* "?
+    * Que signifie le mot **libre** dans la phrase : "*VLC est un lecteur multimédia gratuit et libre*" ?
 
 {{ titre_activite("Initiation à la ligne de commande",[])}}
 
@@ -61,7 +61,7 @@ Cette initiation se fait à travers la réalisation de **missions** dans un mini
 
 {{ exo("Python en ligne de commande",["python"]) }}
 
-Le langage Python peut être invoqué à partir de la ligne de commande, taper simplement `python` dans un terminal. L'invite de commande se transforme en `>>>`, on dit que Python est en mode console. vous pouvez quitter Python en tapant `exit()`.
+Le langage Python peut être invoqué à partir de la ligne de commande, taper simplement `python` dans un terminal. L'invite de commande se transforme en `>>>`, on dit que Python est en mode console. Vous pouvez quitter Python en tapant `exit()`.
 
 1. Utiliser Python comme calculatrice <br>En mode console, Python vous fournira directement les résultats de calculs, taper par exemple  :
     1. `15+5*5`, dans quel ordre les opérations sont-elles effectuées ?
@@ -70,13 +70,13 @@ Le langage Python peut être invoqué à partir de la ligne de commande, taper s
         !!! aide "Aide"
             Tester d'autres valeurs par exemple `7**2` ou `2**3` pour vous aider
 
-    3. `20%3`  et  `20//3`, de quelle opération s'agit-il ? (tester d'autres valeurs si nécessaires)
+    3. `20%3`  et  `20//3`, de quelle opération s'agit-il ? (tester d'autres valeurs si nécessaire)
     4. En utilisant Python, donner le résultat de $9^{10} - 10^9$.
     5. En utilisant Python, convertir 17899132 minutes en jours, heures et minutes. 
 
 2. Obtenir de l'aide en python
-    1. Tester les commandes `chr(33)`,  `chr(72)`, `chr(125)`
-    2. Pour connaître l'utilité de cette commande taper `help(chr)`
+    1. Tester les expressions Python `chr(33)`,  `chr(72)`, `chr(125)`
+    2. Pour connaître l'utilité de cette fonction taper `help(chr)`
 
 {{ exo("Ecrire dans un fichier",[]) }}
 
@@ -98,12 +98,12 @@ Le langage Python peut être invoqué à partir de la ligne de commande, taper s
 {{ exo("Ranger un dossier",[]) }}
 
 1. Faire une copie du répertoire `a_ranger` que vous trouverez dans le dossier partagé.
-2. Lister le contenu de ce dossier, quel type de fichier contient-t-il ?
-3. Dans le dossier `a_ranger`, créer les dossiers `Texte`,`Htlm` et `Python`. 
+2. Lister le contenu de ce dossier, quels types de fichier contient-t-il ?
+3. Dans le dossier `a_ranger`, créer les dossiers `Texte`,`HTML` et `Python`. 
 4. Déplacer les fichiers de chaque type dans le dossier correspondant
 
     !!! aide "Aide"
-            Déplacer les fichiers un à un serait long à fastidieux. Penser à utiliser le caractère `*` qui remplace n'importe quel suite de caractère dans les noms de fichiers.
+            Déplacer les fichiers un à un serait long à fastidieux. Penser à utiliser le caractère `*` qui remplace n'importe quelle suite de caractères dans les noms de fichiers.
 
 {{ exo("Enigme",["dur"]) }}
 
