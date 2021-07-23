@@ -6,8 +6,8 @@ site_author: Fabrice NATIVEL
 # Les éléments de la barre de navigation
 nav:  
   - "C1-Systèmes d'exploitation" : os.md
-  - "C2-Initiation à Python avec Turtle" : ippt.md
-  - "C3-Représentation des entiers et des caractères" : codage.md
+  - "C2-Représentation des entiers et des caractères" : codage.md
+  - "C3-Initiation à Python avec Turtle" : ippt.md
   - "C4-Notions d'algorithmique" : notionsalgo.md
   - "C5-Lecture et traitement de données en table" : donneestable.md
   - "C6-Le web" : leweb.md
@@ -21,6 +21,8 @@ nav:
   - "C14-Interface homme-machine" : interface.md
   - "C15-Notion de nombre flottant" : flottant.md
   - "C16-Algorithme des k plus proches voisins" : knn.md
+
+
 
 
 #Le thème du site

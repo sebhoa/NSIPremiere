@@ -57,8 +57,8 @@ def define_env(env):
 
     env.variables['progression']={
         1 : ["os","Systèmes d'exploitation",1,"os.md"],
-        2 : ["python","Initiation à Python avec Turtle",3,"ippt.md"],
-        3 : ["typesbase","Représentation des entiers et des caractères",2,"codage.md"],
+        2 : ["typesbase","Représentation des entiers et des caractères",2,"codage.md"],
+        3 : ["python","Initiation à Python avec Turtle",3,"ippt.md"],
         4 : ["algorithmique","Notions d'algorithmique",2,"notionsalgo.md"],
         5 : ["donneestable","Lecture et traitement de données en table",2,"donneestable.md"],
         6 : ["web","Le web",2,"leweb.md"],
@@ -96,7 +96,8 @@ def define_env(env):
     @env.macro
     def titre_chapitre(numero,titre,theme):
         # Position de l'ancre pour repérage dans la page
-        ligne=f"# <span class='numchapitre'>C{numero}</span> {titre} "
+        titre_bis = env.variables['progression'][numero][1]
+        ligne=f"# <span class='numchapitre'>C{numero}</span> {titre_bis} "
         ligne+=f"<span style='float:right;'>{env.variables.icones[theme]}</span>"
         return ligne
     
@@ -225,7 +226,14 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
             da = env.variables['progression'][k]
             ret+=f'  - "C{k}-{da[1]}" : {da[3]}\n'
         return ret+'```\n'
-
+    
+    @env.macro
+    def ok():
+        return ":fontawesome-solid-check:{.vert title='Compatible'}"
+    
+    @env.macro
+    def nok():
+        return ":fontawesome-solid-times:{.rouge title='Non compatible'}"
     
 
     

@@ -1,7 +1,7 @@
 {% set num = 2 %}
 {% set titre = "Codage des entiers et des caractères"%}
 {% set theme = "typesbase"%}
-
+ 
 {{ titre_chapitre(num,titre,theme)}}
  
 ## Activités 
@@ -93,6 +93,17 @@ Il manque des chiffres (remplacés par des ?) dans le nombre binaire suivant : $
 3. Même question pour C et c. Que remarquez-vous ?
 4. Le code {{ sc("ascii") }} binaire de P est $10100000$, quel est celui de p ?
 5. Le code {{ sc("ascii") }} du zéro est 48, l'écrire en binaire. Ce code a-t-il été choisi au hasard ?
+
+
+{{ exo("Message secret",[]) }}
+```
+0x420x720x610x760x6f0x200x210x200x560x6f0x750x730x200x610x760x650x7a0x200x64
+0xe90x630x6f0x640xe90x200x6c0x650x200x6d0x650x730x730x610x670x65
+```
+Parviendrez-vous à décoder le message secret ci-dessus ? 
+!!! aide
+    Un indice : {{ sc("ascii") }}
+
 
 {{ exo("Le parachute de perseverance",[]) }}
 
