@@ -1,10 +1,10 @@
 num,enonce,reponseA,reponseB,reponseC,reponseD,bonne_reponse,domaine,chapitre,image
-1,"Une et une seule de es affirmations est fausse. Laquelle ?","Un système d'exploitation libre est la plupart du temps gratuit","Je peux contribuer à un système d'exploitation libre","Il est interdit d'étudier un système d'exploitation propriétaire","Un système d'exploitation propriétaire est plus sécurisé","D","Architectures matérielles et systèmes d'exploitation",1,None
-2,"Quelle est l'effet de la commande `cd ..` ?","Changer le répertoire courant vers le répertoire supérieur","Ejecter le CD","Copier le contenu du répertoire courant dans un répertoire caché","Supprimer le répertoire courant","A","Architectures matérielles et systèmes d'exploitation",1,None
+1,"Une et une seule de ces affirmations est fausse. Laquelle ?","Un système d'exploitation libre est la plupart du temps gratuit","Je peux contribuer à un système d'exploitation libre","Il est interdit d'étudier un système d'exploitation propriétaire","Un système d'exploitation propriétaire est plus sécurisé","D","Architectures matérielles et systèmes d'exploitation",1,None
+2,"Quelle est l'effet de la commande `cd ..` ?","Changer le répertoire courant vers le répertoire parent","Ejecter le CD","Copier le contenu du répertoire courant dans un répertoire caché","Supprimer le répertoire courant","A","Architectures matérielles et systèmes d'exploitation",1,None
 3,"Quel est le rôle de la commande `ls` ?","Basculer en mode administrateur","Lister le contenu du répertoire courant","Effacer le contenu du répertoire courant","Donner un accès complet à un fichier","B","Architectures matérielles et systèmes d'exploitation",1,None
 4,"Dans un terminal sous Linux, quelle commande faut-il écrire pour donner à tout le monde le droit d'écriture sur le fichier `information.py` ?",`chmod o+w information.py`,`chmod a+w information.py`,`chmod o+x information.py`,`chmod a+x information.py`,B,Architectures matérielles et systèmes d'exploitation,1,None
 5,Quel est l'effet de la commande `chmod u+w fichier.txt` ?,de permettre au propriétaire du fichier de modifier le contenu de ce fichier,d'interdire au propriétaire de modifier le contenu de ce fichier,d'interdire à tous les autres utilisateurs de lire le fichier,d'effacer le fichier,A,Architectures matérielles et systèmes d'exploitation,1,None
-6,"Dans la console Linux, quelle commande faut-il exécuter pour obtenir la documentation sur commande `pwd` ?",`man pwd`,`cd pwd`,`mkdir pwd`,`ls pwd`,A,Architectures matérielles et systèmes d'exploitation,1,None
+6,"Dans la console Linux, quelle commande faut-il exécuter pour obtenir la documentation de la commande `pwd` ?",`man pwd`,`cd pwd`,`mkdir pwd`,`ls pwd`,A,Architectures matérielles et systèmes d'exploitation,1,None
 7,Lequel de ces systèmes d'exploitation est sous licence propriétaire ?,Android,Linux,Windows,Ubuntu,C,Architectures matérielles et systèmes d'exploitation,1,None
 8,"Une application doit écrire sur le disque dur de l'ordinateur, laquelle des affirmations suivantes est vraie ?",Elle peut le faire quand bon lui semble,Elle doit en faire la demande au système d'exploitation,Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur,Elle doit en faire la demande à l'utilisateur de l'ordinateur,B,Architectures matérielles et systèmes d'exploitation,1,None
 9,Quelle est l'écriture en base 2 du nombre $(154)_{10}$ ?,10011100,10011001,00011010,10011010,D,Types et valeurs de base,2,None
@@ -27,7 +27,7 @@ def f(x,y):
         t=t-1
     return s
 ```
-",La propriété `s+t=x+y` est un invariant de boucle,La valeur finale de `t` est 1,"La propriété ""`t` est supérieur ou égale à 0"" est un invariant de boucle",Le résultat renvoyé est égal à la somme `a+b`,B,Algorithmique,4,
+",La propriété `s+t=x+y` est un invariant de boucle,La valeur finale de `t` est 1,"La propriété ""`t` est supérieur ou égal à 0"" est un invariant de boucle",Le résultat renvoyé est égal à la somme `x+y`,A,Algorithmique,4,
 20,"Donner un invariant de boucle de l'algorithme suivant qui permet de calculer la somme des `N` premiers entiers (où `N` est un nombre entier) :
 ```python
 i=0
