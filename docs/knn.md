@@ -49,7 +49,7 @@
 
 ## QCM
 
-{{qcm_chapitre(num)}}
+{{qcm_chapitre(num)}} 
 
 
 ## Exercices

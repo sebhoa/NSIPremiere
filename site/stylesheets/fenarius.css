@@ -3,6 +3,13 @@
   font-size : 72pt;
 }
 
+.vert {
+  color : limegreen;
+}
+
+.rouge {
+  color : orangered;
+}
 
 .textcenter {
   text-align: center ;

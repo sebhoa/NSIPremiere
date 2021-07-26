@@ -43,7 +43,7 @@ Cette initiation se fait à travers la réalisation de **missions** dans un mini
 
 ## Cours
 
-{{ cours("C1/C1-cours.pdf") }}
+{{ cours("C1/C1-cours.pdf") }} 
 
 
 ## QCM

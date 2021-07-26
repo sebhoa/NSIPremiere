@@ -139,16 +139,16 @@ def define_env(env):
 
     @env.macro
     def telecharger(description,fichier):
-        liens =f"[{description} :fontawesome-solid-download:](./{fichier})"
+        liens =f"[{description} :fontawesome-regular-file-pdf:](./{fichier})"
         liens+="{.md-button}"
-        return liens
+        return "<span class='centre'>"+liens+"</span>"
 
     @env.macro
     def cours(fichier):
         ccours = '''
 Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de cours présenté en classe :
 
-[Diaporama de cours :fontawesome-solid-download:](./pdf/'''+fichier+'''){.md-button}
+<span class='centre'>[Diaporama de cours :fontawesome-regular-file-pdf:](./pdf/'''+fichier+'''){.md-button}</span>
 !!! warning "Attention"
     Ce diaporama ne vous donne que quelques points de repères lors de vos révisions. Il devrait être complété par la relecture attentive de vos **propres** notes de cours et par une révision approfondie des exercices.'''
         return ccours
@@ -163,6 +163,11 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
             lenonce=lenonce.replace("\n",'\n    ')
         else:
             lenonce+='"'
+        # Traitement si image
+        limg = env.variables.qcm[num]["image"]
+        if limg!='':
+            lenonce+=f'\n \t ![illustration](./images/C{env.variables.qcm[num]["chapitre"]}/{limg})'
+            lenonce+='{: .imgcentre}\n'
         modele = f'''
 !!! fabquestion "**{index}.** {lenonce}
     === "Réponses"

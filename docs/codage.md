@@ -7,7 +7,7 @@
 ## Activités 
 
 {{ titre_activite("Numération binaire",["papier"],0) }}
-{{ telecharger("Fiche d'activité","/pdf/C2/C2-act1.pdf")}}
+{{ telecharger("Fiche d'activité","/pdf/C2/C2-act1.pdf")}} 
 
 {{ titre_activite("Numération hexadécimale",[]) }}
 {{ telecharger("Fiche d'activité","/pdf/C2/C2-act2.pdf")}}
