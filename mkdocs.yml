@@ -73,8 +73,6 @@ markdown_extensions:
   # Admonitions et variantes (details : repliable, superfences : avec onglet)
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.tabbed
   - pymdownx.keys:
       strict: false
 
@@ -82,7 +80,7 @@ markdown_extensions:
 plugins:
   - macros
   - search
-  - mermaid2
+
 
 extra_css:
   - stylesheets/fenarius.css
