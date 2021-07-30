@@ -39,11 +39,19 @@ Vous devriez voir apparaître les éléments suivants :
 4. Placer un second ordinateur et les relier par un cable, attribuer deux adresses IP commençant par les mêmes trois valeurs aux deux ordinateurs (voir remarque ci-dessus). Passer en mode simulation.
     1. Cliquer sur l'un des ordinateurs, une interace permettant d'installer des logiciels sur cet ordinateur apparait, sélection la ligne de commande et l'installer :
     ![Filius1](./images/C10/act1-2.png){width=500px}
+    2. Tester la commande `ifconfig`, quel est son rôle ?
+    3. Tester la commande `ping` en donnant l'adresse IP de l'autre ordinateur, quel est le rôle de cette commande ?
+
+5. Peut-on ajouter un troisième ordinateur et les relier aux  autres avec un cable ? Pourquoi ?
+
+6. Utiliser un switch pour relier entre eux trois ordinateurs. Tester de nouveau la commande ping pour vérifier qu'ils peuvent communiquer.
 
 
 
 
-{{ titre_activite("Protocoles",[]) }}
+{{ titre_activite("Découpage en paquets",[]) }}
+
+{{ titre_activite("Couches d'un réseau",[]) }}
 
 {{ titre_activite("Protocole du bit alterné",[]) }}
 Alice envoie un message découpé en cinq paquets $P_1,P_2,P_3,P_4$ et $P_5$ à Bob :
@@ -54,15 +62,25 @@ Certains paquets peuvent être en retard ou perdus, dans l'exemple suivant, $P_1
 1. Quel sera alors, le message reçu par Bob ?
 
     Afin de palier à ces erreurs de transmission, Bob propose à Alice la solution suivante : *"Je t'enverrai une confirmation de reception pour chaque paquet, tant que tu ne l'as pas reçu, renvoie le même paquet"*
-    ![pba0](./images/C10/pba3.png){: .imgcentre width=400px}
+    ![pba3](./images/C10/pba3.png){: .imgcentre width=400px}
     La schéma ci-dessous montre que ce nouveau protocole permet de palier à certains problèmes. Les paquets perdus $P_1$ et $P_3$ ont étés émis de nouveau en l'absence d'accusé de réception.
 
-2. Montrer sur plusieurs exemples que ce nouveau protocole, peut générer des doublons dans le message reçu.
+2. Compléter le schéma suivant de communication avec ce nouveau protocole :
+    ![pba4](./images/C10/pba4.png){: .imgcentre width=400px}
+3. Quel est le message reçu par Bob ? Quelles erreurs se produisent ?
 
-    !!! aide "Aide"
-        Penser au fait que l'accusé de réception peut lui aussi être perdu ou en retard.
+    Alice propose d'améliorer le protocole de Bob de la façon suivante : *"Lorsque j'envoie un paquet je vais y joindre un 0 ou un 1, j'attendrai de recevoir un accusé de réception accompagné du même chiffre pour envoyer le paquet suivant. De ton côté, tu ne dois pas prendre en compte deux paquets consécutifs portant le même numéro ! *"
 
-    Alice propose d'améliorer le protocole de Bob de la façon suivante : *"Lorsque j'envoie un paquet je vais y joindre un 0 ou un 1, j'attendrai de recevoir un accusé de réception accompagné du même chiffre pour envoyer le paquet suivant*"
+    Ce nouveau fonctionnement est illustré par le schéma suivant :
+    ![pba4](./images/C10/pba5.png){: .imgcentre width=400px}
+
+4. Expliquer pourquoi Bob a ignoré le second envoi du paquet $P_2$ avec le bit 1.
+
+5. Bien qu'elle est reçu un accusé de réception entre temps, Alice envoie deux fois de suite le paquet $P_3$ avec le bit 0. Pourquoi ?
+
+6. Reprendre le schéma précédent en supposant que l'envoi de $P_4$ échoue et que l'accusé de réception de $P_2$ arrive encore plus en retard, c'est à dire après l'envoi de $P_4$ avec le bit 1. Que se passe-t-il alors ?
+
+7. Que peut-on en conclure pour ce nouveau protocole ?
 
 ## Cours
 

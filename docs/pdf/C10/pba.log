@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex 2020.8.9)  29 JUL 2021 13:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex 2020.8.9)  30 JUL 2021 11:39
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -750,6 +750,8 @@ Package: frcursive 2004/02/01 v1.2 support package for French Cursive
 \seyesThickness=\skip77
 \seyes@box=\box94
 \seyes@ln=\skip78
+) (/usr/share/texlive/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
 ) (/usr/share/texlive/texmf-dist/tex/latex/multido/multido.sty
 Package: multido 2004/05/17 package wrapper for PSTricks `multido.tex', (HV/RN)
  (/usr/share/texlive/texmf-dist/tex/generic/multido/multido.tex  v1.42, 2010/05/14 <tvz>
@@ -1242,6 +1244,97 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 
 ] [3
 
+] [4
+
+]
+Overfull \hbox (6.67978pt too wide) in paragraph at lines 156--156
+[]$\OML/lmm/m/it/10 P[]$[] 
+ []
+
+
+Overfull \hbox (6.67978pt too wide) in paragraph at lines 156--156
+[]$\OML/lmm/m/it/10 P[]$[] 
+ []
+
+
+Overfull \hbox (6.67978pt too wide) in paragraph at lines 156--156
+[]$\OML/lmm/m/it/10 P[]$[] 
+ []
+
+
+Overfull \hbox (4.55975pt too wide) in paragraph at lines 156--156
+[]$\OML/lmm/m/it/10 P[]$\U/pzd/m/n/10 À 
+ []
+
+
+Overfull \hbox (4.55975pt too wide) in paragraph at lines 156--156
+[]$\OML/lmm/m/it/10 P[]$\U/pzd/m/n/10 À 
+ []
+
+
+Overfull \hbox (6.67978pt too wide) in paragraph at lines 156--156
+[]$\OML/lmm/m/it/10 P[]$[] 
+ []
+
+
+Overfull \hbox (6.67978pt too wide) in paragraph at lines 156--156
+[]$\OML/lmm/m/it/10 P[]$[] 
+ []
+
+
+Overfull \hbox (6.67978pt too wide) in paragraph at lines 156--156
+[]$\OML/lmm/m/it/10 P[]$[] 
+ []
+
+[5
+
+]
+Overfull \hbox (6.67978pt too wide) in paragraph at lines 189--189
+[]$\OML/lmm/m/it/10 P[]$[] 
+ []
+
+
+Overfull \hbox (6.67978pt too wide) in paragraph at lines 189--189
+[]$\OML/lmm/m/it/10 P[]$[] 
+ []
+
+
+Overfull \hbox (4.55975pt too wide) in paragraph at lines 189--189
+[]$\OML/lmm/m/it/10 P[]$\U/pzd/m/n/10 À 
+ []
+
+
+Overfull \hbox (4.55975pt too wide) in paragraph at lines 189--189
+[]$\OML/lmm/m/it/10 P[]$\U/pzd/m/n/10 À 
+ []
+
+
+Overfull \hbox (4.55975pt too wide) in paragraph at lines 189--189
+[]$\OML/lmm/m/it/10 P[]$\U/pzd/m/n/10 À 
+ []
+
+
+Overfull \hbox (6.67978pt too wide) in paragraph at lines 189--189
+[]$\OML/lmm/m/it/10 P[]$[] 
+ []
+
+
+Overfull \hbox (6.67978pt too wide) in paragraph at lines 189--189
+[]$\OML/lmm/m/it/10 P[]$[] 
+ []
+
+
+Overfull \hbox (6.67978pt too wide) in paragraph at lines 189--189
+[]$\OML/lmm/m/it/10 P[]$[] 
+ []
+
+
+Overfull \hbox (4.55975pt too wide) in paragraph at lines 189--189
+[]$\OML/lmm/m/it/10 P[]$\U/pzd/m/n/10 À 
+ []
+
+[6
+
 ]
 \tf@nav=\write11
 \openout11 = `pba.nav'.
@@ -1252,21 +1345,25 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 \tf@snm=\write13
 \openout13 = `pba.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 94.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 94.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 191.
  (./pba.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 94.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 94.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 191.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 191.
 Package rerunfilecheck Info: File `pba.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
  ) 
 Here is how much of TeX's memory you used:
- 36421 strings out of 483041
- 706857 string characters out of 5962453
- 1372648 words of memory out of 5000000
- 50604 multiletter control sequences out of 15000+600000
- 576600 words of font info for 67 fonts, out of 8000000 for 9000
+ 36475 strings out of 483041
+ 707633 string characters out of 5962453
+ 1378728 words of memory out of 5000000
+ 50651 multiletter control sequences out of 15000+600000
+ 579619 words of font info for 69 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 60i,16n,89p,993b,775s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,19n,89p,993b,778s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on pba.dvi (3 pages, 118004 bytes).
+Output written on pba.dvi (6 pages, 247332 bytes).
