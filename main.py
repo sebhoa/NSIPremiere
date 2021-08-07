@@ -182,9 +182,6 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
                 modele+=f"        - [x] {rep.lower()}) =={env.variables.qcm[num][clerep]}== \n"
             else:
                 modele+=f"        - [ ] {rep.lower()}) ~~{env.variables.qcm[num][clerep]}~~ \n"
-        f= open("resultat.txt","a")
-        f.write(modele)
-        f.close()
         return modele
 
     @env.macro

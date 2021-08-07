@@ -47,9 +47,19 @@ Vous devriez voir apparaître les éléments suivants :
 6. Utiliser un switch pour relier entre eux trois ordinateurs. Tester de nouveau la commande ping pour vérifier qu'ils peuvent communiquer.
 
 
-
-
 {{ titre_activite("Découpage en paquets",[]) }}
+Quatre ordinateurs A,B,C et D sont reliés en réseau par un routeur. Des données (en rouge) sont émises **en un seul envoi continu** de A vers B comme illustré ci-dessous :
+![animation transfert continu](/images/C10/transfert.gif){: .imgcentre width=500px}
+
+1. Que faut-il faire si le routeur tombe en panne momentanément pendant le passage des données ?
+2. Que se passe-t-il si l'ordinateur C envoie en même temps des données vers D ?
+
+    Le schéma suivant illustre un envoi des données **par paquets** (P1, P2, P3, P4 et P5):
+    ![animation transfert continu](/images/C10/paquets.gif){: .imgcentre width=500px}
+
+3. Une panne momentanée du routeur est moins problématique, pourquoi ?
+4. L'ordinateur C peut-il envoyer des données en même temps vers D ? 
+
 
 {{ titre_activite("Couches d'un réseau",[]) }}
 

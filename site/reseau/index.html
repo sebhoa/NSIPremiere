@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../images/dragon.svg">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.7">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.875de78c.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
@@ -358,15 +358,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#activite-2-protocoles" class="md-nav__link">
-    Activité 2 : Protocoles
+  <a href="#activite-2-decoupage-en-paquets" class="md-nav__link">
+    Activité 2 : Découpage en paquets
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#activite-3-protocole-du-bit-alterne" class="md-nav__link">
-    Activité 3 : Protocole du bit alterné
+  <a href="#activite-3-couches-dun-reseau" class="md-nav__link">
+    Activité 3 : Couches d'un réseau
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activite-4-protocole-du-bit-alterne" class="md-nav__link">
+    Activité 4 : Protocole du bit alterné
   </a>
   
 </li>
@@ -549,15 +556,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#activite-2-protocoles" class="md-nav__link">
-    Activité 2 : Protocoles
+  <a href="#activite-2-decoupage-en-paquets" class="md-nav__link">
+    Activité 2 : Découpage en paquets
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#activite-3-protocole-du-bit-alterne" class="md-nav__link">
-    Activité 3 : Protocole du bit alterné
+  <a href="#activite-3-couches-dun-reseau" class="md-nav__link">
+    Activité 3 : Couches d'un réseau
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activite-4-protocole-du-bit-alterne" class="md-nav__link">
+    Activité 4 : Protocole du bit alterné
   </a>
   
 </li>
@@ -655,11 +669,34 @@ Vous devriez voir apparaître les éléments suivants :
 <ol>
 <li>Cliquer sur l'un des ordinateurs, une interace permettant d'installer des logiciels sur cet ordinateur apparait, sélection la ligne de commande et l'installer :
 <img alt="Filius1" src="../images/C10/act1-2.png" width="500px" /></li>
+<li>Tester la commande <code>ifconfig</code>, quel est son rôle ?</li>
+<li>Tester la commande <code>ping</code> en donnant l'adresse IP de l'autre ordinateur, quel est le rôle de cette commande ?</li>
 </ol>
 </li>
+<li>
+<p>Peut-on ajouter un troisième ordinateur et les relier aux  autres avec un cable ? Pourquoi ?</p>
+</li>
+<li>
+<p>Utiliser un switch pour relier entre eux trois ordinateurs. Tester de nouveau la commande ping pour vérifier qu'ils peuvent communiquer.</p>
+</li>
 </ol>
-<h3 id="activite-2-protocoles"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:" />   Activité 2 : <em>Protocoles</em></h3>
-<h3 id="activite-3-protocole-du-bit-alterne"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:" />   Activité 3 : <em>Protocole du bit alterné</em></h3>
+<h3 id="activite-2-decoupage-en-paquets"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:" />   Activité 2 : <em>Découpage en paquets</em></h3>
+<p>Quatre ordinateurs A,B,C et D sont reliés en réseau par un routeur. Des données (en rouge) sont émises <strong>en un seul envoi continu</strong> de A vers B comme illustré ci-dessous :
+<img alt="animation transfert continu" class="imgcentre" src="/images/C10/transfert.gif" width="500px" /></p>
+<ol>
+<li>Que faut-il faire si le routeur tombe en panne momentanément pendant le passage des données ?</li>
+<li>
+<p>Que se passe-t-il si l'ordinateur C envoie en même temps des données vers D ?</p>
+<p>Le schéma suivant illustre un envoi des données <strong>par paquets</strong> (P1, P2, P3, P4 et P5):
+<img alt="animation transfert continu" class="imgcentre" src="/images/C10/paquets.gif" width="500px" /></p>
+</li>
+<li>
+<p>Une panne momentanée du routeur est moins problématique, pourquoi ?</p>
+</li>
+<li>L'ordinateur C peut-il envoyer des données en même temps vers D ? </li>
+</ol>
+<h3 id="activite-3-couches-dun-reseau"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:" />   Activité 3 : <em>Couches d'un réseau</em></h3>
+<h3 id="activite-4-protocole-du-bit-alterne"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:" />   Activité 4 : <em>Protocole du bit alterné</em></h3>
 <p>Alice envoie un message découpé en cinq paquets <span class="arithmatex">\(P_1,P_2,P_3,P_4\)</span> et <span class="arithmatex">\(P_5\)</span> à Bob :
 <img alt="pba0" class="imgcentre" src="../images/C10/pba1.png" width="400px" />
 Certains paquets peuvent être en retard ou perdus, dans l'exemple suivant, <span class="arithmatex">\(P_1\)</span> est en retard, <span class="arithmatex">\(P_2\)</span> et <span class="arithmatex">\(P_4\)</span> sont perdus. 
@@ -668,22 +705,30 @@ Certains paquets peuvent être en retard ou perdus, dans l'exemple suivant, <spa
 <li>
 <p>Quel sera alors, le message reçu par Bob ?</p>
 <p>Afin de palier à ces erreurs de transmission, Bob propose à Alice la solution suivante : <em>"Je t'enverrai une confirmation de reception pour chaque paquet, tant que tu ne l'as pas reçu, renvoie le même paquet"</em>
-<img alt="pba0" class="imgcentre" src="../images/C10/pba3.png" width="400px" />
+<img alt="pba3" class="imgcentre" src="../images/C10/pba3.png" width="400px" />
 La schéma ci-dessous montre que ce nouveau protocole permet de palier à certains problèmes. Les paquets perdus <span class="arithmatex">\(P_1\)</span> et <span class="arithmatex">\(P_3\)</span> ont étés émis de nouveau en l'absence d'accusé de réception.</p>
 </li>
 <li>
-<p>Compléter le schéma suivant de communication avec ce nouveau protocole :</p>
+<p>Compléter le schéma suivant de communication avec ce nouveau protocole :
+    <img alt="pba4" class="imgcentre" src="../images/C10/pba4.png" width="400px" /></p>
 </li>
 <li>
-<p>Quel est le message reçu par Bob ? Quel erreur se produit ?</p>
+<p>Quel est le message reçu par Bob ? Quelles erreurs se produisent ?</p>
+<p>Alice propose d'améliorer le protocole de Bob de la façon suivante : <em>"Lorsque j'envoie un paquet je vais y joindre un 0 ou un 1, j'attendrai de recevoir un accusé de réception accompagné du même chiffre pour envoyer le paquet suivant. De ton côté, tu ne dois pas prendre en compte deux paquets consécutifs portant le même numéro ! </em>"</p>
+<p>Ce nouveau fonctionnement est illustré par le schéma suivant :
+<img alt="pba4" class="imgcentre" src="../images/C10/pba5.png" width="400px" /></p>
 </li>
 <li>
-<p>Montrer en construisant un exemple que même avec ce nouveau protocole certains paquets peuvent être perdus.</p>
-<div class="admonition aide">
-<p class="admonition-title">Aide</p>
-<p>Penser au fait que l'accusé de réception peut lui aussi  en retard.</p>
-</div>
-<p>Alice propose d'améliorer le protocole de Bob de la façon suivante : <em>"Lorsque j'envoie un paquet je vais y joindre un 0 ou un 1, j'attendrai de recevoir un accusé de réception accompagné du même chiffre pour envoyer le paquet suivant</em>"</p>
+<p>Expliquer pourquoi Bob a ignoré le second envoi du paquet <span class="arithmatex">\(P_2\)</span> avec le bit 1.</p>
+</li>
+<li>
+<p>Bien qu'elle est reçu un accusé de réception entre temps, Alice envoie deux fois de suite le paquet <span class="arithmatex">\(P_3\)</span> avec le bit 0. Pourquoi ?</p>
+</li>
+<li>
+<p>Reprendre le schéma précédent en supposant que l'envoi de <span class="arithmatex">\(P_4\)</span> échoue et que l'accusé de réception de <span class="arithmatex">\(P_2\)</span> arrive encore plus en retard, c'est à dire après l'envoi de <span class="arithmatex">\(P_4\)</span> avec le bit 1. Que se passe-t-il alors ?</p>
+</li>
+<li>
+<p>Que peut-on en conclure pour ce nouveau protocole ?</p>
 </li>
 </ol>
 <h2 id="cours">Cours</h2>
@@ -694,6 +739,106 @@ La schéma ci-dessous montre que ce nouveau protocole permet de palier à certai
 <p>Ce diaporama ne vous donne que quelques points de repères lors de vos révisions. Il devrait être complété par la relecture attentive de vos <strong>propres</strong> notes de cours et par une révision approfondie des exercices.</p>
 </div>
 <h2 id="qcm">QCM</h2>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>1.</strong> Laquelle de ces propositions est une adresse IP v4 valide ?</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) 4E:15:67:E3:11:17</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) 212.53.98.120</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) 256.53.98.120</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) 53.98.120</li>
+</ul>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>4E:15:67:E3:11:17</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> b) <mark>212.53.98.120</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>256.53.98.120</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>53.98.120</del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>2.</strong> Laquelle de ces propositions est une adresse MAC valide ?</p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) 04:D3:B0:7E:71:A6</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) 04:D3:B0:7E:71</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) 04:D3:B0:7E:71:G6</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) 125.212.31.53</li>
+</ul>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> a) <mark>04:D3:B0:7E:71:A6</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del>04:D3:B0:7E:71</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>04:D3:B0:7E:71:G6</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>125.212.31.53</del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>3.</strong> Quelle est l'utilité de la commande <code>ping</code> ?</p>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) Obtenir la route suivie par un paquet sur un réseau informatique</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) Obtenir l'adresse MAC de la machine sur laquelle on exécute cette commande.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) Mesurer  les performances d'une machine distante.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) Tester si une machine distante est accessible.</li>
+</ul>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>Obtenir la route suivie par un paquet sur un réseau informatique</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del>Obtenir l'adresse MAC de la machine sur laquelle on exécute cette commande.</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>Mesurer  les performances d'une machine distante.</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> d) <mark>Tester si une machine distante est accessible.</mark> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>4.</strong> Le protocole du bit alterné permet :</p>
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) de chiffrer les communications sur un réseau</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) de corriger les problèmes de perte de paquet lors de transmissions sur un réseau</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) d'accélerer les communications sur un réseau</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) de fiabiliser totalement les communications sur un réseau</li>
+</ul>
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>de chiffrer les communications sur un réseau</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> b) <mark>de corriger les problèmes de perte de paquet lors de transmissions sur un réseau</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>d'accélerer les communications sur un réseau</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>de fiabiliser totalement les communications sur un réseau</del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>5.</strong> Par rapport à un envoi en continu, quel est l'un des avantages de l'envoi de données par paquets dans un réseau ?</p>
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) Les données vont plus vite lorsqu'elles sont par paquets.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) Les données sont plus sécurisées lorsqu'elles sont par paquets</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) En cas de panne temporaire sur le réseau, seul les paquets concernés doivent être émis de nouveau.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) Il n'y a pas davantage, l'envoi en continu est toujours préférable.</li>
+</ul>
+</div>
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>Les données vont plus vite lorsqu'elles sont par paquets.</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del>Les données sont plus sécurisées lorsqu'elles sont par paquets</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> c) <mark>En cas de panne temporaire sur le réseau, seul les paquets concernés doivent être émis de nouveau.</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>Il n'y a pas davantage, l'envoi en continu est toujours préférable.</del> </li>
+</ul>
+</div>
+</div>
+</div>
 <h2 id="exercices">Exercices</h2>
 <h3 id="exercice-1-masque-de-sous-reseau"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:" />   Exercice 1 : <em>Masque de sous réseau</em></h3>
                 
@@ -714,8 +859,7 @@ La schéma ci-dessous montre que ce nouveau protocole permet de palier à certai
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        
-        <a href="../negatifs/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: C9-Représentation des entiers négatifs" rel="prev">
+        <a href="../negatifs/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -730,8 +874,7 @@ La schéma ci-dessous montre que ce nouveau protocole permet de palier à certai
         </a>
       
       
-        
-        <a href="../gloutons/" class="md-footer__link md-footer__link--next" aria-label="Suivant: C12-Algorithmes gloutons" rel="next">
+        <a href="../gloutons/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -766,10 +909,10 @@ La schéma ci-dessous montre que ce nouveau protocole permet de palier à certai
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.34eae1b6.min.js"></script>
       
         <script src="../javascripts/config.js"></script>
       
