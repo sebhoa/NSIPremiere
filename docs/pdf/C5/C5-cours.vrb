@@ -1,0 +1,16 @@
+\mframe{\DB}
+	\begin{alertblock}{Trier une liste de dictionnaires}
+		\begin{itemize}
+			\item<1-> La fonction \textcolor{red}{\tt sorted} permet aussi de trier des listes de dictionnaires on indique alors le critère de tri à l'aide de l'option \textcolor{blue}{\tt key}.
+			\item<2-> Par exemple:
+			      \begin{lstlisting}
+	def note(eleve):
+		return eleve["Note"]	
+	
+	notes = [{"Prenom":"Albert","Note":15},{"Prenom":"Jim","Note":10},{"Prenom":"Sarah","Note":19}]
+	notes.sort(key=note,reverse=True)
+	print(notes)
+	 \end{lstlisting}
+			      affichera : {\tt [\{'Prenom': 'Sarah', 'Note': 19\}, \{'Prenom': 'Albert', 'Note': 15\}, \{'Prenom': 'Jim', 'Note': 10\}]}
+		\end{itemize}
+	\end{alertblock}

@@ -70,10 +70,10 @@ def recherche_dichotomie(element,liste):
     while ....:
         milieu = ...
         if element>liste[milieu]:
-            debut=milieu+1
+            debut=.....
         else:
-            fin=milieu
-    if element==liste[milieu]:
+            fin=.....
+    if element==.....:
         return True
     else:
         return False
@@ -82,12 +82,32 @@ def recherche_dichotomie(element,liste):
 !!! aide "Aide"
     * Les variables `debut` (ligne 2) et `fin` (ligne 3) contiennent les indices de la liste entre lesquels on recherche.
     * La condition d'arrêt (ligne 4) est que l'écart entre ces deux indices est égale à 0.
+    * Si `element>liste[milieu]` (condition ligne 6), alors on peut restreindre la recherche à droite de milieu (exclu).
+    * Sinon on restreint la recherche à gauche de milieu (inclus)
 
 
 {{ titre_activite("Complexité d'un algorithme",[]) }}
 
-
+1. Graphique de comparaison de temps d'exécution 
 {{ telecharger("Jupyter notebook","notebook/Recherche dans une liste.ipynb")}}
+Le graphique suivant qui compare les temps d'exécution des deux algorithmes de recherche dans une liste a été construit dans le notebook précédent :
+![comparaison recherche simple et dichotomique](./images/C4/comparaison.png){: .imgcentre}
+2. Quel algorithme est le plus rapide ?
+3. Cas de la recherche simple
+    1. Pour la recherche simple, si une liste contient $n$ éléments, combien de comparaisons seront faites (au maximum) pour une recherche ?
+    2. Par conséquent, si on double la taille de la liste, que dire du nombre de comparaisons ?
+4. Cas de la recherche dichotomique
+    1. Dans la recherche dichotomique, après chaque comparaison comment évolue la portion de la liste dans laquelle on effectue la recherche ?
+    2. Par conséquent, si on double la taille de la liste, combien de comparaisons supplémentaires seront nécessaires ? 
+5. Compléter le tableau suivant :
+
+    |Taille de la liste | Nombre de comparaisons recherche simple | Nombre de comparaisons recherche dichotomique |
+    |-------------------|----------------------------------------|----------------------------------------------|
+    | $100$             | $100$ | $7$ |
+    | $200$             |   ...    | ...    |
+    | $400$             |   ...    | ...    |
+    | $800$             |   ...    | ...    |
+
 
 {{ titre_activite("Correction d'un algorithme",[]) }}
 
@@ -110,7 +130,24 @@ def recherche_dichotomie(element,liste):
  
 ## Exercices
 
-{{ exo("Analyser un programme",[],0)}}
+{{ exo("Parcours par indice",[],0)}}
+
+On reprend la fonction Python de recherche d'un élément dans une liste (activité 1) :
+
+```python linenums="1"
+def recherche(element,liste):
+    ''' Renvoie True si element est dans liste, False sinon '''
+    for x in liste:
+        if x==element: 
+            return True    
+    return False
+```
+
+1. Modifier la ligne 3 de façon à effectuer un parcours par indice plutôt que par élément
+2. Modifier en conséquence la ligne 4 
+3. Tester la fonction
+
+{{ exo("Analyser un programme",[])}}
 On considère la fonction Python suivante :
 ```python
     def cherche_position(element,liste):
@@ -129,6 +166,31 @@ On considère la fonction Python suivante :
 
 1. Si un algorithme de recherche linéaire s'exécute environ en 0.002 s sur une liste de $10\,000$ éléments, en combien de temps environ devrait-il s'exécuter pour une liste de un million d'éléments ?
 2. Si on double la taille d'une liste, le temps d'exécution d'un algorithme de recherche dichotomique va-t-il aussi doubler ? Justifier.
+
+{{ exo("Recherche dichotomique",[]) }}
+On donne ci-dessous la fonction de recherche par dichotomie vue à l'activité 2 :
+```python
+
+def recherche_dichotomie(element,liste):
+    debut = 0
+    fin = len(liste)-1
+    while fin-debut>0:
+        milieu = (debut+fin)//2
+        if element>liste[milieu]:
+            debut=milieu+1
+        else:
+            fin=milieu
+    if element==liste[debut]:
+        return True
+    else:
+        return False
+```
+
+1. Première améliorations
+    1. Modifier cette fonction afin qu'elle renvoie un résultat correct lorsque la liste est vide.
+    2. Ajouter une chaîne de documentation.
+    3. Ajouter des préconditions sous forme d'instructions `assert`.
+2. Modifier cette fonction de façon à sortir de la boucle `while` dès que l'élement cherché est égal à `liste[milieu]`.
 
 {{ exo("Puissance",["maths"],)}}
 On considère la fonction Python suivante :

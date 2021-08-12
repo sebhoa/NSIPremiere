@@ -17,7 +17,7 @@ nav:
   - "C10-Réseau" : reseau.md
   - "C11-Interaction dans une page web" : interactionweb.md
   - "C12-Algorithmes gloutons" : gloutons.md
-  - "C13-Tri et fusion de tables" : fusiontable.md
+  - "C13-Fusion de tables" : fusiontable.md
   - "C14-Interface homme-machine" : interface.md
   - "C15-Notion de nombre flottant" : flottant.md
   - "C16-Algorithme des k plus proches voisins" : knn.md

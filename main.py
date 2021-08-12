@@ -68,7 +68,7 @@ def define_env(env):
         10: ["os","Réseau",1,"reseau.md"],
         11: ["web","Interaction dans une page web",1,"interactionweb.md"],
         12: ["algorithmique","Algorithmes gloutons",2,"gloutons.md"],
-        13: ["donneestable","Tri et fusion de tables",1,"fusiontable.md"],
+        13: ["donneestable","Fusion de tables",1,"fusiontable.md"],
         14: ["os","Interface homme-machine",2,"interface.md"],
         15: ["typesbase","Notion de nombre flottant",1,"flottant.md"],
         16: ["algorithmique","Algorithme des k plus proches voisins",2,"knn.md"]
