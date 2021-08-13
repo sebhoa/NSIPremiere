@@ -11,7 +11,7 @@
 {{ titre_activite("Format csv",[],0) }}
 
 1. Consulter le site [data.gouv.fr](https://data.gouv.fr/){target=_blank} et notamment sa [page de documentation](https://doc.data.gouv.fr/){target=_blank}. Quels sont les objectifs de ce site ?
-2. Consulter cette [page](https://www.data.gouv.fr/fr/datasets/menus-des-cantines-des-colleges/) du site `data.gouv.fr`. Quelles données peut-on télécharger sur cette page ? Sous quel forme sont-elles proposées ?
+2. Consulter cette [page](https://www.data.gouv.fr/fr/datasets/menus-des-cantines-des-colleges/) du site `data.gouv.fr`. Quelles données peut-on télécharger sur cette page ? Sous quelle forme sont-elles proposées ?
 3. Prévisualiser les données au format `csv`. Faites des recherches sur ce format de données.
 4. Expliquer rapidement comment sont représentées des données au format `csv`
 
