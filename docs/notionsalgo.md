@@ -48,7 +48,7 @@ def recherche(element,liste):
     Arrêt de l'algorithme, $28$ n'est pas dans la liste.
 
     1. Dès l'étape 2, on a grisé les éléments situés avant 23 pour indiquer que 28 ne s'y trouve pas. Quelle propriété de la liste le permet ?
-    2. Que représente les nombres situés en rouge au-dessus (ou en-dessous) des éléments de la liste ?
+    2. Que représente les nombres situés en rouge au-dessus (ou au-dessous) des éléments de la liste ?
     3. Quelle est la condition d'arrêt de cet algorithme ?
     4. Si la liste contenait 100 éléments, en combien d'étapes cet algorithme se terminerait-il ? Justifier.
     
