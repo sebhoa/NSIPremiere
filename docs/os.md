@@ -97,9 +97,9 @@ Le langage Python peut être invoqué à partir de la ligne de commande, taper s
 
 {{ exo("Ranger un dossier",[]) }}
 
-1. Faire une copie du répertoire `a_ranger` que vous trouverez dans le dossier partagé.
+1. Télécharger et décompresser le dossier [A_Ranger](./files/C1/A_Ranger.zip).
 2. Lister le contenu de ce dossier, quels types de fichier contient-t-il ?
-3. Dans le dossier `a_ranger`, créer les dossiers `Texte`,`HTML` et `Python`. 
+3. Dans le dossier `A_ranger`, créer les dossiers `Texte`,`HTML` et `Python`. 
 4. Déplacer les fichiers de chaque type dans le dossier correspondant
 
     !!! aide "Aide"
@@ -107,14 +107,17 @@ Le langage Python peut être invoqué à partir de la ligne de commande, taper s
 
 {{ exo("Enigme",["dur"]) }}
 
-1. Trouver six lettres en utilisant uniquement la ligne de commande et les indices suivants :
-    * Lettre n° 1 : "*cachée dans le dossier `EnigmeNSI` que vous trouverez dans le dossier partagé*"
+1. Télécharger puis décompresser le fichier [`Enigme`](./files/C1/Enigme.zip).
+2. En utilisant **uniquement la ligne de commande**, trouver six lettres avec les indices suivants :
+    
+    * Lettre n° 1 : "*cachée dans le dossier `Enigme` que vous avez téléchargé*"
     * Lettre n° 2 : "*son code {{sc("ascii")}} est 71*"
     * Lettre n° 3 : "*deuxième lettre du jour de la semaine du 23 juin 1912*"
-    * Lettre n° 4 : "*La commande `wc` vous permettra de compter le nombre de caractères du fichier lettre 4 qui se trouve dans `EnigmeNSI` Diviser le résultat obtenu par 1956 pour avoir la position dans l'alphabet de la quatrième lettre"
-    * Lettre n° 5 : "Lorsque cette lettre est donnée en option à la commande `cp`, elle permet de copier un dossier et tout ce qu'il contient"
-    * Lettre n°6 : La taille en kilo octet du fichier `last` qui se trouve dans `/usr/bin` vous donnera le rang dans l'alphabet de la sixième lettre.
-2. Remettre dans l'ordre les six lettres obtenus pour trouver le nom d'un célèbre informaticien.
+    * Lettre n° 4 : "*La commande `wc` vous permettra de compter le nombre de caractères du fichier lettre 4 qui se trouve dans `Enigme`. Diviser le résultat obtenu par 1956 pour avoir la position dans l'alphabet de la quatrième lettre*"
+    * Lettre n° 5 : "*Lorsque cette lettre est donnée en option à la commande `cp`, elle permet de copier un dossier et tout ce qu'il contient*"
+    * Lettre n°6 : "*La commande `eog` vous permettra de découvrir la lettre6*".
+
+3. Remettre dans l'ordre les six lettres obtenus pour trouver le nom d'un célèbre informaticien.
 
 
 

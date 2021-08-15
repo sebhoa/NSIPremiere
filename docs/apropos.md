@@ -27,10 +27,9 @@ Mon adresse mail : `fnativel2[at]ac-reunion.fr`
 
 ## Utilisation
 
-Ce cours est construit pour être utilisé **en classe**, les élèves disposent d'un ordinateur fonctionnant sous [Ubuntu](https://www.ubuntu.com){target=_blank} et équipé des logiciels nécessaires. Cependant, une utilisation autonome à la maison est possible à condition d'installer les applications nécessaires (voir ci-dessous).
+Ce cours est construit pour être utilisé **en classe**, les élèves disposent d'un ordinateur fonctionnant sous [Ubuntu](https://www.ubuntu.com){target=_blank} et équipé des logiciels nécessaires. Cependant, une utilisation autonome à la maison est possible à condition d'installer les applications suivantes.
 
-## Applications
-Les applications suivants sont utilisés dans le cours, leur compatibilité avec les systèmes d'exploitation est indiqué.Pour les installer, suivre les liens. 
+###  Applications
 
 | Applications | {{ sc("gnu")}}/Linux | Windows | MacOS |
 | ----------|----------------------|------------|----------|
@@ -38,6 +37,8 @@ Les applications suivants sont utilisés dans le cours, leur compatibilité avec
 | [Jupyter](https://jupyter.org/)   | {{ ok() }}           | {{ ok() }} | {{ ok() }} |
 | [Filius](https://www.lernsoftware-filius.de/Herunterladen)    | {{ ok() }}           | {{ ok() }} | {{ ok() }} |
 | [Gameshell](https://linuxfr.org/news/gameshell-apprendre-les-rudiments-du-shell-en-s-amusant) | {{ ok() }}           | {{ nok() }} | {{ ok() }} |
+
+Cliquer sur une application pour accéder à sa page et l'installer.
 
 ## Licence
 

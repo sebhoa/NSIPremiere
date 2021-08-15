@@ -195,7 +195,6 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
     def qcm_chapitre(num_chap):
         index=1
         qcmc=""
-        print("Nombre questions : ",len(env.variables.qcm))
         for num in range(len(env.variables.qcm)):
             if int(env.variables.qcm[num]["chapitre"])==num_chap:
                 qcmc+=affiche_question(num,index)
