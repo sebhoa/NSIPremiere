@@ -19,11 +19,22 @@
 
 {{ titre_activite("Initiation à la ligne de commande",[])}}
 
-Cette initiation se fait à travers la réalisation de **missions** dans un mini jeu d'aventures. Pour démarrer cette activité
+Cette initiation se fait à travers la réalisation de **missions** dans un mini jeu d'aventures appelé [gameshell](https://github.com/phyver/GameShell){target=_blank}. 
 
-1. lancer un terminal 
-2. dans ce terminal taper `./gameshell.sh` et laisser vous guider par les instructions à l'écran
-3. Parallèlement à l'exécution des missions :
+
+1. Installation de Gameshell :
+    1. Télécharger le fichier [gameshell](./files/C1/gameshell.sh).
+    2. Ouvrir l'explorateur de fichier.
+    3. Créer un répertoire `gameshell` dans votre dossier personnel
+    4. Dans ce répertoire, copier le fichier gameshell que vous avez téléchargé.
+    4. Faire un clic droit sur le fichier et dans l'onglet permission cocher la case '*Autoriser l'exécution du fichier comme un programme*', comme illustré ci-dessous : ![gameshell1](./images/C1/gameshell1.png){: .imgcentre}
+    5. Faire un clic droit dans la fenêtre de l'explorateur de fichier et sélectionner "*ouvrir dans un terminal*" comme illustré ci-dessous :![gameshell2](./images/C1/gameshell2.png){: .imgcentre}
+    6. Dans le terminal taper :
+    ```bash
+     ./gameshell.sh 
+    ```
+
+2. Parallèlement à l'exécution des missions :
     * Noter les commandes que vous utilisez et leur signification
     * Tenir à jour un plan du monde dans lequel se déroule le jeu
     
