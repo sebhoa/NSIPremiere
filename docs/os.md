@@ -116,6 +116,22 @@ Le langage Python peut être invoqué à partir de la ligne de commande, taper s
     !!! aide "Aide"
             Déplacer les fichiers un à un serait long à fastidieux. Penser à utiliser le caractère `*` qui remplace n'importe quelle suite de caractères dans les noms de fichiers.
 
+{{ exo("Chercher des fichiers",[] )}}
+
+1. Lire les premières lignes de la documentation de la commande `find`. A quoi sert cette commande ?
+2. Tester la commande `find ~ -name "gameshell"`. Expliquer le résultat obtenu et l'effet de la commande.
+
+    !!! Aide 
+         * On rappelle que `~` désigne votre répertoire personnel.
+         * A l'activité 2, `gameshell` avait été téléchargé puis copier dans un repertoire, deux exemplaires de ce fichiers devraient donc se trouver dans votre répertoire personnel
+
+3. Sachant que les commandes du système se trouvent dans le repertoire `/usr/bin`, lister toutes les commandes dont le nom se terminent par  `dir` (`rmdir` et `mkdir` devraient donc apparaître).
+
+4. Lister tous les commandes dont le nom commence par `ls`. 
+
+
+        
+
 {{ exo("Enigme",["dur"]) }}
 
 1. Télécharger puis décompresser le fichier [`Enigme`](./files/C1/Enigme.zip).

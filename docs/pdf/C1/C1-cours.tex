@@ -4,7 +4,7 @@
 
 \begin{document}
 
-\input{\detokenize{/home/fenarius/Travail/Cours/MkDocs/docs/commun/MacrosCours.tex}}
+\input{\detokenize{/home/fenarius/Travail/Cours/NSIPremiere/docs/commun/MacrosCours.tex}}
 \newcommand{\Systeme}{\cnum Système d'exploitation}
 \pythonmode
 
@@ -32,13 +32,13 @@
 	\begin{block}{La place du système d'exploitation}
 		\setlength{\shadowsize}{1pt}
 		\begin{tabularx}{0.9\textwidth}{Y}
-			\onslide<2->{\rnode{ut}{\psshadowbox{\makebox[5cm]{\par\noindent\rule[-0.2cm]{0pt}{0.6cm} \textcolor{red}{\textbf{L'utilisateur}} }} } }              \\
+			\onslide<2->{\rnode{ut}{\psshadowbox{\makebox[5cm]{\par\noindent\rule[-0.2cm]{0pt}{0.6cm} \textcolor{red}{\textbf{\faUser \ L'utilisateur}} }} } }              \\
 			\\
-			\onslide<3->{\rnode{ap}{\psshadowbox{\makebox[5cm]{\par\noindent\rule[-0.2cm]{0pt}{0.6cm} {\textcolor{red}{\textbf{Les applications}} } }}}}            \\
+			\onslide<3->{\rnode{ap}{\psshadowbox{\makebox[5cm]{\par\noindent\rule[-0.2cm]{0pt}{0.6cm} {\textcolor{red}{\textbf{\faThList \ Les applications}} } }}}}            \\
 			\\
-			\onslide<6->{\rnode{os}{\psshadowbox{\makebox[5cm]{\par\noindent\rule[-0.2cm]{0pt}{0.6cm} {\textcolor{red}{\textbf{Système d'exploitation}}} }}}} \\
+			\onslide<6->{\rnode{os}{\psshadowbox{\makebox[5cm]{\par\noindent\rule[-0.2cm]{0pt}{0.6cm} {\textcolor{red}{\textbf{\faLinux \ Système d'exploitation}}} }}}} \\
 			\\
-			\onslide<6->{\rnode{or}{\psshadowbox{\makebox[5cm]{\par\noindent\rule[-0.2cm]{0pt}{0.6cm} {\textcolor{red}{\textbf{L'ordinateur}}} }}}}
+			\onslide<6->{\rnode{or}{\psshadowbox{\makebox[5cm]{\par\noindent\rule[-0.2cm]{0pt}{0.6cm} {\textcolor{red}{\textbf{\faLaptop \ L'ordinateur}}} }}}}
 		\end{tabularx}
 		\onslide<4->{\ncline[doubleline=true,offset=1cm,doublesep=3pt,doublecolor=blue,linecolor=blue,linewidth=1.5pt,arrowsize=10pt,arrowinset=0.2,arrowlength=1.2]{->}{ut}{ap}}
 		\onslide<4->{\ncline[doubleline=true,offset=1.5cm,doublesep=3pt,doublecolor=blue,linecolor=blue,linewidth=1.5pt,arrowsize=10pt,arrowinset=0.2,arrowlength=1.2]{<-}{ut}{ap}}
@@ -67,17 +67,40 @@
 	\end{block}
 \end{frame}
 
+
+
+
+% Différences OS libres et propriétaires  schéma
+\begin{frame}
+	\mframe{\Systeme}
+	\begin{block}{Du Code source à l'exécutable}
+		\begin{tabular}{ccccc}
+			& & & & \vspace{0.2cm} \\
+		\rnode{CS}{\psframebox[framearc=.3,framesep=0,linecolor=Sepia,linewidth=1pt]{\psframebox*[framearc=.3,fillcolor=lightgray]{\textcolor{Sepia}{\textbf{ \faFile} Code source}}}} & \hspace{1cm} & \onslide<2->{\rnode{{CO}}{\psframebox{\faCog Compilateur}}} & \hspace{1cm} & \onslide<3->{\rnode{EX}{\psframebox[framearc=.3,framesep=0,linecolor=blue,linewidth=1pt]{\psframebox*[framearc=.3,fillcolor=lightgray]{\textcolor{blue}{\textbf{ \faFileArchive} Exécutable} }} }} \\
+		\end{tabular}
+		\onslide<2->{\ncline[doubleline=true,doublesep=3pt,doublecolor=OliveGreen,linecolor=OliveGreen,linewidth=1.5pt,arrowsize=10pt,arrowinset=0.2,arrowlength=1.2]{->}{CS}{CO} \naput[labelsep=0]{\textcolor{OliveGreen}{\faCheck}}}
+		\onslide<3->{\ncline[doubleline=true,doublesep=3pt,doublecolor=OliveGreen,linecolor=OliveGreen,linewidth=1.5pt,arrowsize=10pt,arrowinset=0.2,arrowlength=1.2]{->}{CO}{EX}\naput[labelsep=0]{\textcolor{OliveGreen}{\faCheck}}}
+		\onslide<5->{\ncbar[angle=90,linewidth=1.5pt,linecolor=red]{->}{EX}{CS} \nbput[labelsep=0.1pt]{\textcolor{red}{\faTimes \ Impossible}}}
+		\begin{enumerate}
+			\item<1-> Le \textcolor{Sepia}{code source} est écrit par des développeurs informatique. Ce \og code \fg est lisible et compréhensible par un être humain.
+			\item<2-> Ce code est \textcolor{red}{compilé}, c'est à dire qu'il est traduit par un programme informatique appelé compilateur.
+			\item<3-> Le résultat obtenu est \textcolor{blue}{un exécutable} fichier binaire compréhensible uniquement par un ordinateur
+			\item<4-> L'opération inverse (passé de l'exécutable au code source) est virtuellement \textcolor{red}{impossible} !
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
 % Différences OS libres et propriétaires
 \begin{frame}
 	\mframe{\Systeme}
 	\begin{block}{Libres et propriétaires}
 		On distingue généralement :
 		\begin{itemize}
-			\item<1-> Les systèmes d'exploitation \textcolor{blue}{propriétaires} développé par une société dans un but commercial. Par exemple Windows ou MacOS.
+			\item<1-> Les logiciels (et donc les OS) \textcolor{blue}{propriétaires} développé par une société dans un but commercial. Par exemple Windows ou MacOS.
 			      \onslide<2->{Les utilisateurs n'ont alors pas le droit ni de modifier, ni de revendre le système d'exploitation.}
-			      \onslide<3->{En particulier, ils n'ont pas accès au \textcolor{blue}{code source}}.
-			\item<4-> Les systèmes d'exploitation \textcolor{blue}{libres} développé par une communauté d'informaticiens. Par exemple Linux.
-			      \onslide<5->{Le code source est fourni (\textit{open source}), mais libre n'est pas synonyme de gratuit.}
+			      \onslide<3->{En particulier, ils n'ont pas accès au \textcolor{blue}{code source}. Seul l'exécutable est fourni.}
+			\item<4-> Les logiciels (et donc les OS)  \textcolor{blue}{libres} développé par une communauté d'informaticiens. Par exemple Linux.
+			      \onslide<5->{Le code source est alors fourni (\textit{open source}), parfois avec des droits de modification.}
 		\end{itemize}
 	\end{block}
 \end{frame}
@@ -115,6 +138,8 @@
 	\end{block}
 \end{frame}
 
+
+
 \begin{frame}
 	\mframe{\Systeme}
 	\begin{block}{Un état des lieux en 2020}
@@ -126,6 +151,18 @@
 		\end{itemize}
 	\end{block}
 \end{frame}
+
+\begin{frame}
+	\mframe{\Systeme}
+	\begin{block}{Des ressources vidéo}
+		\begin{itemize}
+		\item<1->{Une  \href{https://youtu.be/4OhUDAtmAUo}{\textcolor{red}{\faYoutube \ vidéo} sur l'histoire des systèmes d'exploitation et leurs rôles.}}
+		\item<2->{Une  \href{https://youtu.be/4lXp_89c3RU}{\textcolor{red}{\faYoutube \ vidéo} sur les notions de compilateurs/interpréteur.}}
+		\item<3->{Une  \href{https://youtu.be/yVpbFMhOAwE}{\textcolor{red}{\faYoutube \ vidéo} sur Linux et son développement.}}
+		\end{itemize}
+	\end{block}
+\end{frame}
+
 
 \begin{frame}
 	\mframe{\Systeme}
