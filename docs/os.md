@@ -63,7 +63,23 @@ Cette initiation se fait à travers la réalisation de **missions** dans un mini
 
 ## Exercices
 
-{{ exo("Calendrier",["capacite"],0) }}
+
+{{ exo("Les bases de la ligne de commande",[],0) }}
+1. En utilisant uniquement la  ligne de commande, créer l'arborescence suivante dans votre répertoire personnel :
+        ```mermaid
+            graph TD
+            A[Cours] --> B[C1-OS]
+            A[Cours] --> G[C2-Binaire]
+            B --> C[Exercices]
+            B --> D[Activités]
+            B --> E[Notes]
+            B --> F[Python]
+        ```
+2. Renommer le dossier `Cours` en `NSI`
+3. Aller dans le dossier `NSI`
+4. Taper la commande `tree`, quel est l'effet de cette commande ?
+
+{{ exo("Calendrier",["capacite"],1) }}
 
 1. Ouvrir un terminal et y tester la commande ``cal``
 2. Lire la documentation de cette commande
