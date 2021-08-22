@@ -80,6 +80,7 @@ markdown_extensions:
 plugins:
   - macros
   - search
+  - mermaid2
 
 
 extra_css:
