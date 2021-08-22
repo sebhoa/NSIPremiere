@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex 2021.5.4)  10 AUG 2021 08:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex 2021.5.4)  21 AUG 2021 09:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/home/fenarius/Travail/Cours/MkDocs/docs/pdf/C5/C5-cours.tex
-(/home/fenarius/Travail/Cours/MkDocs/docs/pdf/C5/C5-cours.tex
+**/home/fenarius/Travail/Cours/NSIPremiere/site/pdf/C5/C5-cours.tex
+(/home/fenarius/Travail/Cours/NSIPremiere/site/pdf/C5/C5-cours.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2019/09/29 v3.57 A class for typesetting presentations
@@ -1224,7 +1224,7 @@ File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 5.
  (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) (/home/fenarius/Travail/Cours/MkDocs/docs/commun/MacrosCours.tex
+) (/home/fenarius/Travail/Cours/NSIPremiere/docs/commun/MacrosCours.tex
 \c@numchap=\count432
 \c@numframe=\count433
 \ltxt=\skip90
@@ -1238,7 +1238,7 @@ File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 31.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 30.
  [1
 
 ] [2
@@ -1252,21 +1252,21 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
 ] [6
 
 ] (/usr/share/texmf/tex/latex/lm/t1lmtt.fd)
-Overfull \hbox (6.45102pt too wide) in paragraph at lines 68--68
+Overfull \hbox (6.45102pt too wide) in paragraph at lines 67--67
 []|[]| 
  []
 
 [7
 
 ]
-Overfull \hbox (6.45102pt too wide) in paragraph at lines 68--68
+Overfull \hbox (6.45102pt too wide) in paragraph at lines 67--67
 []|[]| 
  []
 
 [8
 
 ]
-Overfull \hbox (6.45102pt too wide) in paragraph at lines 68--68
+Overfull \hbox (6.45102pt too wide) in paragraph at lines 67--67
 []|[]| 
  []
 
@@ -1329,21 +1329,21 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <9> not available
 \tf@snm=\write13
 \openout13 = `C5-cours.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 162.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 162.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 161.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
  (./C5-cours.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 162.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 162.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 161.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
 Package rerunfilecheck Info: File `C5-cours.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
  37081 strings out of 481240
- 714881 string characters out of 5920404
- 1437426 words of memory out of 5000000
+ 714921 string characters out of 5920404
+ 1437431 words of memory out of 5000000
  51467 multiletter control sequences out of 15000+600000
  599419 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,20n,89p,841b,1709s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,20n,89p,846b,1709s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on C5-cours.dvi (23 pages, 469588 bytes).
