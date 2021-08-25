@@ -132,6 +132,22 @@ Le langage Python peut être invoqué à partir de la ligne de commande, taper s
     !!! aide "Aide"
             Déplacer les fichiers un à un serait long à fastidieux. Penser à utiliser le caractère `*` qui remplace n'importe quelle suite de caractères dans les noms de fichiers.
 
+
+{{ exo("Gestion des droits sur un fichier",[]) }}
+1. Quelle commande permet d'afficher les droits sur les fichiers d'un répertoire ?
+2. Quels sont les trois droits définis par un système de type Linux et leurs signfications ?
+3. Compléter le tableau suivant :
+
+    |Commande | Résultat |
+    |---------|----------|
+    |`chmod g+x monfichier` | |
+    | ... | Enlever le droit d'écriture pour le propriétaire du fichier|
+    | `chmod go-rwx monfichier` | ... |
+    | `chmod a+x monfichier` | ... |
+    | ..... | Attribuer les droits de lecture, d'écriture et d'exécution aux autres |
+    | ....  | Enlever les droits d'écriture au groupe et aux autres|
+
+
 {{ exo("Chercher des fichiers",[] )}}
 
 1. Lire les premières lignes de la documentation de la commande `find`. A quoi sert cette commande ?
