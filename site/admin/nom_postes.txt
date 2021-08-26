@@ -1,0 +1,18 @@
+Bureau 	: AlanTuring 		
+
+1 (Gauche)	: AdaLovelace		(L)
+2 (Gauche)	: KenThomson		(T)
+3 (Gauche)	: DennisRitchie	(R)
+4 (Gauche)  	: GeorgeBoole		(B)
+5 (Face)  	: LinusTordvalds	(T)
+6 (Face)	: EdgarCodd		(C)
+7 (Face)	: JohnVonNeumann	(V)
+8 (Face)	: GraceHooper		(H)
+Droit 1 	: BlaisePascal		(P)
+Droit 2	: TimBernersLee	*
+Droit 3	: GuidoVanRossum	*
+Droit 4	: FrancesAllen		*
+		: CharlesBabbage
+		: DonaldKnuth
+		: EdsgerDijkstra
+		: 
