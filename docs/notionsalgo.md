@@ -40,10 +40,10 @@ def recherche(element,liste):
 
     |Etape | Liste | Milieu|Comparaison |
     |------|-------|--------------|------------|
-    |1|$\underbrace{[\overset{\textcolor{red}{_\wedge^{0}}}{14}, 15, 17, 22,}_{ } \underset{_4^\uparrow}{\textcolor{darkblue}{23}} , \overbrace{25, 29, 34, \underset{\textcolor{red}{_8^{\vee}}}{38}]}_{ }$| $(0+8)//2 = 4$ |$\textcolor{darkblue}{23} <\textcolor{red}{28}$ |
-    |2|$[\colorbox{lightgray}{14, 15, 17, 22,23} , \underbrace{\overset{\textcolor{red}{_\wedge^{5}}}{25}} \underset{_6^\uparrow}{\textcolor{darkblue}{29}}, \overbrace{34, \underset{\textcolor{red}{_8^{\vee}}}{38}]}_{ }$ | $(5+8)//2=6$|$\textcolor{darkblue}{29} \geq \textcolor{red}{28}$.|
-    |3|$[\colorbox{lightgray}{14, 15, 17, 22,23} , \underset{_5^\uparrow}{\overset{\textcolor{red}{_\wedge^{5}}}{25}}, \underset{\textcolor{red}{_6^{\vee}}}{29} \colorbox{lightgray}{34,38}]$ | $(5+6)//2=5$ |$\textcolor{darkblue}{25} < \textcolor{red}{28}$.|
-    |3|$[\colorbox{lightgray}{14, 15, 17, 22,23,25} \underset{\textcolor{red}{_6^{\vee}}}{\overset{\textcolor{red}{_\wedge^6}}{29}} \colorbox{lightgray}{34,38}]$ | - | - |
+    |:one:|$\underbrace{[\overset{\textcolor{red}{_\wedge^{0}}}{14}, 15, 17, 22,}_{ } \underset{_4^\uparrow}{\textcolor{darkblue}{23}} , \overbrace{25, 29, 34, \underset{\textcolor{red}{_8^{\vee}}}{38}]}_{ }$| $(0+8)//2 = 4$ |$\textcolor{darkblue}{23} <\textcolor{red}{28}$ |
+    |:two:|$[\colorbox{lightgray}{14, 15, 17, 22,23} , \underbrace{\overset{\textcolor{red}{_\wedge^{5}}}{25}} \underset{_6^\uparrow}{\textcolor{darkblue}{29}}, \overbrace{34, \underset{\textcolor{red}{_8^{\vee}}}{38}]}_{ }$ | $(5+8)//2=6$|$\textcolor{darkblue}{29} \geq \textcolor{red}{28}$.|
+    |:three:|$[\colorbox{lightgray}{14, 15, 17, 22,23} , \underset{_5^\uparrow}{\overset{\textcolor{red}{_\wedge^{5}}}{25}}, \underset{\textcolor{red}{_6^{\vee}}}{29} \colorbox{lightgray}{34,38}]$ | $(5+6)//2=5$ |$\textcolor{darkblue}{25} < \textcolor{red}{28}$.|
+    |:four:|$[\colorbox{lightgray}{14, 15, 17, 22,23,25} \underset{\textcolor{red}{_6^{\vee}}}{\overset{\textcolor{red}{_\wedge^6}}{29}} \colorbox{lightgray}{34,38}]$ | - | - |
 
     Arrêt de l'algorithme, $28$ n'est pas dans la liste.
 
