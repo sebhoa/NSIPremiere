@@ -152,6 +152,11 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
 !!! warning "Attention"
     Ce diaporama ne vous donne que quelques points de repères lors de vos révisions. Il devrait être complété par la relecture attentive de vos **propres** notes de cours et par une révision approfondie des exercices.'''
         return ccours
+    
+    @env.macro
+    def aff_cours(num):
+        fichier=f'C{num}/C{num}-cours.pdf'
+        return cours(fichier)
 
     @env.macro
     def affiche_question(num,index):

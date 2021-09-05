@@ -93,3 +93,15 @@ pays = [
 48,Quelle ligne dans le fichier `css` d'une page web permettra aux titres de niveau 1 de cette page de s'afficher en rouge ?,`h1 {color:red;}`,`title {color:red;}`,`.h1 {couleur:red;}`,`<h1> {color:red;}`,A,Interactions entre l'homme et la machine sur le Web,6,
 49,Quel est la balise à utiliser pour insérer une image nommée `logo_python.jpg` dans une page web ?,"`<image src=""logo_python.jpg"">`","`<image source=""logo_python.jpg"">`","`<img src=""logo_python.jpg"">`","`<img source=""logo_python.jpg"">`",C,Interactions entre l'homme et la machine sur le Web,6,
 50,Quelles balises doit-on utiliser pour créer une liste d'éléments non ordonnées dans une page web ?,`<ol>` et `<li>`,`<ul>` et `<li>`,`<ol>` et `<il>`,`<ul>` et `<ol>`,B,Interactions entre l'homme et la machine sur le Web,6,
+51,Quelle instruction permet d'orienter une tortue `crayon` vers le bas ?,`tortue.forward(270)`,`tortue.left(270)`,`tortue.right(270)`,`tortue.setheading(270)`,D,Langages et programmation,3,
+52,"On suppose que la tortue `crayon` est située en `(0,0)` et est orientée vers le bas, quelle suite d'instructions permet de construire la figure suivante ?",<br> `crayon.forward(100)` <br> `crayon.left(90)` <br> `crayon.forward(50)`,<br> `crayon.forward(100)` <br> `crayon.right(90)` <br> `crayon.forward(50)`,<br> `crayon.forward(100)` <br> `crayon.setheading(90)` <br> `crayon.forward(50)`,<br>`crayon.forward(100)` <br> `crayon.left(45)`<br> `crayon.forward(50)`,A,Langages et programmation,3,qcm1.png
+53,"Quelles instructions permettent de positionner la tortue `crayon` en `(-100,100)`, sans rien tracer à l'écran ?","<br> `crayon.penup()` <br> `crayon.set(-100,100)`","<br> `crayon.penup()` <br> `crayon.forward(-100,100)`","<br> `crayon.pendown()` <br> `crayon.goto(-100,100)`","<br> `crayon.penup()` <br> `crayon.goto(-100,100)`",D,Langages et programmation,3,
+54,"En python, la définition d'une fonction commencer par le mot clé :",`function`,`def`,`import`,`return`,B,Langages et programmation,3,
+55,"Quelle sera le dessin produit par l'instruction `mystere(100,45)`  où `mystere` est la fonction ci-dessous :
+```python
+def mystere(l,a):
+    crayon.penup()
+    crayon.goto(0,0)
+    crayon.setheading(a)
+    crayon.forward(l)
+```",Un trait de longueur 45 d'orientation 100° et partant de l'origine,Un trait de longueur 100 d'orientation 45° et partant de l'origine,Deux traits de longueur 100 se croisant à l'origine à 45°,Cette fonction ne produit aucun dessin !,D,Langages et programmation,3,

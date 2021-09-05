@@ -1,0 +1,14 @@
+\mframe{\Python}
+	\begin{alertblock}{Fonctions}
+		\begin{itemize}
+			\item<2->{Les fonctions sont des blocs d'instructions destinés à accomplir une tâche lors de leur \textcolor{blue}{appel} (par exemple avec \tmc{turtle}, tracé un carré).}
+			\item<3->{Leurs résultats peut dépendre de valeurs appelées \textcolor{blue}{paramètres} de la fonction (par exemple, le côté du carré).}
+			\item<4->{Lorsqu'une fonction est destinée à produire un résultat (par exemple celui d'un calcul), on renvoie ce résultat à l'aide de l'instruction \textcolor{blue}{return}}
+			\item<5->{Pour définir une fonction en Python, on utilise la syntaxe suivante :
+		\begin{lstlisting}
+		def <nom_fonction>(<arguments>):
+			<instruction>
+			return <resultat>
+		\end{lstlisting}}
+		\end{itemize}
+	\end{alertblock}

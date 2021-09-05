@@ -18,13 +18,32 @@
 \newcommand{\cnum}{\fbox{\textcolor{yellow}{\textbf{C\thenumchap}}}~}
 
 \definecolor{grispale}{gray}{0.95}
-
+\definecolor{pythonbg}{gray}{0.85}
 
 \definecolor{grispale}{gray}{0.95}
 \newcommand{\htmlmode}{\lstset{language=html,numbers=left, tabsize=2, frame=single, breaklines=true, keywordstyle=\ttfamily, basicstyle=\small,
    numberstyle=\tiny\ttfamily, framexleftmargin=0mm, backgroundcolor=\color{grispale}, xleftmargin=12mm,showstringspaces=false}}
-\newcommand{\pythonmode}{\lstset{language=python,numbers=left, tabsize=2, frame=single, breaklines=true, keywordstyle=\ttfamily, basicstyle=\small,
-   numberstyle=\tiny\ttfamily, framexleftmargin=0mm, backgroundcolor=\color{grispale}, xleftmargin=12mm, showstringspaces=false}}
+\newcommand{\pythonmode}{\lstset{
+   language=python,
+   linewidth=\linewidth,
+   numbers=left,
+   tabsize=2,
+   frame=single,
+   breaklines=true,
+   keywordstyle=\ttfamily\color{blue},
+   basicstyle=\small,
+   numberstyle=\tiny\ttfamily,
+   framexleftmargin=-2mm,
+   numbersep=-0.5mm,
+   backgroundcolor=\color{pythonbg},
+   xleftmargin=-1mm, 
+   showstringspaces=false,
+   commentstyle=\color{gray},
+   stringstyle=\color{OliveGreen},
+   emph={turtle,Screen,Turtle},
+   emphstyle=\color{RawSienna},
+   morekeywords={setheading,goto,backward,forward,left,right,pendown,penup,pensize,color,speed,hideturtle,showturtle,forward}}
+   }
 \newcommand{\bashmode}{\lstset{language=bash,numbers=left, tabsize=2, frame=single, breaklines=true, basicstyle=\ttfamily,
    numberstyle=\tiny\ttfamily, framexleftmargin=0mm, backgroundcolor=\color{grispale}, xleftmargin=12mm, showstringspaces=false}}
 \newcommand{\exomode}{\lstset{language=python,numbers=left, tabsize=2, frame=single, breaklines=true, basicstyle=\ttfamily,
@@ -467,6 +486,9 @@
 \end{tcolorbox}
 }
 \newcommand{\rc}[1]{\textcolor{OliveGreen}{#1}}
+\newcommand{\pmc}[1]{\textcolor{blue}{\tt #1}}
+\newcommand{\tmc}[1]{\textcolor{RawSienna}{\tt #1}}
+
 
 %Référence aux exercices par leur numéro
 \newcommand{\refexo}[1]{

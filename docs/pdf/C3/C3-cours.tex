@@ -1,0 +1,161 @@
+\PassOptionsToPackage{dvipsnames,table}{xcolor}
+\documentclass[10pt]{beamer}
+\usepackage{Cours}
+
+\begin{document}
+
+\input{\detokenize{/home/fenarius/Travail/Cours/NSIPremiere/docs/commun/MacrosCours.tex}}
+\setcounter{numchap}{3}
+\newcommand{\Python}{\cnum Initiation à Python avec turtle}
+
+\pythonmode
+
+
+
+% Turtle : papier et crayon
+\begin{frame}[fragile]
+	\mframe{\Python}
+	\begin{block}{Création du papier et du crayon}
+		\begin{lstlisting}
+	import turtle
+	papier = turtle.Screen()
+	crayon = turtle.Turtle()
+		\end{lstlisting}
+	\end{block}
+	\onslide<2->{\begin{block}{Remarques}
+			\begin{itemize}
+				\item<3-> les noms {\tt papier} et {\tt crayon} sont des \textcolor{blue}{noms de variables}, choisis par le programmeur.
+				\item<4-> On peut créer plusieurs crayons différents ({\tt stylo =}\tmc{turtle.Turtle()}).
+				\item<5-> l'instruction {\tt crayon.}\tmc{reset()} permet d'effacer la totalité des tracés de la tortue nommée {\tt crayon}.
+				\item<6-> l'instruction {\tt crayon.}\tmc{undo()} permet d'effacer le dernier tracé de la tortue nommée {\tt crayon}.
+			\end{itemize}
+		\end{block}}
+\end{frame}
+
+% Turtle : papier et crayon 1/2
+\begin{frame}[fragile]
+	\mframe{\Python}
+	\begin{alertblock}{\textcolor{yellow}{\danger} Attention}
+		Dans la suite, on supposera que la tortue a été nommée {\tt crayon} et l'écran {\tt papier}. Mais, ces noms sont \textcolor{blue}{choisis par le programmeur}.
+	\end{alertblock}
+	\begin{block}{Propriétés de la tortue}
+		\begin{itemize}
+			\item<2-> {\tt crayon.}\tmc{pensize}{\tt(size)} fixe l'épaisseur de la tortue à {\tt size}.
+			\item<3-> {\tt crayon.}\tmc{color}{\tt(color)} change à {\tt color} la couleur de la tortue.
+			\item<4-> {\tt crayon.}\tmc{penup}{\tt ()} et {\tt crayon.}\tmc{penup}{\tt ()} permettent respectivement de relever ou d'abaisser la tortue.
+			\item<5-> {\tt crayon.}\tmc{showturtle}{\tt ()} et {\tt crayon.}\tmc{hideturtle}{\tt ()} permettent respectivement de faire apparaître ou non la tortue.
+			\item<6-> {\tt crayon.}\tmc{speed}{\tt (s)}  pour modifier la vitesse de tracé.
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+% Turtle : papier et crayon 2/2
+\begin{frame}[fragile]
+	\mframe{\Python}
+	\begin{exampleblock}{Exemples}
+		Ecrire les instructions permettant d'obtenir un crayon abaissé, rouge, d'épaisseur~3, caché et se déplaçant à la vitesse maximale.\pause
+		\begin{lstlisting}
+	crayon.pendown() 
+	crayon.pensize(3)
+	crayon.color("red")
+	crayon.hideturtle()
+	crayon.speed(10)
+	\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
+
+% Turtle : Orientation
+\begin{frame}[fragile]
+	\mframe{\Python}
+	\begin{block}{Orientation de la tortue}
+		\begin{itemize}
+			\item<2-> L'orientation de la tortue est définie par l'angle qu'elle fait avec l'axe horizontale et est initialement fixé à 0.
+			\item<4-> Les instructions suivantes permettent de modifier cette orientation \\
+			      \bigskip
+			      \begin{tabularx}{\linewidth}{p{4.5cm}|X}
+				      \psset{unit=0.6px, xlabelsep}
+				      \begin{pspicture}
+					      \pstGeonode[PointName=none,PointSymbol=none](90,-70){O}(0,-70){A}(180,-70){B}(90,-160){C}(90,20){D}
+					      \ncline[linewidth=0.7px,linecolor=red]{->}{O}{B}
+					      \ncline[linewidth=0.5px]{->}{O}{A}
+					      \ncline[linewidth=0.5px]{->}{O}{C}
+					      \ncline[linewidth=0.5px]{->}{O}{D}
+					      \rput(190,-70){{\footnotesize \textcolor{blue}{0}}}
+					      \rput(-10,-70){\footnotesize \textcolor{blue}{180}}
+					      \rput(90,25){\footnotesize \textcolor{blue}{90}}
+					      \rput(90,-170){\footnotesize \textcolor{blue}{270}}
+					      \pstRotation[PointName=none,PointSymbol=none,RotAngle=60]{O}{B}[E]
+					      \pstRotation[PointName=none,PointSymbol=none,RotAngle=160]{O}{B}[F]
+					      \pstRotation[PointName=none,PointSymbol=none,RotAngle=20]{O}{B}[G]
+					      \onslide<6->{\ncline[linewidth=0.5px,linecolor=RawSienna]{->}{O}{E} \pstMarkAngle[MarkAngleRadius=40,LabelSep=50,MarkAngleType=default,arrows=->]{B}{O}{E}{$a$}}
+					      \onslide<8,9>{\ncline[linewidth=0.5px,linecolor=RawSienna,linestyle=dashed]{->}{O}{F} \pstMarkAngle[MarkAngleRadius=30,LabelSep=20,MarkAngleType=default,arrows=->,linecolor=OliveGreen]{E}{O}{F}{\textcolor{OliveGreen}{$l$}}}{}
+					      \onslide<10>{\ncline[linewidth=0.5px,linecolor=RawSienna,linestyle=dashed]{->}{O}{G} \pstMarkAngle[MarkAngleRadius=30,LabelSep=20,MarkAngleType=default,arrows=<-,linecolor=OliveGreen]{G}{O}{E}{\textcolor{OliveGreen}{$r$}}}{}
+
+				      \end{pspicture} &
+				      \begin{itemize}
+					      \item<5-> {\tt crayon.}\tmc{setheading}{\tt (a)} pour fixer l'orientation de la tortue à l'angle {\tt a}.
+					      \item<7-> {\tt crayon.}\tmc{left}{\tt (l)} pour faire tourner la tortue de {\tt l} degrés à gauche \textcolor{blue}{à partir de son orientation actuelle}.
+					      \item<9-> {\tt crayon.}\tmc{right}{\tt (r)} pour faire tourner la tortue de {\tt r} degrés à droite \textcolor{blue}{à partir de son orientation actuelle}.
+				      \end{itemize}
+			      \end{tabularx}
+			      \bigskip
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+% Turtle : Déplacement
+\begin{frame}[fragile]
+	\mframe{\Python}
+	\begin{block}{Déplacement de la tortue}
+		\begin{itemize}
+			\item<2-> La position de la tortue est définie par ses coordonnées dans un repère (comme en mathématiques) et est initialement l'origine du repère.
+			\item<4-> Les instructions suivantes permettent de modifier cette position \\
+			      \begin{tabularx}{\linewidth}{p{4.5cm}|X}
+				      \psset{xunit=0.5cm,yunit=0.5cm,xlabelsep=0,ylabelsep=0.1,MarkHashLength=2pt}
+				      \begin{pspicture}(0,4)(-4,4)
+					      \psgrid[xunit=0.5cm,yunit=0.5cm,subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(-4,-4)(4,4)
+					      \pstGeonode[PointName=none,PointSymbol=none](-4,0){X1}(4,0){X2}(0,-4){Y1}(0,4){Y2}
+					      \ncline[linewidth=0.5px]{->}{X1}{X2}
+					      \ncline[linewidth=0.5px]{->}{Y1}{Y2}
+					      \onslide<6->{\pstGeonode[PointName=none,PointSymbol=|](-2,0){x} \rput(-2,-0.4){{\scriptsize \textcolor{blue}{x}}}}
+					      \onslide<6->{\pstGeonode[PointName=none,PointSymbol=+](0,3){y} \rput(0.2,3){{\scriptsize \textcolor{blue}{y}}}}
+					      \onslide<7->{\psline[linecolor=RawSienna,linestyle=dashed]{<-}(-2,3)(0,3) \psline[linecolor=RawSienna,linestyle=dashed]{<-}(-2,3)(-2,0) }
+					      \onslide<8->{\pstGeonode[PosAngle=135,PointSymbol=*,PointName=none](-2,3){M}}
+					      \onslide<10->{\pstGeonode[PosAngle=135,PointSymbol=none,PointName=none](-1.8,2.8){N} \ncline[linewidth=1.5px,linecolor=gray]{->}{M}{N}}
+					      \onslide<11->{\pstGeonode[PosAngle=135,PointSymbol=none,PointName=none](2,-1){P} \ncline[linestyle=dashed,linecolor=OliveGreen]{->}{M}{P} \naput{$l$}}
+				      \end{pspicture} &
+				      \begin{itemize}
+					      \item<5-> {\tt crayon.}\tmc{goto}{\tt (x,y)} pour déplacer la tortue au point de coordonnées {\tt (x,y)}.
+					      \item<9-> {\tt crayon.}\tmc{forward}{\tt (l)} pour faire avancer la tortue d'une distance {\tt l} \textcolor{blue}{dans sa direction actuelle}.
+					      \item<12-> {\tt crayon.}\tmc{backward}{\tt (l)} pour faire reculer la tortue d'une distance {\tt l}\textcolor{blue}{dans la direction opposée à sa direction actuelle}.
+				      \end{itemize}
+			      \end{tabularx}
+			      \bigskip
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+
+% Appel à une fonction
+\begin{frame}[fragile]
+	\mframe{\Python}
+	\begin{alertblock}{Fonctions}
+		\begin{itemize}
+			\item<2->{Les fonctions sont des blocs d'instructions destinés à accomplir une tâche lors de leur \textcolor{blue}{appel} (par exemple avec \tmc{turtle}, tracé un carré).}
+			\item<3->{Leurs résultats peut dépendre de valeurs appelées \textcolor{blue}{paramètres} de la fonction (par exemple, le côté du carré).}
+			\item<4->{Lorsqu'une fonction est destinée à produire un résultat (par exemple celui d'un calcul), on renvoie ce résultat à l'aide de l'instruction \textcolor{blue}{return}}
+			\item<5->{Pour définir une fonction en Python, on utilise la syntaxe suivante :
+		\begin{lstlisting}
+		def <nom_fonction>(<arguments>):
+			<instruction>
+			return <resultat>
+		\end{lstlisting}}
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+
+
+
+\end{document}
