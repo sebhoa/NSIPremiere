@@ -74,7 +74,7 @@ Il manque des chiffres (remplacés par des ?) dans le nombre binaire suivant : $
     * ce nombre est divisible par 2
     * il y a un nombre impair de 0 dans l'écriture binaire de ce nombre
     * l'écriture décimale de ce nombre dépasse $(355)_{10}$
-2. Donner l'écriture décimale de nombre.
+2. Donner l'écriture décimale de ce nombre.
 3. Donner son écriture hexadécimale
 
 {{ exo("Un peu de Python",["python"]) }}
@@ -83,7 +83,7 @@ Il manque des chiffres (remplacés par des ?) dans le nombre binaire suivant : $
 1. Lancer Python en ligne de commande, comme vu dans le chapitre précédent.
 2. Tester la fonction `bin` de Python, en affichant par exemple `bin(201)` et `bin(57)`. Rapprocher les résultats obtenus avec les réponses de l'exercice 1. Émettre une hypothèse sur cette fonction.
 3. Valider votre hypothèse en faisant afficher l'aide de la fonction `bin`.
-4. Reprendre les questions précédentes pour la fonction `hex`
+4. Reprendre les questions précédentes pour la fonction `hex`.
 
 {{ exo("Code ASCII",[]) }}
 

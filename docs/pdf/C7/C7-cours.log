@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex 2021.5.4)  21 AUG 2021 09:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex 2020.8.9)  5 SEP 2021 22:04
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
-**/home/fenarius/Travail/Cours/NSIPremiere/docs/pdf/C2/C2-cours.tex
-(/home/fenarius/Travail/Cours/NSIPremiere/docs/pdf/C2/C2-cours.tex
+**/home/fenarius/Travail/Cours/NSIPremiere/docs/pdf/C7/C7-cours
+(/home/fenarius/Travail/Cours/NSIPremiere/docs/pdf/C7/C7-cours.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2019/09/29 v3.57 A class for typesetting presentations
@@ -585,9 +585,9 @@ LaTeX Info: Redefining \textlatin on input line 2319.
 \bbl@dirlevel=\count315
 )
 Package babel Info: \l@acadian = using hyphenrules for french
-(babel)             (\language73) on input line 91.
+(babel)             (\language7) on input line 91.
 Package babel Info: \l@canadien = using hyphenrules for french
-(babel)             (\language73) on input line 92.
+(babel)             (\language7) on input line 92.
 \FB@nonchar=\count316
 Package babel Info: Making : an active character on input line 419.
 Package babel Info: Making ; an active character on input line 420.
@@ -750,6 +750,8 @@ Package: frcursive 2004/02/01 v1.2 support package for French Cursive
 \seyesThickness=\skip77
 \seyes@box=\box94
 \seyes@ln=\skip78
+) (/usr/share/texlive/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
 ) (/usr/share/texlive/texmf-dist/tex/latex/multido/multido.sty
 Package: multido 2004/05/17 package wrapper for PSTricks `multido.tex', (HV/RN)
  (/usr/share/texlive/texmf-dist/tex/generic/multido/multido.tex  v1.42, 2010/05/14 <tvz>
@@ -805,7 +807,7 @@ Package: xlop 2009/12/02 package wrapper for xlop.tex
 Package: pstricks 2018/12/21 v0.69 LaTeX wrapper for `PSTricks' (RN,HV)
  (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
 ) (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/pst-xkey.tex
 File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
  (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
@@ -1079,9 +1081,98 @@ File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 File: listings.cfg 2019/09/10 1.8c listings configuration
 ))
 Package: listings 2019/09/10 1.8c (Carsten Heinz)
- (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemeserif.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty)))
-No file C2-cours.aux.
-\openout1 = `C2-cours.aux'.
+ (/usr/share/texlive/texmf-dist/tex/latex/circuitikz/circuitikz.sty
+Package: circuitikz 2020/02/04{} The CircuiTikz circuit drawing package version 1.0
+ (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Loading pgffor.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen373
+\pgffor@skip=\dimen374
+\pgffor@stack=\toks69
+\pgffor@toks=\toks70
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Loading tikz.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@plot@mark@count=\count430
+\pgfplotmarksize=\dimen375
+)
+\tikz@lastx=\dimen376
+\tikz@lasty=\dimen377
+\tikz@lastxsaved=\dimen378
+\tikz@lastysaved=\dimen379
+\tikz@lastmovetox=\dimen380
+\tikz@lastmovetoy=\dimen381
+\tikzleveldistance=\dimen382
+\tikzsiblingdistance=\dimen383
+\tikz@figbox=\box113
+\tikz@figbox@bg=\box114
+\tikz@tempbox=\box115
+\tikz@tempbox@bg=\box116
+\tikztreelevel=\count431
+\tikznumberofchildren=\count432
+\tikznumberofcurrentchild=\count433
+\tikz@fig@count=\count434
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfmatrixcurrentrow=\count435
+\pgfmatrixcurrentcolumn=\count436
+\pgf@matrix@numberofcolumns=\count437
+)
+\tikz@expandcount=\count438
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowinset=\dimen384
+\pgfarrowlength=\dimen385
+\pgfarrowwidth=\dimen386
+\pgfarrowlinewidth=\dimen387
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybending.code.tex
+File: tikzlibrarybending.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulebending.code.tex
+File: pgfmodulebending.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineartransformations.code.tex
+File: pgfmodulenonlineartransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgftransformnonlinearflatness=\dimen388
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvilinear.code.tex
+File: pgflibrarycurvilinear.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@curvilinear@time@a=\dimen389
+\pgf@curvilinear@length@a=\dimen390
+\pgf@curvilinear@length@b=\dimen391
+\pgf@curvilinear@length@c=\dimen392
+\pgf@curvilinear@length@d=\dimen393
+)
+\pgf@arrows@the@rigidity=\dimen394
+)) (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
+\pgf@circ@count@a=\count439
+\pgf@circ@count@b=\count440
+\pgf@circ@count@c=\count441
+\pgf@circ@res@up=\dimen395
+\pgf@circ@res@down=\dimen396
+\pgf@circ@res@zero=\dimen397
+\pgf@circ@res@left=\dimen398
+\pgf@circ@res@right=\dimen399
+\pgf@circ@res@other=\dimen400
+\pgf@circ@res@step=\dimen401
+\pgf@circ@res@temp=\dimen402
+\pgfstartlinewidth=\dimen403
+\pgf@circ@Rlen=\dimen404
+\pgf@circ@scaled@Rlen=\dimen405
+) (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex) (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex) (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex) (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex) (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex
+\pgf@circ@res@count=\count442
+) (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex) (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircmultipoles.tex) (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirclabel.tex) (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircvoltage.tex) (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex) (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex) (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircpath.tex)
+
+Package circuitikz Warning: You did not specify one of the voltage directions:
+(circuitikz)                  oldvoltagedirection, nooldvoltagedirection, 
+(circuitikz)                  RPvoltages or EFvoltages 
+(circuitikz)                Default directions may have changed, 
+(circuitikz)                please check the manual.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemeserif.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty))) (./C7-cours.aux)
+\openout1 = `C7-cours.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
@@ -1099,6 +1190,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
@@ -1134,7 +1226,7 @@ LaTeX Font Info:    ... okay on input line 5.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box113
+\AtBeginShipoutBox=\box117
 Package hyperref Info: Link coloring OFF on input line 5.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1143,19 +1235,16 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count430
+\c@section@level=\count443
 )
 LaTeX Info: Redefining \ref on input line 5.
 LaTeX Info: Redefining \pageref on input line 5.
 LaTeX Info: Redefining \nameref on input line 5.
+ (./C7-cours.out) (./C7-cours.out)
 \@outlinefile=\write10
-\openout10 = `C2-cours.out'.
+\openout10 = `C7-cours.out'.
 
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
-(/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
+ (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-English.dict
 Dictionary: translator-bibliography-dictionary, Language: English 
@@ -1174,11 +1263,10 @@ LaTeX Info: Redefining \up on input line 5.
  (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-\c@lstlisting=\count431
-
-No file C2-cours.nav.
+\c@lstlisting=\count444
+ (./C7-cours.nav)
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 5.
-(/usr/share/texmf/tex/latex/lm/t1lmr.fd
+ (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
@@ -1229,18 +1317,21 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 5
  (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (/home/fenarius/Travail/Cours/NSIPremiere/docs/commun/MacrosCours.tex
-\c@numchap=\count432
-\c@numframe=\count433
+\c@numchap=\count445
+\c@numframe=\count446
 \ltxt=\skip90
-\c@tempangle=\count434
-\c@numact=\count435
-\c@numseance=\count436
-\c@numexo=\count437
-\c@numprojet=\count438
-\c@numquestion=\count439
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2019/09/10 1.8c listings language file
-) [1
+\c@tempangle=\count447
+\c@numact=\count448
+\c@numseance=\count449
+\c@numexo=\count450
+\c@numprojet=\count451
+\c@numquestion=\count452
+)
+
+LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <9> not available
+(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 29.
+
+[1
 
 ] [2
 
@@ -1248,62 +1339,327 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 
 ] [4
 
-]
-Overfull \hbox (1.95236pt too wide) in paragraph at lines 50--50
-[][]  
- []
+] [5
 
-[5
+] [6
 
-]
-Overfull \hbox (1.95236pt too wide) in paragraph at lines 50--50
-[][]  
- []
-
-[6
+] [7
 
 ]
-Overfull \hbox (1.95236pt too wide) in paragraph at lines 50--50
-[][]  
- []
 
-[7
+LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <10> not available
+(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 41.
 
-] [8
+[8
 
 ] [9
 
 ] [10
 
-] [11
+]
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]|[][][][]| 
+ []
 
-] [12
 
-] [13
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+ []|[]  
+ []
 
-] [14
 
-] [15
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+ [] 
+ []
 
-] [16
 
-] [17
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]|[] 
+ []
 
-] [18
 
-] [19
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+[]
+ []
 
-] [20
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]
+ []
+
+[11
+
+]
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]|[][][][]| 
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+ []|[]  
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+ [] 
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]|[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+[]
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]
+ []
+
+[12
+
+]
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]|[][][][][][][]| 
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+ []|[]  
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+ [] 
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]|[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+[]
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]
+ []
+
+[13
+
+]
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]|[][][][][][][]| 
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+ []|[]  
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+ [] 
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]|[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+[]
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]
+ []
+
+[14
+
+]
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]|[][][][][][][]| 
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+ []|[]  
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+ [] 
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]|[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+[]
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]
+ []
+
+[15
+
+]
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]|[][][][][][][]| 
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+ []|[]  
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+ [] 
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]|[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+[]
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]
+ []
+
+[16
+
+]
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]|[][][][][][][]| 
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+ []|[]  
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+ [] 
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]|[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+[]
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]
+ []
+
+[17
+
+]
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]|[][][][][][][]| 
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+ []|[]  
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+ [] 
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]|[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+[]
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]
+ []
+
+[18
+
+]
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]|[][][][][][][]| 
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+ []|[]  
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+ [] 
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]|[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+[]
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 67--67
+[]
+ []
+
+[19
+
+]
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 81.
+ [20
 
 ] [21
 
-]
-LaTeX Font Info:    Trying to load font information for U+fontawesomefree0 on input line 132.
- (/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/ufontawesomefree0.fd) [22
+] [22
 
 ] [23
 
-] [24
+]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 119.
+ (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [24
 
 ] [25
 
@@ -1335,12 +1691,7 @@ LaTeX Font Info:    Trying to load font information for U+fontawesomefree0 on in
 
 ] [39
 
-]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 284.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 284.
- [40
+] [40
 
 ] [41
 
@@ -1358,150 +1709,31 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 ] [48
 
-] [49
-
-] [50
-
-] [51
-
-] [52
-
-] [53
-
-] [54
-
-] [55
-
-] [56
-
-] [57
-
-] [58
-
-] [59
-
-] [60
-
-] [61
-
-] [62
-
-] [63
-
-] [64
-
-] [65
-
-] [66
-
-] [67
-
-] [68
-
-] [69
-
-] [70
-
-] [71
-
-] [72
-
-] [73
-
-] [74
-
-] [75
-
-] [76
-
-] [77
-
-] [78
-
-] [79
-
-] [80
-
-] [81
-
-] [82
-
-] [83
-
-] [84
-
-] [85
-
-] [86
-
-] [87
-
-] [88
-
-] [89
-
-] [90
-
-] [91
-
-] [92
-
-] [93
-
-] [94
-
-] [95
-
-] [96
-
-] [97
-
-] [98
-
-] [99
-
-] [100
-
-] [101
-
-] [102
-
-] [103
-
-] [104
-
 ]
 \tf@nav=\write11
-\openout11 = `C2-cours.nav'.
+\openout11 = `C7-cours.nav'.
 
 \tf@toc=\write12
-\openout12 = `C2-cours.toc'.
+\openout12 = `C7-cours.toc'.
 
 \tf@snm=\write13
-\openout13 = `C2-cours.snm'.
+\openout13 = `C7-cours.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 340.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 340.
- (./C2-cours.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 340.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 340.
-
-
-Package rerunfilecheck Warning: File `C2-cours.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `C2-cours.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 247.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 247.
+ (./C7-cours.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 247.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 247.
+Package rerunfilecheck Info: File `C7-cours.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 36591 strings out of 481240
- 711527 string characters out of 5920404
- 1392034 words of memory out of 5000000
- 51012 multiletter control sequences out of 15000+600000
- 595920 words of font info for 83 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 60i,19n,89p,846b,1046s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50185 strings out of 483041
+ 1109441 string characters out of 5962453
+ 1747144 words of memory out of 5000000
+ 64279 multiletter control sequences out of 15000+600000
+ 592262 words of font info for 69 fonts, out of 8000000 for 9000
+ 81 hyphenation exceptions out of 8191
+ 60i,21n,89p,842b,1401s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on C2-cours.dvi (104 pages, 2610488 bytes).
+Output written on C7-cours.dvi (48 pages, 1064776 bytes).
