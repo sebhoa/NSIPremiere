@@ -1,5 +1,5 @@
 
-{% set num = 8 %}
+{% set num = 9 %}
 {% set titre = "Algorithmes de tri"%}
 {% set theme = "algorithmique" %}
 
@@ -16,7 +16,7 @@
 
 ## Cours
 
-{{ cours("CHEMIN VERS PDF DE COURS") }}
+{{ aff_cours(num) }}
 
 
 ## QCM

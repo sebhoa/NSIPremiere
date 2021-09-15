@@ -54,7 +54,7 @@ Cette initiation se fait à travers la réalisation de **missions** dans un mini
 
 ## Cours
 
-{{ cours("C1/C1-cours.pdf") }} 
+{{ aff_cours(num) }}
 
 
 ## QCM

@@ -1,5 +1,5 @@
 
-{% set num = 9 %}
+{% set num = 10 %}
 {% set titre = "Représentation des entiers négatifs"%}
 {% set theme = "typesbase" %}
 
@@ -9,12 +9,12 @@
 
 {{ titre_activite("Complément à deux",[],0) }}
 
-{{ telecharger("Fiche d'activité","/pdf/C9/C9-act1.pdf")}}
+{{ telecharger("Fiche d'activité","/pdf/C10/C10-act1.pdf")}}
 
 
 ## Cours
 
-{{ cours("C9/C9-Cours.pdf") }}
+{{ aff_cours(num) }}
 
 ## QCM
 

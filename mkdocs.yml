@@ -13,7 +13,7 @@ nav:
       - "C2-Représentation des entiers et des caractères" : codage.md
       - "C3-Initiation à Python avec Turtle - Partie 1" : ippt1.md
       - "C4-Architecture matérielle" : architecture.md
-      - "C5-Initiation à Python avec Turtle - Partie 2" : ippt1.md
+      - "C5-Initiation à Python avec Turtle - Partie 2" : ippt2.md
       - "C6-Notions d'algorithmique" : notionsalgo.md
       - "C7-Lecture et traitement de données en table" : donneestable.md
       - "C8-Le web" : leweb.md

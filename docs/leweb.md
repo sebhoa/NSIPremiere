@@ -1,5 +1,5 @@
 
-{% set num = 6 %}
+{% set num = 8 %}
 {% set titre = "Le web"%}
 {% set theme = "web" %}
 
@@ -50,7 +50,7 @@ L'éditeur VS Code, permet d'insérer rapidement la structure de base d'une page
 
 ## Cours
 
-{{ cours("C6/C6-cours.pdf") }}
+{{ aff_cours(num) }}
 
 
 ## QCM

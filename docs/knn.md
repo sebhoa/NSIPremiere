@@ -1,5 +1,5 @@
 
-{% set num = 16 %}
+{% set num = 17 %}
 {% set titre = "Algorithe des k plus proches voisins"%}
 {% set theme = "algorithmique" %}
 
@@ -44,7 +44,7 @@
 
 ## Cours
 
-{{ cours("CHEMIN VERS PDF DE COURS") }}
+{{ aff_cours(num) }}
 
 
 ## QCM

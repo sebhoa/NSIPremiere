@@ -1,5 +1,5 @@
 
-{% set num = 5 %}
+{% set num = 7 %}
 {% set titre = "Données en table"%}
 {% set theme = "donneestable"%}
 
@@ -20,7 +20,7 @@
 
 {{ titre_activite("Tri d'une table",[]) }}
 
-Le fichier [Médailles Tokyo 2021](./files/C5/Tokyo2021.csv) présente au format `csv` le tableau des médailles des jeux olympiques de Tokyo 2021.
+Le fichier [Médailles Tokyo 2021](./files/C7/Tokyo2021.csv) présente au format `csv` le tableau des médailles des jeux olympiques de Tokyo 2021.
 
 1. Quelques révisions
     1. Télécharger ce fichier et l'ouvrir pour en avoir un aperçu, quels sont les descripteurs de ce fichier `csv` ?
@@ -64,7 +64,7 @@ Le fichier [Médailles Tokyo 2021](./files/C5/Tokyo2021.csv) présente au format
 
 ## Cours
 
-{{ cours("C5/C5-cours.pdf") }}
+{{ aff_cours(num) }}
 
 
 ## QCM
@@ -115,7 +115,7 @@ Boole;George;1815
 
 {{ exo("Pays du monde",[]) }}
 En cliquant sur le lien ci-dessous, télécharger un fichier au format `csv` (source : [kaggle.com](https://www.kaggle.com){target=_blank}, licence : domaine public), contenant des informations sur les pays du monde :
-{{ telecharger("Pays du monde","./files/C5/countries.csv")}}
+{{ telecharger("Pays du monde","./files/C7/countries.csv")}}
 On précise la signification des champs suivants : <br>
 :octicons-triangle-right-16: `Population` : le nombre d'habitants du pays,<br>
 :octicons-triangle-right-16:`Region`: la région dans laquelle se trouve le pays, par exemple la France est dans la région {{ sc("western europe")}},<br>

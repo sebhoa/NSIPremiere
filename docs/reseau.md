@@ -1,5 +1,5 @@
 
-{% set num = 10 %}
+{% set num = 11 %}
 {% set titre = "Réseau"%}
 {% set theme = "os" %}
 
@@ -94,7 +94,7 @@ Certains paquets peuvent être en retard ou perdus, dans l'exemple suivant, $P_1
 
 ## Cours
 
-{{ cours("CHEMIN VERS PDF DE COURS") }}
+{{ aff_cours(num) }}
 
 
 ## QCM

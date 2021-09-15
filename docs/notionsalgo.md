@@ -1,5 +1,5 @@
 
-{% set num = 4 %}
+{% set num = 6 %}
 {% set titre = "Recherche dans une liste"%}
 {% set theme = "algorithmique"%}
 
@@ -112,16 +112,16 @@ Le graphique suivant qui compare les temps d'exécution des deux algorithmes de 
 {{ titre_activite("Correction d'un algorithme",[]) }}
 
 
-{{ telecharger("Fiche d'activité","pdf/C4/C4-act2.pdf")}}
+{{ telecharger("Fiche d'activité","pdf/C6/C6-act2.pdf")}}
 
 {{ titre_activite("Terminaison d'un algorithme",[]) }}
 
 
-{{ telecharger("Fiche d'activité","pdf/C4/C4-act2.pdf")}}
+{{ telecharger("Fiche d'activité","pdf/C6/C6-act2.pdf")}}
 
 ## Cours
 
-{{ cours("C4/C4-cours.pdf") }}
+{{ aff_cours(num) }}
 
 
 ## QCM

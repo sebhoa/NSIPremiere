@@ -30,7 +30,7 @@ En utilisant la video ci-dessus et en faisant éventuellement vos propres recher
 
 ## Cours
 
-{{ cours("C2/C2-cours.pdf") }}
+{{ aff_cours(num) }}
 
 ## QCM
 
