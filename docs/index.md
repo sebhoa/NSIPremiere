@@ -1,7 +1,5 @@
 # Cours de NSI en Première du lycée Hintermann-Afféjee
 
-Pour toutes questions relatives à ce site (contenu, utilisation, licence, ...), merci de consulter cette [page](apropos.md)
-
 ## Liste des chapitres 
 
 {{ affiche_progression() }} 
