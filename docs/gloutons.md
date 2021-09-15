@@ -1,5 +1,5 @@
 
-{% set num = 8 %}
+{% set num = 13 %}
 {% set titre = "Algorithmes gloutons"%}
 {% set theme = "algorithmique" %}
 
