@@ -744,161 +744,166 @@ Le graphique suivant qui compare les temps d'exécution des deux algorithmes de 
 </div>
 <h2 id="qcm">QCM</h2>
 <div class="admonition fabquestion">
-<p class="admonition-title"><strong>1.</strong> Entre quelles balises se trouvent le contenu d'un fichier html qui s'affiche dans un navigateur ?</p>
+<p class="admonition-title"><strong>1.</strong> On a écrit une fonction qui prend en paramètre une liste non vide et qui renvoie son plus grand élément. Combien de tests faudrait-il écrire pour garantir que la fonction donne un résultat correct pour toute liste ?</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><label for="__tabbed_1_1">Réponses</label><div class="tabbed-content">
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> a) <code>&lt;html&gt;</code> et <code>&lt;/html&gt;</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> b) <code>&lt;head&gt;</code> et <code>&lt;/head&gt;</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> c) <code>&lt;title&gt;</code> et <code>&lt;/title&gt;</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> d) <code>&lt;body&gt;</code> et <code>&lt;/body&gt;</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> a) Il faudrait écrire une infinité de tests, on ne peut pas prouver que cette fonction est correct simplement en la testant</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> b) Deux tests : pour une liste à un élément et pour une liste à deux éléments ou plus.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> c) Trois tests : pour une liste vide, pour une liste à un élément et pour une liste à deux éléments ou plus.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> d) Deux tests : pour le cas où le plus grand élément est en début de liste et pour le cas où le plus grand élément n'est pas en début de liste</li>
 </ul>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio"><label for="__tabbed_1_2">Correction</label><div class="tabbed-content">
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> a) <del><code>&lt;html&gt;</code> et <code>&lt;/html&gt;</code></del> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> b) <del><code>&lt;head&gt;</code> et <code>&lt;/head&gt;</code></del> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del><code>&lt;title&gt;</code> et <code>&lt;/title&gt;</code></del> </li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> d) <mark><code>&lt;body&gt;</code> et <code>&lt;/body&gt;</code></mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"><span class="task-list-indicator"></span></input></label> a) <mark>Il faudrait écrire une infinité de tests, on ne peut pas prouver que cette fonction est correct simplement en la testant</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> b) <del>Deux tests : pour une liste à un élément et pour une liste à deux éléments ou plus.</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>Trois tests : pour une liste vide, pour une liste à un élément et pour une liste à deux éléments ou plus.</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>Deux tests : pour le cas où le plus grand élément est en début de liste et pour le cas où le plus grand élément n'est pas en début de liste</del> </li>
 </ul>
 </div>
 </input></input></div>
 </div>
 <div class="admonition fabquestion">
-<p class="admonition-title"><strong>2.</strong> Quel balise html permet d'insérer un lien hypertexte ?</p>
+<p class="admonition-title"><strong>2.</strong> Quelle affirmation concernant la fonction ci-dessous (où <code>x</code> et <code>y</code> sont des entiers naturels) est fausse ? </p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="n">s</span><span class="o">=</span><span class="n">x</span>
+    <span class="n">t</span><span class="o">=</span><span class="n">y</span>
+    <span class="k">while</span> <span class="n">t</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span>
+        <span class="n">t</span><span class="o">=</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">s</span>
+</code></pre></div>
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"/><label for="__tabbed_2_1">Réponses</label><div class="tabbed-content">
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <code>&lt;a&gt;</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <code>&lt;p&gt;</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <code>&lt;link&gt;</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <code>&lt;href&gt;</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) La propriété <code>s+t=x+y</code> est un invariant de boucle</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) La valeur finale de <code>t</code> est 1</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) La propriété "<code>t</code> est supérieur ou égal à 0" est un invariant de boucle</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) Le résultat renvoyé est égal à la somme <code>x+y</code></li>
 </ul>
 </div>
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio"/><label for="__tabbed_2_2">Correction</label><div class="tabbed-content">
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> a) <mark><code>&lt;a&gt;</code></mark> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del><code>&lt;p&gt;</code></del> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del><code>&lt;link&gt;</code></del> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del><code>&lt;href&gt;</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> a) <mark>La propriété <code>s+t=x+y</code> est un invariant de boucle</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del>La valeur finale de <code>t</code> est 1</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>La propriété "<code>t</code> est supérieur ou égal à 0" est un invariant de boucle</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>Le résultat renvoyé est égal à la somme <code>x+y</code></del> </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="admonition fabquestion">
-<p class="admonition-title"><strong>3.</strong> Quel est le rôle d'un fichier <code>css</code> ?</p>
+<p class="admonition-title"><strong>3.</strong> Donner un invariant de boucle de l'algorithme suivant qui permet de calculer la somme des <code>N</code> premiers entiers (où <code>N</code> est un nombre entier) :</p>
+<div class="highlight"><pre><span></span><code><span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">:</span>
+    <span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+    <span class="n">somme</span><span class="o">=</span><span class="n">somme</span><span class="o">+</span><span class="n">i</span>
+</code></pre></div>
 <div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><label for="__tabbed_3_1">Réponses</label><div class="tabbed-content">
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) Créer le contenu d'une page web</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) Définir l'apparence des éléments constituants une page web</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) Définir la structure d'une page web (titres, paragraphes, ...)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) Insérer des images dans une page web</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <code>somme = 0+1+2+...+i</code> et <code>i&lt;N</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <code>somme = 0+1+2+...+N</code> et <code>i&lt;N</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <code>somme = 0+1+1+...+i</code> et <code>i&lt;N+1</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <code>somme = 0+1+2+...+N</code> et <code>i&lt;N+1</code></li>
 </ul>
 </div>
 <input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><label for="__tabbed_3_2">Correction</label><div class="tabbed-content">
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>Créer le contenu d'une page web</del> </li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> b) <mark>Définir l'apparence des éléments constituants une page web</mark> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>Définir la structure d'une page web (titres, paragraphes, ...)</del> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>Insérer des images dans une page web</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del><code>somme = 0+1+2+...+i</code> et <code>i&lt;N</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> b) <mark><code>somme = 0+1+2+...+N</code> et <code>i&lt;N</code></mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del><code>somme = 0+1+1+...+i</code> et <code>i&lt;N+1</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del><code>somme = 0+1+2+...+N</code> et <code>i&lt;N+1</code></del> </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="admonition fabquestion">
-<p class="admonition-title"><strong>4.</strong> Les balises <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, ... <code>&lt;h6&gt;</code>, permettent :</p>
+<p class="admonition-title"><strong>4.</strong> Quel test va permettre de détecter l'erreur dans la fonction Python suivante qui ne calcule pas toujours correctement le résultat de <span class="arithmatex">\(x^y\)</span> (avec <span class="arithmatex">\(x\)</span> et <span class="arithmatex">\(y\)</span> entiers) ?</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+    <span class="n">p</span><span class="o">=</span><span class="n">x</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="o">*</span><span class="n">x</span>
+    <span class="k">return</span> <span class="n">p</span>
+</code></pre></div>
 <div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><label for="__tabbed_4_1">Réponses</label><div class="tabbed-content">
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) De créer des listes numérotées dans une page web</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) De créer des listes à puces dans une page web</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) De créer plusieurs niveaux de titres dans une page web</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) De créer des paragraphes dans  une page web</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <code>puissance(2,0)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <code>puissance(2,1)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <code>puissance(2,2)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <code>puissance(2,10)</code></li>
 </ul>
 </div>
 <input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><label for="__tabbed_4_2">Correction</label><div class="tabbed-content">
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>De créer des listes numérotées dans une page web</del> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del>De créer des listes à puces dans une page web</del> </li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> c) <mark>De créer plusieurs niveaux de titres dans une page web</mark> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>De créer des paragraphes dans  une page web</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> a) <mark><code>puissance(2,0)</code></mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del><code>puissance(2,1)</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del><code>puissance(2,2)</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del><code>puissance(2,10)</code></del> </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="admonition fabquestion">
-<p class="admonition-title"><strong>5.</strong> Le <em>Web</em> fonctionne sur le :</p>
+<p class="admonition-title"><strong>5.</strong> Pour pouvoir utiliser un algorithme de recherche par dichotomie dans une liste, quelle précondition doit être vraie ?</p>
 <div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><label for="__tabbed_5_1">Réponses</label><div class="tabbed-content">
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) modèle client-serveur</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) modèle pair à pair</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) modèle client-client</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) modèle serveur-serveur</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) La liste doit être triée.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) La liste ne doit pas comporter de doublons.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) La liste doit comporter uniquement des entiers positifs.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) La liste doit être de longueur inférieure à 1024.</li>
 </ul>
 </div>
 <input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><label for="__tabbed_5_2">Correction</label><div class="tabbed-content">
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> a) <mark>modèle client-serveur</mark> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del>modèle pair à pair</del> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>modèle client-client</del> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>modèle serveur-serveur</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> a) <mark>La liste doit être triée.</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del>La liste ne doit pas comporter de doublons.</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>La liste doit comporter uniquement des entiers positifs.</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>La liste doit être de longueur inférieure à 1024.</del> </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="admonition fabquestion">
-<p class="admonition-title"><strong>6.</strong> Quelle ligne dans le fichier <code>css</code> d'une page web permettra aux titres de niveau 1 de cette page de s'afficher en rouge ?</p>
+<p class="admonition-title"><strong>6.</strong> La fonction suivante doit calculer la moyenne d'un tableau de nombres. Avec quelles expressions faut-il compléter l'écriture pour que la fonction soit correcte ?</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tableau</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">for</span> <span class="n">valeur</span> <span class="ow">in</span> <span class="n">tableau</span><span class="p">:</span>
+        <span class="n">total</span><span class="o">=</span><span class="n">total</span><span class="o">+</span><span class="n">valeur</span>
+    <span class="k">return</span> <span class="n">total</span><span class="o">/...</span>
+</code></pre></div>
 <div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><label for="__tabbed_6_1">Réponses</label><div class="tabbed-content">
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <code>h1 {color:red;}</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <code>title {color:red;}</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <code>.h1 {couleur:red;}</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <code>&lt;h1&gt; {color:red;}</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <code>0</code> et <code>len(tableau)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <code>0</code> et <code>len(tableau)+1</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <code>1</code> et <code>len(tableau)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <code>1</code> et <code>len(tableau)+1</code></li>
 </ul>
 </div>
 <input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><label for="__tabbed_6_2">Correction</label><div class="tabbed-content">
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> a) <mark><code>h1 {color:red;}</code></mark> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del><code>title {color:red;}</code></del> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del><code>.h1 {couleur:red;}</code></del> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del><code>&lt;h1&gt; {color:red;}</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> a) <mark><code>0</code> et <code>len(tableau)</code></mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del><code>0</code> et <code>len(tableau)+1</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del><code>1</code> et <code>len(tableau)</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del><code>1</code> et <code>len(tableau)+1</code></del> </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="admonition fabquestion">
-<p class="admonition-title"><strong>7.</strong> Quel est la balise à utiliser pour insérer une image nommée <code>logo_python.jpg</code> dans une page web ?</p>
+<p class="admonition-title"><strong>7.</strong> Dans une recherche par dichotomie, combien de comparaisons faut-il faire au maximum pour savoir si une valeur se trouve ou non dans un tableau trié de 1000 nombres ?</p>
 <div class="tabbed-set" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><label for="__tabbed_7_1">Réponses</label><div class="tabbed-content">
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <code>&lt;image src="logo_python.jpg"&gt;</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <code>&lt;image source="logo_python.jpg"&gt;</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <code>&lt;img src="logo_python.jpg"&gt;</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <code>&lt;img source="logo_python.jpg"&gt;</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) 3</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) 10</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) 1000</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) 2000</li>
 </ul>
 </div>
 <input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><label for="__tabbed_7_2">Correction</label><div class="tabbed-content">
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del><code>&lt;image src="logo_python.jpg"&gt;</code></del> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del><code>&lt;image source="logo_python.jpg"&gt;</code></del> </li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> c) <mark><code>&lt;img src="logo_python.jpg"&gt;</code></mark> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del><code>&lt;img source="logo_python.jpg"&gt;</code></del> </li>
-</ul>
-</div>
-</div>
-</div>
-<div class="admonition fabquestion">
-<p class="admonition-title"><strong>8.</strong> Quelles balises doit-on utiliser pour créer une liste d'éléments non ordonnées dans une page web ?</p>
-<div class="tabbed-set" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><label for="__tabbed_8_1">Réponses</label><div class="tabbed-content">
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <code>&lt;ol&gt;</code> et <code>&lt;li&gt;</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <code>&lt;ul&gt;</code> et <code>&lt;li&gt;</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <code>&lt;ol&gt;</code> et <code>&lt;il&gt;</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <code>&lt;ul&gt;</code> et <code>&lt;ol&gt;</code></li>
-</ul>
-</div>
-<input id="__tabbed_8_2" name="__tabbed_8" type="radio"/><label for="__tabbed_8_2">Correction</label><div class="tabbed-content">
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del><code>&lt;ol&gt;</code> et <code>&lt;li&gt;</code></del> </li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> b) <mark><code>&lt;ul&gt;</code> et <code>&lt;li&gt;</code></mark> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del><code>&lt;ol&gt;</code> et <code>&lt;il&gt;</code></del> </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del><code>&lt;ul&gt;</code> et <code>&lt;ol&gt;</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>3</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> b) <mark>10</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>1000</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>2000</del> </li>
 </ul>
 </div>
 </div>
