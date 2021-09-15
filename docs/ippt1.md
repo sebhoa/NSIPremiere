@@ -19,6 +19,11 @@
 
 {{ telecharger("Jupyter Notebook","./notebook/pendu2.ipynb")}}
 
+{{ titre_activite("Boucles",["notebook"]) }}
+
+
+{{ telecharger("Jupyter Notebook","./notebook/pendu3.ipynb")}}
+
 
 ## Cours
 

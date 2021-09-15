@@ -9,7 +9,7 @@
 <meta content="Fabrice NATIVEL" name="author"/>
 <link href="../images/dragon.svg" rel="icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-7.1.6" name="generator"/>
-<title>C10-Réseau - Numériques et Sciences Informatiques Première</title>
+<title>C11-Réseau - Numériques et Sciences Informatiques Première</title>
 <link href="../assets/stylesheets/main.875de78c.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#c10-reseau">
+<a class="md-skip" href="#c10-representation-des-entiers-negatifs">
           Aller au contenu
         </a>
 </div>
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              C10-Réseau
+              C11-Réseau
             
           </span>
 </div>
@@ -171,48 +171,53 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ippt/">
-        C3-Initiation à Python avec Turtle
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../notionsalgo/">
-        C4-Notions d'algorithmique
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../donneestable/">
-        C5-Lecture et traitement de données en table
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../leweb/">
-        C6-Le web
+<a class="md-nav__link" href="../ippt1/">
+        C3-Initiation à Python avec Turtle - Partie 1
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../architecture/">
-        C7-Architecture matérielle
+        C4-Architecture matérielle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ippt1/">
+        C5-Initiation à Python avec Turtle - Partie 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notionsalgo/">
+        C6-Notions d'algorithmique
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../donneestable/">
+        C7-Lecture et traitement de données en table
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../leweb/">
+        C8-Le web
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../algostri/">
-        C8-Algorithmes de tri
+        C9-Algorithmes de tri
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../negatifs/">
-        C9-Représentation des entiers négatifs
+        C10-Représentation des entiers négatifs
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          C10-Réseau
+          C11-Réseau
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        C10-Réseau
+        C11-Réseau
       </a>
 <nav aria-label="Table des matières" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -278,32 +283,32 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../interactionweb.md">
-        C11-Interaction dans une page web
+        C12-Interaction dans une page web
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../gloutons/">
-        C12-Algorithmes gloutons
+        C13-Algorithmes gloutons
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../fusiontable.md">
-        C13-Fusion de tables
+        C14-Fusion de tables
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../interface.md">
-        C14-Interface homme-machine
+        C15-Interface homme-machine
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../flottant.md">
-        C15-Notion de nombre flottant
+        C16-Notion de nombre flottant
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../knn/">
-        C16-Algorithme des k plus proches voisins
+        C17-Algorithme des k plus proches voisins
       </a>
 </li>
 </ul>
@@ -423,7 +428,7 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="c10-reseau"><span class="numchapitre">C10</span> Réseau <span style="float:right;"><span class="twemoji" title="Architectures matérielles et systèmes d'exploitation"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 48v416c0 26.51-21.49 48-48 48H144c-26.51 0-48-21.49-48-48V48c0-26.51 21.49-48 48-48h224c26.51 0 48 21.49 48 48zm96 58v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42V88h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zM30 376h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6z"></path></svg></span></span></h1>
+<h1 id="c10-representation-des-entiers-negatifs"><span class="numchapitre">C10</span> Représentation des entiers négatifs <span style="float:right;"><span class="twemoji" title="Architectures matérielles et systèmes d'exploitation"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 48v416c0 26.51-21.49 48-48 48H144c-26.51 0-48-21.49-48-48V48c0-26.51 21.49-48 48-48h224c26.51 0 48 21.49 48 48zm96 58v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42V88h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zM30 376h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6z"></path></svg></span></span></h1>
 <h2 id="activites">Activités</h2>
 <h3 id="activite-1-simuler-un-reseau-avec-filius"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Activité 1 : <em>Simuler un réseau avec Filius</em></img></h3>
 <p>Lancer <a href="https://www.lernsoftware-filius.de/">Filius</a>, un outil de simulation de réseaux, repérer les deux modes d'utilisation dans la barre supérieure :</p>
@@ -651,7 +656,7 @@ La schéma ci-dessous montre que ce nouveau protocole permet de palier à certai
 <span class="md-footer__direction">
                 Précédent
               </span>
-              C9-Représentation des entiers négatifs
+              C10-Représentation des entiers négatifs
             </div>
 </div>
 </a>
@@ -661,7 +666,7 @@ La schéma ci-dessous montre que ce nouveau protocole permet de palier à certai
 <span class="md-footer__direction">
                 Suivant
               </span>
-              C12-Algorithmes gloutons
+              C13-Algorithmes gloutons
             </div>
 </div>
 <div class="md-footer__button md-icon">

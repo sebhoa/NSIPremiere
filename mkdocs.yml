@@ -8,23 +8,24 @@ nav:
   - "<img src='https://fabricenativel.github.io/NSIPremiere/images/icones/home.svg' width=16px height=16px>&thinsp; Accueil" :
     - index.md
   - "<img src='https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg' width=16px height=16px>&thinsp; Liste des chapitres" :
-    - "Progression" : progression.md
-    - "C1-Systèmes d'exploitation" : os.md
-    - "C2-Représentation des entiers et des caractères" : codage.md
-    - "C3-Initiation à Python avec Turtle" : ippt.md
-    - "C4-Notions d'algorithmique" : notionsalgo.md
-    - "C5-Lecture et traitement de données en table" : donneestable.md
-    - "C6-Le web" : leweb.md
-    - "C7-Architecture matérielle" : architecture.md
-    - "C8-Algorithmes de tri" : algostri.md
-    - "C9-Représentation des entiers négatifs" : negatifs.md
-    - "C10-Réseau" : reseau.md
-    - "C11-Interaction dans une page web" : interactionweb.md
-    - "C12-Algorithmes gloutons" : gloutons.md
-    - "C13-Fusion de tables" : fusiontable.md
-    - "C14-Interface homme-machine" : interface.md
-    - "C15-Notion de nombre flottant" : flottant.md
-    - "C16-Algorithme des k plus proches voisins" : knn.md
+      - "Progression" : progression.md
+      - "C1-Systèmes d'exploitation" : os.md
+      - "C2-Représentation des entiers et des caractères" : codage.md
+      - "C3-Initiation à Python avec Turtle - Partie 1" : ippt1.md
+      - "C4-Architecture matérielle" : architecture.md
+      - "C5-Initiation à Python avec Turtle - Partie 2" : ippt1.md
+      - "C6-Notions d'algorithmique" : notionsalgo.md
+      - "C7-Lecture et traitement de données en table" : donneestable.md
+      - "C8-Le web" : leweb.md
+      - "C9-Algorithmes de tri" : algostri.md
+      - "C10-Représentation des entiers négatifs" : negatifs.md
+      - "C11-Réseau" : reseau.md
+      - "C12-Interaction dans une page web" : interactionweb.md
+      - "C13-Algorithmes gloutons" : gloutons.md
+      - "C14-Fusion de tables" : fusiontable.md
+      - "C15-Interface homme-machine" : interface.md
+      - "C16-Notion de nombre flottant" : flottant.md
+      - "C17-Algorithme des k plus proches voisins" : knn.md
   - "<img src='https://fabricenativel.github.io/NSIPremiere/images/icones/lightbulb.svg' width=16px height=16px>&thinsp; Projets" :
     - "Projets" : projets.md
   - "<img src='https://fabricenativel.github.io/NSIPremiere/images/icones/information.svg' width=16px height=16px>&thinsp; A propos" :

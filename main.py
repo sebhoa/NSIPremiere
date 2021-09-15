@@ -58,20 +58,21 @@ def define_env(env):
     env.variables['progression']={
         1 : ["os","Systèmes d'exploitation",1,"os.md"],
         2 : ["typesbase","Représentation des entiers et des caractères",2,"codage.md"],
-        3 : ["python","Initiation à Python avec Turtle",3,"ippt.md"],
-        4 : ["algorithmique","Notions d'algorithmique",2,"notionsalgo.md"],
-        5 : ["donneestable","Lecture et traitement de données en table",2,"donneestable.md"],
-        6 : ["web","Le web",2,"leweb.md"],
-        7 : ["os","Architecture matérielle",1,"architecture.md"],
-        8 : ["algorithmique","Algorithmes de tri",2,"algostri.md"],
-        9 : ["typesbase","Représentation des entiers négatifs",1,"negatifs.md"],
-        10: ["os","Réseau",1,"reseau.md"],
-        11: ["web","Interaction dans une page web",1,"interactionweb.md"],
-        12: ["algorithmique","Algorithmes gloutons",2,"gloutons.md"],
-        13: ["donneestable","Fusion de tables",1,"fusiontable.md"],
-        14: ["os","Interface homme-machine",2,"interface.md"],
-        15: ["typesbase","Notion de nombre flottant",1,"flottant.md"],
-        16: ["algorithmique","Algorithme des k plus proches voisins",2,"knn.md"]
+        3 : ["python","Initiation à Python avec Turtle - Partie 1",3,"ippt1.md"],
+        4 : ["os","Architecture matérielle",1,"architecture.md"],
+        5 : ["python","Initiation à Python avec Turtle - Partie 2",3,"ippt1.md"],
+        6 : ["algorithmique","Notions d'algorithmique",2,"notionsalgo.md"],
+        7 : ["donneestable","Lecture et traitement de données en table",2,"donneestable.md"],
+        8 : ["web","Le web",2,"leweb.md"],
+        9 : ["algorithmique","Algorithmes de tri",2,"algostri.md"],
+        10 : ["typesbase","Représentation des entiers négatifs",1,"negatifs.md"],
+        11: ["os","Réseau",1,"reseau.md"],
+        12: ["web","Interaction dans une page web",1,"interactionweb.md"],
+        13: ["algorithmique","Algorithmes gloutons",2,"gloutons.md"],
+        14: ["donneestable","Fusion de tables",1,"fusiontable.md"],
+        15: ["os","Interface homme-machine",2,"interface.md"],
+        16: ["typesbase","Notion de nombre flottant",1,"flottant.md"],
+        17: ["algorithmique","Algorithme des k plus proches voisins",2,"knn.md"]
     }
 
     with open(QCMFILE,"r",encoding="utf-8") as f:

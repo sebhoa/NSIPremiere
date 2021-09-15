@@ -1,5 +1,5 @@
 
-{% set num = 7 %}
+{% set num = 4 %}
 {% set titre = "Architecture matérielle"%}
 {% set theme = "os" %}
 
@@ -17,7 +17,7 @@
 
 ## Cours
 
-{{ cours("CHEMIN VERS PDF DE COURS") }}
+{{ aff_cours(num) }}
 
 
 ## QCM

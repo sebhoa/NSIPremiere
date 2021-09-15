@@ -9,7 +9,7 @@
 <meta content="Fabrice NATIVEL" name="author"/>
 <link href="../images/dragon.svg" rel="icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-7.1.6" name="generator"/>
-<title>C3-Initiation à Python avec Turtle - Numériques et Sciences Informatiques Première</title>
+<title>C5-Initiation à Python avec Turtle - Partie 2 - Numériques et Sciences Informatiques Première</title>
 <link href="../assets/stylesheets/main.875de78c.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#c3-initiation-a-python-avec-turtle">
+<a class="md-skip" href="#c3-initiation-a-python-avec-turtle-partie-1">
           Aller au contenu
         </a>
 </div>
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              C3-Initiation à Python avec Turtle
+              C5-Initiation à Python avec Turtle - Partie 2
             
           </span>
 </div>
@@ -170,14 +170,24 @@
         C2-Représentation des entiers et des caractères
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="./">
+        C3-Initiation à Python avec Turtle - Partie 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../architecture/">
+        C4-Architecture matérielle
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          C3-Initiation à Python avec Turtle
+          C5-Initiation à Python avec Turtle - Partie 2
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        C3-Initiation à Python avec Turtle
+        C5-Initiation à Python avec Turtle - Partie 2
       </a>
 <nav aria-label="Table des matières" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -199,6 +209,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#activite-2-premieres-fonctions">
     Activité 2 : Premières fonctions  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activite-3-boucles">
+    Activité 3 : Boucles  
   </a>
 </li>
 </ul>
@@ -248,67 +263,62 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../notionsalgo/">
-        C4-Notions d'algorithmique
+        C6-Notions d'algorithmique
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../donneestable/">
-        C5-Lecture et traitement de données en table
+        C7-Lecture et traitement de données en table
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../leweb/">
-        C6-Le web
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../architecture/">
-        C7-Architecture matérielle
+        C8-Le web
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../algostri/">
-        C8-Algorithmes de tri
+        C9-Algorithmes de tri
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../negatifs/">
-        C9-Représentation des entiers négatifs
+        C10-Représentation des entiers négatifs
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../reseau/">
-        C10-Réseau
+        C11-Réseau
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../interactionweb.md">
-        C11-Interaction dans une page web
+        C12-Interaction dans une page web
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../gloutons/">
-        C12-Algorithmes gloutons
+        C13-Algorithmes gloutons
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../fusiontable.md">
-        C13-Fusion de tables
+        C14-Fusion de tables
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../interface.md">
-        C14-Interface homme-machine
+        C15-Interface homme-machine
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../flottant.md">
-        C15-Notion de nombre flottant
+        C16-Notion de nombre flottant
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../knn/">
-        C16-Algorithme des k plus proches voisins
+        C17-Algorithme des k plus proches voisins
       </a>
 </li>
 </ul>
@@ -384,6 +394,11 @@
     Activité 2 : Premières fonctions  
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activite-3-boucles">
+    Activité 3 : Boucles  
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -433,12 +448,14 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="c3-initiation-a-python-avec-turtle"><span class="numchapitre">C3</span> Initiation à Python avec Turtle <span style="float:right;"><span class="twemoji" title="Langages et programmation"><svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"></path></svg></span></span></h1>
+<h1 id="c3-initiation-a-python-avec-turtle-partie-1"><span class="numchapitre">C3</span> Initiation à Python avec Turtle - Partie 1 <span style="float:right;"><span class="twemoji" title="Langages et programmation"><svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"></path></svg></span></span></h1>
 <h2 id="activites">Activités</h2>
 <h3 id="activite-1-desssiner-avec-le-module-turtle"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Activité 1 : <em>Desssiner avec le module turtle</em><span style="float:right;"><span style="float:right;">  <span class="twemoji" title="Activité utilisant un jupyter notebook"><svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z"></path></svg></span></span></span></img></h3>
 <p><span class="centre"><a class="md-button" href="../notebook/pendu1.ipynb">Jupyter Notebook <span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg></span></a></span></p>
 <h3 id="activite-2-premieres-fonctions"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Activité 2 : <em>Premières fonctions</em><span style="float:right;"><span style="float:right;">  <span class="twemoji" title="Activité utilisant un jupyter notebook"><svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z"></path></svg></span></span></span></img></h3>
 <p><span class="centre"><a class="md-button" href="../notebook/pendu2.ipynb">Jupyter Notebook <span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg></span></a></span></p>
+<h3 id="activite-3-boucles"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Activité 3 : <em>Boucles</em><span style="float:right;"><span style="float:right;">  <span class="twemoji" title="Activité utilisant un jupyter notebook"><svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z"></path></svg></span></span></span></img></h3>
+<p><span class="centre"><a class="md-button" href="../notebook/pendu3.ipynb">Jupyter Notebook <span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg></span></a></span></p>
 <h2 id="cours">Cours</h2>
 <p>Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de cours présenté en classe :</p>
 <p><span class="centre"><a class="md-button" href="../pdf/C3/C3-cours.pdf">Diaporama de cours <span class="twemoji"><svg viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M369.9 97.9 286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48zm250.2-143.7c-12.2-12-47-8.7-64.4-6.5-17.2-10.5-28.7-25-36.8-46.3 3.9-16.1 10.1-40.6 5.4-56-4.2-26.2-37.8-23.6-42.6-5.9-4.4 16.1-.4 38.5 7 67.1-10 23.9-24.9 56-35.4 74.4-20 10.3-47 26.2-51 46.2-3.3 15.8 26 55.2 76.1-31.2 22.4-7.4 46.8-16.5 68.4-20.1 18.9 10.2 41 17 55.8 17 25.5 0 28-28.2 17.5-38.7zm-198.1 77.8c5.1-13.7 24.5-29.5 30.4-35-19 30.3-30.4 35.7-30.4 35zm81.6-190.6c7.4 0 6.7 32.1 1.8 40.8-4.4-13.9-4.3-40.8-1.8-40.8zm-24.4 136.6c9.7-16.9 18-37 24.7-54.7 8.3 15.1 18.9 27.2 30.1 35.5-20.8 4.3-38.9 13.1-54.8 19.2zm131.6-5s-5 6-37.3-7.8c35.1-2.6 40.9 5.4 37.3 7.8z"></path></svg></span></a></span></p>
@@ -626,7 +643,7 @@ Les croix ont toujours la même couleur (<em>green</em>) et la même taille (des
 </ol>
 </li>
 </ol>
-<h3 id="exercice-4-une-fonction-cercle"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 4 : <em>Une fonction cercle</em></img></h3>
+<h3 id="exercice-4-une-fonction-cercle"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:"/>   Exercice 4 : <em>Une fonction cercle</em></h3>
 <ol>
 <li>En vous inspirant de l'exercice 3, écrire une fonction <code>cercle(x,y)</code> qui permet de tracer un cercle de rayon 35 et de couleur <em>darkred</em> dans l'une quelconque des cases de la grille de morpion. Comme par exemple ci-dessous dans la case inférieure droite.
 <img alt="Grille de morpion avec cercle" class="imgcentre" src="../images/C3/ex4a.png"/></li>
@@ -639,7 +656,7 @@ Les croix ont toujours la même couleur (<em>green</em>) et la même taille (des
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a class="md-footer__link md-footer__link--prev" href="../codage/" rel="prev">
+<a class="md-footer__link md-footer__link--prev" href="../architecture/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -648,7 +665,7 @@ Les croix ont toujours la même couleur (<em>green</em>) et la même taille (des
 <span class="md-footer__direction">
                 Précédent
               </span>
-              C2-Représentation des entiers et des caractères
+              C4-Architecture matérielle
             </div>
 </div>
 </a>
@@ -658,7 +675,7 @@ Les croix ont toujours la même couleur (<em>green</em>) et la même taille (des
 <span class="md-footer__direction">
                 Suivant
               </span>
-              C4-Notions d'algorithmique
+              C6-Notions d'algorithmique
             </div>
 </div>
 <div class="md-footer__button md-icon">

@@ -104,6 +104,20 @@ Parviendrez-vous à décoder le message secret ci-dessus ?
 !!! aide
     Un indice : {{ sc("ascii") }}
 
+{{ exo("Algorithme des divisions successives",[]) }}
+
+En utilisant l'*algorithme des divisions successives* :
+
+1. Convertir $6771_{10}$ en base 2
+2. Convertir $6771_{10}$ en base 16
+3. Vérifier le résultat précédent en effectuant la conversion du nombre obtenu à la question 1. en base 16.
+4. Mêmes questions pour $9753$
+
+!!! Aide
+    Cet exercice impose l'utilisation de l'*algorithme des divisions successives*, on pourra donc se référer au cours et refaire les exemples qui s'y trouvent en cas de difficultés.
+
+
+
 
 {{ exo("Le parachute de perseverance",[]) }}
 
