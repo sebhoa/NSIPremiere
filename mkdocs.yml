@@ -4,23 +4,34 @@ site_description: Cours de NSI en classe de première du lycée Hintermann-Affé
 site_author: Fabrice NATIVEL
 
 # Les éléments de la barre de navigation
-nav:  
-  - "C1-Systèmes d'exploitation" : os.md
-  - "C2-Représentation des entiers et des caractères" : codage.md
-  - "C3-Initiation à Python avec Turtle" : ippt.md
-  - "C4-Notions d'algorithmique" : notionsalgo.md
-  - "C5-Lecture et traitement de données en table" : donneestable.md
-  - "C6-Le web" : leweb.md
-  - "C7-Architecture matérielle" : architecture.md
-  - "C8-Algorithmes de tri" : algostri.md
-  - "C9-Représentation des entiers négatifs" : negatifs.md
-  - "C10-Réseau" : reseau.md
-  - "C11-Interaction dans une page web" : interactionweb.md
-  - "C12-Algorithmes gloutons" : gloutons.md
-  - "C13-Fusion de tables" : fusiontable.md
-  - "C14-Interface homme-machine" : interface.md
-  - "C15-Notion de nombre flottant" : flottant.md
-  - "C16-Algorithme des k plus proches voisins" : knn.md
+nav:
+  - "<img src='https://fabricenativel.github.io/NSIPremiere/images/icones/home.svg' width=16px height=16px>&thinsp; Accueil" :
+    - index.md
+  - "<img src='https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg' width=16px height=16px>&thinsp; Liste des chapitres" :
+    - "Progression" : progression.md
+    - "C1-Systèmes d'exploitation" : os.md
+    - "C2-Représentation des entiers et des caractères" : codage.md
+    - "C3-Initiation à Python avec Turtle" : ippt.md
+    - "C4-Notions d'algorithmique" : notionsalgo.md
+    - "C5-Lecture et traitement de données en table" : donneestable.md
+    - "C6-Le web" : leweb.md
+    - "C7-Architecture matérielle" : architecture.md
+    - "C8-Algorithmes de tri" : algostri.md
+    - "C9-Représentation des entiers négatifs" : negatifs.md
+    - "C10-Réseau" : reseau.md
+    - "C11-Interaction dans une page web" : interactionweb.md
+    - "C12-Algorithmes gloutons" : gloutons.md
+    - "C13-Fusion de tables" : fusiontable.md
+    - "C14-Interface homme-machine" : interface.md
+    - "C15-Notion de nombre flottant" : flottant.md
+    - "C16-Algorithme des k plus proches voisins" : knn.md
+  - "<img src='https://fabricenativel.github.io/NSIPremiere//images/icones/lightbulb.svg' width=16px height=16px>&thinsp; Projets" :
+    - "Index" : index-projets.md
+    - "Trimestre 1" : projets1.md
+    - "Trimestre 2" : projets1.md
+    - "Trimestre 3" : projets1.md
+  - "<img src='https://fabricenativel.github.io/NSIPremiere//images/icones/informations.svg' width=16px height=16px>&thinsp; A propos" :
+    - apropos.md
 
 
 
@@ -36,6 +47,11 @@ theme:
   # Les couleurs, on utilise la palette par défaut avec qques tweaks via css (voir https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/_colors.scss)
   palette: 
     scheme: default
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
   
 
 

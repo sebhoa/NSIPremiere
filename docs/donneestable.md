@@ -16,7 +16,7 @@
 4. Expliquer rapidement comment sont représentées des données au format `csv`
 
 {{ titre_activite("Lecture et traitement",["notebook"]) }}
-{{ telecharger("Jupyter Notebook","notebook/MenuCantine.ipynb")}}
+{{ telecharger("Jupyter Notebook","./notebook/MenuCantine.ipynb")}}
 
 {{ titre_activite("Tri d'une table",[]) }}
 
@@ -89,6 +89,8 @@ fichier_pays.open("pays.csv","read")
 pays = list(csv.Dictreader(fichier_pays,delimiter=";")
 fichier_pays.close()
 ```
+3. Dans le programme précédent, on a supposé que le séparateur de champ est `;`, quelle modification faut-il apporter à ce programme si le séparateur de champ est `,` ?
+4. Dans le programme précédent, on a supposé que l'encodage était {{ sc("utf-8")}}, quelle modification faut-il apporter à ce programme pour lire un fichier dont l'encodage serait par exemple {{ sc("ascii")}} ?
 
 {{ exo("Personnages célèbres de l'histoire de l'informatique",[]) }}
 On reprend l'exemple de fichier `csv` d'informaticiens célèbres vu en cours :
@@ -109,6 +111,27 @@ Boole;George;1815
 4. Ajouter un enregistrement de votre choix à ce fichier `csv`.
 5. Ecrire un programme Python permettant de lire ce fichier `csv` et de créer la liste de dictionnaires `celebres`.
 6. Trier ce dictionnaire par date de naissance.
+
+
+{{ exo("Pays du monde",[]) }}
+En cliquant sur le lien ci-dessous, télécharger un fichier au format `csv` (source : [kaggle.com](https://www.kaggle.com){target=_blank}, licence : domaine public), contenant des informations sur les pays du monde :
+{{ telecharger("Pays du monde","./files/C5/countries.csv")}}
+On précise la signification des champs suivants : <br>
+:octicons-triangle-right-16: `Population` : le nombre d'habitants du pays,<br>
+:octicons-triangle-right-16:`Region`: la région dans laquelle se trouve le pays, par exemple la France est dans la région {{ sc("western europe")}},<br>
+:octicons-triangle-right-16: `Area` : la surface du pays en *miles* carrés,<br>
+ :octicons-triangle-right-16:`Coastline` : la surface cotière du pays, cette surface vaut "0,00" lorsque le pays n'a pas d'ouverture sur la mer, <br>
+:octicons-triangle-right-16:  `GDP` : le produit intérieur brut par habitant, c'est une mesure de la richesse du pays. <br>
+
+1. Ecrire un programme Python permettant de lire ce fichier et de créer la liste de dictionnaires `pays`.
+2. Compléter votre programme en rajoutant les instructions permettant d'afficher :
+    1. la population, la surface et le produit intérieur brut de la France,
+    2. le nom des toutes les régions figurant dans cette table,
+    3. la liste des trois pays les plus peuplés au monde,
+    4. le plus grand pays n'ayant pas d'ouverture sur la mer.
+3. Ecrire une fonction Python permettant de convertir les *miles* carrés en kilomètres carrés.
+4. Donner la liste pays dont la surface est comprise en 500 000 et un million de kilomètres carrés.
+
 
 
 {{ exo("Statistiques des prénoms donnés en France",[]) }}

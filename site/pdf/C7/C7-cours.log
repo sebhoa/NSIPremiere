@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex 2021.5.4)  21 AUG 2021 09:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex 2021.5.4)  8 SEP 2021 11:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/home/fenarius/Travail/Cours/NSIPremiere/docs/pdf/C2/C2-cours.tex
-(/home/fenarius/Travail/Cours/NSIPremiere/docs/pdf/C2/C2-cours.tex
+**/home/fenarius/Travail/Cours/NSIPremiere/docs/pdf/C7/C7-cours.tex
+(/home/fenarius/Travail/Cours/NSIPremiere/docs/pdf/C7/C7-cours.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2019/09/29 v3.57 A class for typesetting presentations
@@ -1079,9 +1079,8 @@ File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 File: listings.cfg 2019/09/10 1.8c listings configuration
 ))
 Package: listings 2019/09/10 1.8c (Carsten Heinz)
- (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemeserif.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty)))
-No file C2-cours.aux.
-\openout1 = `C2-cours.aux'.
+ (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemeserif.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty))) (./C7-cours.aux)
+\openout1 = `C7-cours.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
@@ -1099,6 +1098,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
@@ -1148,14 +1148,11 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 5.
 LaTeX Info: Redefining \pageref on input line 5.
 LaTeX Info: Redefining \nameref on input line 5.
+ (./C7-cours.out) (./C7-cours.out)
 \@outlinefile=\write10
-\openout10 = `C2-cours.out'.
+\openout10 = `C7-cours.out'.
 
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
-(/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
+ (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-English.dict
 Dictionary: translator-bibliography-dictionary, Language: English 
@@ -1175,10 +1172,9 @@ LaTeX Info: Redefining \up on input line 5.
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
 \c@lstlisting=\count431
-
-No file C2-cours.nav.
+ (./C7-cours.nav)
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 5.
-(/usr/share/texmf/tex/latex/lm/t1lmr.fd
+ (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
@@ -1238,9 +1234,12 @@ File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 \c@numexo=\count437
 \c@numprojet=\count438
 \c@numquestion=\count439
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2019/09/10 1.8c listings language file
-) [1
+)
+
+LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <9> not available
+(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 29.
+
+[1
 
 ] [2
 
@@ -1248,260 +1247,392 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 
 ] [4
 
-]
-Overfull \hbox (1.95236pt too wide) in paragraph at lines 50--50
-[][]  
- []
+] [5
 
-[5
+] [6
 
-]
-Overfull \hbox (1.95236pt too wide) in paragraph at lines 50--50
-[][]  
- []
-
-[6
+] [7
 
 ]
-Overfull \hbox (1.95236pt too wide) in paragraph at lines 50--50
-[][]  
- []
 
-[7
+LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <10> not available
+(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 41.
 
-] [8
+[8
 
 ] [9
 
 ] [10
 
-] [11
+] (/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd) (/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/ufontawesomefree0.fd)
+Overfull \hbox (5.7374pt too wide) in paragraph at lines 66--66
+[]|[][][][]| 
+ []
 
-] [12
 
-] [13
+Underfull \hbox (badness 7759) in paragraph at lines 66--66
+\T1/lmss/m/n/9 Unité arith-
+ []
 
-] [14
 
-] [15
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+\T1/lmss/m/n/9 mé-tique et
+ []
 
-] [16
 
-] [17
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+\T1/lmss/m/n/9 Unité de
+ []
 
-] [18
 
-] [19
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 66--66
+[]|[] 
+ []
 
-] [20
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+[]
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 66--66
+[]
+ []
+
+[11
+
+]
+Overfull \hbox (5.7374pt too wide) in paragraph at lines 66--66
+[]|[][][][]| 
+ []
+
+
+Underfull \hbox (badness 7759) in paragraph at lines 66--66
+\T1/lmss/m/n/9 Unité arith-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+\T1/lmss/m/n/9 mé-tique et
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+\T1/lmss/m/n/9 Unité de
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 66--66
+[]|[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+[]
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 66--66
+[]
+ []
+
+[12
+
+]
+Overfull \hbox (5.7374pt too wide) in paragraph at lines 66--66
+[]|[][][][][][][]| 
+ []
+
+
+Underfull \hbox (badness 7759) in paragraph at lines 66--66
+\T1/lmss/m/n/9 Unité arith-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+\T1/lmss/m/n/9 mé-tique et
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+\T1/lmss/m/n/9 Unité de
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 66--66
+[]|[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+[]
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 66--66
+[]
+ []
+
+[13
+
+]
+Overfull \hbox (5.7374pt too wide) in paragraph at lines 66--66
+[]|[][][][][][][]| 
+ []
+
+
+Underfull \hbox (badness 7759) in paragraph at lines 66--66
+\T1/lmss/m/n/9 Unité arith-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+\T1/lmss/m/n/9 mé-tique et
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+\T1/lmss/m/n/9 Unité de
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 66--66
+[]|[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+[]
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 66--66
+[]
+ []
+
+[14
+
+]
+Overfull \hbox (5.7374pt too wide) in paragraph at lines 66--66
+[]|[][][][][][][]| 
+ []
+
+
+Underfull \hbox (badness 7759) in paragraph at lines 66--66
+\T1/lmss/m/n/9 Unité arith-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+\T1/lmss/m/n/9 mé-tique et
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+\T1/lmss/m/n/9 Unité de
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 66--66
+[]|[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+[]
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 66--66
+[]
+ []
+
+[15
+
+]
+Overfull \hbox (5.7374pt too wide) in paragraph at lines 66--66
+[]|[][][][][][][]| 
+ []
+
+
+Underfull \hbox (badness 7759) in paragraph at lines 66--66
+\T1/lmss/m/n/9 Unité arith-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+\T1/lmss/m/n/9 mé-tique et
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+\T1/lmss/m/n/9 Unité de
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 66--66
+[]|[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+[]
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 66--66
+[]
+ []
+
+[16
+
+]
+Overfull \hbox (5.7374pt too wide) in paragraph at lines 66--66
+[]|[][][][][][][]| 
+ []
+
+
+Underfull \hbox (badness 7759) in paragraph at lines 66--66
+\T1/lmss/m/n/9 Unité arith-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+\T1/lmss/m/n/9 mé-tique et
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+\T1/lmss/m/n/9 Unité de
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 66--66
+[]|[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+[]
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 66--66
+[]
+ []
+
+[17
+
+]
+Overfull \hbox (5.7374pt too wide) in paragraph at lines 66--66
+[]|[][][][][][][]| 
+ []
+
+
+Underfull \hbox (badness 7759) in paragraph at lines 66--66
+\T1/lmss/m/n/9 Unité arith-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+\T1/lmss/m/n/9 mé-tique et
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+\T1/lmss/m/n/9 Unité de
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 66--66
+[]|[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+[]
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 66--66
+[]
+ []
+
+[18
+
+]
+Overfull \hbox (5.7374pt too wide) in paragraph at lines 66--66
+[]|[][][][][][][]| 
+ []
+
+
+Underfull \hbox (badness 7759) in paragraph at lines 66--66
+\T1/lmss/m/n/9 Unité arith-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+\T1/lmss/m/n/9 mé-tique et
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+\T1/lmss/m/n/9 Unité de
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 66--66
+[]|[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+[]
+ []
+
+
+Overfull \hbox (0.88275pt too wide) in paragraph at lines 66--66
+[]
+ []
+
+[19
+
+]
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 80.
+ [20
 
 ] [21
 
-]
-LaTeX Font Info:    Trying to load font information for U+fontawesomefree0 on input line 132.
- (/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/ufontawesomefree0.fd) [22
+] [22
 
 ] [23
 
-] [24
-
-] [25
-
-] [26
-
-] [27
-
-] [28
-
-] [29
-
-] [30
-
-] [31
-
-] [32
-
-] [33
-
-] [34
-
-] [35
-
-] [36
-
-] [37
-
-] [38
-
-] [39
-
-]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 284.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 284.
- [40
-
-] [41
-
-] [42
-
-] [43
-
-] [44
-
-] [45
-
-] [46
-
-] [47
-
-] [48
-
-] [49
-
-] [50
-
-] [51
-
-] [52
-
-] [53
-
-] [54
-
-] [55
-
-] [56
-
-] [57
-
-] [58
-
-] [59
-
-] [60
-
-] [61
-
-] [62
-
-] [63
-
-] [64
-
-] [65
-
-] [66
-
-] [67
-
-] [68
-
-] [69
-
-] [70
-
-] [71
-
-] [72
-
-] [73
-
-] [74
-
-] [75
-
-] [76
-
-] [77
-
-] [78
-
-] [79
-
-] [80
-
-] [81
-
-] [82
-
-] [83
-
-] [84
-
-] [85
-
-] [86
-
-] [87
-
-] [88
-
-] [89
-
-] [90
-
-] [91
-
-] [92
-
-] [93
-
-] [94
-
-] [95
-
-] [96
-
-] [97
-
-] [98
-
-] [99
-
-] [100
-
-] [101
-
-] [102
-
-] [103
-
-] [104
-
 ]
 \tf@nav=\write11
-\openout11 = `C2-cours.nav'.
+\openout11 = `C7-cours.nav'.
 
 \tf@toc=\write12
-\openout12 = `C2-cours.toc'.
+\openout12 = `C7-cours.toc'.
 
 \tf@snm=\write13
-\openout13 = `C2-cours.snm'.
+\openout13 = `C7-cours.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 340.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 340.
- (./C2-cours.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 340.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 340.
-
-
-Package rerunfilecheck Warning: File `C2-cours.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `C2-cours.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 86.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
+ (./C7-cours.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 86.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
+Package rerunfilecheck Info: File `C7-cours.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 36591 strings out of 481240
- 711527 string characters out of 5920404
- 1392034 words of memory out of 5000000
- 51012 multiletter control sequences out of 15000+600000
- 595920 words of font info for 83 fonts, out of 8000000 for 9000
+ 36557 strings out of 481240
+ 710696 string characters out of 5920404
+ 1208016 words of memory out of 5000000
+ 50979 multiletter control sequences out of 15000+600000
+ 595384 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,19n,89p,846b,1046s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,21n,89p,846b,1138s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on C2-cours.dvi (104 pages, 2610488 bytes).
+Output written on C7-cours.dvi (23 pages, 548004 bytes).

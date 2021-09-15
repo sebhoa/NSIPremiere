@@ -337,4 +337,70 @@
 	\end{exampleblock}
 \end{frame}
 
+
+%ASCII et Latin-1
+\begin{frame}
+	\mframe{\Encodage}
+	\begin{block}{Représentation des caractères : code {\sc ascii}}
+		\begin{itemize}
+			\item<1-> Dès les années 1960, Le code \textcolor{blue}{\sc ascii} (American Standard Code for Information Interchange) a crée un standard pour la représentation des caractères.
+			\item<2-> Ce code n'utilisait que 7 bits et donc ne pouvait représenter que 128 caractères.
+			\item<3-> L'encodage \textcolor{blue}{Latin-1} (ou ISO-8859-1), a étendu le code {\sc ascii} à 8 bits (256 caractères représentables) en intégrant notamment les lettres latines accentuées.
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+%ASCII et Latin-1
+\begin{frame}
+	\mframe{\Encodage}
+	\begin{block}{Représentation des caractères : unicode}
+		Le codage \textcolor{blue}{\sc utf-8} (Unicode Transformation Format) s'est imposé comme standard d'encodage des caractères.
+		\begin{itemize}
+			\item<1-> les caractères sont représentés sur un nombre variable d'octets (de 1 à 4)
+			\item<2-> compatibilité avec {\sc ascii}
+			\item<3-> possibilités de représenter plusieurs centaine de milliers de caractères
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+%Exemples
+\begin{frame}
+	\mframe{\Encodage}
+	\begin{exampleblock}{Exemples}
+		\renewcommand{\arraystretch}{1.2}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\cline{2-4}
+				\multicolumn{1}{c|}{} & {\sc ascii}               & {\sc Latin-1}             & {\sc utf-8}           \\
+				\hline
+				\alt<2->{A            & 65                        & 65                        & 65}{        &  &  & } \\
+				\hline
+				\alt<3->{À            & \textcolor{red}{\faTimes} & 192                       & 192}{       &  &  & } \\
+				\hline
+				\alt<4->{$\beta$      & \textcolor{red}{\faTimes} & \textcolor{red}{\faTimes} & 946}{       &  &  & } \\
+				\hline
+			\end{tabular}
+		\end{center}
+	\end{exampleblock}
+\end{frame}
+
+%Exemples
+\begin{frame}
+	\mframe{\Encodage}
+	\begin{block}{Encodage en Python}
+		En Python, 
+		\begin{itemize}
+			\item<2-> \pmc{chr}{\tt (code)} renvoie le caractère de code {\sc utf-8} {\tt code}
+			\item<3->  \pmc{ord}{\tt (caractere)} renvoie le code  {\sc utf-8} du caractère {\tt caractere}
+		 \end{itemize}
+	\end{block}
+	\onslide<4->{
+	\begin{exampleblock}{Exemple}
+		{\tt >}{\tt>}{\tt>}\pmc{chr}{\tt (946)} \\
+		{\tt '}$\beta${\tt '} \\
+		{\tt >}{\tt>}{\tt>}\pmc{ord}{\tt ('À')} \\
+		{\tt 192}\\
+	\end{exampleblock}}
+\end{frame}
+
 \end{document}
