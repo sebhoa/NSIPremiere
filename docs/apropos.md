@@ -1,4 +1,4 @@
-
+hide: - navigation  in apropos.md
 # A Propos
 
 ## Contenu

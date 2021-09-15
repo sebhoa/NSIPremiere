@@ -26,10 +26,9 @@ nav:
     - "C15-Notion de nombre flottant" : flottant.md
     - "C16-Algorithme des k plus proches voisins" : knn.md
   - "<img src='https://fabricenativel.github.io/NSIPremiere/images/icones/lightbulb.svg' width=16px height=16px>&thinsp; Projets" :
-    - "Projets" : index-projets.md
+    - "Projets" : projets.md
   - "<img src='https://fabricenativel.github.io/NSIPremiere/images/icones/information.svg' width=16px height=16px>&thinsp; A propos" :
     - apropos.md
-
 
 
 
@@ -45,10 +44,8 @@ theme:
   palette: 
     scheme: default
   features:
-    - navigation.instant
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.indexes
   
 
 
