@@ -73,7 +73,7 @@ Il manque des chiffres (remplacés par des ?) dans le nombre binaire suivant : $
     * il n'y a pas de zéros non significatifs dans ce nombre
     * ce nombre est divisible par 2
     * il y a un nombre impair de 0 dans l'écriture binaire de ce nombre
-    * l'écriture décimale de ce nombre dépasse $(355)_{10}$
+    * l'écriture décimale de ce nombre dépasse $(600)_{10}$
 2. Donner l'écriture décimale de ce nombre.
 3. Donner son écriture hexadécimale
 
