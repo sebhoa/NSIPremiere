@@ -1,14 +1,16 @@
 \mframe{\Python}
-	\begin{alertblock}{Fonctions}
-		\begin{itemize}
-			\item<2->{Les fonctions sont des blocs d'instructions destinés à accomplir une tâche lors de leur \textcolor{blue}{appel} (par exemple avec \tmc{turtle}, tracé un carré).}
-			\item<3->{Leurs résultats peut dépendre de valeurs appelées \textcolor{blue}{paramètres} de la fonction (par exemple, le côté du carré).}
-			\item<4->{Lorsqu'une fonction est destinée à produire un résultat (par exemple celui d'un calcul), on renvoie ce résultat à l'aide de l'instruction \textcolor{blue}{return}}
-			\item<5->{Pour définir une fonction en Python, on utilise la syntaxe suivante :
-		\begin{lstlisting}
-		def <nom_fonction>(<arguments>):
-			<instruction>
-			return <resultat>
-		\end{lstlisting}}
-		\end{itemize}
-	\end{alertblock}
+	\begin{exampleblock}{Une boucle avec la fonction trait}
+		En faisant varier la direction et la longueur dans la fonction {\tt trait} définie ci-dessus à l'aide d'une boucle on obtient le dessin suivant :
+		\begin{center}
+			\includegraphics[scale=0.25]{ex-cours.eps}
+		\end{center}
+	\begin{lstlisting}
+	direction = 0
+	longueur = 10
+	for t in range(51):
+		trait(0,0,longueur,direction)
+		direction+=3.6
+		longueur+=5
+	papier.exitonclick()
+	\end{lstlisting}
+	\end{exampleblock}

@@ -106,3 +106,79 @@ Les croix ont toujours la même couleur (*green*) et la même taille (des branch
 2. Reproduire la grille de morpion suivante en utilisant les fonctions `croix` et `cercle` :
 ![Grille de morpion avec cercle](./images/C3/ex4b.png){: .imgcentre}
 
+{{ exo("Grille",[]) }}
+
+Le but de l'exercice est d'utiliser les boucles pour tracer la grille suivante :
+![grille](./images/C3/grille.png){: .imgcentre}
+
+On donne le squelette de programme suivante qui fixe les paramètres du dessin et contient la fonction `ligne(x1,y1,x2,y2)` vue dans les notebooks d'activité permettant de tracer une ligne allant du point de coordonnées `(x1,y1)` au point de coordonnées `(x2,y2)`.
+
+```python
+    import turtle
+
+    # Création du "papier" et du "crayon"
+    crayon = turtle.Turtle()
+    papier = turtle.Screen()
+    # Taille, dimension et couleur pour le papier et le crayon
+    papier.bgcolor("beige")
+    papier.setup(width=500,height=500)
+    crayon.color("navy")
+    crayon.pensize(5)
+
+    def ligne(x1,y1,x2,y2):
+        crayon.penup()
+        crayon.goto(x1,y1)
+        crayon.pendown()
+        crayon.goto(x2,y2)
+```
+
+1. Ecrire une boucle `for` permettant de tracer les lignes horizontales.
+
+    !!! Aide
+        En cas de difficultés, écrire le tracé normal des lignes (sans boucle). Observer vos instructions de façon à repérer les variables qui doivent être modifiées et celles qui restent fixes.
+
+2. Ecrire une boucle `for` permettant de tracer les lignes verticales.
+
+{{ exo("Quelques figures avec `turtle`",[]) }}
+Construire les figures suivantes (le repère est là pour vous aider et ne doit pas être reproduit):
+
+1. L'escalier
+![escalier](./images/C3/escalier.png){: .imgcentre}
+2. Cercles concentriques (les couleurs alternent entre `blue` et `lightblue`, le crayon a une épaisseur de 10, les cercles ont pour rayon 10,20,30, ...)
+![cercles](./images/C3/cercles.png){: .imgcentre}
+
+{{ exo("Polygone régulier",["maths"]) }}
+
+1. Ecrire une fonction `triangle_equilateral(c)` qui trace un triangle équilatéral de côte `c` à partir de la position courante de la tortue.
+2. Ecrire une fonction `carre(c)` qui trace un carré de côte `c` à partir de la position courante de la tortue.
+3. Ecrire une fonction `polygone_regulier(n,c)` qui trace un polygone régulier de côte `c` à partir de la position courante de la tortue.
+    
+    !!! Rappel
+ 
+        * Un polygone régulier est un polygone dont tous les côtés sont de la même longueur et tous les angles sont égaux.
+        * Les angles d'un polygone régulier à $n$ côtés mesurent $\dfrac{360}{n}$
+
+{{ exo("Drapeau",[]) }}
+
+Le module `turtle` permet aussi de colorier des surfaces, pour cela: <br>
+:octicons-triangle-right-16: on fixe la couleur de remplissage avec  `crayon.fillcolor()` <br>
+:octicons-triangle-right-16: avant de commencer le dessin de la surface, on écrit `crayon.begin_fill()`<br>
+:octicons-triangle-right-16: à la fin de la construction de la surface, on écrit  `crayon.end_fill()`<br>
+Par exemple, pour dessiner un  cercle rempli en rouge :
+```python
+crayon.fillcolor("red")
+crayon.begin_fill()
+crayon.circle(50)
+crayon.end_fill()
+```
+
+1. Ecrire et tester une fonction `rectangle_rempli(x,y,largeur,longueur,couleur)` qui trace un rectangle rempli avec la couleur `couleur`, de dimensions `largeur x longueur` et dont le coin inférieur gauche est situé au point de coordonnées `(x,y)`
+2. En utilisant la fonction ci-dessus, écrire un programme Python permettant de dessiner un drapeau français de dimension `300` sur `200` (chacun des trois rectangles formant le drapeau est de dimensions `100x200`)
+
+
+{{ exo("Panneau de signalisation",[]) }}
+Ecrire un programme Python permettant de dessiner le panneau de signalisation de votre choix. Quelques exemples sont proposés ci-dessous.<br>
+![sens interdit](./images/C3/sensinterdit.jpg){width=150px} &nbsp;
+![croisement](./images/C3/croisement.svg){width=150px}  &nbsp;
+![stop](./images/C3/stop.svg){width=150px}  &nbsp;
+![doublesens](./images/C3/doublesens.png){width=150px} 
