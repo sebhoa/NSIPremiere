@@ -26,8 +26,10 @@ nav:
       - "C15-Interface homme-machine" : interface.md
       - "C16-Notion de nombre flottant" : flottant.md
       - "C17-Algorithme des k plus proches voisins" : knn.md
+  - "<img src='https://fabricenativel.github.io/NSIPremiere/images/icones/file-badge-16.svg' width=16px height=16px>&thinsp; Documents officiels" :
+    - docs.md
   - "<img src='https://fabricenativel.github.io/NSIPremiere/images/icones/lightbulb.svg' width=16px height=16px>&thinsp; Projets" :
-    - "Projets" : projets.md
+    - projets.md
   - "<img src='https://fabricenativel.github.io/NSIPremiere/images/icones/information.svg' width=16px height=16px>&thinsp; A propos" :
     - apropos.md
 

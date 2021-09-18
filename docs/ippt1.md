@@ -150,6 +150,13 @@ Construire les figures suivantes (le repère est là pour vous aider et ne doit 
 {{ exo("Polygone régulier",["maths"]) }}
 
 1. Ecrire une fonction `triangle_equilateral(c)` qui trace un triangle équilatéral de côte `c` à partir de la position courante de la tortue.
+
+    !!! Aide
+        * On rappelle que tous les angles d'un triangle équilatéral sont égaux et valent 60°.
+        * Les deux premières étapes de la construction sont illustrées ci-dessous.
+        ![etape construction equilateral](./images/C3/equilateral.png){: .imgcentre}
+        * Comme un angle plat mesure 180°, on a tourné de 120° de façon à former un angle intérieur de 180°-160° = 60°
+
 2. Ecrire une fonction `carre(c)` qui trace un carré de côte `c` à partir de la position courante de la tortue.
 3. Ecrire une fonction `polygone_regulier(n,c)` qui trace un polygone régulier de côte `c` à partir de la position courante de la tortue.
     
@@ -182,3 +189,6 @@ Ecrire un programme Python permettant de dessiner le panneau de signalisation de
 ![croisement](./images/C3/croisement.svg){width=150px}  &nbsp;
 ![stop](./images/C3/stop.svg){width=150px}  &nbsp;
 ![doublesens](./images/C3/doublesens.png){width=150px} 
+
+!!! Aide
+    Consulter la [page de documentation](https://docs.python.org/fr/3/library/turtle.html){target=_blank} du module `turtle` et plus particulièrement celle concernant la fonction `write` qui permet d'écrire à l'écran

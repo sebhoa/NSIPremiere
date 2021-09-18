@@ -32,7 +32,7 @@ def recherche(element,liste):
 
 
 {{ titre_activite("Recherche dichotomique",[]) }}
-1. Télécharger et exécuter le programme du [jeu du nombre mystère](./files/C4/mystere.py)
+1. Télécharger et exécuter le programme du [jeu du nombre mystère](./files/C6/mystere.py)
     1. Faire quelques parties, expliquer la stratégie de l'ordinateur pour trouver le nombre mystère.
     2. Lorsque le nombre est compris entre 1 et 100, en combien d'essais au maximum l'ordinateur trouve-t-il la solution ?
     3. Et si le nombre mystère est compris entre 1 et 200 ?
@@ -91,7 +91,7 @@ def recherche_dichotomie(element,liste):
 1. Graphique de comparaison de temps d'exécution 
 {{ telecharger("Jupyter notebook","notebook/Recherche dans une liste.ipynb")}}
 Le graphique suivant qui compare les temps d'exécution des deux algorithmes de recherche dans une liste a été construit dans le notebook précédent :
-![comparaison recherche simple et dichotomique](./images/C4/comparaison.png){: .imgcentre}
+![comparaison recherche simple et dichotomique](./images/C6/comparaison.png){: .imgcentre}
 2. Quel algorithme est le plus rapide ?
 3. Cas de la recherche simple
     1. Pour la recherche simple, si une liste contient $n$ éléments, combien de comparaisons seront faites (au maximum) pour une recherche ?

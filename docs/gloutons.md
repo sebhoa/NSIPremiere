@@ -9,7 +9,7 @@
 
 {{ titre_activite("Introduction",["oral"],0) }}
 
-![Problème du sac à dos](./images/C8/pbsac.png){: .imgcentre}
+![Problème du sac à dos](./images/C13/pbsac.png){: .imgcentre}
 
 1. Quel est le problème illustré par l'image ci-dessous ?
 2. Proposer une réponse à ce problème.
