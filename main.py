@@ -56,7 +56,7 @@ def define_env(env):
     env.variables['num_act']=1
 
     env.variables['progression']={
-        1 : ["os","Systèmes d'exploitation",1,"os.md"],
+        1 : ["os","Systèmes d'exploitation",3,"os.md"],
         2 : ["typesbase","Représentation des entiers et des caractères",2,"codage.md"],
         3 : ["python","Initiation à Python avec Turtle - Partie 1",3,"ippt1.md"],
         4 : ["os","Architecture matérielle",1,"architecture.md"],
@@ -79,7 +79,7 @@ def define_env(env):
         questions = list(csv.DictReader(f,delimiter=","))
     env.variables['qcm']=questions
 
-   
+    
     
     env.variables['nchap']=0
     env.variables['nelements']=0
@@ -241,6 +241,21 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
     @env.macro
     def nok():
         return ":fontawesome-solid-times:{.rouge title='Non compatible'}"
+
+    @env.macro
+    def sujets(annee):
+        aff="\n"
+        aff+= "|Numéro | Lien de téléchargement| Repère de l'épreuve | Nom de fichier |\n"
+        aff+= "|-------|-----------------------|---------------------|----------------|\n"
+        FNAME = f"./docs/officiels/Sujets/BNS{annee}/lsujet{annee}.txt"
+        with open(FNAME,"r",encoding="utf-8") as f:
+            nums=1
+            for s in f:
+                lf=s.split(",",1)
+                aff+=f"|{nums}|[Sujet N°{nums}](./officiels/Sujets/BNS{annee}/{lf[0]}) | {lf[1][:-1]} | {lf[0]} |\n "
+                nums+=1
+        return aff
+    
     
 
     

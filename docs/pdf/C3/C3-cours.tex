@@ -11,6 +11,51 @@
 \pythonmode
 
 
+% Remarques sur les langages de programmation
+\begin{frame}
+	\mframe{\Python}
+	\begin{block}{Remarques}
+		\begin{itemize}
+			\item<1-> Il existe \textit{plusieurs milliers} de langages informatique.
+			\item<2-> Parmi les plus importants historiquement et les plus utilisés, on peut citer :
+			      \begin{itemize}
+				      \item<3-> Cobol, Fortran, Lisp,
+				      \item<4-> le \textcolor{blue}{langage C} et ses dérivés, Pascal, Ada
+				      \item<5-> Perl, Javascript, PHP, \textcolor{red}{Python}, Java.
+			      \end{itemize}
+			\item<6-> Ne pas confondre langages de programmations et algorithme. Un algorithme est une méthode permettant de résoudre un problème. Un langage informatique permet de formuler un algorithme pour l'exécuter sur un ordinateur.
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+
+% Python
+\begin{frame}
+	\mframe{\Python}
+	\begin{alertblock}{A propos de Python}
+		\begin{itemize}
+			\item<1-> Langage crée par un informaticien néerlandais : \textcolor{blue}{Guido Van Rossum}. La première version date de 1991, nous en sommes actuellement à la version 3.
+			\item<2-> C'est un langage sous licence libre, gratuit, multiplateforme.
+			\item<3-> C'est un langage extensible grâce à l'ajout de nombreuses bibliothèques.
+			\item<4-> C'est un langage interprété.
+			\item<5-> Choisi pour l'enseignement de la spécialité {\sc nsi} au lycée.
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+
+% Variables
+\begin{frame}[fragile]
+	\mframe{\Python}
+	\begin{block}{Programmation en python : généralités}
+		\begin{itemize}
+			\item<1-> Python renvoie un message d'erreur lorsqu'il n'arrive pas à interpréter les instructions de votre programme. Prendre l'habitude de \textcolor{blue}{lire attentivement} ces messages, qui sont de premiers indices pour déterminer la source de l'erreur
+			\item<2-> En Python, les \textcolor{blue}{commentaires} s'écrivent en faisant commencer la ligne par le caractère \textcolor{red}{\tt \#}.
+			\item<3-> Le respect de la syntaxe du langage est \textcolor{blue}{fondamental} et demande de la \textcolor{blue}{rigueur}.
+			\item<4-> Attention aussi à bien surveiller les correspondances entre les parenthèses mais aussi les guillemets ou les apostrophes qui sont souvent source d'erreurs.
+		\end{itemize}
+	\end{block}
+\end{frame}
 
 % Turtle : papier et crayon
 \begin{frame}[fragile]
@@ -144,18 +189,109 @@
 		\begin{itemize}
 			\item<2->{Les fonctions sont des blocs d'instructions destinés à accomplir une tâche lors de leur \textcolor{blue}{appel} (par exemple avec \tmc{turtle}, tracé un carré).}
 			\item<3->{Leurs résultats peut dépendre de valeurs appelées \textcolor{blue}{paramètres} de la fonction (par exemple, le côté du carré).}
-			\item<4->{Lorsqu'une fonction est destinée à produire un résultat (par exemple celui d'un calcul), on renvoie ce résultat à l'aide de l'instruction \textcolor{blue}{return}}
-			\item<5->{Pour définir une fonction en Python, on utilise la syntaxe suivante :
-		\begin{lstlisting}
-		def <nom_fonction>(<arguments>):
-			<instruction>
-			return <resultat>
+			\item<4->{Pour définir une fonction en Python, on utilise la syntaxe suivante :
+			      \begin{lstlisting}
+	def <nom_fonction>(<arguments>):
+		<instruction>
 		\end{lstlisting}}
 		\end{itemize}
 	\end{alertblock}
 \end{frame}
 
+% Exemple de fonction
+\begin{frame}[fragile]
+	\mframe{\Python}
+	\begin{exampleblock}{Un exemple de fonction}
+		Tracer un trait à partir du point de coordonnées {\tt (x,y)} en donnant la longueur $l$ et la direction $a$.
+		\begin{tabularx}{\linewidth}{p{4.5cm}|X}
+			\psset{xunit=0.5cm,yunit=0.5cm,xlabelsep=0,ylabelsep=0.1,MarkHashLength=2pt}
+			\begin{pspicture}(0,2)(-4,2)
+				\pstGeonode[PointName=none,PointSymbol=none](-2,-3){M}(2,-3){MX}(1,2){N}
+				\rput(-3,-3){(x,y)} \rput(0,-2.5){Angle $a$}
+				\ncline[linewidth=1px,linecolor=blue]{->}{M}{N} \naput{longueur $l$}
+				\ncline[linewidth=0.25px,linestyle=dashed]{->}{M}{MX}
+				\pstMarkAngle[LabelSep=50,arrows=->]{MX}{M}{N}{Angle $a$}
+			\end{pspicture} &
+			\begin{itemize}
+				\item<2-> Relever le crayon
+				\item<3-> Aller en {\tt (x,y)}
+				\item<4-> S'orienter dans la direction d'angle $a$
+				\item<5-> Abaisser le crayon
+				\item<6-> Avancer de la longueur $l$
+			\end{itemize}
+		\end{tabularx}
+	\end{exampleblock}
+\end{frame}
+
+% Exemple de fonction
+\begin{frame}[fragile]
+	\mframe{\Python}
+	\begin{exampleblock}{Un exemple de fonction}
+		Tracer un trait à partir du point de coordonnées {\tt (x,y)} en donnant la longueur $l$ et la direction $a$.
+		\begin{tabularx}{\linewidth}{p{4.5cm}|X}
+			\psset{xunit=0.5cm,yunit=0.5cm,xlabelsep=0,ylabelsep=0.1,MarkHashLength=2pt}
+			\begin{pspicture}(0,2)(-4,2)
+				\pstGeonode[PointName=none,PointSymbol=none](-2,-3){M}(2,-3){MX}(1,2){N}
+				\rput(-3,-3){(x,y)} \rput(0,-2.5){Angle $a$}
+				\ncline[linewidth=1px,linecolor=blue]{->}{M}{N} \naput{longueur $l$}
+				\ncline[linewidth=0.25px,linestyle=dashed]{->}{M}{MX}
+				\pstMarkAngle[LabelSep=50,arrows=->]{MX}{M}{N}{Angle $a$}
+			\end{pspicture} &
+			\begin{itemize}
+				\item Relever le crayon
+				\item Aller en {\tt (x,y)}
+				\item S'orienter dans la direction d'angle $a$
+				\item Abaisser le crayon
+				\item Avancer de la longueur $l$
+			\end{itemize}
+		\end{tabularx}
+		\begin{lstlisting}
+		def trait(x,y,l,a):
+			crayon.penup()
+			crayon.goto(x,y)
+			crayon.setheading(a)
+			crayon.pendown()
+			crayon.forward(l)
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
 
 
+% boucle for
+\begin{frame}[fragile]
+	\mframe{\Python}
+	\begin{alertblock}{Boucles {\tt for}}
+		\begin{itemize}
+			\item<2-> Les instructions :
+			      \begin{lstlisting}
+	for <variable> in range(<entier>):
+		 <instructions>
+	\end{lstlisting}
+			      permet de créer une variable parcourant les entiers de 0 à {\tt <entier>} (exclu).
+			\item<3-> Les {\tt <instructions>} indentées qui suivent seront executées pour chaque valeur prise par la variable.
+			\item<4-> La boucle {\tt for} permet donc de répéter un nombre prédéfini de fois des instructions, on dit que c'est une boucle bornée.
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+% boucle for
+\begin{frame}[fragile]
+	\mframe{\Python}
+	\begin{exampleblock}{Une boucle avec la fonction trait}
+		En faisant varier la direction et la longueur dans la fonction {\tt trait} définie ci-dessus à l'aide d'une boucle on obtient le dessin suivant :
+		\begin{center}
+			\includegraphics[scale=0.25]{ex-cours.eps}
+		\end{center}
+	\begin{lstlisting}
+	direction = 0
+	longueur = 10
+	for t in range(51):
+		trait(0,0,longueur,direction)
+		direction+=3.6
+		longueur+=5
+	papier.exitonclick()
+	\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
 
 \end{document}

@@ -34,6 +34,7 @@ Ce cours est construit pour être utilisé **en classe**, les élèves disposent
 | Applications | {{ sc("gnu")}}/Linux | Windows | MacOS |
 | ----------|----------------------|------------|----------|
 | [Python](https://www.python.org){target=_blank}    | {{ ok() }}           | {{ ok() }} | {{ ok() }} |
+| [VS Code](https://code.visualstudio.com/){target=_blank}    | {{ ok() }}           | {{ ok() }} | {{ ok() }} |
 | [Jupyter](https://jupyter.org/)   | {{ ok() }}           | {{ ok() }} | {{ ok() }} |
 | [Filius](https://www.lernsoftware-filius.de/Herunterladen)    | {{ ok() }}           | {{ ok() }} | {{ ok() }} |
 | [Gameshell](https://linuxfr.org/news/gameshell-apprendre-les-rudiments-du-shell-en-s-amusant) | {{ ok() }}           | {{ nok() }} | {{ ok() }} |

@@ -1,3 +1,4 @@
+#! /usr/bin/python3
 import tkinter
 from random import shuffle
 import time
