@@ -1,0 +1,961 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Cours de NSI en classe de première du lycée Hintermann-Afféjee" name="description"/>
+<meta content="Fabrice NATIVEL" name="author"/>
+<link href="../images/dragon.svg" rel="icon"/>
+<meta content="mkdocs-1.2.2, mkdocs-material-7.2.8" name="generator"/>
+<title>C1-Systèmes d'exploitation - Numériques et Sciences Informatiques Première</title>
+<link href="../assets/stylesheets/main.92558b1b.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+<link href="../stylesheets/fenarius.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#c1-systemes-dexploitation">
+          Aller au contenu
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="En-tête" class="md-header__inner md-grid">
+<a aria-label="Numériques et Sciences Informatiques Première" class="md-header__button md-logo" data-md-component="logo" href=".." title="Numériques et Sciences Informatiques Première">
+<svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M18.32 255.78 192 223.96l-91.28 68.69c-10.08 10.08-2.94 27.31 11.31 27.31h222.7c-9.44-26.4-14.73-54.47-14.73-83.38v-42.27l-119.73-87.6c-23.82-15.88-55.29-14.01-77.06 4.59L5.81 227.64c-12.38 10.33-3.45 30.42 12.51 28.14zm556.87 34.1-100.66-50.31A47.992 47.992 0 0 1 448 196.65v-36.69h64l28.09 22.63c6 6 14.14 9.37 22.63 9.37h30.97a32 32 0 0 0 28.62-17.69l14.31-28.62a32.005 32.005 0 0 0-3.02-33.51l-74.53-99.38C553.02 4.7 543.54 0 533.47 0H296.02c-7.13 0-10.7 8.57-5.66 13.61L352 63.96 292.42 88.8c-5.9 2.95-5.9 11.36 0 14.31L352 127.96v108.62c0 72.08 36.03 139.39 96 179.38-195.59 6.81-344.56 41.01-434.1 60.91C5.78 478.67 0 485.88 0 494.2 0 504 7.95 512 17.76 512h499.08c63.29.01 119.61-47.56 122.99-110.76 2.52-47.28-22.73-90.4-64.64-111.36zM489.18 66.25l45.65 11.41c-2.75 10.91-12.47 18.89-24.13 18.26-12.96-.71-25.85-12.53-21.52-29.67z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Numériques et Sciences Informatiques Première
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              C1-Systèmes d'exploitation
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Rechercher" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Rechercher" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Effacer" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Onglets" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="..">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/home.svg" width="16px"/>  Accueil
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../progression/">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg" width="16px"/>  Liste des chapitres
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../docs/">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/file-badge-16.svg" width="16px"/>  Documents officiels
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../projets/">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/lightbulb.svg" width="16px"/>  Projets
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../apropos/">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/information.svg" width="16px"/>  A propos
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Numériques et Sciences Informatiques Première" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Numériques et Sciences Informatiques Première">
+<svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M18.32 255.78 192 223.96l-91.28 68.69c-10.08 10.08-2.94 27.31 11.31 27.31h222.7c-9.44-26.4-14.73-54.47-14.73-83.38v-42.27l-119.73-87.6c-23.82-15.88-55.29-14.01-77.06 4.59L5.81 227.64c-12.38 10.33-3.45 30.42 12.51 28.14zm556.87 34.1-100.66-50.31A47.992 47.992 0 0 1 448 196.65v-36.69h64l28.09 22.63c6 6 14.14 9.37 22.63 9.37h30.97a32 32 0 0 0 28.62-17.69l14.31-28.62a32.005 32.005 0 0 0-3.02-33.51l-74.53-99.38C553.02 4.7 543.54 0 533.47 0H296.02c-7.13 0-10.7 8.57-5.66 13.61L352 63.96 292.42 88.8c-5.9 2.95-5.9 11.36 0 14.31L352 127.96v108.62c0 72.08 36.03 139.39 96 179.38-195.59 6.81-344.56 41.01-434.1 60.91C5.78 478.67 0 485.88 0 494.2 0 504 7.95 512 17.76 512h499.08c63.29.01 119.61-47.56 122.99-110.76 2.52-47.28-22.73-90.4-64.64-111.36zM489.18 66.25l45.65 11.41c-2.75 10.91-12.47 18.89-24.13 18.26-12.96-.71-25.85-12.53-21.52-29.67z"></path></svg>
+</a>
+    Numériques et Sciences Informatiques Première
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/home.svg" width="16px"/>  Accueil
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="&lt;img src='https://fabricenativel.github.io/NSIPremiere/images/icones/home.svg' width=16px height=16px&gt;  Accueil" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/home.svg" width="16px"/>  Accueil
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Cours de NSI en Première du lycée Hintermann-Afféjee
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg" width="16px"/>  Liste des chapitres
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="&lt;img src='https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg' width=16px height=16px&gt;  Liste des chapitres" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg" width="16px"/>  Liste des chapitres
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../progression/">
+        Progression
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          C1-Systèmes d'exploitation
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        C1-Systèmes d'exploitation
+      </a>
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activites">
+    Activités
+  </a>
+<nav aria-label="Activités" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activite-1-decouverte-des-os-logiciels-libres">
+    Activité 1 : Découverte des OS, logiciels libres
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activite-2-initiation-a-la-ligne-de-commande">
+    Activité 2 : Initiation à la ligne de commande
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cours">
+    Cours
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#qcm">
+    QCM
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercices">
+    Exercices
+  </a>
+<nav aria-label="Exercices" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-1-les-bases-de-la-ligne-de-commande">
+    Exercice 1 : Les bases de la ligne de commande
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-2-calendrier">
+    Exercice 2 : Calendrier  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-3-python-en-ligne-de-commande">
+    Exercice 3 : Python en ligne de commande  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-4-ecrire-dans-un-fichier">
+    Exercice 4 : Ecrire dans un fichier
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-5-ranger-un-dossier">
+    Exercice 5 : Ranger un dossier
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-6-gestion-des-droits-sur-un-fichier">
+    Exercice 6 : Gestion des droits sur un fichier
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-7-chercher-des-fichiers">
+    Exercice 7 : Chercher des fichiers
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-8-enigme">
+    Exercice 8 : Enigme  
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../codage/">
+        C2-Représentation des entiers et des caractères
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ippt1/">
+        C3-Initiation à Python avec Turtle - Partie 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../architecture/">
+        C4-Architecture matérielle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ippt2/">
+        C5-Initiation à Python avec Turtle - Partie 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notionsalgo/">
+        C6-Notions d'algorithmique
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../donneestable/">
+        C7-Lecture et traitement de données en table
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../leweb/">
+        C8-Le web
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../algostri/">
+        C9-Algorithmes de tri
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../negatifs/">
+        C10-Représentation des entiers négatifs
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../reseau/">
+        C11-Réseau
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interactionweb/">
+        C12-Interaction dans une page web
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gloutons/">
+        C13-Algorithmes gloutons
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fusiontable/">
+        C14-Fusion de tables
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+        C15-Interface homme-machine
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../flottant/">
+        C16-Notion de nombre flottant
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../knn/">
+        C17-Algorithme des k plus proches voisins
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/file-badge-16.svg" width="16px"/>  Documents officiels
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="&lt;img src='https://fabricenativel.github.io/NSIPremiere/images/icones/file-badge-16.svg' width=16px height=16px&gt;  Documents officiels" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/file-badge-16.svg" width="16px"/>  Documents officiels
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docs/">
+        Documents officiels
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/lightbulb.svg" width="16px"/>  Projets
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="&lt;img src='https://fabricenativel.github.io/NSIPremiere/images/icones/lightbulb.svg' width=16px height=16px&gt;  Projets" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/lightbulb.svg" width="16px"/>  Projets
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projets/">
+        Projets
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/information.svg" width="16px"/>  A propos
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="&lt;img src='https://fabricenativel.github.io/NSIPremiere/images/icones/information.svg' width=16px height=16px&gt;  A propos" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/information.svg" width="16px"/>  A propos
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../apropos/">
+        A Propos
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activites">
+    Activités
+  </a>
+<nav aria-label="Activités" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activite-1-decouverte-des-os-logiciels-libres">
+    Activité 1 : Découverte des OS, logiciels libres
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activite-2-initiation-a-la-ligne-de-commande">
+    Activité 2 : Initiation à la ligne de commande
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cours">
+    Cours
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#qcm">
+    QCM
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercices">
+    Exercices
+  </a>
+<nav aria-label="Exercices" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-1-les-bases-de-la-ligne-de-commande">
+    Exercice 1 : Les bases de la ligne de commande
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-2-calendrier">
+    Exercice 2 : Calendrier  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-3-python-en-ligne-de-commande">
+    Exercice 3 : Python en ligne de commande  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-4-ecrire-dans-un-fichier">
+    Exercice 4 : Ecrire dans un fichier
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-5-ranger-un-dossier">
+    Exercice 5 : Ranger un dossier
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-6-gestion-des-droits-sur-un-fichier">
+    Exercice 6 : Gestion des droits sur un fichier
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-7-chercher-des-fichiers">
+    Exercice 7 : Chercher des fichiers
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-8-enigme">
+    Exercice 8 : Enigme  
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="c1-systemes-dexploitation"><span class="numchapitre">C1</span> Systèmes d'exploitation <span style="float:right;"><span class="twemoji" title="Architectures matérielles et systèmes d'exploitation"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 48v416c0 26.51-21.49 48-48 48H144c-26.51 0-48-21.49-48-48V48c0-26.51 21.49-48 48-48h224c26.51 0 48 21.49 48 48zm96 58v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42V88h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zM30 376h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6z"></path></svg></span></span></h1>
+<h2 id="activites">Activités</h2>
+<h3 id="activite-1-decouverte-des-os-logiciels-libres"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Activité 1 : <em>Découverte des OS, logiciels libres</em></img></h3>
+<ol>
+<li>Rendez-vous sur la  <a href="https://www.videolan.org/vlc/index.fr.html" target="_blank">page de téléchargement du logiciel vlc</a>. :<ul>
+<li>Pourquoi faut-il télécharger une version différente de VLC suivant qu'on utilise Windows, MacOS, Linux ou Android ?</li>
+<li>Pouvez-vous associer chaque icône au logiciel qu'il représente ?</li>
+</ul>
+</li>
+<li>En faisant  des recherches sur le <em>Web</em>, rédiger une réponse brève aux questions suivantes :<ul>
+<li>Que sont Windows, MacOS, Linux et Android ?</li>
+<li>Quel est le rôle de ces logiciels sur un ordinateur ?</li>
+<li>Que signifie le mot <strong>libre</strong> dans la phrase : "<em>VLC est un lecteur multimédia gratuit et libre</em>" ?</li>
+</ul>
+</li>
+</ol>
+<h3 id="activite-2-initiation-a-la-ligne-de-commande"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Activité 2 : <em>Initiation à la ligne de commande</em></img></h3>
+<p>Cette initiation se fait à travers la réalisation de <strong>missions</strong> dans un mini jeu d'aventures appelé <a href="https://github.com/phyver/GameShell" target="_blank">gameshell</a>. </p>
+<ol>
+<li>
+<p>Installation de Gameshell :</p>
+<ol>
+<li>Télécharger le fichier <a href="../files/C1/gameshell.sh">gameshell</a>.</li>
+<li>Ouvrir l'explorateur de fichier.</li>
+<li>Créer un répertoire <code>gameshell</code> dans votre dossier personnel</li>
+<li>Dans ce répertoire, copier le fichier gameshell que vous avez téléchargé.</li>
+<li>Faire un clic droit sur le fichier et dans l'onglet permission cocher la case '<em>Autoriser l'exécution du fichier comme un programme</em>', comme illustré ci-dessous : <img alt="gameshell1" class="imgcentre" src="../images/C1/gameshell1.png"/></li>
+<li>Faire un clic droit dans la fenêtre de l'explorateur de fichier et sélectionner "<em>ouvrir dans un terminal</em>" comme illustré ci-dessous :<img alt="gameshell2" class="imgcentre" src="../images/C1/gameshell2.png"/></li>
+<li>Dans le terminal taper :
+<div class="highlight"><pre><span></span><code> ./gameshell.sh 
+</code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>Parallèlement à l'exécution des missions :</p>
+<ul>
+<li>Noter les commandes que vous utilisez et leur signification</li>
+<li>Tenir à jour un plan du monde dans lequel se déroule le jeu</li>
+</ul>
+<div class="admonition aide">
+<p class="admonition-title">Aide</p>
+<p>Pour la première mission, vous devez donc noter le sens des commandes <code>cd</code>, <code>ls</code> et <code>pwd</code> et commencer le schéma suivant qui sera à poursuivre tout au long des missions :
+<div class="mermaid">    graph TD
+    A[Monde] --&gt; B[Chateau]
+    A --&gt; C[Echoppe]
+    A --&gt; D[Forêt]
+    A --&gt; E[Jardin]
+    A --&gt; F[Montagne]
+</div></p>
+</div>
+</li>
+</ol>
+<div class="admonition maison">
+<p class="admonition-title">Poursuivre ce travail à la maison</p>
+<p>Le but est d'atteindre la mission 15, vous pouvez  poursuivre ce travail à la maison en installant <strong>Gameshell</strong>, suivre les instructions que vous trouverez sur <a href="https://linuxfr.org/news/gameshell-le-retour" target="_blank">cette page</a>.</p>
+</div>
+<h2 id="cours">Cours</h2>
+<p>Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de cours présenté en classe :</p>
+<p><span class="centre"><a class="md-button" href="../pdf/C1/C1-cours.pdf">Diaporama de cours <span class="twemoji"><svg viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M369.9 97.9 286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48zm250.2-143.7c-12.2-12-47-8.7-64.4-6.5-17.2-10.5-28.7-25-36.8-46.3 3.9-16.1 10.1-40.6 5.4-56-4.2-26.2-37.8-23.6-42.6-5.9-4.4 16.1-.4 38.5 7 67.1-10 23.9-24.9 56-35.4 74.4-20 10.3-47 26.2-51 46.2-3.3 15.8 26 55.2 76.1-31.2 22.4-7.4 46.8-16.5 68.4-20.1 18.9 10.2 41 17 55.8 17 25.5 0 28-28.2 17.5-38.7zm-198.1 77.8c5.1-13.7 24.5-29.5 30.4-35-19 30.3-30.4 35.7-30.4 35zm81.6-190.6c7.4 0 6.7 32.1 1.8 40.8-4.4-13.9-4.3-40.8-1.8-40.8zm-24.4 136.6c9.7-16.9 18-37 24.7-54.7 8.3 15.1 18.9 27.2 30.1 35.5-20.8 4.3-38.9 13.1-54.8 19.2zm131.6-5s-5 6-37.3-7.8c35.1-2.6 40.9 5.4 37.3 7.8z"></path></svg></span></a></span></p>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Ce diaporama ne vous donne que quelques points de repères lors de vos révisions. Il devrait être complété par la relecture attentive de vos <strong>propres</strong> notes de cours et par une révision approfondie des exercices.</p>
+</div>
+<h2 id="qcm">QCM</h2>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>1.</strong> Une et une seule de ces affirmations est fausse. Laquelle ?</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><label for="__tabbed_1_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> a) Un système d'exploitation libre est la plupart du temps gratuit</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> b) Je peux contribuer à un système d'exploitation libre</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> c) Il est interdit d'étudier un système d'exploitation propriétaire</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> d) Un système d'exploitation propriétaire est plus sécurisé</li>
+</ul>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio"><label for="__tabbed_1_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> a) <del>Un système d'exploitation libre est la plupart du temps gratuit</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> b) <del>Je peux contribuer à un système d'exploitation libre</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> c) <del>Il est interdit d'étudier un système d'exploitation propriétaire</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> d) <mark>Un système d'exploitation propriétaire est plus sécurisé</mark> </li>
+</ul>
+</div>
+</input></input></div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>2.</strong> Quelle est l'effet de la commande <code>cd ..</code> ?</p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"/><label for="__tabbed_2_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) Changer le répertoire courant vers le répertoire parent</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) Ejecter le CD</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) Copier le contenu du répertoire courant dans un répertoire caché</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) Supprimer le répertoire courant</li>
+</ul>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio"/><label for="__tabbed_2_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> a) <mark>Changer le répertoire courant vers le répertoire parent</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del>Ejecter le CD</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>Copier le contenu du répertoire courant dans un répertoire caché</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>Supprimer le répertoire courant</del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>3.</strong> Quel est le rôle de la commande <code>ls</code> ?</p>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><label for="__tabbed_3_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) Basculer en mode administrateur</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) Lister le contenu du répertoire courant</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) Effacer le contenu du répertoire courant</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) Donner un accès complet à un fichier</li>
+</ul>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><label for="__tabbed_3_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>Basculer en mode administrateur</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> b) <mark>Lister le contenu du répertoire courant</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>Effacer le contenu du répertoire courant</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>Donner un accès complet à un fichier</del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>4.</strong> Dans un terminal sous Linux, quelle commande faut-il écrire pour donner à tout le monde le droit d'écriture sur le fichier <code>information.py</code> ?</p>
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><label for="__tabbed_4_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <code>chmod o+w information.py</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <code>chmod a+w information.py</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <code>chmod o+x information.py</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <code>chmod a+x information.py</code></li>
+</ul>
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><label for="__tabbed_4_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del><code>chmod o+w information.py</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> b) <mark><code>chmod a+w information.py</code></mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del><code>chmod o+x information.py</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del><code>chmod a+x information.py</code></del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>5.</strong> Quel est l'effet de la commande <code>chmod u+w fichier.txt</code> ?</p>
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><label for="__tabbed_5_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) de permettre au propriétaire du fichier de modifier le contenu de ce fichier</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) d'interdire au propriétaire de modifier le contenu de ce fichier</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) d'interdire à tous les autres utilisateurs de lire le fichier</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) d'effacer le fichier</li>
+</ul>
+</div>
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><label for="__tabbed_5_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> a) <mark>de permettre au propriétaire du fichier de modifier le contenu de ce fichier</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del>d'interdire au propriétaire de modifier le contenu de ce fichier</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>d'interdire à tous les autres utilisateurs de lire le fichier</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>d'effacer le fichier</del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>6.</strong> Dans la console Linux, quelle commande faut-il exécuter pour obtenir la documentation de la commande <code>pwd</code> ?</p>
+<div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><label for="__tabbed_6_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <code>man pwd</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <code>cd pwd</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <code>mkdir pwd</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <code>ls pwd</code></li>
+</ul>
+</div>
+<input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><label for="__tabbed_6_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> a) <mark><code>man pwd</code></mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del><code>cd pwd</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del><code>mkdir pwd</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del><code>ls pwd</code></del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>7.</strong> Lequel de ces systèmes d'exploitation est sous licence propriétaire ?</p>
+<div class="tabbed-set" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><label for="__tabbed_7_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) Android</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) Linux</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) Windows</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) Ubuntu</li>
+</ul>
+</div>
+<input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><label for="__tabbed_7_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>Android</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del>Linux</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> c) <mark>Windows</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>Ubuntu</del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>8.</strong> Une application doit écrire sur le disque dur de l'ordinateur, laquelle des affirmations suivantes est vraie ?</p>
+<div class="tabbed-set" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><label for="__tabbed_8_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) Elle peut le faire quand bon lui semble</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) Elle doit en faire la demande au système d'exploitation</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) Elle doit en faire la demande à l'utilisateur de l'ordinateur</li>
+</ul>
+</div>
+<input id="__tabbed_8_2" name="__tabbed_8" type="radio"/><label for="__tabbed_8_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>Elle peut le faire quand bon lui semble</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> b) <mark>Elle doit en faire la demande au système d'exploitation</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>Elle doit en faire la demande à l'utilisateur de l'ordinateur</del> </li>
+</ul>
+</div>
+</div>
+</div>
+<h2 id="exercices">Exercices</h2>
+<h3 id="exercice-1-les-bases-de-la-ligne-de-commande"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 1 : <em>Les bases de la ligne de commande</em></img></h3>
+<ol>
+<li>En utilisant uniquement la  ligne de commande, créer l'arborescence suivante dans votre répertoire personnel :
+        <div class="mermaid">    graph TD
+    A[Cours] --&gt; B[C1-OS]
+    A[Cours] --&gt; G[C2-Binaire]
+    B --&gt; C[Exercices]
+    B --&gt; D[Activités]
+    B --&gt; E[Notes]
+    B --&gt; F[Python]
+</div></li>
+<li>Renommer le dossier <code>Cours</code> en <code>NSI</code></li>
+<li>Aller dans le dossier <code>NSI</code></li>
+<li>Taper la commande <code>tree</code>, quel est l'effet de cette commande ?</li>
+</ol>
+<h3 id="exercice-2-calendrier"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 2 : <em>Calendrier</em><span style="float:right;"><span style="float:right;">  <span class="twemoji" title="Exercice testant une capacité du chapitre"><svg viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path d="M519.442 288.651c-41.519 0-59.5 31.593-82.058 31.593C377.409 320.244 432 144 432 144s-196.288 80-196.288-3.297c0-35.827 36.288-46.25 36.288-85.985C272 19.216 243.885 0 210.539 0c-34.654 0-66.366 18.891-66.366 56.346 0 41.364 31.711 59.277 31.711 81.75C175.885 207.719 0 166.758 0 166.758v333.237s178.635 41.047 178.635-28.662c0-22.473-40-40.107-40-81.471 0-37.456 29.25-56.346 63.577-56.346 33.673 0 61.788 19.216 61.788 54.717 0 39.735-36.288 50.158-36.288 85.985 0 60.803 129.675 25.73 181.23 25.73 0 0-34.725-120.101 25.827-120.101 35.962 0 46.423 36.152 86.308 36.152C556.712 416 576 387.99 576 354.443c0-34.199-18.962-65.792-56.558-65.792z"></path></svg></span></span></span></img></h3>
+<ol>
+<li>Ouvrir un terminal et y tester la commande <code>cal</code></li>
+<li>Lire la documentation de cette commande</li>
+<li>Quel était le jour de la semaine le 26 juin 1815 ?</li>
+<li>Quel commande faut-il écrire pour afficher le calendrier du mois de mai 1970 ?</li>
+</ol>
+<h3 id="exercice-3-python-en-ligne-de-commande"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 3 : <em>Python en ligne de commande</em><span style="float:right;"><span style="float:right;">  <span class="twemoji" title="Exercice en lien avec la programmation en Python"><svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"></path></svg></span></span></span></img></h3>
+<p>Le langage Python peut être invoqué à partir de la ligne de commande, taper simplement <code>python</code> dans un terminal. L'invite de commande se transforme en <code>&gt;&gt;&gt;</code>, on dit que Python est en mode console. Vous pouvez quitter Python en tapant <code>exit()</code>.</p>
+<ol>
+<li>
+<p>Utiliser Python comme calculatrice <br/>En mode console, Python vous fournira directement les résultats de calculs, taper par exemple  :</p>
+<ol>
+<li><code>15+5*5</code>, dans quel ordre les opérations sont-elles effectuées ?</li>
+<li>
+<p><code>2**5</code>, de quelle opération s'agit-il ?</p>
+<div class="admonition aide">
+<p class="admonition-title">Aide</p>
+<p>Tester d'autres valeurs par exemple <code>7**2</code> ou <code>2**3</code> pour vous aider</p>
+</div>
+</li>
+<li>
+<p><code>20%3</code>  et  <code>20//3</code>, de quelle opération s'agit-il ? (tester d'autres valeurs si nécessaire)</p>
+</li>
+<li>En utilisant Python, donner le résultat de <span class="arithmatex">\(9^{10} - 10^9\)</span>.</li>
+<li>En utilisant Python, convertir 17899132 minutes en jours, heures et minutes. </li>
+</ol>
+</li>
+<li>
+<p>Obtenir de l'aide en python</p>
+<ol>
+<li>Tester les expressions Python <code>chr(33)</code>,  <code>chr(72)</code>, <code>chr(125)</code></li>
+<li>Pour connaître l'utilité de cette fonction taper <code>help(chr)</code></li>
+</ol>
+</li>
+</ol>
+<h3 id="exercice-4-ecrire-dans-un-fichier"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 4 : <em>Ecrire dans un fichier</em></img></h3>
+<div class="admonition rappel">
+<p class="admonition-title">Rappel</p>
+<ul>
+<li>La commande <code>touch</code> permet de créer un fichier vide, par exemple <code>touch bidule.txt</code> crée un fichier vide nommé <code>bidule.txt</code> dans le répertoire courant.</li>
+<li>La commande <code>cat</code> permet d'afficher le contenu d'un fichier dans le terminal</li>
+</ul>
+</div>
+<ol>
+<li>Créer un fichier vide appelé <code>monfichier.txt</code></li>
+<li>La commande <code>echo</code><ol>
+<li>Tester la commande <code>echo</code>, en tapant par exemple <code>echo "Bonjour tout le monde"</code></li>
+<li>Pour écrire dans un fichier on peut <em>rediriger</em> la sortie de la commande <code>echo</code> à l'aide du caractère <code>&gt;</code>. Tester en tapant par exemple <code>echo "NSI c'est génial !" &gt; monfichier.txt</code></li>
+<li>Afficher la contenu du fichier pour vérifier qu'il a été modifié.</li>
+</ol>
+</li>
+<li>Un éditeur de texte dans le terminal<ol>
+<li>Taper la commande <code>nano monfichier.txt</code></li>
+<li>
+<p>Utiliser cet éditeur de texte minimal afin de modifier le fichier puis l'enregistrer.</p>
+<div class="admonition aide">
+<p class="admonition-title">Aide</p>
+<p>Les commandes principales s'affichent en bas de page, le caractère <code>^</code> désigne la touche <span class="keys"><kbd class="key-control">Ctrl</kbd></span> </p>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="exercice-5-ranger-un-dossier"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 5 : <em>Ranger un dossier</em></img></h3>
+<ol>
+<li>Télécharger et décompresser le dossier <a href="../files/C1/A_Ranger.zip">A_Ranger</a>.</li>
+<li>Lister le contenu de ce dossier, quels types de fichier contient-t-il ?</li>
+<li>Dans le dossier <code>A_ranger</code>, créer les dossiers <code>Texte</code>,<code>HTML</code> et <code>Python</code>. </li>
+<li>
+<p>Déplacer les fichiers de chaque type dans le dossier correspondant</p>
+<div class="admonition aide">
+<p class="admonition-title">Aide<p>Déplacer les fichiers un à un serait long à fastidieux. Penser à utiliser le caractère <code>*</code> qui remplace n'importe quelle suite de caractères dans les noms de fichiers.</p>
+</p>
+</div>
+</li>
+</ol>
+<h3 id="exercice-6-gestion-des-droits-sur-un-fichier"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 6 : <em>Gestion des droits sur un fichier</em></img></h3>
+<ol>
+<li>Quelle commande permet d'afficher les droits sur les fichiers d'un répertoire ?</li>
+<li>Quels sont les trois droits définis par un système de type Linux et leurs signfications ?</li>
+<li>
+<p>Compléter le tableau suivant :</p>
+<table>
+<thead>
+<tr>
+<th>Commande</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>chmod g+x monfichier</code></td>
+<td></td>
+</tr>
+<tr>
+<td>...</td>
+<td>Enlever le droit d'écriture pour le propriétaire du fichier</td>
+</tr>
+<tr>
+<td><code>chmod go-rwx monfichier</code></td>
+<td>...</td>
+</tr>
+<tr>
+<td><code>chmod a+x monfichier</code></td>
+<td>...</td>
+</tr>
+<tr>
+<td>.....</td>
+<td>Attribuer les droits de lecture, d'écriture et d'exécution aux autres</td>
+</tr>
+<tr>
+<td>....</td>
+<td>Enlever les droits d'écriture au groupe et aux autres</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h3 id="exercice-7-chercher-des-fichiers"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 7 : <em>Chercher des fichiers</em></img></h3>
+<ol>
+<li>Lire les premières lignes de la documentation de la commande <code>find</code>. A quoi sert cette commande ?</li>
+<li>
+<p>Tester la commande <code>find ~ -name "gameshell"</code>. Expliquer le résultat obtenu et l'effet de la commande.</p>
+<div class="admonition aide">
+<p class="admonition-title">Aide</p>
+<ul>
+<li>On rappelle que <code>~</code> désigne votre répertoire personnel.</li>
+<li>A l'activité 2, <code>gameshell</code> avait été téléchargé puis copier dans un repertoire, deux exemplaires de ce fichiers devraient donc se trouver dans votre répertoire personnel</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Sachant que les commandes du système se trouvent dans le repertoire <code>/usr/bin</code>, lister toutes les commandes dont le nom se terminent par  <code>dir</code> (<code>rmdir</code> et <code>mkdir</code> devraient donc apparaître).</p>
+</li>
+<li>
+<p>Lister tous les commandes dont le nom commence par <code>ls</code>. </p>
+</li>
+</ol>
+<h3 id="exercice-8-enigme"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 8 : <em>Enigme</em><span style="float:right;"><span style="float:right;">  <span class="twemoji" title="Exercice difficile"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m440.5 88.5-52 52L415 167c9.4 9.4 9.4 24.6 0 33.9l-17.4 17.4c11.8 26.1 18.4 55.1 18.4 85.6 0 114.9-93.1 208-208 208S0 418.9 0 304 93.1 96 208 96c30.5 0 59.5 6.6 85.6 18.4L311 97c9.4-9.4 24.6-9.4 33.9 0l26.5 26.5 52-52 17.1 17zM500 60h-24c-6.6 0-12 5.4-12 12s5.4 12 12 12h24c6.6 0 12-5.4 12-12s-5.4-12-12-12zM440 0c-6.6 0-12 5.4-12 12v24c0 6.6 5.4 12 12 12s12-5.4 12-12V12c0-6.6-5.4-12-12-12zm33.9 55 17-17c4.7-4.7 4.7-12.3 0-17-4.7-4.7-12.3-4.7-17 0l-17 17c-4.7 4.7-4.7 12.3 0 17 4.8 4.7 12.4 4.7 17 0zm-67.8 0c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17zm67.8 34c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17zM112 272c0-35.3 28.7-64 64-64 8.8 0 16-7.2 16-16s-7.2-16-16-16c-52.9 0-96 43.1-96 96 0 8.8 7.2 16 16 16s16-7.2 16-16z"></path></svg></span></span></span></img></h3>
+<ol>
+<li>Télécharger puis décompresser le fichier <a href="../files/C1/Enigme.zip"><code>Enigme</code></a>.</li>
+<li>
+<p>En utilisant <strong>uniquement la ligne de commande</strong>, trouver six lettres avec les indices suivants :</p>
+<ul>
+<li>Lettre n° 1 : "<em>cachée dans le dossier <code>Enigme</code> que vous avez téléchargé</em>"</li>
+<li>Lettre n° 2 : "<em>son code <span style="font-variant:small-caps;">ascii</span> est 71</em>"</li>
+<li>Lettre n° 3 : "<em>deuxième lettre du jour de la semaine du 23 juin 1912</em>"</li>
+<li>Lettre n° 4 : "<em>La commande <code>wc</code> vous permettra de compter le nombre de caractères du fichier lettre 4 qui se trouve dans <code>Enigme</code>. Diviser le résultat obtenu par 1956 pour avoir la position dans l'alphabet de la quatrième lettre</em>"</li>
+<li>Lettre n° 5 : "<em>Lorsque cette lettre est donnée en option à la commande <code>cp</code>, elle permet de copier un dossier et tout ce qu'il contient</em>"</li>
+<li>Lettre n°6 : "<em>La commande <code>eog</code> vous permettra de découvrir la lettre6</em>".</li>
+</ul>
+</li>
+<li>
+<p>Remettre dans l'ordre les six lettres obtenus pour trouver le nom d'un célèbre informaticien.</p>
+</li>
+</ol>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Pied de page" class="md-footer__inner md-grid">
+<a aria-label="Précédent: Progression" class="md-footer__link md-footer__link--prev" href="../progression/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Précédent
+              </span>
+              Progression
+            </div>
+</div>
+</a>
+<a aria-label="Suivant: C2-Représentation des entiers et des caractères" class="md-footer__link md-footer__link--next" href="../codage/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Suivant
+              </span>
+              C2-Représentation des entiers et des caractères
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}, "search": "../assets/javascripts/workers/search.94ec81fe.min.js", "version": null}</script>
+<script src="../assets/javascripts/bundle.48dfec6c.min.js"></script>
+<script src="../javascripts/config.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({});</script></body>
+</html>

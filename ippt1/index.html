@@ -1,0 +1,880 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Cours de NSI en classe de première du lycée Hintermann-Afféjee" name="description"/>
+<meta content="Fabrice NATIVEL" name="author"/>
+<link href="../images/dragon.svg" rel="icon"/>
+<meta content="mkdocs-1.2.2, mkdocs-material-7.2.8" name="generator"/>
+<title>C3-Initiation à Python avec Turtle - Partie 1 - Numériques et Sciences Informatiques Première</title>
+<link href="../assets/stylesheets/main.92558b1b.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+<link href="../stylesheets/fenarius.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#c3-initiation-a-python-avec-turtle-partie-1">
+          Aller au contenu
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="En-tête" class="md-header__inner md-grid">
+<a aria-label="Numériques et Sciences Informatiques Première" class="md-header__button md-logo" data-md-component="logo" href=".." title="Numériques et Sciences Informatiques Première">
+<svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M18.32 255.78 192 223.96l-91.28 68.69c-10.08 10.08-2.94 27.31 11.31 27.31h222.7c-9.44-26.4-14.73-54.47-14.73-83.38v-42.27l-119.73-87.6c-23.82-15.88-55.29-14.01-77.06 4.59L5.81 227.64c-12.38 10.33-3.45 30.42 12.51 28.14zm556.87 34.1-100.66-50.31A47.992 47.992 0 0 1 448 196.65v-36.69h64l28.09 22.63c6 6 14.14 9.37 22.63 9.37h30.97a32 32 0 0 0 28.62-17.69l14.31-28.62a32.005 32.005 0 0 0-3.02-33.51l-74.53-99.38C553.02 4.7 543.54 0 533.47 0H296.02c-7.13 0-10.7 8.57-5.66 13.61L352 63.96 292.42 88.8c-5.9 2.95-5.9 11.36 0 14.31L352 127.96v108.62c0 72.08 36.03 139.39 96 179.38-195.59 6.81-344.56 41.01-434.1 60.91C5.78 478.67 0 485.88 0 494.2 0 504 7.95 512 17.76 512h499.08c63.29.01 119.61-47.56 122.99-110.76 2.52-47.28-22.73-90.4-64.64-111.36zM489.18 66.25l45.65 11.41c-2.75 10.91-12.47 18.89-24.13 18.26-12.96-.71-25.85-12.53-21.52-29.67z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Numériques et Sciences Informatiques Première
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              C3-Initiation à Python avec Turtle - Partie 1
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Rechercher" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Rechercher" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Effacer" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Onglets" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="..">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/home.svg" width="16px"/>  Accueil
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../progression/">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg" width="16px"/>  Liste des chapitres
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../docs/">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/file-badge-16.svg" width="16px"/>  Documents officiels
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../projets/">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/lightbulb.svg" width="16px"/>  Projets
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../apropos/">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/information.svg" width="16px"/>  A propos
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Numériques et Sciences Informatiques Première" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Numériques et Sciences Informatiques Première">
+<svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M18.32 255.78 192 223.96l-91.28 68.69c-10.08 10.08-2.94 27.31 11.31 27.31h222.7c-9.44-26.4-14.73-54.47-14.73-83.38v-42.27l-119.73-87.6c-23.82-15.88-55.29-14.01-77.06 4.59L5.81 227.64c-12.38 10.33-3.45 30.42 12.51 28.14zm556.87 34.1-100.66-50.31A47.992 47.992 0 0 1 448 196.65v-36.69h64l28.09 22.63c6 6 14.14 9.37 22.63 9.37h30.97a32 32 0 0 0 28.62-17.69l14.31-28.62a32.005 32.005 0 0 0-3.02-33.51l-74.53-99.38C553.02 4.7 543.54 0 533.47 0H296.02c-7.13 0-10.7 8.57-5.66 13.61L352 63.96 292.42 88.8c-5.9 2.95-5.9 11.36 0 14.31L352 127.96v108.62c0 72.08 36.03 139.39 96 179.38-195.59 6.81-344.56 41.01-434.1 60.91C5.78 478.67 0 485.88 0 494.2 0 504 7.95 512 17.76 512h499.08c63.29.01 119.61-47.56 122.99-110.76 2.52-47.28-22.73-90.4-64.64-111.36zM489.18 66.25l45.65 11.41c-2.75 10.91-12.47 18.89-24.13 18.26-12.96-.71-25.85-12.53-21.52-29.67z"></path></svg>
+</a>
+    Numériques et Sciences Informatiques Première
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/home.svg" width="16px"/>  Accueil
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="&lt;img src='https://fabricenativel.github.io/NSIPremiere/images/icones/home.svg' width=16px height=16px&gt;  Accueil" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/home.svg" width="16px"/>  Accueil
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Cours de NSI en Première du lycée Hintermann-Afféjee
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg" width="16px"/>  Liste des chapitres
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="&lt;img src='https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg' width=16px height=16px&gt;  Liste des chapitres" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg" width="16px"/>  Liste des chapitres
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../progression/">
+        Progression
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../os/">
+        C1-Systèmes d'exploitation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../codage/">
+        C2-Représentation des entiers et des caractères
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          C3-Initiation à Python avec Turtle - Partie 1
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        C3-Initiation à Python avec Turtle - Partie 1
+      </a>
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activites">
+    Activités
+  </a>
+<nav aria-label="Activités" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activite-1-desssiner-avec-le-module-turtle">
+    Activité 1 : Desssiner avec le module turtle  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activite-2-premieres-fonctions">
+    Activité 2 : Premières fonctions  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activite-3-boucles">
+    Activité 3 : Boucles  
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cours">
+    Cours
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#qcm">
+    QCM
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercices">
+    Exercices
+  </a>
+<nav aria-label="Exercices" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-1-quelques-dessins-avec-turtle">
+    Exercice 1 : Quelques dessins avec turtle
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-2-utilisation-dune-fonction">
+    Exercice 2 : Utilisation d'une fonction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-3-ecrire-une-fonction">
+    Exercice 3 : Ecrire une fonction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-4-une-fonction-cercle">
+    Exercice 4 : Une fonction cercle
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-5-grille">
+    Exercice 5 : Grille
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-6-quelques-figures-avec-turtle">
+    Exercice 6 : Quelques figures avec turtle
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-7-polygone-regulier">
+    Exercice 7 : Polygone régulier  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-8-drapeau">
+    Exercice 8 : Drapeau
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-9-panneau-de-signalisation">
+    Exercice 9 : Panneau de signalisation
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../architecture/">
+        C4-Architecture matérielle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ippt2/">
+        C5-Initiation à Python avec Turtle - Partie 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notionsalgo/">
+        C6-Notions d'algorithmique
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../donneestable/">
+        C7-Lecture et traitement de données en table
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../leweb/">
+        C8-Le web
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../algostri/">
+        C9-Algorithmes de tri
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../negatifs/">
+        C10-Représentation des entiers négatifs
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../reseau/">
+        C11-Réseau
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interactionweb/">
+        C12-Interaction dans une page web
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gloutons/">
+        C13-Algorithmes gloutons
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fusiontable/">
+        C14-Fusion de tables
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+        C15-Interface homme-machine
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../flottant/">
+        C16-Notion de nombre flottant
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../knn/">
+        C17-Algorithme des k plus proches voisins
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/file-badge-16.svg" width="16px"/>  Documents officiels
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="&lt;img src='https://fabricenativel.github.io/NSIPremiere/images/icones/file-badge-16.svg' width=16px height=16px&gt;  Documents officiels" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/file-badge-16.svg" width="16px"/>  Documents officiels
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docs/">
+        Documents officiels
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/lightbulb.svg" width="16px"/>  Projets
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="&lt;img src='https://fabricenativel.github.io/NSIPremiere/images/icones/lightbulb.svg' width=16px height=16px&gt;  Projets" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/lightbulb.svg" width="16px"/>  Projets
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projets/">
+        Projets
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/information.svg" width="16px"/>  A propos
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="&lt;img src='https://fabricenativel.github.io/NSIPremiere/images/icones/information.svg' width=16px height=16px&gt;  A propos" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/information.svg" width="16px"/>  A propos
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../apropos/">
+        A Propos
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activites">
+    Activités
+  </a>
+<nav aria-label="Activités" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activite-1-desssiner-avec-le-module-turtle">
+    Activité 1 : Desssiner avec le module turtle  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activite-2-premieres-fonctions">
+    Activité 2 : Premières fonctions  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activite-3-boucles">
+    Activité 3 : Boucles  
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cours">
+    Cours
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#qcm">
+    QCM
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercices">
+    Exercices
+  </a>
+<nav aria-label="Exercices" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-1-quelques-dessins-avec-turtle">
+    Exercice 1 : Quelques dessins avec turtle
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-2-utilisation-dune-fonction">
+    Exercice 2 : Utilisation d'une fonction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-3-ecrire-une-fonction">
+    Exercice 3 : Ecrire une fonction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-4-une-fonction-cercle">
+    Exercice 4 : Une fonction cercle
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-5-grille">
+    Exercice 5 : Grille
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-6-quelques-figures-avec-turtle">
+    Exercice 6 : Quelques figures avec turtle
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-7-polygone-regulier">
+    Exercice 7 : Polygone régulier  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-8-drapeau">
+    Exercice 8 : Drapeau
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-9-panneau-de-signalisation">
+    Exercice 9 : Panneau de signalisation
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="c3-initiation-a-python-avec-turtle-partie-1"><span class="numchapitre">C3</span> Initiation à Python avec Turtle - Partie 1 <span style="float:right;"><span class="twemoji" title="Langages et programmation"><svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"></path></svg></span></span></h1>
+<h2 id="activites">Activités</h2>
+<h3 id="activite-1-desssiner-avec-le-module-turtle"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Activité 1 : <em>Desssiner avec le module turtle</em><span style="float:right;"><span style="float:right;">  <span class="twemoji" title="Activité utilisant un jupyter notebook"><svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z"></path></svg></span></span></span></img></h3>
+<p><span class="centre"><a class="md-button" href="../notebook/pendu1.ipynb">Jupyter Notebook <span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg></span></a></span></p>
+<h3 id="activite-2-premieres-fonctions"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Activité 2 : <em>Premières fonctions</em><span style="float:right;"><span style="float:right;">  <span class="twemoji" title="Activité utilisant un jupyter notebook"><svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z"></path></svg></span></span></span></img></h3>
+<p><span class="centre"><a class="md-button" href="../notebook/pendu2.ipynb">Jupyter Notebook <span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg></span></a></span></p>
+<h3 id="activite-3-boucles"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Activité 3 : <em>Boucles</em><span style="float:right;"><span style="float:right;">  <span class="twemoji" title="Activité utilisant un jupyter notebook"><svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z"></path></svg></span></span></span></img></h3>
+<p><span class="centre"><a class="md-button" href="../notebook/pendu3.ipynb">Jupyter Notebook <span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg></span></a></span></p>
+<h2 id="cours">Cours</h2>
+<p>Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de cours présenté en classe :</p>
+<p><span class="centre"><a class="md-button" href="../pdf/C3/C3-cours.pdf">Diaporama de cours <span class="twemoji"><svg viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M369.9 97.9 286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48zm250.2-143.7c-12.2-12-47-8.7-64.4-6.5-17.2-10.5-28.7-25-36.8-46.3 3.9-16.1 10.1-40.6 5.4-56-4.2-26.2-37.8-23.6-42.6-5.9-4.4 16.1-.4 38.5 7 67.1-10 23.9-24.9 56-35.4 74.4-20 10.3-47 26.2-51 46.2-3.3 15.8 26 55.2 76.1-31.2 22.4-7.4 46.8-16.5 68.4-20.1 18.9 10.2 41 17 55.8 17 25.5 0 28-28.2 17.5-38.7zm-198.1 77.8c5.1-13.7 24.5-29.5 30.4-35-19 30.3-30.4 35.7-30.4 35zm81.6-190.6c7.4 0 6.7 32.1 1.8 40.8-4.4-13.9-4.3-40.8-1.8-40.8zm-24.4 136.6c9.7-16.9 18-37 24.7-54.7 8.3 15.1 18.9 27.2 30.1 35.5-20.8 4.3-38.9 13.1-54.8 19.2zm131.6-5s-5 6-37.3-7.8c35.1-2.6 40.9 5.4 37.3 7.8z"></path></svg></span></a></span></p>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Ce diaporama ne vous donne que quelques points de repères lors de vos révisions. Il devrait être complété par la relecture attentive de vos <strong>propres</strong> notes de cours et par une révision approfondie des exercices.</p>
+</div>
+<h2 id="qcm">QCM</h2>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>1.</strong> Quelle instruction permet d'orienter une tortue <code>crayon</code> vers le bas ?</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><label for="__tabbed_1_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> a) <code>tortue.forward(270)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> b) <code>tortue.left(270)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> c) <code>tortue.right(270)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> d) <code>tortue.setheading(270)</code></li>
+</ul>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio"><label for="__tabbed_1_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> a) <del><code>tortue.forward(270)</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> b) <del><code>tortue.left(270)</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> c) <del><code>tortue.right(270)</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> d) <mark><code>tortue.setheading(270)</code></mark> </li>
+</ul>
+</div>
+</input></input></div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>2.</strong> On suppose que la tortue <code>crayon</code> est située en <code>(0,0)</code> et est orientée vers le bas, quelle suite d'instructions permet de construire la figure suivante ?</p>
+<p><img alt="illustration" class="imgcentre" src="../images/C3/qcm1.png"/></p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"/><label for="__tabbed_2_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <br/> <code>crayon.forward(100)</code> <br/> <code>crayon.left(90)</code> <br/> <code>crayon.forward(50)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <br/> <code>crayon.forward(100)</code> <br/> <code>crayon.right(90)</code> <br/> <code>crayon.forward(50)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <br/> <code>crayon.forward(100)</code> <br/> <code>crayon.setheading(90)</code> <br/> <code>crayon.forward(50)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <br/><code>crayon.forward(100)</code> <br/> <code>crayon.left(45)</code><br/> <code>crayon.forward(50)</code></li>
+</ul>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio"/><label for="__tabbed_2_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> a) <mark><br/> <code>crayon.forward(100)</code> <br/> <code>crayon.left(90)</code> <br/> <code>crayon.forward(50)</code></mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del><br/> <code>crayon.forward(100)</code> <br/> <code>crayon.right(90)</code> <br/> <code>crayon.forward(50)</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del><br/> <code>crayon.forward(100)</code> <br/> <code>crayon.setheading(90)</code> <br/> <code>crayon.forward(50)</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del><br/><code>crayon.forward(100)</code> <br/> <code>crayon.left(45)</code><br/> <code>crayon.forward(50)</code></del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>3.</strong> Quelles instructions permettent de positionner la tortue <code>crayon</code> en <code>(-100,100)</code>, sans rien tracer à l'écran ?</p>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><label for="__tabbed_3_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <br/> <code>crayon.penup()</code> <br/> <code>crayon.set(-100,100)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <br/> <code>crayon.penup()</code> <br/> <code>crayon.forward(-100,100)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <br/> <code>crayon.pendown()</code> <br/> <code>crayon.goto(-100,100)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <br/> <code>crayon.penup()</code> <br/> <code>crayon.goto(-100,100)</code></li>
+</ul>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><label for="__tabbed_3_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del><br/> <code>crayon.penup()</code> <br/> <code>crayon.set(-100,100)</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del><br/> <code>crayon.penup()</code> <br/> <code>crayon.forward(-100,100)</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del><br/> <code>crayon.pendown()</code> <br/> <code>crayon.goto(-100,100)</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> d) <mark><br/> <code>crayon.penup()</code> <br/> <code>crayon.goto(-100,100)</code></mark> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>4.</strong> En python, la définition d'une fonction commencer par le mot clé :</p>
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><label for="__tabbed_4_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <code>function</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <code>def</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <code>import</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <code>return</code></li>
+</ul>
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><label for="__tabbed_4_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del><code>function</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> b) <mark><code>def</code></mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del><code>import</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del><code>return</code></del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>5.</strong> Quelle sera le dessin produit par l'instruction <code>mystere(100,45)</code>  où <code>mystere</code> est la fonction ci-dessous :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">mystere</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">crayon</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
+    <span class="n">crayon</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">crayon</span><span class="o">.</span><span class="n">setheading</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">crayon</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</code></pre></div>
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><label for="__tabbed_5_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) Un trait de longueur 45 d'orientation 100° et partant de l'origine</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) Un trait de longueur 100 d'orientation 45° et partant de l'origine</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) Deux traits de longueur 100 se croisant à l'origine à 45°</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) Cette fonction ne produit aucun dessin !</li>
+</ul>
+</div>
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><label for="__tabbed_5_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>Un trait de longueur 45 d'orientation 100° et partant de l'origine</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del>Un trait de longueur 100 d'orientation 45° et partant de l'origine</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>Deux traits de longueur 100 se croisant à l'origine à 45°</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> d) <mark>Cette fonction ne produit aucun dessin !</mark> </li>
+</ul>
+</div>
+</div>
+</div>
+<h2 id="exercices">Exercices</h2>
+<h3 id="exercice-1-quelques-dessins-avec-turtle"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 1 : <em>Quelques dessins avec turtle</em></img></h3>
+<p>Ecrire un programme Python permettant de dessiner les figures suivante :</p>
+<div class="admonition aide">
+<p class="admonition-title">Aide</p>
+<p>On donne le squelette de programme suivant qui servira de point de départ :
+<div class="highlight"><pre><span></span><code>    <span class="kn">import</span> <span class="nn">turtle</span>
+    <span class="n">papier</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+    <span class="n">crayon</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+    <span class="n">crayon</span><span class="o">.</span><span class="n">pensize</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">crayon</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s2">"navy"</span><span class="p">)</span>
+</code></pre></div></p>
+</div>
+<ol>
+<li>
+<p>La lettre H <br/>
+<img alt="lettre H" class="imgcentre" src="../images/C3/ex1a.png"/></p>
+</li>
+<li>
+<p>Une croix centrée sur l'origine <br/></p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<ul>
+<li>La longueur totale d'une branche de couleur est de 200 pixels</li>
+<li>Les couleurs des branches sont <em>navy</em> et <em>darkred</em></li>
+<li>La branche de couleur <em>navy</em> fait un angle de 45° avec l'horizontale</li>
+</ul>
+</div>
+<p><img alt="croix centrée sur l'origine" class="imgcentre" src="../images/C3/ex1b.png"/></p>
+</li>
+<li>
+<p>Des cercles <br/>
+<img alt="cercles" class="imgcentre" src="../images/C3/ex1c.png"/></p>
+</li>
+</ol>
+<h3 id="exercice-2-utilisation-dune-fonction"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 2 : <em>Utilisation d'une fonction</em></img></h3>
+<div class="admonition rappel">
+<p class="admonition-title">Rappel</p>
+<p>On donne ci-dessous le code de la fonction <code>ligne(x1,y1,x2,y2)</code> vue dans l'activité 2, elle permet de tracer la ligne joignant les points d'extrémités <code>(x1,y1)</code> et <code>(x2,y2)</code>
+<div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">ligne</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="p">):</span>
+        <span class="n">crayon</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
+        <span class="n">crayon</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">)</span>
+        <span class="n">crayon</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
+        <span class="n">crayon</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="p">)</span>
+</code></pre></div></p>
+</div>
+<ol>
+<li>En utilisant la fonction <code>ligne</code>, construire la grille de morpion suivante :
+<img alt="Grille de morpion" class="imgcentre" src="../images/C3/ex2a.png"/></li>
+<li>Dessiner de nouveau la <a href="#exercice-1-quelques-dessins-avec-turtle">lettre H de l'exercice 1</a> en vous aidant de cette fonction. </li>
+<li>Comparer les deux programmes (avec et sans fonction), qu'en pensez-vous ?</li>
+</ol>
+<h3 id="exercice-3-ecrire-une-fonction"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 3 : <em>Ecrire une fonction</em></img></h3>
+<p>Le but de l'exercice est de pouvoir dessiner une croix dans l'une quelconque des cases de la grille de morpion de l'exercice précédent. Comme par exemple dans la case supérieure droite tel qu'illustré ci-dessous.
+<img alt="Grille de morpion avec croix" class="imgcentre" src="../images/C3/ex3a.png">
+Les croix ont toujours la même couleur (<em>green</em>) et la même taille (des branches de longueur 40 pixels), seule la position de leur centre varie. On décide donc, d'écrire une fonction <code>croix(x,y)</code> qui trace la croix à partir du point de coordonnées <code>(x,y)</code></img></p>
+<ol>
+<li>Recopier et compléter l'écriture de la fonction croix (pour l'instant seule la branche supérieure droite est tracée):
+<div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">croix</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+        <span class="n">crayon</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
+        <span class="n">crayon</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+        <span class="n">crayon</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
+        <span class="n">crayon</span><span class="o">.</span><span class="n">setheading</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+        <span class="n">crayon</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+        <span class="o">...</span>
+</code></pre></div></li>
+<li>Utilisation de la fonction<ol>
+<li>Quel appel à la fonction <code>croix</code> permet de tracer la croix se situant dans la case supérieure droite ?</li>
+<li>Quel sera le résultat de l'instruction <code>croix(-100,0)</code> ?</li>
+</ol>
+</li>
+</ol>
+<h3 id="exercice-4-une-fonction-cercle"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 4 : <em>Une fonction cercle</em></img></h3>
+<ol>
+<li>En vous inspirant de l'exercice 3, écrire une fonction <code>cercle(x,y)</code> qui permet de tracer un cercle de rayon 35 et de couleur <em>darkred</em> dans l'une quelconque des cases de la grille de morpion. Comme par exemple ci-dessous dans la case inférieure droite.
+<img alt="Grille de morpion avec cercle" class="imgcentre" src="../images/C3/ex4a.png"/></li>
+<li>Reproduire la grille de morpion suivante en utilisant les fonctions <code>croix</code> et <code>cercle</code> :
+<img alt="Grille de morpion avec cercle" class="imgcentre" src="../images/C3/ex4b.png"/></li>
+</ol>
+<h3 id="exercice-5-grille"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:"/>   Exercice 5 : <em>Grille</em></h3>
+<p>Le but de l'exercice est d'utiliser les boucles pour tracer la grille suivante :
+<img alt="grille" class="imgcentre" src="../images/C3/grille.png"/></p>
+<p>On donne le squelette de programme suivante qui fixe les paramètres du dessin et contient la fonction <code>ligne(x1,y1,x2,y2)</code> vue dans les notebooks d'activité permettant de tracer une ligne allant du point de coordonnées <code>(x1,y1)</code> au point de coordonnées <code>(x2,y2)</code>.</p>
+<div class="highlight"><pre><span></span><code>    <span class="kn">import</span> <span class="nn">turtle</span>
+
+    <span class="c1"># Création du "papier" et du "crayon"</span>
+    <span class="n">crayon</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+    <span class="n">papier</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+    <span class="c1"># Taille, dimension et couleur pour le papier et le crayon</span>
+    <span class="n">papier</span><span class="o">.</span><span class="n">bgcolor</span><span class="p">(</span><span class="s2">"beige"</span><span class="p">)</span>
+    <span class="n">papier</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+    <span class="n">crayon</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s2">"navy"</span><span class="p">)</span>
+    <span class="n">crayon</span><span class="o">.</span><span class="n">pensize</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">ligne</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="p">):</span>
+        <span class="n">crayon</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
+        <span class="n">crayon</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">)</span>
+        <span class="n">crayon</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
+        <span class="n">crayon</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>
+<p>Ecrire une boucle <code>for</code> permettant de tracer les lignes horizontales.</p>
+<div class="admonition aide">
+<p class="admonition-title">Aide</p>
+<p>En cas de difficultés, écrire le tracé normal des lignes (sans boucle). Observer vos instructions de façon à repérer les variables qui doivent être modifiées et celles qui restent fixes.</p>
+</div>
+</li>
+<li>
+<p>Ecrire une boucle <code>for</code> permettant de tracer les lignes verticales.</p>
+</li>
+</ol>
+<h3 id="exercice-6-quelques-figures-avec-turtle"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:"/>   Exercice 6 : <em>Quelques figures avec <code>turtle</code></em></h3>
+<p>Construire les figures suivantes (le repère est là pour vous aider et ne doit pas être reproduit):</p>
+<ol>
+<li>L'escalier
+<img alt="escalier" class="imgcentre" src="../images/C3/escalier.png"/></li>
+<li>Cercles concentriques (les couleurs alternent entre <code>blue</code> et <code>lightblue</code>, le crayon a une épaisseur de 10, les cercles ont pour rayon 10,20,30, ...)
+<img alt="cercles" class="imgcentre" src="../images/C3/cercles.png"/></li>
+</ol>
+<h3 id="exercice-7-polygone-regulier"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:"/>   Exercice 7 : <em>Polygone régulier</em><span style="float:right;"><span style="float:right;">  <span class="twemoji" title="Exercice en lien avec les mathématiques"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M471.1 96C405 96 353.3 137.3 320 174.6 286.7 137.3 235 96 168.9 96 75.8 96 0 167.8 0 256s75.8 160 168.9 160c66.1 0 117.8-41.3 151.1-78.6 33.3 37.3 85 78.6 151.1 78.6 93.1 0 168.9-71.8 168.9-160S564.2 96 471.1 96zM168.9 320c-40.2 0-72.9-28.7-72.9-64s32.7-64 72.9-64c38.2 0 73.4 36.1 94 64-20.4 27.6-55.9 64-94 64zm302.2 0c-38.2 0-73.4-36.1-94-64 20.4-27.6 55.9-64 94-64 40.2 0 72.9 28.7 72.9 64s-32.7 64-72.9 64z"></path></svg></span></span></span></h3>
+<ol>
+<li>
+<p>Ecrire une fonction <code>triangle_equilateral(c)</code> qui trace un triangle équilatéral de côte <code>c</code> à partir de la position courante de la tortue.</p>
+<div class="admonition aide">
+<p class="admonition-title">Aide</p>
+<ul>
+<li>On rappelle que tous les angles d'un triangle équilatéral sont égaux et valent 60°.</li>
+<li>Les deux premières étapes de la construction sont illustrées ci-dessous.
+<img alt="etape construction equilateral" class="imgcentre" src="../images/C3/equilateral.png"/></li>
+<li>Comme un angle plat mesure 180°, on a tourné de 120° de façon à former un angle intérieur de 180°-160° = 60°</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Ecrire une fonction <code>carre(c)</code> qui trace un carré de côte <code>c</code> à partir de la position courante de la tortue.</p>
+</li>
+<li>
+<p>Ecrire une fonction <code>polygone_regulier(n,c)</code> qui trace un polygone régulier de côte <code>c</code> à partir de la position courante de la tortue.</p>
+<div class="admonition rappel">
+<p class="admonition-title">Rappel</p>
+<ul>
+<li>Un polygone régulier est un polygone dont tous les côtés sont de la même longueur et tous les angles sont égaux.</li>
+<li>Les angles d'un polygone régulier à <span class="arithmatex">\(n\)</span> côtés mesurent <span class="arithmatex">\(\dfrac{360}{n}\)</span></li>
+</ul>
+</div>
+</li>
+</ol>
+<h3 id="exercice-8-drapeau"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:"/>   Exercice 8 : <em>Drapeau</em></h3>
+<p>Le module <code>turtle</code> permet aussi de colorier des surfaces, pour cela: <br/>
+<span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m6.427 4.427 3.396 3.396a.25.25 0 0 1 0 .354l-3.396 3.396A.25.25 0 0 1 6 11.396V4.604a.25.25 0 0 1 .427-.177z"></path></svg></span> on fixe la couleur de remplissage avec  <code>crayon.fillcolor()</code> <br/>
+<span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m6.427 4.427 3.396 3.396a.25.25 0 0 1 0 .354l-3.396 3.396A.25.25 0 0 1 6 11.396V4.604a.25.25 0 0 1 .427-.177z"></path></svg></span> avant de commencer le dessin de la surface, on écrit <code>crayon.begin_fill()</code><br/>
+<span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m6.427 4.427 3.396 3.396a.25.25 0 0 1 0 .354l-3.396 3.396A.25.25 0 0 1 6 11.396V4.604a.25.25 0 0 1 .427-.177z"></path></svg></span> à la fin de la construction de la surface, on écrit  <code>crayon.end_fill()</code><br/>
+Par exemple, pour dessiner un  cercle rempli en rouge :
+<div class="highlight"><pre><span></span><code><span class="n">crayon</span><span class="o">.</span><span class="n">fillcolor</span><span class="p">(</span><span class="s2">"red"</span><span class="p">)</span>
+<span class="n">crayon</span><span class="o">.</span><span class="n">begin_fill</span><span class="p">()</span>
+<span class="n">crayon</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">crayon</span><span class="o">.</span><span class="n">end_fill</span><span class="p">()</span>
+</code></pre></div></p>
+<ol>
+<li>Ecrire et tester une fonction <code>rectangle_rempli(x,y,largeur,longueur,couleur)</code> qui trace un rectangle rempli avec la couleur <code>couleur</code>, de dimensions <code>largeur x longueur</code> et dont le coin inférieur gauche est situé au point de coordonnées <code>(x,y)</code></li>
+<li>En utilisant la fonction ci-dessus, écrire un programme Python permettant de dessiner un drapeau français de dimension <code>300</code> sur <code>200</code> (chacun des trois rectangles formant le drapeau est de dimensions <code>100x200</code>)</li>
+</ol>
+<h3 id="exercice-9-panneau-de-signalisation"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:"/>   Exercice 9 : <em>Panneau de signalisation</em></h3>
+<p>Ecrire un programme Python permettant de dessiner le panneau de signalisation de votre choix. Quelques exemples sont proposés ci-dessous.<br/>
+<img alt="sens interdit" src="../images/C3/sensinterdit.jpg" width="150px"/>  
+<img alt="croisement" src="../images/C3/croisement.svg" width="150px"/>   
+<img alt="stop" src="../images/C3/stop.svg" width="150px"/>   
+<img alt="doublesens" src="../images/C3/doublesens.png" width="150px"/> </p>
+<div class="admonition aide">
+<p class="admonition-title">Aide</p>
+<p>Consulter la <a href="https://docs.python.org/fr/3/library/turtle.html" target="_blank">page de documentation</a> du module <code>turtle</code> et plus particulièrement celle concernant la fonction <code>write</code> qui permet d'écrire à l'écran</p>
+</div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Pied de page" class="md-footer__inner md-grid">
+<a aria-label="Précédent: C2-Représentation des entiers et des caractères" class="md-footer__link md-footer__link--prev" href="../codage/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Précédent
+              </span>
+              C2-Représentation des entiers et des caractères
+            </div>
+</div>
+</a>
+<a aria-label="Suivant: C4-Architecture matérielle" class="md-footer__link md-footer__link--next" href="../architecture/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Suivant
+              </span>
+              C4-Architecture matérielle
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}, "search": "../assets/javascripts/workers/search.94ec81fe.min.js", "version": null}</script>
+<script src="../assets/javascripts/bundle.48dfec6c.min.js"></script>
+<script src="../javascripts/config.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
+</body>
+</html>

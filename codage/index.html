@@ -1,0 +1,928 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Cours de NSI en classe de première du lycée Hintermann-Afféjee" name="description"/>
+<meta content="Fabrice NATIVEL" name="author"/>
+<link href="../images/dragon.svg" rel="icon"/>
+<meta content="mkdocs-1.2.2, mkdocs-material-7.2.8" name="generator"/>
+<title>C2-Représentation des entiers et des caractères - Numériques et Sciences Informatiques Première</title>
+<link href="../assets/stylesheets/main.92558b1b.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+<link href="../stylesheets/fenarius.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#c2-representation-des-entiers-et-des-caracteres">
+          Aller au contenu
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="En-tête" class="md-header__inner md-grid">
+<a aria-label="Numériques et Sciences Informatiques Première" class="md-header__button md-logo" data-md-component="logo" href=".." title="Numériques et Sciences Informatiques Première">
+<svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M18.32 255.78 192 223.96l-91.28 68.69c-10.08 10.08-2.94 27.31 11.31 27.31h222.7c-9.44-26.4-14.73-54.47-14.73-83.38v-42.27l-119.73-87.6c-23.82-15.88-55.29-14.01-77.06 4.59L5.81 227.64c-12.38 10.33-3.45 30.42 12.51 28.14zm556.87 34.1-100.66-50.31A47.992 47.992 0 0 1 448 196.65v-36.69h64l28.09 22.63c6 6 14.14 9.37 22.63 9.37h30.97a32 32 0 0 0 28.62-17.69l14.31-28.62a32.005 32.005 0 0 0-3.02-33.51l-74.53-99.38C553.02 4.7 543.54 0 533.47 0H296.02c-7.13 0-10.7 8.57-5.66 13.61L352 63.96 292.42 88.8c-5.9 2.95-5.9 11.36 0 14.31L352 127.96v108.62c0 72.08 36.03 139.39 96 179.38-195.59 6.81-344.56 41.01-434.1 60.91C5.78 478.67 0 485.88 0 494.2 0 504 7.95 512 17.76 512h499.08c63.29.01 119.61-47.56 122.99-110.76 2.52-47.28-22.73-90.4-64.64-111.36zM489.18 66.25l45.65 11.41c-2.75 10.91-12.47 18.89-24.13 18.26-12.96-.71-25.85-12.53-21.52-29.67z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Numériques et Sciences Informatiques Première
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              C2-Représentation des entiers et des caractères
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Rechercher" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Rechercher" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Effacer" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Onglets" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="..">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/home.svg" width="16px"/>  Accueil
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../progression/">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg" width="16px"/>  Liste des chapitres
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../docs/">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/file-badge-16.svg" width="16px"/>  Documents officiels
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../projets/">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/lightbulb.svg" width="16px"/>  Projets
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../apropos/">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/information.svg" width="16px"/>  A propos
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Numériques et Sciences Informatiques Première" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Numériques et Sciences Informatiques Première">
+<svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M18.32 255.78 192 223.96l-91.28 68.69c-10.08 10.08-2.94 27.31 11.31 27.31h222.7c-9.44-26.4-14.73-54.47-14.73-83.38v-42.27l-119.73-87.6c-23.82-15.88-55.29-14.01-77.06 4.59L5.81 227.64c-12.38 10.33-3.45 30.42 12.51 28.14zm556.87 34.1-100.66-50.31A47.992 47.992 0 0 1 448 196.65v-36.69h64l28.09 22.63c6 6 14.14 9.37 22.63 9.37h30.97a32 32 0 0 0 28.62-17.69l14.31-28.62a32.005 32.005 0 0 0-3.02-33.51l-74.53-99.38C553.02 4.7 543.54 0 533.47 0H296.02c-7.13 0-10.7 8.57-5.66 13.61L352 63.96 292.42 88.8c-5.9 2.95-5.9 11.36 0 14.31L352 127.96v108.62c0 72.08 36.03 139.39 96 179.38-195.59 6.81-344.56 41.01-434.1 60.91C5.78 478.67 0 485.88 0 494.2 0 504 7.95 512 17.76 512h499.08c63.29.01 119.61-47.56 122.99-110.76 2.52-47.28-22.73-90.4-64.64-111.36zM489.18 66.25l45.65 11.41c-2.75 10.91-12.47 18.89-24.13 18.26-12.96-.71-25.85-12.53-21.52-29.67z"></path></svg>
+</a>
+    Numériques et Sciences Informatiques Première
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/home.svg" width="16px"/>  Accueil
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="&lt;img src='https://fabricenativel.github.io/NSIPremiere/images/icones/home.svg' width=16px height=16px&gt;  Accueil" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/home.svg" width="16px"/>  Accueil
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Cours de NSI en Première du lycée Hintermann-Afféjee
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg" width="16px"/>  Liste des chapitres
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="&lt;img src='https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg' width=16px height=16px&gt;  Liste des chapitres" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg" width="16px"/>  Liste des chapitres
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../progression/">
+        Progression
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../os/">
+        C1-Systèmes d'exploitation
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          C2-Représentation des entiers et des caractères
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        C2-Représentation des entiers et des caractères
+      </a>
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activites">
+    Activités
+  </a>
+<nav aria-label="Activités" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activite-1-numeration-binaire">
+    Activité 1 : Numération binaire  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activite-2-numeration-hexadecimale">
+    Activité 2 : Numération hexadécimale
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activite-3-encodage-des-caracteres">
+    Activité 3 : Encodage des caractères  
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cours">
+    Cours
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#qcm">
+    QCM
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercices">
+    Exercices
+  </a>
+<nav aria-label="Exercices" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-1-passer-dune-base-a-lautre">
+    Exercice 1 : Passer d'une base à l'autre
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-2-un-peu-de-reflexion">
+    Exercice 2 : Un peu de reflexion
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-3-enigme">
+    Exercice 3 : Énigme
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-4-un-peu-de-python">
+    Exercice 4 : Un peu de Python  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-5-code-ascii">
+    Exercice 5 : Code ASCII
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-6-message-secret">
+    Exercice 6 : Message secret
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-7-algorithme-des-divisions-successives">
+    Exercice 7 : Algorithme des divisions successives
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-8-le-parachute-de-perseverance">
+    Exercice 8 : Le parachute de perseverance
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ippt1/">
+        C3-Initiation à Python avec Turtle - Partie 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../architecture/">
+        C4-Architecture matérielle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ippt2/">
+        C5-Initiation à Python avec Turtle - Partie 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notionsalgo/">
+        C6-Notions d'algorithmique
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../donneestable/">
+        C7-Lecture et traitement de données en table
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../leweb/">
+        C8-Le web
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../algostri/">
+        C9-Algorithmes de tri
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../negatifs/">
+        C10-Représentation des entiers négatifs
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../reseau/">
+        C11-Réseau
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interactionweb/">
+        C12-Interaction dans une page web
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gloutons/">
+        C13-Algorithmes gloutons
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fusiontable/">
+        C14-Fusion de tables
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+        C15-Interface homme-machine
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../flottant/">
+        C16-Notion de nombre flottant
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../knn/">
+        C17-Algorithme des k plus proches voisins
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/file-badge-16.svg" width="16px"/>  Documents officiels
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="&lt;img src='https://fabricenativel.github.io/NSIPremiere/images/icones/file-badge-16.svg' width=16px height=16px&gt;  Documents officiels" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/file-badge-16.svg" width="16px"/>  Documents officiels
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docs/">
+        Documents officiels
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/lightbulb.svg" width="16px"/>  Projets
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="&lt;img src='https://fabricenativel.github.io/NSIPremiere/images/icones/lightbulb.svg' width=16px height=16px&gt;  Projets" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/lightbulb.svg" width="16px"/>  Projets
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projets/">
+        Projets
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/information.svg" width="16px"/>  A propos
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="&lt;img src='https://fabricenativel.github.io/NSIPremiere/images/icones/information.svg' width=16px height=16px&gt;  A propos" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+<img height="16px" src="https://fabricenativel.github.io/NSIPremiere/images/icones/information.svg" width="16px"/>  A propos
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../apropos/">
+        A Propos
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activites">
+    Activités
+  </a>
+<nav aria-label="Activités" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activite-1-numeration-binaire">
+    Activité 1 : Numération binaire  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activite-2-numeration-hexadecimale">
+    Activité 2 : Numération hexadécimale
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activite-3-encodage-des-caracteres">
+    Activité 3 : Encodage des caractères  
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cours">
+    Cours
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#qcm">
+    QCM
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercices">
+    Exercices
+  </a>
+<nav aria-label="Exercices" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-1-passer-dune-base-a-lautre">
+    Exercice 1 : Passer d'une base à l'autre
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-2-un-peu-de-reflexion">
+    Exercice 2 : Un peu de reflexion
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-3-enigme">
+    Exercice 3 : Énigme
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-4-un-peu-de-python">
+    Exercice 4 : Un peu de Python  
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-5-code-ascii">
+    Exercice 5 : Code ASCII
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-6-message-secret">
+    Exercice 6 : Message secret
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-7-algorithme-des-divisions-successives">
+    Exercice 7 : Algorithme des divisions successives
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercice-8-le-parachute-de-perseverance">
+    Exercice 8 : Le parachute de perseverance
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="c2-representation-des-entiers-et-des-caracteres"><span class="numchapitre">C2</span> Représentation des entiers et des caractères <span style="float:right;"><span class="twemoji" title="Représentation des données : types et valeurs de bases"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m239.1 6.3-208 78c-18.7 7-31.1 25-31.1 45v225.1c0 18.2 10.3 34.8 26.5 42.9l208 104c13.5 6.8 29.4 6.8 42.9 0l208-104c16.3-8.1 26.5-24.8 26.5-42.9V129.3c0-20-12.4-37.9-31.1-44.9l-208-78C262 2.2 250 2.2 239.1 6.3zM256 68.4l192 72v1.1l-192 78-192-78v-1.1l192-72zm32 356V275.5l160-65v133.9l-160 80z"></path></svg></span></span></h1>
+<h2 id="activites">Activités</h2>
+<h3 id="activite-1-numeration-binaire"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Activité 1 : <em>Numération binaire</em><span style="float:right;"><span style="float:right;">  <span class="twemoji" title="Activité à réaliser sur feuille"><svg viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path d="m402.6 83.2 90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"></path></svg></span></span></span></img></h3>
+<p><span class="centre"><a class="md-button" href="../pdf/C2/C2-act1.pdf">Fiche d'activité <span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg></span></a></span> </p>
+<h3 id="activite-2-numeration-hexadecimale"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Activité 2 : <em>Numération hexadécimale</em></img></h3>
+<p><span class="centre"><a class="md-button" href="../pdf/C2/C2-act2.pdf">Fiche d'activité <span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg></span></a></span></p>
+<h3 id="activite-3-encodage-des-caracteres"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Activité 3 : <em>Encodage des caractères</em><span style="float:right;"><span style="float:right;">  <span class="twemoji" title="Activité utilisant un support vidéo"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M488 64h-8v20c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12V64H96v20c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12V64h-8C10.7 64 0 74.7 0 88v336c0 13.3 10.7 24 24 24h8v-20c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v20h320v-20c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v20h8c13.3 0 24-10.7 24-24V88c0-13.3-10.7-24-24-24zM96 372c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm272 208c0 6.6-5.4 12-12 12H156c-6.6 0-12-5.4-12-12v-96c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v96zm0-168c0 6.6-5.4 12-12 12H156c-6.6 0-12-5.4-12-12v-96c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v96zm112 152c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40z"></path></svg></span></span></span></img></h3>
+<div class="centre"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/MijmeoH9LT4" title="YouTube video player" width="560"></iframe></div>
+<p>En utilisant la video ci-dessus et en faisant éventuellement vos propres recherches sur le <em>Web</em>, répondre brièvement aux questions suivantes :</p>
+<ol>
+<li>L'encodage <span style="font-variant:small-caps;">ascii</span><ol>
+<li>Combien de caractères pouvaient être codés en <span style="font-variant:small-caps;">ascii</span> ?</li>
+<li>Expliquer rapidement pourquoi ce système était limité et à du être étendu</li>
+</ol>
+</li>
+<li>L'encodage Latin-1<ol>
+<li>Sur combien de bits était encodé chaque caractère ?</li>
+<li>Combien de caractères au maximum étaient représentés ?</li>
+<li>Ce système était-il universel ?</li>
+</ol>
+</li>
+<li>L'encodage <span style="font-variant:small-caps;">utf-8</span><ol>
+<li>Un caractère est-il toujours encodé sur le même nombre de bits ?</li>
+<li>Cet encodage est-il compatible avec l'ancienne norme <span style="font-variant:small-caps;">ascii</span> ?</li>
+</ol>
+</li>
+</ol>
+<h2 id="cours">Cours</h2>
+<p>Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de cours présenté en classe :</p>
+<p><span class="centre"><a class="md-button" href="../pdf/C2/C2-cours.pdf">Diaporama de cours <span class="twemoji"><svg viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M369.9 97.9 286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48zm250.2-143.7c-12.2-12-47-8.7-64.4-6.5-17.2-10.5-28.7-25-36.8-46.3 3.9-16.1 10.1-40.6 5.4-56-4.2-26.2-37.8-23.6-42.6-5.9-4.4 16.1-.4 38.5 7 67.1-10 23.9-24.9 56-35.4 74.4-20 10.3-47 26.2-51 46.2-3.3 15.8 26 55.2 76.1-31.2 22.4-7.4 46.8-16.5 68.4-20.1 18.9 10.2 41 17 55.8 17 25.5 0 28-28.2 17.5-38.7zm-198.1 77.8c5.1-13.7 24.5-29.5 30.4-35-19 30.3-30.4 35.7-30.4 35zm81.6-190.6c7.4 0 6.7 32.1 1.8 40.8-4.4-13.9-4.3-40.8-1.8-40.8zm-24.4 136.6c9.7-16.9 18-37 24.7-54.7 8.3 15.1 18.9 27.2 30.1 35.5-20.8 4.3-38.9 13.1-54.8 19.2zm131.6-5s-5 6-37.3-7.8c35.1-2.6 40.9 5.4 37.3 7.8z"></path></svg></span></a></span></p>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Ce diaporama ne vous donne que quelques points de repères lors de vos révisions. Il devrait être complété par la relecture attentive de vos <strong>propres</strong> notes de cours et par une révision approfondie des exercices.</p>
+</div>
+<h2 id="qcm">QCM</h2>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>1.</strong> Quelle est l'écriture en base 2 du nombre <span class="arithmatex">\((154)_{10}\)</span> ?</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><label for="__tabbed_1_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> a) 10011100</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> b) 10011001</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> c) 00011010</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> d) 10011010</li>
+</ul>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio"><label for="__tabbed_1_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> a) <del>10011100</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> b) <del>10011001</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></input></label> c) <del>00011010</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> d) <mark>10011010</mark> </li>
+</ul>
+</div>
+</input></input></div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>2.</strong> Que peut-on dire de l'écriture en base 2 d'un nombre divisible par 2 ?</p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"/><label for="__tabbed_2_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) Elle ne contient pas de 0</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) Elle se termine par 0</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) Elle ne contient qu'un seul 1</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) Elle contient deux 1</li>
+</ul>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio"/><label for="__tabbed_2_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>Elle ne contient pas de 0</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> b) <mark>Elle se termine par 0</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>Elle ne contient qu'un seul 1</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>Elle contient deux 1</del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>3.</strong> Quelle est l'écriture en base 10 du nombre <span class="arithmatex">\((01101100)_{2}\)</span> ?</p>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><label for="__tabbed_3_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) 216</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) 108</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) 54</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) 4</li>
+</ul>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><label for="__tabbed_3_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>216</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> b) <mark>108</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>54</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>4</del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>4.</strong> Quelle est l'écriture en base 16 du nombre <span class="arithmatex">\((165)_{10}\)</span> ?</p>
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><label for="__tabbed_4_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) 95</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) A5</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) B5</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) C5</li>
+</ul>
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><label for="__tabbed_4_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>95</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> b) <mark>A5</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>B5</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>C5</del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>5.</strong> En base 12, combien il y a-t-il de chiffres ?</p>
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><label for="__tabbed_5_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) 10</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) 11</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) 12</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) 13</li>
+</ul>
+</div>
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><label for="__tabbed_5_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>10</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del>11</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> c) <mark>12</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>13</del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>6.</strong> Si l'écriture en base 2 d'un nombre ne comporte qu'un seul 1, alors ce nombre :</p>
+<div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><label for="__tabbed_6_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) n'est pas une puissance 2</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) est une puissance de 2</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) est divisible par 2</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) n'est pas divisible par 2</li>
+</ul>
+</div>
+<input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><label for="__tabbed_6_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>n'est pas une puissance 2</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> b) <mark>est une puissance de 2</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>est divisible par 2</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>n'est pas divisible par 2</del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>7.</strong> Quelle est l'écriture en base 10 du nombre <span class="arithmatex">\((B2)_{16}\)</span> ?</p>
+<div class="tabbed-set" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><label for="__tabbed_7_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) 112</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) 162</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) 178</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) 194</li>
+</ul>
+</div>
+<input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><label for="__tabbed_7_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>112</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del>162</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> c) <mark>178</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>194</del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>8.</strong> Pour écrire les nombres entre 1 et 100 en base 2, on a besoin au maximum de :</p>
+<div class="tabbed-set" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><label for="__tabbed_8_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) 5 chiffres</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) 6 chiffres</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) 7 chiffres</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) 8 chiffres</li>
+</ul>
+</div>
+<input id="__tabbed_8_2" name="__tabbed_8" type="radio"/><label for="__tabbed_8_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>5 chiffres</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del>6 chiffres</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> c) <mark>7 chiffres</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>8 chiffres</del> </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>9.</strong> Quelle est l'affirmation exacte ?</p>
+<div class="tabbed-set" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"/><label for="__tabbed_9_1">Réponses</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) Le codage UTF-8 est sur 7 bits.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) Le codage UTF-8 est sur 1 octet.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) Le codage UTF-8 est sur 1 à 4 octets.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) Le codage UTF-8 est sur 4 octets.</li>
+</ul>
+</div>
+<input id="__tabbed_9_2" name="__tabbed_9" type="radio"/><label for="__tabbed_9_2">Correction</label><div class="tabbed-content">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>Le codage UTF-8 est sur 7 bits.</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del>Le codage UTF-8 est sur 1 octet.</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" type="checkbox"/><span class="task-list-indicator"></span></label> c) <mark>Le codage UTF-8 est sur 1 à 4 octets.</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>Le codage UTF-8 est sur 4 octets.</del> </li>
+</ul>
+</div>
+</div>
+</div>
+<h2 id="exercices">Exercices</h2>
+<h3 id="exercice-1-passer-dune-base-a-lautre"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 1 : <em>Passer d'une base à l'autre</em></img></h3>
+<p>Recopier et compléter le tableau de conversion suivant :</p>
+<table>
+<thead>
+<tr>
+<th>Ecriture décimale</th>
+<th>Ecriture binaire</th>
+<th>Ecriture hexadécimale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\((201)_{10}\)</span></td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td><span class="arithmatex">\((EA)_{16}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((57)_{10}\)</span></td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\((00100001)_2\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((128)_{10}\)</span></td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((163)_{10}\)</span></td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td><span class="arithmatex">\((5B)_{16}\)</span></td>
+</tr>
+<tr>
+<td>...</td>
+<td><span class="arithmatex">\((10010101)_2\)</span></td>
+<td>...</td>
+</tr>
+<tr>
+<td>...</td>
+<td><span class="arithmatex">\((10010010)_2\)</span></td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exercice-2-un-peu-de-reflexion"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 2 : <em>Un peu de reflexion</em></img></h3>
+<ol>
+<li>Quel est le plus grand entier positif écrit en utilisant 10 chiffres en base 2 ?</li>
+<li>Que peut-on dire d'un nombre dont l'écriture en base 2 ne contient qu'un seul chiffre 1 ?</li>
+<li>
+<ol>
+<li>En base 10, comment reconnaît-on un nombre divisible par 10 ? </li>
+<li>L'écriture en base 2 d'un nombre divisible par 2 se termine forcément par quel chiffre ? Justifier.</li>
+<li>De façon générale, soit <span class="arithmatex">\(b\)</span> un entier supérieur ou égal à 2, que peut-on dire de l'écriture en base <span class="arithmatex">\(b\)</span> d'un nombre divisible par <span class="arithmatex">\(b\)</span> .</li>
+</ol>
+</li>
+<li>En base 10, un million s'écrit avec 7 chiffres, combien en faut-il pour l'écrire en base 2 ?</li>
+</ol>
+<h3 id="exercice-3-enigme"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 3 : <em>Énigme</em></img></h3>
+<p>Il manque des chiffres (remplacés par des ?) dans le nombre binaire suivant : <span class="arithmatex">\(?001??111?\)</span></p>
+<ol>
+<li>Retrouver les chiffres manquants en utilisant les indices suivants:<ul>
+<li>il n'y a pas de zéros non significatifs dans ce nombre</li>
+<li>ce nombre est divisible par 2</li>
+<li>il y a un nombre impair de 0 dans l'écriture binaire de ce nombre</li>
+<li>l'écriture décimale de ce nombre dépasse <span class="arithmatex">\((600)_{10}\)</span></li>
+</ul>
+</li>
+<li>Donner l'écriture décimale de ce nombre.</li>
+<li>Donner son écriture hexadécimale</li>
+</ol>
+<h3 id="exercice-4-un-peu-de-python"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 4 : <em>Un peu de Python</em><span style="float:right;"><span style="float:right;">  <span class="twemoji" title="Exercice en lien avec la programmation en Python"><svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"></path></svg></span></span></span></img></h3>
+<ol>
+<li>Lancer Python en ligne de commande, comme vu dans le chapitre précédent.</li>
+<li>Tester la fonction <code>bin</code> de Python, en affichant par exemple <code>bin(201)</code> et <code>bin(57)</code>. Rapprocher les résultats obtenus avec les réponses de l'exercice 1. Émettre une hypothèse sur cette fonction.</li>
+<li>Valider votre hypothèse en faisant afficher l'aide de la fonction <code>bin</code>.</li>
+<li>Reprendre les questions précédentes pour la fonction <code>hex</code>.</li>
+</ol>
+<h3 id="exercice-5-code-ascii"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 5 : <em>Code ASCII</em></img></h3>
+<ol>
+<li>Le code <span style="font-variant:small-caps;">ascii</span> de A est 65 et celui de a est 97. Ecrire ces deux codes en binaire. </li>
+<li>Sachant que l'ordre des codes suit l'ordre alphabétique (donc le code de B est 66), écrire les codes binaires de B et de b.</li>
+<li>Même question pour C et c. Que remarquez-vous ?</li>
+<li>Le code <span style="font-variant:small-caps;">ascii</span> binaire de P est <span class="arithmatex">\(10100000\)</span>, quel est celui de p ?</li>
+<li>Le code <span style="font-variant:small-caps;">ascii</span> du zéro est 48, l'écrire en binaire. Ce code a-t-il été choisi au hasard ?</li>
+</ol>
+<h3 id="exercice-6-message-secret"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 6 : <em>Message secret</em></img></h3>
+<p><div class="highlight"><pre><span></span><code>0x420x720x610x760x6f0x200x210x200x560x6f0x750x730x200x610x760x650x7a0x200x64
+0xe90x630x6f0x640xe90x200x6c0x650x200x6d0x650x730x730x610x670x65
+</code></pre></div>
+Parviendrez-vous à décoder le message secret ci-dessus ? </p>
+<div class="admonition aide">
+<p class="admonition-title">Aide</p>
+<p>Un indice : <span style="font-variant:small-caps;">ascii</span></p>
+</div>
+<h3 id="exercice-7-algorithme-des-divisions-successives"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 7 : <em>Algorithme des divisions successives</em></img></h3>
+<p>En utilisant l'<em>algorithme des divisions successives</em> :</p>
+<ol>
+<li>Convertir <span class="arithmatex">\(6771_{10}\)</span> en base 2</li>
+<li>Convertir <span class="arithmatex">\(6771_{10}\)</span> en base 16</li>
+<li>Vérifier le résultat précédent en effectuant la conversion du nombre obtenu à la question 1. en base 16.</li>
+<li>Mêmes questions pour <span class="arithmatex">\(9753\)</span></li>
+</ol>
+<div class="admonition aide">
+<p class="admonition-title">Aide</p>
+<p>Cet exercice impose l'utilisation de l'<em>algorithme des divisions successives</em>, on pourra donc se référer au cours et refaire les exemples qui s'y trouvent en cas de difficultés.</p>
+</div>
+<h3 id="exercice-8-le-parachute-de-perseverance"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:">   Exercice 8 : <em>Le parachute de perseverance</em></img></h3>
+<p>En février 2021, le robot <em>Perseverance</em> a atterrit sur Mars, en déployant un parachute :
+<img alt="Parachute de perseverance" class="imgcentre" src="../images/C2/perseverance.png">
+Le motif du parachute cache un message codé en binaire, le décoder en utilisant les informations suivantes :</img></p>
+<ul>
+<li>Un mot est codé sur chacun des trois anneaux intérieurs </li>
+<li>les caractères sont représentés sur 10 bits </li>
+<li>La lettre A est codée 1, la lettre B est codée 2 et ainsi de suite</li>
+<li>l'anneau extérieur code des coordonnées <span style="font-variant:small-caps;">gps</span> de la forme trois groupes de chiffres suivi d'une lettre (N ou S) puis de nouveau 3 groupes de chiffres suivi d'une lettre (E ou W)</li>
+</ul>
+<p><img alt="Parachute de perseverance" class="imgcentre" src="../images/C2/parachute.png"/></p>
+<div class="admonition lien">
+<p class="admonition-title">Pour aller plus loin</p>
+<ul>
+<li>Visiter le site <a href="https://sjwarner.github.io/perseverance-parachute-generator/" target="_blank">Msg2Mars</a> pour coder votre propre message en suivant le même principe</li>
+<li>Le service <a href="https://nominatim.openstreetmap.org/ui/search.html" target="_blank">Nominatim d'openstreetmap</a> vous permettra de retrouver un lieu à partir de ces coordonnées <span style="font-variant:small-caps;">gps</span></li>
+</ul>
+</div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Pied de page" class="md-footer__inner md-grid">
+<a aria-label="Précédent: C1-Systèmes d'exploitation" class="md-footer__link md-footer__link--prev" href="../os/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Précédent
+              </span>
+              C1-Systèmes d'exploitation
+            </div>
+</div>
+</a>
+<a aria-label="Suivant: C3-Initiation à Python avec Turtle - Partie 1" class="md-footer__link md-footer__link--next" href="../ippt1/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Suivant
+              </span>
+              C3-Initiation à Python avec Turtle - Partie 1
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}, "search": "../assets/javascripts/workers/search.94ec81fe.min.js", "version": null}</script>
+<script src="../assets/javascripts/bundle.48dfec6c.min.js"></script>
+<script src="../javascripts/config.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+\mframe{\Python}
+	\begin{exampleblock}{Une boucle avec la fonction trait}
+		En faisant varier la direction et la longueur dans la fonction {\tt trait} définie ci-dessus à l'aide d'une boucle on obtient le dessin suivant :
+		\begin{center}
+			\includegraphics[scale=0.25]{ex-cours.eps}
+		\end{center}
+	\begin{lstlisting}
+	direction = 0
+	longueur = 10
+	for t in range(51):
+		trait(0,0,longueur,direction)
+		direction+=3.6
+		longueur+=5
+	papier.exitonclick()
+	\end{lstlisting}
+	\end{exampleblock}
